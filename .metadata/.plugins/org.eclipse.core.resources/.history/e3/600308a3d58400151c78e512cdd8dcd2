@@ -1,0 +1,45 @@
+public class SetNatural
+{
+    final int BASE = 10;
+    int _val;
+
+    public SetNatural(int aVal)
+    {
+        _val = aVal;
+    }
+
+    public void Remove(int aElement)
+    {
+        int _SetCopy = _val;
+        int retVal = _SetCopy %= BASE;
+        _val -= retVal;
+        _val /= BASE;
+        
+        return retVal;
+    }
+
+    public void Add (int aElement)
+    {
+        int buffSetQueue = _val;
+        boolean retVal = false;
+
+        do
+        {
+            int buffDequeued = dequeue();
+
+            if(buffDequeued==aElement)
+                retVal = true;
+
+        }while(retVal == false || aQueueCopy<0);
+    }
+    
+    public boolean equals(SetNatural aVal)
+    {
+        return _val == aVal._val;
+    }
+    
+    public String toString()
+    {
+        return "Q:"+_val;
+    }  
+}

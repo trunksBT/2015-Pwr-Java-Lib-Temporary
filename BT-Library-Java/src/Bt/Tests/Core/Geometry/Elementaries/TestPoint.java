@@ -1,9 +1,13 @@
 package Bt.Tests.Core.Geometry.Elementaries;
 
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import Bt.Core.Geometry.Elementaries.Point;
 import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class TestPoint extends TestCase{
 
@@ -22,7 +26,7 @@ public class TestPoint extends TestCase{
         boolean result = !(expected ^ reached);
         assertTrue(result);
     }
-
+    
     @Test
     public void testEqualsPointsOtherFalse()
     {

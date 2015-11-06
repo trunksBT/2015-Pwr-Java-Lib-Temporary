@@ -32,7 +32,9 @@ public class TestLineSegment extends TestCase
 	        boolean result = !(expected ^ reached);
 	        assertTrue(result);
 	    }
-	    
+																																			
+																																			
+																																			
 	 	@Test
 	    public void testEqualsLineSegmentTheSameButReversedPointsTrue2()
 	    {
