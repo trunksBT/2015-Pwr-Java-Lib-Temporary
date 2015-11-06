@@ -1,0 +1,157 @@
+package BT.Tests.Collections;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+import BT.Core.Collections.QueueNatural;
+
+public class QueueNaturalTest
+{   
+    @Test
+    public void EqualsQueuesTheSameTrue()
+    {
+        //arrange
+        QueueNatural _queueA = new QueueNatural(212);
+        QueueNatural _queueB = new QueueNatural(212);
+        boolean expected = true;
+        
+        //act
+        boolean reached = _queueA.equals(_queueB);
+        
+        //assert
+        boolean result = !(expected ^ reached);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void EqualsQueuesTheSameFalse()
+    {
+        //arrange
+        QueueNatural _queueA = new QueueNatural(212);
+        QueueNatural _queueB = new QueueNatural(213);
+        boolean expected = false;
+        
+        //act
+        boolean reached = _queueA.equals(_queueB);
+        
+        //assert
+        boolean result = !(expected ^ reached);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void DequeueTrue()
+    {
+        //arrange
+        QueueNatural _queueA = new QueueNatural(212);
+        QueueNatural _queueB = new QueueNatural(21);
+        int expectDequeued = 2;
+        boolean expectedAfter = true;
+        
+        //act
+        int reachedDequeued = _queueA.dequeue();
+        boolean reachedAfter = _queueA.equals(_queueB);
+        
+        //assert
+        boolean result = expectDequeued == reachedDequeued;
+        boolean resultAfter = !(expectedAfter ^ reachedAfter);
+        assertTrue(result);
+        assertTrue(resultAfter);
+    }
+    
+    @Test
+    public void DequeueFalse()
+    {
+        //arrange
+        QueueNatural _queueA = new QueueNatural(212);
+        QueueNatural _queueB = new QueueNatural(21);
+        int expectDequeued = 4;
+        boolean expectedAfter = true;
+        
+        //act
+        int reachedDequeued = _queueA.dequeue();
+        boolean reachedAfter = _queueA.equals(_queueB);
+        
+        //assert
+        boolean result = expectDequeued != reachedDequeued;
+        boolean resultAfter = !(expectedAfter ^ reachedAfter);
+        assertTrue(result);
+        assertTrue(resultAfter);
+    }
+    
+    @Test
+    public void EnqueueTrue()
+    {
+        //arrange
+        QueueNatural _queueA = new QueueNatural(212);
+        QueueNatural _queueB = new QueueNatural(2124);
+        int val = 4;
+        boolean expectedAfter = true;
+        
+        //act
+        _queueA.enqueue(val);
+        boolean reachedAfter = _queueA.equals(_queueB);
+        
+        //assert
+        boolean resultAfter = !(expectedAfter ^ reachedAfter);
+        assertTrue(resultAfter);
+    }
+    
+    @Test
+    public void EnqueueFalse()
+    {
+        //arrange
+        QueueNatural _queueA = new QueueNatural(212);
+        QueueNatural _queueB = new QueueNatural(2122);
+        int val = 4;
+        boolean expectedAfter = false;
+        
+        //act
+        _queueA.enqueue(val);
+        boolean reachedAfter = _queueA.equals(_queueB);
+        
+        //assert
+        boolean resultAfter = !(expectedAfter ^ reachedAfter);
+        assertTrue(resultAfter);
+    }
+    
+    @Test
+    public void SizeTrue()
+    {
+        //arrange
+        QueueNatural _queueA = new QueueNatural(212);
+        QueueNatural _queueB = new QueueNatural(212);
+        int expected = 3;
+        boolean expectedAfter = true;
+        
+        //act
+        int reached = _queueA.size();
+        boolean reachedAfter = _queueA.equals(_queueB);
+        
+        //assert
+        boolean result = expected == reached;
+        boolean resultAfter = !(expectedAfter^reachedAfter);
+        assertTrue(result);
+        assertTrue(resultAfter);
+    }
+    
+    @Test
+    public void SizeFalse()
+    {
+        //arrange
+        QueueNatural _queueA = new QueueNatural(212);
+        QueueNatural _queueB = new QueueNatural(212);
+        int expected = 4;
+        boolean expectedAfter = false;
+        
+        //act
+        int reached = _queueA.size();
+        boolean reachedAfter = _queueA.equals(_queueB);
+        
+        //assert
+        boolean result = expected != reached;
+        boolean resultAfter = !(expectedAfter^reachedAfter);
+        assertTrue(result);
+        assertTrue(resultAfter);
+    }
+}

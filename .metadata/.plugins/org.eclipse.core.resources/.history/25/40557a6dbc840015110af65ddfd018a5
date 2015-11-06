@@ -1,0 +1,15 @@
+
+public class Temp {
+	public static void main(String arg[])
+	{
+		int val = 3;
+		toDebug();
+		
+	}
+	
+	public static void toDebug (){
+		System.out.println("Siema");
+		int val3= 3;
+	}
+}
+

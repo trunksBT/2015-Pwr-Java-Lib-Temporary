@@ -1,0 +1,118 @@
+package Bt.Tests.Core.Geometry.Elementaries;
+
+import org.junit.Test;
+
+import Bt.Core.Geometry.Elementaries.Point;
+import junit.framework.TestCase;
+
+public class TestPointtt extends TestCase {
+
+    public void TestEqualsPointsTheSameTrue()
+    {
+        //arrange
+        Point _pointA = new Point(2,2);
+        Point _pointB = new Point(2,2);
+        boolean expected = true;
+        
+        //act
+        boolean reached = _pointA.equals(_pointB);
+        
+        //assert
+        boolean result = !(expected ^ reached);
+        assertTrue(result);
+    }
+
+    public void TestEqualsPointsOtherFalse()
+    {
+        //arrange
+    	Point _pointA = new Point(2,2);
+        Point _pointB = new Point(3,3);
+        boolean expected = false;
+        
+        //act
+        boolean reached = _pointA.equals(_pointB);
+        
+        //assert    
+        boolean result = !(expected ^ reached);
+        assertTrue(result);
+    }
+
+    @Test
+    public void TestDistancePointsTheSameTrue()
+    {
+        //arrange
+        Point _pointA  = new Point(2,5);        
+        Point _pointB = new Point(2,5);
+        double expected = 0.0;
+        
+        //act
+        double reached = _pointA.distance(_pointB);
+        
+        //assert     
+        boolean result = reached == expected;
+        assertTrue(result);
+    }
+
+    public void TestDistancePointsOthersTrue()
+    {
+        //arrange
+        Point _pointA = new Point(2,5);        
+        Point _pointB = new Point(5,9);
+        double expected = 5;
+        
+        //act
+        double reached = _pointA.distance(_pointB);
+        
+        //assert    
+        boolean result = expected == reached;    
+        assertTrue(result);
+    }
+
+    public void TestDistancePointsOthersFalse()
+    {
+        //arrange
+        Point _pointA = new Point(2,5);        
+        Point _pointB = new Point(5,9);
+        double expected = 3;
+        
+        //act
+        double reached = _pointA.distance(_pointB);
+        
+        //assert    
+        boolean result = expected != reached;      
+        assertTrue(result);
+    }
+
+    public void TestShiftPointsTrue()
+    {
+        //arrange
+        Point _pointA = new Point(2,2);        
+        Point _pointB = new Point(4,4);
+        boolean expected = true;
+        
+        //act
+        _pointA.shift(2, 2);
+        boolean reached = _pointA.equals(_pointB);
+        
+        //assert
+        boolean result = ! (expected ^ reached);
+        assertTrue(result);
+    }
+
+    public void TestShiftPointsFalse()
+    {
+        //arrange
+        Point _pointA = new Point(2,2);        
+        Point _pointB = new Point(3,3);
+        boolean expected = false;
+        
+        //act
+        _pointA.shift(2,2);
+        boolean reached = _pointA.equals(_pointB);
+                
+        //assert
+        boolean result = !(expected ^ reached);
+        assertTrue(result);
+    } 
+
+}

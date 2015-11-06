@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.Point"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Complex.LineSegment"/>
+<fullyQualifiedTypeName name="org.junit.FixMethodOrder"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="Bt.Tests.Core.Geometry.Complex.testLineSegment"/>
+<fullyQualifiedTypeName name="Bt.Tests.Core.Geometry.Elementaries.TestPoint"/>
+<fullyQualifiedTypeName name="junit.framework.TestSuite"/>
+</qualifiedTypeNameHistroy>

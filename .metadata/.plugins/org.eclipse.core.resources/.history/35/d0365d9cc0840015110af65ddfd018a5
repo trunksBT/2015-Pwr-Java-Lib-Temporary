@@ -1,0 +1,7 @@
+package Bt.Tests.Core.Geometry.Complex;
+
+import junit.framework.TestCase;
+
+public class testLineSegmentt extends TestCase {
+
+}

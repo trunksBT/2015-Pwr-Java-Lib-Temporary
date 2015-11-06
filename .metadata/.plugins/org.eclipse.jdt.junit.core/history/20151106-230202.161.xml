@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AllTests" project="BT-Library-Java" tests="15" started="15" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Geometry.AllTests" time="0.001">
+    <testsuite name="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.001">
+      <testcase name="testEqualsLineSegmentTheSameButReversedPointsTrue2" classname="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.0"/>
+      <testcase name="testEqualsLineSegmentTheSameFalse1" classname="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.0"/>
+      <testcase name="testEqualsLineSegmentTheSameFalse2" classname="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.0"/>
+      <testcase name="testEqualsLineSegmentTheSameTrue1" classname="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.0"/>
+      <testcase name="testLengthFalse" classname="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.0"/>
+      <testcase name="testLengthTrue" classname="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.001"/>
+      <testcase name="testShiftLineSegmentFalse" classname="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.0"/>
+      <testcase name="testShiftLineSegmentTrue" classname="Bt.Tests.Core.Geometry.Complex.TestLineSegment" time="0.0"/>
+    </testsuite>
+    <testsuite name="Bt.Tests.Core.Geometry.Elementaries.TestPoint" time="0.0">
+      <testcase name="testEqualsPointsTheSameTrue" classname="Bt.Tests.Core.Geometry.Elementaries.TestPoint" time="0.0"/>
+      <testcase name="testEqualsPointsOtherFalse" classname="Bt.Tests.Core.Geometry.Elementaries.TestPoint" time="0.0"/>
+      <testcase name="testDistancePointsTheSameTrue" classname="Bt.Tests.Core.Geometry.Elementaries.TestPoint" time="0.0"/>
+      <testcase name="testDistancePointsOthersFalse" classname="Bt.Tests.Core.Geometry.Elementaries.TestPoint" time="0.0"/>
+      <testcase name="testShiftPointsTrue" classname="Bt.Tests.Core.Geometry.Elementaries.TestPoint" time="0.0"/>
+      <testcase name="testDistancePointsOthersTrue" classname="Bt.Tests.Core.Geometry.Elementaries.TestPoint" time="0.0"/>
+      <testcase name="testShiftPointsFalse" classname="Bt.Tests.Core.Geometry.Elementaries.TestPoint" time="0.0"/>
+    </testsuite>
+  </testsuite>
+</testrun>

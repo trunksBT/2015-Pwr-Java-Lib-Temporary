@@ -1,0 +1,16 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import junit.framework.TestCase;
+
+public class TempTest extends TestCase{
+
+	@Test
+	public void test() {
+		double aVal = 3.0;
+		
+		assertEquals(3.0, aVal);
+	}
+
+}

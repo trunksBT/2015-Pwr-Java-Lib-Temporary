@@ -1,0 +1,14 @@
+package Bt.Tests.Core.Geometry.Elementaries;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestPointt {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

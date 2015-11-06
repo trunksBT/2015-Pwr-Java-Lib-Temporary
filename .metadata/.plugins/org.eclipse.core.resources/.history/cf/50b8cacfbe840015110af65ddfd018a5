@@ -1,0 +1,23 @@
+package Bt.Tests.Core.Geometry.Elementaries;
+
+import junit.framework.TestCase;
+
+public class TestPointtt extends TestCase {
+
+	public void testPoint() {
+		fail("Not yet implemented");
+	}
+
+	public void testEqualsPoint() {
+		fail("Not yet implemented");
+	}
+
+	public void testShift() {
+		fail("Not yet implemented");
+	}
+
+	public void testDistance() {
+		fail("Not yet implemented");
+	}
+
+}

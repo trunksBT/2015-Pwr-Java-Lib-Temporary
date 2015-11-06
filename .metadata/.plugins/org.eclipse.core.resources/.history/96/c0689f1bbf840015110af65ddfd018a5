@@ -1,0 +1,11 @@
+package Bt.Tests.Core.Geometry.Elementaries;
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+import Bt.Core.Geometry.Elementaries.Point;
+import junit.framework.TestCase;
+
+public class TestPoint  extends TestCase
+{    
+    
+}
