@@ -5,10 +5,10 @@ public class QueueNatural
     final int BASE = 10;
     int _val;
 
-//    public QueueNatural(QueueNatural aVal)
-//    {
-//        _val = aVal.dequeueAll();
-//    }//TODO
+    public QueueNatural(QueueNatural aVal)
+    {
+        _val = aVal.dequeueAll();
+    }
     
     public QueueNatural(int aVal)
     {
@@ -25,9 +25,9 @@ public class QueueNatural
         return retVal;
     }
 
-//    private dequeueAll(){
-//    	
-//    }//TODO
+    private dequeueAll(){
+    	
+    }
     
     public void Enqueue (int aElement)
     {

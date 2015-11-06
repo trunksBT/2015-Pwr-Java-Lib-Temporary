@@ -5,17 +5,12 @@ public class QueueNatural
     final int BASE = 10;
     int _val;
 
-//    public QueueNatural(QueueNatural aVal)
-//    {
-//        _val = aVal.dequeueAll();
-//    }//TODO
-    
     public QueueNatural(int aVal)
     {
         _val = aVal;
     }
 
-    public int Dequeue()
+    public int dequeue()
     {
         int _queueCopy = _val;
         int retVal = _queueCopy %= BASE;
@@ -25,11 +20,7 @@ public class QueueNatural
         return retVal;
     }
 
-//    private dequeueAll(){
-//    	
-//    }//TODO
-    
-    public void Enqueue (int aElement)
+    public void enqueue (int aElement)
     {
         _val*=BASE;
         _val+=aElement;    

@@ -12,19 +12,19 @@ public class SetNatural
     	//TODO filterQueue With Set Methods
     }
     
-//    private void filterRepetitions() {
-//    	QueueNatural buffCopy = 
-//    }//TODO
+    private void filterRepetitions() {
+    	QueueNatural buffCopy = 
+    }
 
-//    public boolean Remove(int aElement)
-//    {
-//        int _SetCopy = _val;
-//        int retVal = _SetCopy %= BASE;
-//        _val -= retVal;
-//        _val /= BASE;
-//        
-//        return retVal;
-//    }//TODO
+    public boolean Remove(int aElement)
+    {
+        int _SetCopy = _val;
+        int retVal = _SetCopy %= BASE;
+        _val -= retVal;
+        _val /= BASE;
+        
+        return retVal;
+    }
 
     public void Add (int aElement)
     {

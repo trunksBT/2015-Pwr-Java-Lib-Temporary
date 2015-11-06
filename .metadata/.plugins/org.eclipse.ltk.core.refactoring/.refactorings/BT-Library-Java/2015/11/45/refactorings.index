@@ -19,3 +19,9 @@
 1446848459523	Rename type 'AllTests'
 1446848470815	Copy compilation unit
 1446848477768	Rename type 'AllTestsCollections'
+1446848921576	Move compilation unit
+1446848933164	Move compilation unit
+1446848975057	Delete element
+1446848994226	Copy compilation unit
+1446849856882	Rename method 'dequeue'
+1446849870633	Rename method 'enqueue'
