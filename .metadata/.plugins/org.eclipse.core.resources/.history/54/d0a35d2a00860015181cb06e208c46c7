@@ -33,12 +33,12 @@ public class StackNatural
     
     public void PushAll(int aElement)
     {
-    	StackNatural _buffStack = new StackNatural(aElement);
+    	QueueNatural _buffQueue = new QueueNatural(aElement);
     	int buffDequeued;
     	
-    	while ( !_buffStack.IsEmpty()) {
+    	while ( !_buffQueue.IsEmpty()) {
         	
-        	buffDequeued = _buffStack.Pop();
+        	buffDequeued = _buffQueue.Dequeue();
         	Push(buffDequeued);
 		} 
     }
@@ -55,6 +55,6 @@ public class StackNatural
     
     public String toString()
     {
-        return "[Q:"+_val+","+BASE+"]";
+        return "Q:"+_val;
     }  
 }

@@ -55,6 +55,6 @@ public class StackNatural
     
     public String toString()
     {
-        return "[Q:"+_val+","+BASE+"]";
+        return "Q:"+_val;
     }  
 }

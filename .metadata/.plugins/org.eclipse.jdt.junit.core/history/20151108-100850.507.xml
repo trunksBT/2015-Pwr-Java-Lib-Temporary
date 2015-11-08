@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestStackNatural" project="BT-Library-Java" tests="9" started="9" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Collections.TestStackNatural" time="0.001">
+    <testcase name="testEqualsQueuesTheSameFalse" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.001"/>
+    <testcase name="testEqualsQueuesTheSameTrue" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.0"/>
+    <testcase name="testIsEmptyFalse" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.0"/>
+    <testcase name="testIsEmptyTrue" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.0"/>
+    <testcase name="testPopFalse" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.0"/>
+    <testcase name="testPopTrue" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.0"/>
+    <testcase name="testPushAllTrue" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.0"/>
+    <testcase name="testPushFalse" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.0"/>
+    <testcase name="testPushTrue" classname="Bt.Tests.Core.Collections.TestStackNatural" time="0.0"/>
+  </testsuite>
+</testrun>
