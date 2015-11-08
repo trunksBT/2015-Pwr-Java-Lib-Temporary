@@ -124,13 +124,13 @@ public class TestStackNatural extends TestCase {
     {
         //arrange
         StackNatural _queueA = new StackNatural(212);
-        StackNatural _queueB = new StackNatural(212674);
-        int val = 476;
+        StackNatural _queueB = new StackNatural(674);
+        StackNatural _queueC = new StackNatural(212476);
         boolean expectedAfter = true;
         
         //act
-        _queueA.Merge(val);
-        boolean reachedAfter = _queueA.equals(_queueB);
+        _queueA.Merge(_queueB);
+        boolean reachedAfter = _queueA.equals(_queueC);
         
         //assert
         boolean resultAfter = !(expectedAfter ^ reachedAfter);

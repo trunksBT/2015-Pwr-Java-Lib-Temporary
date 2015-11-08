@@ -2,18 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="SetNatural" key="selection"/>
+		<item value="Pop" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Dequeue"/>
+			<item value="Enqueue"/>
 			<item value="QueueNatural"/>
 			<item value="SetNatural"/>
 			<item value="        QueueNatural _queueA = new QueueNatural(21);"/>
 			<item value="Test"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Pop"/>
+			<item value="Push"/>
+			<item value="StackNatural"/>
 			<item value="SetNatural"/>
 			<item value="test"/>
 		</list>

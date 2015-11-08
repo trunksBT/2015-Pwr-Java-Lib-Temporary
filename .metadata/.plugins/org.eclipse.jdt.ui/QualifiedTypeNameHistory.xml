@@ -11,7 +11,10 @@
 <fullyQualifiedTypeName name="Bt.Tests.Collections.TestQueueNatural"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Geometry.AllTestsCoreGeometry"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.SetNatural"/>
-<fullyQualifiedTypeName name="Bt.Core.Collections.QueueNatural"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Collections.TestQueueNatural"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Collections.AllTestsCollections"/>
+<fullyQualifiedTypeName name="Bt.Core.Collections.QueueNatural"/>
+<fullyQualifiedTypeName name="Bt.Core.Collections.Interfaces.IMergable"/>
+<fullyQualifiedTypeName name="Bt.Core.Collections.StackNatural"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
 </qualifiedTypeNameHistroy>

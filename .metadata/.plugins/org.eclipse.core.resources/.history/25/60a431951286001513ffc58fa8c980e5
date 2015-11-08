@@ -1,0 +1,8 @@
+package Bt.Core.Collections.Interfaces;
+
+public interface IBigEndian {
+	public Object getBigEndInt();
+}
+
+
+

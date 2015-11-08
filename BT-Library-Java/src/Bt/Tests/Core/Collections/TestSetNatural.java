@@ -15,12 +15,12 @@ public class TestSetNatural extends TestCase {
   public void testEmptyCTORandCTOR()
   {
       //arrange
-      SetNatural _queueA = new SetNatural();
-      SetNatural _queueB = new SetNatural();
+      SetNatural _setA = new SetNatural();
+      SetNatural _setB = new SetNatural();
       boolean expected = true;
       
       //act
-      boolean reached = _queueA.equals(_queueB);
+      boolean reached = _setA.equals(_setB);
       
       //assert
       boolean result = !(expected ^ reached);
@@ -28,22 +28,54 @@ public class TestSetNatural extends TestCase {
   }
   
   @Test
-  public void testAddUnrepetitedValue()
+  public void testUnrepetiveCTORandUnsequence()
   {
       //arrange
-      SetNatural _setA = new SetNatural(21);
-      SetNatural _setB = new SetNatural(214);
-      int val = 4;
-      boolean expectedLogic = true;
+      SetNatural _setA = new SetNatural(234);
+      SetNatural _setB = new SetNatural(432);
+      boolean expected = true;
       
       //act
-      _setA.Add(val);
-      boolean reachedLogic = _setA.equals(_setB);
+      boolean reached = _setA.equals(_setB);
       
       //assert
-      boolean resultLogic = !(expectedLogic ^ reachedLogic);
-      assertTrue(resultLogic);
+      boolean result = !(expected ^ reached);
+      assertTrue(result);
   }
+  
+  @Test
+  public void testUnrepetiveCTORandUnsequence()
+  {
+      //arrange
+      SetNatural _setA = new SetNatural(234);
+      SetNatural _setB = new SetNatural(234);
+      boolean expected = true;
+      
+      //act
+      boolean reached = _setA.equals(_setB);
+      
+      //assert
+      boolean result = !(expected ^ reached);
+      assertTrue(result);
+  }
+  
+//  @Test
+//  public void testAddUnrepetitedValue()
+//  {
+//      //arrange
+//      SetNatural _setA = new SetNatural(21);
+//      SetNatural _setB = new SetNatural(214);
+//      int val = 4;
+//      boolean expectedLogic = true;
+//      
+//      //act
+//      _setA.Add(val);
+//      boolean reachedLogic = _setA.equals(_setB);
+//      
+//      //assert
+//      boolean resultLogic = !(expectedLogic ^ reachedLogic);
+//      assertTrue(resultLogic);
+//  }
   
 //  @Test
 //  public void testAddUnrepetitedValue()
@@ -67,12 +99,12 @@ public class TestSetNatural extends TestCase {
 //    public void testEqualsSetsTheSameTrue()
 //    {
 //        //arrange
-//        SetNatural _queueA = new SetNatural(21);
-//        SetNatural _queueB = new SetNatural(21);
+//        SetNatural _setA = new SetNatural(21);
+//        SetNatural _setB = new SetNatural(21);
 //        boolean expected = true;
 //        
 //        //act
-//        boolean reached = _queueA.equals(_queueB);
+//        boolean reached = _setA.equals(_setB);
 //        
 //        //assert
 //        boolean result = !(expected ^ reached);
@@ -83,12 +115,12 @@ public class TestSetNatural extends TestCase {
 //    public void testEqualsQueuesTheSameFalse()
 //    {
 //        //arrange
-//        SetNatural _queueA = new SetNatural(21);
-//        SetNatural _queueB = new SetNatural(23);
+//        SetNatural _setA = new SetNatural(21);
+//        SetNatural _setB = new SetNatural(23);
 //        boolean expected = false;
 //        
 //        //act
-//        boolean reached = _queueA.equals(_queueB);
+//        boolean reached = _setA.equals(_setB);
 //        
 //        //assert
 //        boolean result = !(expected ^ reached);
@@ -99,15 +131,15 @@ public class TestSetNatural extends TestCase {
 //    public void testRemoveTrue()
 //    {
 //        //arrange
-//        SetNatural _queueA = new SetNatural(21);
-//        SetNatural _queueB = new SetNatural(2);
+//        SetNatural _setA = new SetNatural(21);
+//        SetNatural _setB = new SetNatural(2);
 //        int element = 2;
 //        boolean expectLogic = true;
 //        boolean expectedAfter = true;
 //        
 //        //act
-//        boolean reachedLogic = _queueA.Remove(element);
-//        boolean reachedAfter = _queueA.equals(_queueB);
+//        boolean reachedLogic = _setA.Remove(element);
+//        boolean reachedAfter = _setA.equals(_setB);
 //        
 //        //assert
 //        boolean resultLogic = !(reachedLogic ^ expectLogic);
@@ -120,15 +152,15 @@ public class TestSetNatural extends TestCase {
 //    public void testRemoveFalse1()
 //    {
 //        //arrange
-//        SetNatural _queueA = new SetNatural(21);
-//        SetNatural _queueB = new SetNatural(21);
+//        SetNatural _setA = new SetNatural(21);
+//        SetNatural _setB = new SetNatural(21);
 //        int element = 1;
 //        boolean expectLogic = true;
 //        boolean expectedAfter = false;
 //        
 //        //act
-//        boolean reachedLogic = _queueA.Remove(element);
-//        boolean reachedAfter = _queueA.equals(_queueB);
+//        boolean reachedLogic = _setA.Remove(element);
+//        boolean reachedAfter = _setA.equals(_setB);
 //        
 //        //assert
 //        boolean resultLogic = !(reachedLogic ^ expectLogic);
@@ -141,15 +173,15 @@ public class TestSetNatural extends TestCase {
 //    public void testRemoveFalse2()
 //    {
 //        //arrange
-//        SetNatural _queueA = new SetNatural(21);
-//        SetNatural _queueB = new SetNatural(21);
+//        SetNatural _setA = new SetNatural(21);
+//        SetNatural _setB = new SetNatural(21);
 //        int element = 3;
 //        boolean expectLogic = false;
 //        boolean expectedAfter = true;
 //        
 //        //act
-//        boolean reachedLogic = _queueA.Remove(element);
-//        boolean reachedAfter = _queueA.equals(_queueB);
+//        boolean reachedLogic = _setA.Remove(element);
+//        boolean reachedAfter = _setA.equals(_setB);
 //        
 //        //assert
 //        boolean resultLogic = !(reachedLogic ^ expectLogic);
@@ -164,15 +196,15 @@ public class TestSetNatural extends TestCase {
 //    public void testAddFalse1()
 //    {
 //        //arrange
-//        SetNatural _queueA = new SetNatural(21);
-//        SetNatural _queueB = new SetNatural(21);
+//        SetNatural _setA = new SetNatural(21);
+//        SetNatural _setB = new SetNatural(21);
 //        int val = 2;
 //        boolean expectedLogic = false;
 //        boolean expectedAfter = true;
 //        
 //        //act
-//        boolean reachedLogic = _queueA.add(val);
-//        boolean reachedAfter = _queueA.equals(_queueB);
+//        boolean reachedLogic = _setA.add(val);
+//        boolean reachedAfter = _setA.equals(_setB);
 //        
 //        //assert
 //        boolean resultLogic = !(expectedLogic ^ reachedLogic);
