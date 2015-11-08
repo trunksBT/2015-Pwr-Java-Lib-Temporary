@@ -42,22 +42,38 @@ public class TestSetNatural extends TestCase {
       boolean result = !(expected ^ reached);
       assertTrue(result);
   }
-//  
-//  @Test
-//  public void testUnrepetiveCTORandUnsequence2()
-//  {
-//      //arrange
-//      SetNatural _setA = new SetNatural(234);
-//      SetNatural _setB = new SetNatural(234);
-//      boolean expected = true;
-//      
-//      //act
-//      boolean reached = _setA.equals(_setB);
-//      
-//      //assert
-//      boolean result = !(expected ^ reached);
-//      assertTrue(result);
-//  }
+  
+  @Test
+  public void testUnrepetiveCTORandUnsequence1()
+  {
+      //arrange
+      SetNatural _setA = new SetNatural(234);
+      SetNatural _setB = new SetNatural(432);
+      boolean expected = true;
+      
+      //act
+      boolean reached = _setA.equals(_setB);
+      
+      //assert
+      boolean result = !(expected ^ reached);
+      assertTrue(result);
+  }
+  
+  @Test
+  public void testUnrepetiveCTORandUnsequence2()
+  {
+      //arrange
+      SetNatural _setA = new SetNatural(234);
+      SetNatural _setB = new SetNatural(423);
+      boolean expected = true;
+      
+      //act
+      boolean reached = _setA.equals(_setB);
+      
+      //assert
+      boolean result = !(expected ^ reached);
+      assertTrue(result);
+  }
   
 //  @Test
 //  public void testAddUnrepetitedValue()

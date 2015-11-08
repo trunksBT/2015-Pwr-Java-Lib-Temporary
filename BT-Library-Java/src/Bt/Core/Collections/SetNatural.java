@@ -58,7 +58,24 @@ public class SetNatural
 //    }
     
     public boolean equals(SetNatural aVal){
-        return _val == aVal._val;
+    	StackNatural _copy = new StackNatural(aVal._stack);
+    	boolean retVal = true;
+    	    	
+    	while(!_copy.IsEmpty())
+    	{
+    		int buffPoped = _copy.Pop();
+    		int properElement = returnIfUnique(buffPoped, _copy);
+    		
+    		if(properElement==buffPoped)
+    			retVal&=true;
+    	}
+    	
+    	return retVal;
+
+    }
+    
+    public boolean IsEmpty(){
+    	return _val==0;
     }
     
     public String toString(){
@@ -70,27 +87,26 @@ public class SetNatural
     	
     	while(!aInStack.IsEmpty())
     	{
-    		int properElement = popProperElement(aInStack);
+    		int buffPoped = aInStack.Pop();
+    		int properElement = returnIfUnique(buffPoped, aInStack);
 			_buffRet.Push(properElement);
     	}
     	
     	return _buffRet.getLittleEndianed();
     }
 
-	private int popProperElement(StackNatural aInStack) {
-		boolean flagReply = false;
-		int buffPoped;
+	private int returnIfUnique(int aElement, StackNatural aInStack) {
+		boolean flagUnique = false;
 
-		buffPoped = aInStack.Pop();
 		StackNatural _buffArg = new StackNatural(aInStack);
 		
 		do
 		{
-			if(buffPoped==_buffArg.Pop())
-				flagReply = true;	
-		}while(_buffArg.IsEmpty()^flagReply!=true);
+			if(aElement==_buffArg.Pop())
+				flagUnique = true;	
+		}while(_buffArg.IsEmpty()^flagUnique!=true);
 		
-		if(!flagReply) return buffPoped;
+		if(!flagUnique) return aElement;
 		else return 0;
 	}
 }
