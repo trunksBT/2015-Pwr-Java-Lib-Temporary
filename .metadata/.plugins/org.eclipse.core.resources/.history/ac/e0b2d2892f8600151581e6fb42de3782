@@ -109,7 +109,7 @@ public class SetNatural
 		{
 			if(aElement==_buffArg.Pop())
 				flagUnique = true;	
-		}while(!_buffArg.IsEmpty());
+		}while(_buffArg.IsEmpty()^flagUnique!=true);
 		
 		if(!flagUnique) return aElement;
 		else return 0;

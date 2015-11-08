@@ -61,13 +61,13 @@ public class SetNatural
 //    }
     
     public boolean equals(SetNatural aVal){
-    	StackNatural inStack = aVal._stack;
+    	StackNatural _copy = aVal._stack;
     	boolean retVal = true;
     	    	
     	while(!_stack.IsEmpty())
     	{
     		int buffPoped = _stack.Pop();
-    		int properElement = idxIfUnique(buffPoped, inStack);
+    		int properElement = returnIfUnique(buffPoped, _copy);
     		
     		if(properElement==buffPoped)
     			retVal&=true;
@@ -93,14 +93,14 @@ public class SetNatural
     	while(!aInStack.IsEmpty())
     	{
     		int buffPoped = aInStack.Pop();
-    		int properElement = idxIfUnique(buffPoped, aInStack);
+    		int properElement = returnIfUnique(buffPoped, aInStack);
 			_buffRet.Push(properElement);
     	}
     	
     	return _buffRet.getLittleEndianed();
     }
 
-	private int idxIfUnique(int aElement, StackNatural aInStack) {
+	private int returnIfUnique(int aElement, StackNatural aInStack) {
 		boolean flagUnique = false;
 
 		StackNatural _buffArg = new StackNatural(aInStack);
@@ -109,7 +109,7 @@ public class SetNatural
 		{
 			if(aElement==_buffArg.Pop())
 				flagUnique = true;	
-		}while(!_buffArg.IsEmpty());
+		}while(_buffArg.IsEmpty()^flagUnique!=true);
 		
 		if(!flagUnique) return aElement;
 		else return 0;

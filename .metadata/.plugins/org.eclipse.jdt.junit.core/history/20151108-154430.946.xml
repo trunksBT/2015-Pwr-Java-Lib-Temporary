@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestSetNatural" project="BT-Library-Java" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Collections.TestSetNatural" time="0.827">
+    <testcase name="testEmptyCTORandCTOR" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testUnrepetiveCTORandSequence" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.826"/>
+    <testcase name="testUnrepetiveCTORandUnsequence1" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testUnrepetiveCTORandUnsequence2" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.001"/>
+  </testsuite>
+</testrun>
