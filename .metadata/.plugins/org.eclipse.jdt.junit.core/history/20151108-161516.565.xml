@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestSetNatural" project="BT-Library-Java" tests="9" started="9" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Collections.TestSetNatural" time="0.0">
+    <testcase name="testAddRepetitedValue" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testAddUnrepetitedValue1" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testAddUnrepetitedValue2" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testEmptyCTORandCTOR" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testRemoveMultiOccurenceTrue1" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testRemoveOnesOccurenceTrue1" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testUnrepetiveCTORandSequence" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testUnrepetiveCTORandUnsequence1" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+    <testcase name="testUnrepetiveCTORandUnsequence2" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+  </testsuite>
+</testrun>

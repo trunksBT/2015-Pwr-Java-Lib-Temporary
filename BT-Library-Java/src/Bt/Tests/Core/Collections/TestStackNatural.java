@@ -53,7 +53,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedAfter = true;
         
         //act
-        int reachedPopd = _queueA.Pop();
+        int reachedPopd = _queueA.pop();
         boolean reachedAfter = _queueA.equals(_queueB);
         
         //assert
@@ -73,7 +73,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedAfter = true;
         
         //act
-        int reachedPopd = _queueA.Pop();
+        int reachedPopd = _queueA.pop();
         boolean reachedAfter = _queueA.equals(_queueB);
         
         //assert
@@ -93,7 +93,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedAfter = true;
         
         //act
-        _queueA.Push(val);
+        _queueA.push(val);
         boolean reachedAfter = _queueA.equals(_queueB);
         
         //assert
@@ -111,7 +111,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedAfter = false;
         
         //act
-        _queueA.Push(val);
+        _queueA.push(val);
         boolean reachedAfter = _queueA.equals(_queueB);
         
         //assert
@@ -129,7 +129,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedAfter = true;
         
         //act
-        _queueA.Merge(_queueB);
+        _queueA.merge(_queueB);
         boolean reachedAfter = _queueA.equals(_queueC);
         
         //assert
@@ -145,7 +145,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedResult = true;
         
         //act
-        boolean reachedResult = _queue.IsEmpty();
+        boolean reachedResult = _queue.isEmpty();
         
         //assert
         boolean resultAfter = !(expectedResult ^ reachedResult);
@@ -160,7 +160,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedResult = false;
         
         //act
-        boolean reachedResult = _queue.IsEmpty();
+        boolean reachedResult = _queue.isEmpty();
         
         //assert
         boolean resultAfter = !(expectedResult ^ reachedResult);

@@ -20,7 +20,7 @@ public class StackNatural implements IMergable,ILittleEndian
     	_val = aStack._val;
     }
 
-    public int Pop(){
+    public int pop(){
     	int retVal = peekFirst();
         _val -= retVal;
         _val /= BASE;
@@ -28,14 +28,14 @@ public class StackNatural implements IMergable,ILittleEndian
         return retVal;
     }
     
-    public void Push (int aElement){
+    public void push (int aElement){
     	if(aElement!=0) {
     		_val*=BASE;
     		_val+=aElement;    
     	}
     }
         
-    public boolean IsEmpty(){
+    public boolean isEmpty(){
     	return _val==0;
     }
 	
@@ -54,13 +54,13 @@ public class StackNatural implements IMergable,ILittleEndian
 	}
 
 	@Override
-	public void Merge(Object aSecond) {
+	public void merge(Object aSecond) {
     	StackNatural _buffStack = (StackNatural)aSecond;
     	int buffDequeued;
     	
-    	while ( !_buffStack.IsEmpty()) {	        	
-        	buffDequeued = _buffStack.Pop();
-        	Push(buffDequeued);
+    	while ( !_buffStack.isEmpty()) {	        	
+        	buffDequeued = _buffStack.pop();
+        	push(buffDequeued);
 		} 
 	}
 	
