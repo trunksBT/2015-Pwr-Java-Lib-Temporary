@@ -1,0 +1,9 @@
+Bt.Core.Collections
+Bt.Core.Collections.Interfaces
+Bt.Core.Geometry.Complex
+Bt.Core.Geometry.Elementaries
+Bt.Tests
+Bt.Tests.Core.Collections
+Bt.Tests.Core.Geometry
+Bt.Tests.Core.Geometry.Complex
+Bt.Tests.Core.Geometry.Elementaries
