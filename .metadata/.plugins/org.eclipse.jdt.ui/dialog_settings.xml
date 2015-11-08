@@ -60,25 +60,31 @@
 		<item value="400" key="height"/>
 	</section>
 	<section name="javadoc">
-		<item value="protected" key="access"/>
+		<item value="private" key="access"/>
 		<item value="false" key="noindex"/>
 		<item value="D:\Clouds\OneDrive\GitHub\2015-Pwr-Java-Lib\BT-Library-DocumentationVersion\javadoc.xml" key="antpath"/>
-		<item value="false" key="nodeprecatedlist"/>
+		<item value="true" key="nodeprecatedlist"/>
 		<item value="true" key="use"/>
-		<item value="true" key="author"/>
-		<item value="false" key="nodeprecated"/>
+		<item value="false" key="author"/>
+		<item value="true" key="nodeprecated"/>
 		<item value="false" key="nonavbar"/>
 		<item value="" key="docletpath"/>
-		<item value=";D:\Clouds\OneDrive\GitHub\2015-Pwr-Java-Lib\BT_Java_101.doc" key="javadoc_command_history"/>
+		<item value="C:\Program Files\Java\jdk1.8.0_66\bin\javadoc.exe;D:\Clouds\OneDrive\GitHub\2015-Pwr-Java-Lib\BT_Java_101.doc" key="javadoc_command_history"/>
 		<item value="1.8" key="source"/>
-		<item value="true" key="version"/>
+		<item value="false" key="version"/>
+		<item value="BT_Java_Lib_101" key="doctitle"/>
 		<item value="" key="docletname"/>
 		<item value="true" key="splitindex"/>
 		<item value="true" key="fromStandard"/>
 		<item value="false" key="notree"/>
-		<item value="D:\Clouds\OneDrive\GitHub\2015-Pwr-Java-Lib\BT-Library-DocumentationVersion\doc" key="destdir"/>
+		<item value="D:\Clouds\OneDrive\GitHub\2015-Pwr-Java-Lib\doc" key="destdir"/>
 		<item value="false" key="openinbrowser"/>
 		<section name="projects">
+			<section name="BT-Library-DocumentationVersion">
+				<item value="D:\Clouds\OneDrive\GitHub\2015-Pwr-Java-Lib\BT-Library-DocumentationVersion\javadoc.xml" key="antpath"/>
+				<item value="D:\Clouds\OneDrive\GitHub\2015-Pwr-Java-Lib\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
 		</section>
 	</section>
 	<section name="JavaBuildConfigurationBlock">
