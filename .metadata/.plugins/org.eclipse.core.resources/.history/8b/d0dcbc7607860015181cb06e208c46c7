@@ -5,15 +5,15 @@ public class StackNatural implements IMergable
 {
     final int BASE = 10;
     int _val;
-
-//    public StackNatural(QueueNatural aVal)
+//
+//    public QueueNatural(QueueNatural aVal)
 //    {
-//        _val = aVal.Merge();
-//    }
+//        _val = aVal.dequeueAll();
+//    }//TODO
 //    
-//    public StackNatural(int aVal){
-//        _val = aVal;
-//    }
+    public StackNatural(int aVal){
+        _val = aVal;
+    }
 
     public int Pop(){
         int _queueCopy = _val;
@@ -33,6 +33,17 @@ public class StackNatural implements IMergable
     	return _val==0;
     }
     
+    
+    public boolean equals(StackNatural aVal)
+    {
+        return _val == aVal._val;
+    }
+    
+    public String toString()
+    {
+        return "[Q:"+_val+","+BASE+"]";
+    }
+
 	@Override
 	public void Merge(int aSecond) {
 	    	StackNatural _buffStack = new StackNatural(aSecond);
@@ -44,14 +55,4 @@ public class StackNatural implements IMergable
 	        	Push(buffDequeued);
 			} 
 	} 
-    
-    public boolean equals(StackNatural aVal)
-    {
-        return _val == aVal._val;
-    }
-    
-    public String toString()
-    {
-        return "[Q:"+_val+","+BASE+"]";
-    }
 }

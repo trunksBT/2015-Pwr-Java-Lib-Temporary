@@ -129,7 +129,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedAfter = true;
         
         //act
-        _queueA.Merge(val);
+        _queueA.MergeWith(val);
         boolean reachedAfter = _queueA.equals(_queueB);
         
         //assert

@@ -120,7 +120,7 @@ public class TestStackNatural extends TestCase {
     }
     
     @Test
-    public void testMergeTrue()
+    public void testPushAllTrue()
     {
         //arrange
         StackNatural _queueA = new StackNatural(212);
@@ -129,7 +129,7 @@ public class TestStackNatural extends TestCase {
         boolean expectedAfter = true;
         
         //act
-        _queueA.Merge(val);
+        _queueA.PushAll(val);
         boolean reachedAfter = _queueA.equals(_queueB);
         
         //assert

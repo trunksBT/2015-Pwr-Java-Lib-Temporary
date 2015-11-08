@@ -6,14 +6,14 @@ public class StackNatural implements IMergable
     final int BASE = 10;
     int _val;
 
-//    public StackNatural(QueueNatural aVal)
-//    {
-//        _val = aVal.Merge();
-//    }
-//    
-//    public StackNatural(int aVal){
-//        _val = aVal;
-//    }
+    public StackNatural(QueueNatural aVal)
+    {
+        _val = aVal.dequeueAll();
+    }
+    
+    public StackNatural(int aVal){
+        _val = aVal;
+    }
 
     public int Pop(){
         int _queueCopy = _val;
