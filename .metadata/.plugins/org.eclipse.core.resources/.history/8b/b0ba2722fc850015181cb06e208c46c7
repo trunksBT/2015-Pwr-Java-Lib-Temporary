@@ -37,12 +37,12 @@ public class SetNatural
 
     public void Add (int aElement)
     {
-    	
     	int buffDequeued;
     	
     	boolean breakFlag = false;
+    	boolean buffIsEmpty = _queue.IsEmpty();
     	
-    	while ( !_queue.IsEmpty() ^ breakFlag==true ) {
+    	while ( buffIsEmpty || breakFlag!=false ) {
         	
         	buffDequeued = _queue.Dequeue();
         	
@@ -52,14 +52,9 @@ public class SetNatural
         			_val*=10;
         			_val+=aElement;
         		}
-        	else
-        	{
-//    			_val*=10;
-//    			_val+=buffDequeued;
-        	}
-		} 
-    	
-    	_queue = new QueueNatural(_val);
+        	
+        	buffIsEmpty = _queue.IsEmpty();
+		}  		
     }
     
     public boolean equals(SetNatural aVal)

@@ -35,17 +35,17 @@ public class QueueNatural
         _val+=aElement;    
     }
     
-//    public void EnqueueAll(int aElement)
-//    {
-//    	QueueNatural _buffQueue = new QueueNatural(aElement);
-//    	int buffDequeued;
-//    	
-//    	while ( !_buffQueue.IsEmpty()) {
-//        	
-//        	buffDequeued = _buffQueue.Dequeue();
-//        	Enqueue(buffDequeued);
-//		} 
-//    }
+    public void EnqueueAll(int aElement)
+    {
+    	QueueNatural _buffQueue = new QueueNatural(aElement);
+    	int buffDequeued;
+    	
+    	while ( !_buffQueue.IsEmpty()) {
+        	
+        	buffDequeued = _buffQueue.Dequeue();
+        	Enqueue(buffDequeued);
+		} 
+    }
     
     public boolean IsEmpty(){
     	return _val==0;

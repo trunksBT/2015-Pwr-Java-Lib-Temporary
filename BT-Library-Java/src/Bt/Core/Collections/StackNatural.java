@@ -1,21 +1,21 @@
 package Bt.Core.Collections;
 
-public class QueueNatural
+public class StackNatural
 {
     final int BASE = 10;
     int _val;
-
+//
 //    public QueueNatural(QueueNatural aVal)
 //    {
 //        _val = aVal.dequeueAll();
 //    }//TODO
-    
-    public QueueNatural(int aVal)
+//    
+    public StackNatural(int aVal)
     {
         _val = aVal;
     }
 
-    public int Dequeue()
+    public int Pop()
     {
         int _queueCopy = _val;
         int retVal = _queueCopy %= BASE;
@@ -24,35 +24,31 @@ public class QueueNatural
         
         return retVal;
     }
-
-//    private dequeueAll(){
-//    	
-//    }//TODO
     
-    public void Enqueue (int aElement)
+    public void Push (int aElement)
     {
         _val*=BASE;
         _val+=aElement;    
     }
     
-//    public void EnqueueAll(int aElement)
-//    {
-//    	QueueNatural _buffQueue = new QueueNatural(aElement);
-//    	int buffDequeued;
-//    	
-//    	while ( !_buffQueue.IsEmpty()) {
-//        	
-//        	buffDequeued = _buffQueue.Dequeue();
-//        	Enqueue(buffDequeued);
-//		} 
-//    }
+    public void PushAll(int aElement)
+    {
+    	QueueNatural _buffQueue = new QueueNatural(aElement);
+    	int buffDequeued;
+    	
+    	while ( !_buffQueue.IsEmpty()) {
+        	
+        	buffDequeued = _buffQueue.Dequeue();
+        	Push(buffDequeued);
+		} 
+    }
     
     public boolean IsEmpty(){
     	return _val==0;
     }
     
     
-    public boolean equals(QueueNatural aVal)
+    public boolean equals(StackNatural aVal)
     {
         return _val == aVal._val;
     }

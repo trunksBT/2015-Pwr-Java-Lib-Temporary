@@ -1,6 +1,6 @@
 package Bt.Core.Collections;
 
-public class QueueNatural
+public class StackNatural
 {
     final int BASE = 10;
     int _val;
@@ -10,7 +10,7 @@ public class QueueNatural
 //        _val = aVal.dequeueAll();
 //    }//TODO
     
-    public QueueNatural(int aVal)
+    public StackNatural(int aVal)
     {
         _val = aVal;
     }
@@ -52,7 +52,7 @@ public class QueueNatural
     }
     
     
-    public boolean equals(QueueNatural aVal)
+    public boolean equals(StackNatural aVal)
     {
         return _val == aVal._val;
     }

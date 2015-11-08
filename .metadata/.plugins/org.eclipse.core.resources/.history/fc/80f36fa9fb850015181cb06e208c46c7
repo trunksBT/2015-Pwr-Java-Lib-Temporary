@@ -26,42 +26,6 @@ public class TestSetNatural extends TestCase {
       boolean result = !(expected ^ reached);
       assertTrue(result);
   }
-  
-  @Test
-  public void testAddUnrepetitedValue()
-  {
-      //arrange
-      SetNatural _setA = new SetNatural(21);
-      SetNatural _setB = new SetNatural(214);
-      int val = 4;
-      boolean expectedLogic = true;
-      
-      //act
-      _setA.Add(val);
-      boolean reachedLogic = _setA.equals(_setB);
-      
-      //assert
-      boolean resultLogic = !(expectedLogic ^ reachedLogic);
-      assertTrue(resultLogic);
-  }
-  
-//  @Test
-//  public void testAddUnrepetitedValue()
-//  {
-//      //arrange
-//      SetNatural _setA = new SetNatural(21);
-//      SetNatural _setB = new SetNatural(214);
-//      int val = 4;
-//      boolean expectedLogic = true;
-//      
-//      //act
-//      _setA.Add(val);
-//      boolean reachedLogic = _setA.equals(_setB);
-//      
-//      //assert
-//      boolean resultLogic = !(expectedLogic ^ reachedLogic);
-//      assertTrue(resultLogic);
-//  }
 	
 //    @Test
 //    public void testEqualsSetsTheSameTrue()
@@ -158,7 +122,26 @@ public class TestSetNatural extends TestCase {
 //        assertTrue(resultAfter);
 //    }//TODO
     
-
+    @Test
+    public void testAddUnrepetitedValue()
+    {
+        //arrange
+        SetNatural _queueA = new SetNatural(21);
+        SetNatural _queueB = new SetNatural(214);
+        int val = 4;
+        boolean expectedLogic = true;
+        boolean expectedAfter = true;
+        
+        //act
+        boolean reachedLogic = _queueA.add(val);
+        boolean reachedAfter = _queueA.equals(_queueB);
+        
+        //assert
+        boolean resultLogic = !(expectedLogic ^ reachedLogic);
+        boolean resultAfter = !(expectedAfter ^ reachedAfter);
+        assertTrue(resultAfter);
+        assertTrue(resultLogic);
+    }//TODO
     
 //    @Test
 //    public void testAddFalse1()
