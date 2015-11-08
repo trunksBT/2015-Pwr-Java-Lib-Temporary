@@ -87,7 +87,7 @@ public class SetNatural
     		{
     			if(buffPoped==_buffArg.Pop())
     				flagReply = true;	
-    		}while(_buffArg.IsEmpty()^flagReply!=true);
+    		}while(_buffArg.IsEmpty()^flagReply!=true)
     		
     		if(!flagReply)
     			_buffRet.Push(buffPoped);

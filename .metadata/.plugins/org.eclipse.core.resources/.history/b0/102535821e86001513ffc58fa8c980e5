@@ -70,27 +70,21 @@ public class SetNatural
         return "S:"+_val;
     }
     
-    private int properElements(StackNatural aInStack) {
-    	StackNatural _repoArg = new StackNatural(aInStack);
+    private int properElements(StackNatural aStack) {
+    	StackNatural _repoArg = new StackNatural(aStack);
     	StackNatural _buffRet = new StackNatural();
-    	boolean flagReply = false;
     	int buffPoped;
     	
-    	while(!_repoArg.IsEmpty())
+    	while(!aStack.IsEmpty())
     	{
-    		flagReply = false;
-    				
-    		buffPoped = _repoArg.Pop();
+    		buffPoped = aStack.Pop();
     		StackNatural _buffArg = new StackNatural(_repoArg);
     		
-    		do
+    		while(!_buffArg.IsEmpty())
     		{
-    			if(buffPoped==_buffArg.Pop())
-    				flagReply = true;	
-    		}while(_buffArg.IsEmpty()^flagReply!=true);
-    		
-    		if(!flagReply)
-    			_buffRet.Push(buffPoped);
+    			if(buffPoped!=_buffArg.Pop())
+    				_buffRet.Push(buffPoped);	
+    		}
     	}
     	
     	return _buffRet.getLittleEndianed();

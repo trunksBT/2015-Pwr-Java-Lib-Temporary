@@ -42,10 +42,6 @@ public class StackNatural implements IMergable,ILittleEndian
         return _val == aVal._val;
     }
     
-    public int getLittleEndianed() {
-    	return _val;
-    }
-    
     @Override
     public String toString()
     {

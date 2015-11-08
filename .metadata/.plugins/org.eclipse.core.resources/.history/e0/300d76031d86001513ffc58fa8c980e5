@@ -15,10 +15,6 @@ public class StackNatural implements IMergable,ILittleEndian
     public StackNatural(int aVal){
     	_val = aVal;
     }
-    
-    public StackNatural(StackNatural aStack) {
-    	_val = aStack._val;
-    }
 
     public int Pop(){
     	int retVal = peekFirst();
@@ -40,10 +36,6 @@ public class StackNatural implements IMergable,ILittleEndian
     public boolean equals(StackNatural aVal)
     {
         return _val == aVal._val;
-    }
-    
-    public int getLittleEndianed() {
-    	return _val;
     }
     
     @Override

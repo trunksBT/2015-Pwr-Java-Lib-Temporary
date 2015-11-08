@@ -5,19 +5,10 @@ import Bt.Core.Collections.Interfaces.IMergable;
 public class StackNatural implements IMergable,ILittleEndian
 {
     final int BASE = 10;
-    final int DEFAULT_VALUE = 0;
     int _val;
 
-    public StackNatural(){
-    	_val = DEFAULT_VALUE;
-    }
-    
     public StackNatural(int aVal){
     	_val = aVal;
-    }
-    
-    public StackNatural(StackNatural aStack) {
-    	_val = aStack._val;
     }
 
     public int Pop(){
@@ -40,10 +31,6 @@ public class StackNatural implements IMergable,ILittleEndian
     public boolean equals(StackNatural aVal)
     {
         return _val == aVal._val;
-    }
-    
-    public int getLittleEndianed() {
-    	return _val;
     }
     
     @Override

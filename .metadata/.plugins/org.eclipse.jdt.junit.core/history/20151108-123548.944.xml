@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestSetNatural" project="BT-Library-Java" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Collections.TestSetNatural" time="0.001">
+    <testcase name="testAddUnrepetitedValue" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.001"/>
+    <testcase name="testEmptyCTORandCTOR" classname="Bt.Tests.Core.Collections.TestSetNatural" time="0.0"/>
+  </testsuite>
+</testrun>

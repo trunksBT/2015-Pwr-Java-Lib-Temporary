@@ -83,11 +83,11 @@ public class SetNatural
     		buffPoped = _repoArg.Pop();
     		StackNatural _buffArg = new StackNatural(_repoArg);
     		
-    		do
+    		while(_buffArg.IsEmpty())
     		{
     			if(buffPoped==_buffArg.Pop())
     				flagReply = true;	
-    		}while(_buffArg.IsEmpty()^flagReply!=true);
+    		}
     		
     		if(!flagReply)
     			_buffRet.Push(buffPoped);

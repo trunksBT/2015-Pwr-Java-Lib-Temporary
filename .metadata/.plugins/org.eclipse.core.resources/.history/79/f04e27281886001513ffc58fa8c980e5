@@ -28,7 +28,7 @@ public class TestSetNatural extends TestCase {
   }
   
   @Test
-  public void testUnrepetiveCTORandUnsequence1()
+  public void testUnrepetiveCTORandUnsequence()
   {
       //arrange
       SetNatural _setA = new SetNatural(234);
@@ -44,7 +44,7 @@ public class TestSetNatural extends TestCase {
   }
   
   @Test
-  public void testUnrepetiveCTORandUnsequence2()
+  public void testUnrepetiveCTORandUnsequence()
   {
       //arrange
       SetNatural _setA = new SetNatural(234);
