@@ -62,7 +62,7 @@ public class SetNatural
     }
     
     public String toString(){
-        return "[S:"+_val+"]";
+        return "[S:"+_val];
     }
     
     private int properElementsBigEndianed(StackNatural aInStack) {

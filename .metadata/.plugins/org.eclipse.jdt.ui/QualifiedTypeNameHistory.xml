@@ -15,6 +15,9 @@
 <fullyQualifiedTypeName name="Bt.Tests.Core.Collections.AllTestsCollections"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.QueueNatural"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.Interfaces.IMergable"/>
-<fullyQualifiedTypeName name="Bt.Core.Collections.StackNatural"/>
+<fullyQualifiedTypeName name="Bt.Core.Collections.Interfaces.BigEndian"/>
+<fullyQualifiedTypeName name="Bt.Core.Collections.Interfaces.ILittleEndian"/>
+<fullyQualifiedTypeName name="Bt.Core.Collections.Interfaces.IEndian"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="Bt.Core.Collections.StackNatural"/>
 </qualifiedTypeNameHistroy>

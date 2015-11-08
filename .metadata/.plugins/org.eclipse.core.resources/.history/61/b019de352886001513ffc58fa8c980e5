@@ -48,6 +48,12 @@ public class StackNatural implements IMergable,ILittleEndian
     	return _val;
     }
     
+    @Override
+    public String toString()
+    {
+        return "[Q:"+_val+","+BASE+"]";
+    }
+
 	@Override
 	public int peekFirst() {
         return _val % BASE;
@@ -63,10 +69,4 @@ public class StackNatural implements IMergable,ILittleEndian
         	Push(buffDequeued);
 		} 
 	}
-	
-    @Override
-    public String toString()
-    {
-        return "[Q:"+_val+"]";
-    }
 }

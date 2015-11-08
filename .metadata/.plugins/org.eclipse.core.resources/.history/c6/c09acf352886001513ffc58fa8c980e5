@@ -20,6 +20,11 @@ public class SetNatural
     	_stack = new StackNatural(_val);
     }
     
+    
+//    private void filterRepetitions() {
+//    	QueueNatural buffCopy = 
+//    }//TODO
+
 //    public boolean Remove(int aElement)
 //    {
 //        int _SetCopy = _val;
@@ -62,7 +67,7 @@ public class SetNatural
     }
     
     public String toString(){
-        return "[S:"+_val+"]";
+        return "S:"+_val;
     }
     
     private int properElementsBigEndianed(StackNatural aInStack) {
