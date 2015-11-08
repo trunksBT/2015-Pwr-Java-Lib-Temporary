@@ -72,31 +72,26 @@ public class SetNatural
     
     private int properElements(StackNatural aInStack) {
     	StackNatural _buffRet = new StackNatural();
+    	boolean flagReply = false;
+    	int buffPoped;
     	
     	while(!aInStack.IsEmpty())
     	{
-    		int properElement = popProperElement(aInStack,_buffRet);
-			_buffRet.Push(properElement);
+    		flagReply = false;
+    				
+    		buffPoped = aInStack.Pop();
+    		StackNatural _buffArg = new StackNatural(aInStack);
+    		
+    		do
+    		{
+    			if(buffPoped==_buffArg.Pop())
+    				flagReply = true;	
+    		}while(_buffArg.IsEmpty()^flagReply!=true);
+    		
+    		if(!flagReply)
+    			_buffRet.Push(buffPoped);
     	}
     	
     	return _buffRet.getLittleEndianed();
     }
-
-	private int popProperElement(StackNatural aInStack, StackNatural _buffRet) {
-		boolean flagReply = false;
-		int buffPoped;
-		flagReply = false;
-				
-		buffPoped = aInStack.Pop();
-		StackNatural _buffArg = new StackNatural(aInStack);
-		
-		do
-		{
-			if(buffPoped==_buffArg.Pop())
-				flagReply = true;	
-		}while(_buffArg.IsEmpty()^flagReply!=true);
-		
-		if(!flagReply) return buffPoped;
-		else return 0;
-	}
 }
