@@ -29,10 +29,8 @@ public class StackNatural implements IMergable,ILittleEndian
     }
     
     public void Push (int aElement){
-    	if(aElement!=0) {
-    		_val*=BASE;
-    		_val+=aElement;    
-    	}
+        _val*=BASE;
+        _val+=aElement;    
     }
         
     public boolean IsEmpty(){

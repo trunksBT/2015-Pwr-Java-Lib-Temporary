@@ -16,7 +16,7 @@ public class SetNatural
     public SetNatural(int aStack)
     {
     	_val = DEFAULT_VALUE;
-    	_val = properElementsBigEndianed(new StackNatural(aStack));
+    	_val = properElements(new StackNatural(aStack));
     	_stack = new StackNatural(_val);
     }
     
@@ -70,22 +70,23 @@ public class SetNatural
         return "S:"+_val;
     }
     
-    private int properElementsBigEndianed(StackNatural aInStack) {
+    private int properElements(StackNatural aInStack) {
     	StackNatural _buffRet = new StackNatural();
     	
     	while(!aInStack.IsEmpty())
     	{
-    		int properElement = popProperElement(aInStack);
+    		int properElement = popProperElement(aInStack,_buffRet);
 			_buffRet.Push(properElement);
     	}
     	
     	return _buffRet.getLittleEndianed();
     }
 
-	private int popProperElement(StackNatural aInStack) {
+	private int popProperElement(StackNatural aInStack, StackNatural _buffRet) {
 		boolean flagReply = false;
 		int buffPoped;
-
+		flagReply = false;
+				
 		buffPoped = aInStack.Pop();
 		StackNatural _buffArg = new StackNatural(aInStack);
 		
