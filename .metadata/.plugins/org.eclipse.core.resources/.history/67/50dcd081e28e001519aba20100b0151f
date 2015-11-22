@@ -1,0 +1,12 @@
+package Bt.Core.Collections;
+
+public class Public {
+
+	public static void main(String[] args) {
+		Tab _temp = new Tab();
+		_temp.wczytaj();
+		
+		System.out.println("Koniec");
+	}
+
+}

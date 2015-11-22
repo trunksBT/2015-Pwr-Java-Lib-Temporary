@@ -1,0 +1,28 @@
+package Bt.Core.Collections;
+import java.util.*;
+
+public class Tab {
+	
+	int []tab;
+	int n;
+		
+	void wczytaj()
+	{
+		Scanner scanner = new Scanner(System.in);
+		n = 0;
+		
+		while(scanner.hasNextInt())
+		{
+			tab[n++]=scanner.nextInt();
+		}
+	}
+	
+	void usunPowt()
+	{
+		
+	}
+	
+	void druk()
+	{
+	}
+}

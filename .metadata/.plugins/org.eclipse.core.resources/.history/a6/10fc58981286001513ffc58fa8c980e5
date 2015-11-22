@@ -1,5 +1,0 @@
-package Bt.Core.Collections.Interfaces;
-
-public interface LittleEndian {
-	public int getLittleEndInt();
-}
