@@ -1,0 +1,10 @@
+package Bt.Core.Collections;
+
+public class Geometria {
+
+	Shapes _elementy;
+	
+	public Geometria() {
+		
+	}
+}

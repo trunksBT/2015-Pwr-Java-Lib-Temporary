@@ -1,0 +1,36 @@
+package Bt.Core.ABC.Tests;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import Bt.Core.ABC.OneDimTable;
+import Bt.Core.Geometry.Complex.LineSegment;
+import Bt.Core.Geometry.Elementaries.Point;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestShapes extends TestCase{
+
+    @Test
+    public void testCreateCircle()
+    {
+    	// arrange
+    	Point center = new Point(0,0);
+    	Point endRadius = new Point(4,0);
+    	LineSegment radious = new LineSegment(center,endRadius);
+    	
+    	Circle _kolo = new Circle(center,radious);
+    	
+    	// act
+    	
+    	double expectedObwod = 25.132;
+    	double reachedObwod = _kolo.Obwod();
+    	
+    	
+    	// assert
+    	
+    	assertEquals(reachedObwod,)
+    }
+}

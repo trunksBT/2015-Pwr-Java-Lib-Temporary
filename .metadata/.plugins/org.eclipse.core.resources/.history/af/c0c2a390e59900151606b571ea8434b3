@@ -1,0 +1,17 @@
+package Bt.Core.ABC.Tests;
+
+import Bt.Core.Collections.Shape;
+import Bt.Core.Geometry.Complex.LineSegment;
+import Bt.Core.Geometry.Elementaries.Point;
+
+public class Circle extends Shape {
+
+	Point center;
+	LineSegment radius;
+	
+	public Circle(Point center,LineSegment radius)
+	{
+		this.center = center;
+		this.radius = radius;
+	}
+}

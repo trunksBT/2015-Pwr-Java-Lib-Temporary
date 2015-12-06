@@ -1,0 +1,18 @@
+package Bt.Core.Collections;
+
+public class Geometria {
+
+	Shapes _elementy;
+	
+	public Geometria(Shapes _elementy) {
+		this._elementy = _elementy;
+	}
+	
+	void druk() {
+		while(_elementy.iterator().hasNext())
+		{
+			_elementy.iterator().next().toString();
+			System.out.println();
+		}
+	}
+}

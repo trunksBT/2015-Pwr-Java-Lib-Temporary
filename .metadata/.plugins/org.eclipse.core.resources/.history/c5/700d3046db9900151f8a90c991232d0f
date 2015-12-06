@@ -1,0 +1,29 @@
+package Bt.Core.ABC.Tests;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import Bt.Core.Geometry.Elementaries.Point;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestOneDimTable extends TestCase{
+
+    @Test
+    public void testTableSize()
+    {
+        //arrange
+        Point _pointA = new Point(2,2);
+        Point _pointB = new Point(2,2);
+        boolean expected = true;
+        
+        //act
+        boolean reached = _pointA.equals(_pointB);
+        
+        //assert
+        boolean result = !(expected ^ reached);
+        assertTrue(result);
+    }
+}
