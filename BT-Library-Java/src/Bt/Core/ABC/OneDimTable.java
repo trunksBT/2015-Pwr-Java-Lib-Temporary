@@ -2,7 +2,7 @@ package Bt.Core.ABC;
 import java.util.*;
 
 public class OneDimTable {
-	
+
 	int []tab;
 	int size;
 	
@@ -57,8 +57,78 @@ public class OneDimTable {
 		System.out.println("Koniec");
 	}
 	
+	public OneDimTable insert(int el)
+	{
+		int goodIdx = -1;
+		int i = 1;
+		int j = 0;
+		int [] helpTape = new int [ size+1 ];
+		
+		if( size > 1) {
+			while( goodIdx == -1 && i <= size){	
+				if (tab[ i-1 ] >= el && i == 1)
+					goodIdx = 0;
+				
+				if ( tab[ i-1 ] <= el && tab[ i ] >= el )
+					goodIdx = i;
+				
+				if ( tab[ i ] <= el && i == size-1)
+					goodIdx = i+1;		
+	
+				i++;
+			}
+		}
+		else if ( size == 1) {
+			if ( tab [ 0 ] <= el )
+				goodIdx = 1;
+			else
+				goodIdx = 0;
+		}
+		else
+			goodIdx = 0;
+		
+		
+		i = j = 0;
+		
+		while(i <= size) {
+			if ( i == goodIdx )
+				helpTape[ i++ ] = el;
+			else
+				helpTape[ i++ ]= tab[ j++ ];
+		}
+
+		return new OneDimTable(size+1,helpTape);
+	}
+	
 	public int GetSize()
 	{
 		return this.size;
+	}
+	
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + size;
+		result = prime * result + Arrays.hashCode(tab);
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		OneDimTable other = (OneDimTable) obj;
+		if (size != other.size)
+			return false;
+		if (!Arrays.equals(tab, other.tab))
+			return false;
+		return true;
 	}
 }

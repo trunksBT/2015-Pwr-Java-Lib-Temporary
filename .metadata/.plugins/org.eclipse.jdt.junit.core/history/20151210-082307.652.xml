@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestOneDimTableNatural" project="BT-Library-Java" tests="12" started="12" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0">
+    <testcase name="test_ASig_Method_TableState_NewElRelation" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_CTOR_and_Equal" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToEmpty" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToFilled_Internal" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToFilled_LeftLimit" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToFilled_LeftLimit_Equal" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToFilled_PreviousOfLast" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToFilled_RightLimit" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToFilled_RightLimit_Equal" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToFilled_Second" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToSingleEl_Higher" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+    <testcase name="test_Insert_ToSingleEl_Lower" classname="Bt.Tests.Core.Collections.TestOneDimTableNatural" time="0.0"/>
+  </testsuite>
+</testrun>
