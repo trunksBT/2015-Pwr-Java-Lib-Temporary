@@ -60,31 +60,20 @@ public class TestOneDimTableNatural_Imperative extends TestCase {
 		}
 		
 		else
-			return null;
+			return new int[0];
 	}
 	
 	public boolean equals(int[] fstTab, int[] sndTab)
 	{
 		boolean result = true;
 		
-		if(fstTab != null && sndTab != null)
-		{
-			result&= fstTab.length == sndTab.length;
-			
-			if(result) {
-				for (int i = 0; i < fstTab.length; i++)
-					result &= fstTab[i] == sndTab[i];
-			}
+		result&= fstTab.length == sndTab.length;
+		
+		if(result) {
+			for (int i = 0; i < fstTab.length; i++)
+				result &= fstTab[i] == sndTab[i];
 		}
-		else if(fstTab == null && sndTab != null )
-		{
-			result = false;
-		}
-		else if(fstTab != null && sndTab == null )
-		{
-			result = false;
-		}
-	
+		
 		return result;
 	}
 	
@@ -104,25 +93,6 @@ public class TestOneDimTableNatural_Imperative extends TestCase {
       
       //act
       boolean reached = equals(inTable,inTable2);
-      
-      //assert
-      boolean result = !(expected ^ reached);
-      assertTrue(result);
-  }
-  
-  @Test
-  public void test_Insert_Null_0()
-  {
-      //arrange
-	  int[] inTable = null;
-	  int[] expectTable = null;
-	  
-	  int el = 4;
-      boolean expected = true;
-    
-      //act
-      int[] _outTape = insert(inTable,el);
-      boolean reached = equals(expectTable,_outTape);
       
       //assert
       boolean result = !(expected ^ reached);

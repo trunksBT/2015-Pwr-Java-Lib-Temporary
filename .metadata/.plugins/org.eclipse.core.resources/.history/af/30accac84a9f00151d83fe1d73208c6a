@@ -60,31 +60,20 @@ public class TestOneDimTableNatural_Imperative extends TestCase {
 		}
 		
 		else
-			return null;
+			return new int[0];
 	}
 	
 	public boolean equals(int[] fstTab, int[] sndTab)
 	{
 		boolean result = true;
 		
-		if(fstTab != null && sndTab != null)
-		{
-			result&= fstTab.length == sndTab.length;
-			
-			if(result) {
-				for (int i = 0; i < fstTab.length; i++)
-					result &= fstTab[i] == sndTab[i];
-			}
+		result&= fstTab.length == sndTab.length;
+		
+		if(result) {
+			for (int i = 0; i < fstTab.length; i++)
+				result &= fstTab[i] == sndTab[i];
 		}
-		else if(fstTab == null && sndTab != null )
-		{
-			result = false;
-		}
-		else if(fstTab != null && sndTab == null )
-		{
-			result = false;
-		}
-	
+		
 		return result;
 	}
 	

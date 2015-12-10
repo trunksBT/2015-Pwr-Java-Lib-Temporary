@@ -8,17 +8,9 @@ public class OneDimTable {
 	
 	public OneDimTable(int size,int []tab)
 	{
-		if(tab != null)
-		{
-			this.size = size;
-			this.tab = new int[this.size];
-			this.tab = tab;
-		}
-		else
-		{
-			this.size = 0;
-			this.tab = null;
-		}
+		this.size = size;
+		this.tab = new int[this.size];
+		this.tab = tab;
 	}
 
 		
@@ -67,50 +59,45 @@ public class OneDimTable {
 	
 	public OneDimTable insert(int el)
 	{
-		if(tab != null)
-		{
-			int goodIdx = -1;
-			int i = 1;
-			int j = 0;
-			int [] helpTape = new int [ size+1 ];
-			
-			if( size > 1) {
-				while( goodIdx == -1 && i <= size){	
-					if (tab[ i-1 ] >= el && i == 1)
-						goodIdx = 0;
-					
-					if ( tab[ i-1 ] <= el && tab[ i ] >= el )
-						goodIdx = i;
-					
-					if ( tab[ i ] <= el && i == size-1)
-						goodIdx = i+1;		
+		int goodIdx = -1;
+		int i = 1;
+		int j = 0;
+		int [] helpTape = new int [ size+1 ];
 		
-					i++;
-				}
-			}
-			else if ( size == 1) {
-				if ( tab [ 0 ] <= el )
-					goodIdx = 1;
-				else
+		if( size > 1) {
+			while( goodIdx == -1 && i <= size){	
+				if (tab[ i-1 ] >= el && i == 1)
 					goodIdx = 0;
+				
+				if ( tab[ i-1 ] <= el && tab[ i ] >= el )
+					goodIdx = i;
+				
+				if ( tab[ i ] <= el && i == size-1)
+					goodIdx = i+1;		
+	
+				i++;
 			}
+		}
+		else if ( size == 1) {
+			if ( tab [ 0 ] <= el )
+				goodIdx = 1;
 			else
 				goodIdx = 0;
-			
-			
-			i = j = 0;
-			
-			while(i <= size) {
-				if ( i == goodIdx )
-					helpTape[ i++ ] = el;
-				else
-					helpTape[ i++ ]= tab[ j++ ];
-			}
-			
-			return new OneDimTable(size+1,helpTape);
+		}
+		else
+			goodIdx = 0;
+		
+		
+		i = j = 0;
+		
+		while(i <= size) {
+			if ( i == goodIdx )
+				helpTape[ i++ ] = el;
+			else
+				helpTape[ i++ ]= tab[ j++ ];
 		}
 
-		return new OneDimTable(0,null);
+		return new OneDimTable(size+1,helpTape);
 	}
 	
 	public int GetSize()

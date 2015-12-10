@@ -30,4 +30,5 @@
 <fullyQualifiedTypeName name="Bt.Core.Collections.Geometria"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="Bt.Core.ABC.Tests.Circle"/>
+<fullyQualifiedTypeName name="Bt.Core.ABC.OneDimTable"/>
 </qualifiedTypeNameHistroy>

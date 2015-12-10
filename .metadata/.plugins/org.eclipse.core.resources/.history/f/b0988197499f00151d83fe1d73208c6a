@@ -22,8 +22,7 @@ public class TestOneDimTableNatural_Object extends TestCase {
   public void test_Insert_Filled_Internal()
   {
       //arrange
-	  int[] inTable = null;
-//	  = {1,2,3,5,6}
+	  int[] inTable = {1,2,3,5,6};
 	  int inSize = 5;
 	  
 	  int[] expectTable = {1,2,3,4,5,6};
@@ -31,8 +30,6 @@ public class TestOneDimTableNatural_Object extends TestCase {
 	  
 	  int el = 4;
       boolean expected = true;
-      
-      
 	  	  
       OneDimTable _inTape = new OneDimTable(inSize,inTable);  
       OneDimTable _expectedTape = new OneDimTable(expectSize,expectTable);  

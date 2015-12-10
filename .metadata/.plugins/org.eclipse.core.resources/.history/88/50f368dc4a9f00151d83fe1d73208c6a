@@ -60,7 +60,7 @@ public class TestOneDimTableNatural_Imperative extends TestCase {
 		}
 		
 		else
-			return null;
+			return new int[0];
 	}
 	
 	public boolean equals(int[] fstTab, int[] sndTab)
