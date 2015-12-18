@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestGeometriaIO" project="BT-Library-Java" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO" time="0.0">
-    <testcase name="testPointPrinter" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO" time="0.0"/>
-  </testsuite>
-</testrun>

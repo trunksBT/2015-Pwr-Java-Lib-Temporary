@@ -52,4 +52,6 @@
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Elements.ToPrint.PointPrinter"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Complex.LineSegment"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Elements.ToPrint.LineSegmentPrinter"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Collections.GeometriaIO"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.IPrintable"/>
 </qualifiedTypeNameHistroy>

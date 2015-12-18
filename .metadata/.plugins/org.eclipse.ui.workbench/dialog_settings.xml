@@ -13,25 +13,25 @@
 		<item value="525" key="dialogHeight"/>
 		<item value="1025" key="dialogWidth"/>
 		<list key="textEntries">
-			<item value="3"/>
 			<item value="1"/>
+			<item value="3"/>
 			<item value="2"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.debug.ui.VariableView"/>
 			<item value="org.eclipse.ui.preferencePages.Keys"/>
+			<item value="org.eclipse.debug.ui.VariableView"/>
 			<item value="org.eclipse.jdt.ui.PackageExplorer"/>
 		</list>
 		<list key="orderedProviders">
-			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
+			<item value="key"/>
 			<item value="vari"/>
 			<item value="varia"/>
 			<item value="var"/>
-			<item value="key"/>
 			<item value="pack"/>
 			<item value="package"/>
 		</list>
