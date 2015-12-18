@@ -90,33 +90,9 @@ public class TestShapes extends TestCase{
     	_figury.add(_kolo2);
     	_figury.add(_trojkat1);
     	
-
-    	
     	int expectedSize = 3;
     	
-    	// act 	
-//    	System.out.println("**************DOWOD ZE JEST TO SET**********");
-//    	int reachedSize = _figury.size();
-//    	
-//    	Geometria _algebra = new Geometria(_figury);
-//    	System.out.println("**************DOWOD ZE SIE DRUKUJA**********");
-//    	_algebra.druk();
-//    	
-//    	System.out.println("**************DOWOD ZE OBWODY DOBRE**********");
-//    	System.out.println(_algebra.sumaObwodow());
-//    	
-//    	System.out.println("**************DOWOD ZE KOLO DODANE RAZ**********");
-//    	System.out.println(_algebra.liczbaKol());
-//    	
-//    	System.out.println("**************DOWOD ZE KOLO USUNIETE RAZ**********");
-//    	_algebra.usunFigure("kolo1");
-//    	_algebra.druk();
-//    	
-//    	System.out.println("**************DOWOD POBRANIA KOLA**********");
-//    	System.out.println(_algebra.dajFigure("kolo2").toString());
-    	
-    	// assert	
-//    	assertEquals(3,3);
+    	assertEquals(expectedSize,_figury.size());
     }
 }
 

@@ -3,7 +3,7 @@ package Bt.Core.Geometry.Shapes;
 import Bt.Core.Geometry.Elementaries.LineSegment;
 import Bt.Core.Geometry.Elementaries.Point;
 
-public class Circle extends Shape {
+public class Circle extends Shape{
 
 	Point center;
 	LineSegment radius;
@@ -27,7 +27,13 @@ public class Circle extends Shape {
 
 	@Override
 	public String toString() {
-		return "[Circle_Name: "+name.toString()+center.toString()+"_Radius: "+radius.toString()+"]";
+		return String.format("%-15s %-9s %-15s %-9.1f %-15s %-15s %-15s",
+			super.toString(),
+			this.getClass().getSimpleName(),
+			center,
+			radius.length(),
+			"",
+			"",
+			"");
 	}
-	
 }

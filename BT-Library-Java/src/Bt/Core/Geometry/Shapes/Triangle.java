@@ -27,11 +27,13 @@ public class Triangle extends Shape implements IShape{
 
 	@Override
 	public String toString() {
-		
-		return super.toString() +
-				this.getClass().getSimpleName()+ // 12
-				"_P1: "+vert1+
-				"_P2: "+vert2+
-				"_P3: "+vert3+"]";
+		return String.format("%-15s %-9s %-15s %-9s %-15s %-15s %-15s",
+			super.toString(),
+			this.getClass().getSimpleName(),
+			"",
+			"",
+			vert1,
+			vert2,
+			vert3);
 	}
 }

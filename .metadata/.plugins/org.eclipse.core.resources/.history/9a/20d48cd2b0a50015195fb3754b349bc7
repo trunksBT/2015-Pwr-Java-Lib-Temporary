@@ -1,0 +1,7 @@
+package Bt.Core.Geometry.Shapes;
+
+public interface IPrintable {
+	public default String getMaskShape() {
+		return "%-12s %-9s %-15s %#5.1f %-15s %-15s %-15s";
+	}
+}

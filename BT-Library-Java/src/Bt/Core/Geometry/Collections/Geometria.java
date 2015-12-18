@@ -5,7 +5,7 @@ import java.util.Iterator;
 import Bt.Core.Geometry.Shapes.Circle;
 import Bt.Core.Geometry.Shapes.Shape;
 
-public class Geometria {
+public class Geometria implements IGeometry{
 
 	Shapes _elementy;
 	
@@ -13,7 +13,7 @@ public class Geometria {
 		this._elementy = _elementy;
 	}
 	
-	public void druk() {
+	public void druk() {	
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 		{ 
 			Shape el=it.next();

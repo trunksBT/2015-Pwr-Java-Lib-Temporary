@@ -36,7 +36,7 @@ public abstract class Shape implements IShape{
 	}
 	
 	public String toString()
-	{// 19
-		return String.format("%-19s",name);
+	{
+		return String.format("%-12s",name);
 	}
 }
