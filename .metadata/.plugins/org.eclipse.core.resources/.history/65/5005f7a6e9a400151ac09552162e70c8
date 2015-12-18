@@ -1,0 +1,21 @@
+package Bt.Core.Geometry.Shapes;
+
+import Bt.Core.Geometry.Elementaries.Point;
+
+public class TriangleDetailed extends Triangle{
+
+	public TriangleDetailed(String name,Point vert1,Point vert2,Point vert3) {
+		super(name,vert1,vert2,vert3);
+	}
+	
+	@Override
+	public String toString() {
+		return String
+				.format("%-30s %-15s %6d  ", 
+						super.name,
+						vert1.toString(),
+						vert3.toString());
+	}
+
+	
+}

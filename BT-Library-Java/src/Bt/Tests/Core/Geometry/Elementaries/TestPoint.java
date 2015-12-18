@@ -12,7 +12,7 @@ import junit.framework.TestCase;
 public class TestPoint extends TestCase{
 
     @Test
-    public void testEqualsPointsTheSameTrue()
+    public void test_Equals_EqualPoints_True()
     {
         //arrange
         Point _pointA = new Point(2,2);
@@ -28,7 +28,7 @@ public class TestPoint extends TestCase{
     }
     
     @Test
-    public void testEqualsPointsOtherFalse()
+    public void test_Equals_OtherPoints_False()
     {
         //arrange
     	Point _pointA = new Point(2,2);
@@ -44,7 +44,7 @@ public class TestPoint extends TestCase{
     }
 
     @Test
-    public void testDistancePointsTheSameTrue()
+    public void test_Distance_EqualPoints_True()
     {
         //arrange
         Point _pointA  = new Point(2,5);        
@@ -60,7 +60,7 @@ public class TestPoint extends TestCase{
     }
 
     @Test
-    public void testDistancePointsOthersTrue()
+    public void test_Distance_OtherPoints_True()
     {
         //arrange
         Point _pointA = new Point(2,5);        
@@ -76,7 +76,7 @@ public class TestPoint extends TestCase{
     }
 
     @Test
-    public void testDistancePointsOthersFalse()
+    public void test_Distance_OtherPoints_False()
     {
         //arrange
         Point _pointA = new Point(2,5);        
@@ -92,7 +92,7 @@ public class TestPoint extends TestCase{
     }
 
     @Test
-    public void testShiftPointsTrue()
+    public void test_Shift_True()
     {
         //arrange
         Point _pointA = new Point(2,2);        
@@ -109,7 +109,7 @@ public class TestPoint extends TestCase{
     }
 
     @Test
-    public void testShiftPointsFalse()
+    public void test_Shift_False()
     {
         //arrange
         Point _pointA = new Point(2,2);        
@@ -124,5 +124,17 @@ public class TestPoint extends TestCase{
         boolean result = !(expected ^ reached);
         assertTrue(result);
     } 
+    
+    @Test
+    public void test_toString()
+    {
+    	Point vert1 = new Point(999.5,17.0);
+    	Point vert2 = new Point(999.5,27.0);
+    	
+    	System.out.println( vert1 );
+    	System.out.println( vert2 );
+    	
+    	assertEquals(true,true); 
+    }
 
 }

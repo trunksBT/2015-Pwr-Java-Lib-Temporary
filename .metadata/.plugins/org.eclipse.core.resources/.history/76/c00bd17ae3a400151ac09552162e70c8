@@ -1,0 +1,9 @@
+package Bt.Tests.Core.Geometry.Shapes;
+
+public class TestGeometriaIO {
+
+	public TestGeometriaIO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

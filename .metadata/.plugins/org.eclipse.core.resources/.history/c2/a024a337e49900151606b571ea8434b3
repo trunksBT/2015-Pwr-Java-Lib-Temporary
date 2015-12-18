@@ -1,7 +1,0 @@
-package Bt.Core.ABC.Tests;
-
-import Bt.Core.Collections.Shape;
-
-public class Circle extends Shape {
-
-}

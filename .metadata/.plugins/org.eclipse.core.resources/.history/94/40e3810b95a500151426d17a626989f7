@@ -1,0 +1,19 @@
+package Bt.Core.Geometry.Elements.ToPrint;
+
+import Bt.Core.Geometry.Elementaries.Point;
+import Bt.Core.Geometry.Shapes.Triangle;
+
+public class TrianglePrinter {
+	Triangle val;
+	
+	public TrianglePrinter(Triangle val) {
+		// TODO Auto-generated constructor stub
+		this.val = val;
+	}
+	
+//	@Override
+//    public String toString()
+//    {		
+//        return String.format("( %-#5.1f,%-#5.1f)",_buff.GetX(),_buff.GetY());
+//    }
+}

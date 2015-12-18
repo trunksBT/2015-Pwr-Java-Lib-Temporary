@@ -3,13 +3,13 @@ package Bt.Tests;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-import Bt.Tests.Core.Collections.AllTestsCollections;
-import Bt.Tests.Core.Geometry.AllTestsCoreGeometry;
+import Bt.Tests.Core.Collections.Collections;
+import Bt.Tests.Core.Geometry.Geometry;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	AllTestsCollections.class,
-	AllTestsCoreGeometry.class
+	Collections.class,
+	Geometry.class
 })
 
 public class AllTests{

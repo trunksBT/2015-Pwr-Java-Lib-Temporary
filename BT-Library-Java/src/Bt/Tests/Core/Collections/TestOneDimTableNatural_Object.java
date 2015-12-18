@@ -4,7 +4,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import Bt.Core.ABC.OneDimTable;
+import Bt.Core.Collections.OneDimTable;
 import Bt.Core.Collections.SetNatural;
 import junit.framework.TestCase;
 
@@ -22,8 +22,8 @@ public class TestOneDimTableNatural_Object extends TestCase {
   public void test_Insert_Filled_Internal()
   {
       //arrange
-	  int[] inTable = null;
-//	  = {1,2,3,5,6}
+	  int[] inTable = {1,2,3,5,6};
+
 	  int inSize = 5;
 	  
 	  int[] expectTable = {1,2,3,4,5,6};

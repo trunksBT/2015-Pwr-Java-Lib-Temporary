@@ -4,7 +4,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import Bt.Core.ABC.OneDimTable;
+import Bt.Core.Collections.OneDimTable;
 import Bt.Core.Collections.SetNatural;
 import junit.framework.TestCase;
 

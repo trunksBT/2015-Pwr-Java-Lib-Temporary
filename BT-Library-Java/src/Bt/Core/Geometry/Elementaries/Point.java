@@ -36,9 +36,8 @@ public class Point
     }  
     
     public String toString()
-    {
-        return "("+_x+","+_y+")";
-    }   
-
+    {			
+        return String.format("( %#5.1f,%#5.1f )",_x,_y);
+    }// acc = 15
  }  
 

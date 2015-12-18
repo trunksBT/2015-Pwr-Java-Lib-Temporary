@@ -1,0 +1,9 @@
+package Bt.Core.Geometry.Collections;
+
+public class GeometriaIO {
+
+	public GeometriaIO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

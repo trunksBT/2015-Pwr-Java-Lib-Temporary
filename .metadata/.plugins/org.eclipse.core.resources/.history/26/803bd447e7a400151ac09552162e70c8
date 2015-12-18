@@ -1,0 +1,21 @@
+package Bt.Core.Geometry.Elements.ToPrint;
+
+import Bt.Core.Geometry.Elementaries.Point;
+
+public class PointPrinter {
+
+	Point _buff;
+	
+	public PointPrinter(Point aPoint) {
+		_buff = aPoint;
+	}
+	
+	@Override
+    public String toString()
+    {
+		String ret = String.format("%-15d_%-6d",_buff.GetX(),_buff.GetY());
+//		String ret = String.format("%-4s_%-2s","val","val2");
+		
+        return ret;
+    }
+}

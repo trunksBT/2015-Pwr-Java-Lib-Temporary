@@ -1,0 +1,22 @@
+package Bt.Core.Geometry.Elements.ToPrint;
+
+import Bt.Core.Geometry.Complex.LineSegment;
+import Bt.Core.Geometry.Elementaries.Point;
+
+public class LineSegmentPrinter {
+
+	LineSegment _buff;
+	
+	public LineSegmentPrinter(LineSegment aPoint) {
+		_buff = aPoint;
+	}
+	
+	@Override
+    public String toString()
+    {
+		PointPrinter buff1 = new PointPrinter(_buff.getA());
+		PointPrinter buff2 = new PointPrinter(_buff.getB());
+		
+        return String.format("( %-1s,%-1s)",buff1.toString(),buff2.toString());
+    }
+}
