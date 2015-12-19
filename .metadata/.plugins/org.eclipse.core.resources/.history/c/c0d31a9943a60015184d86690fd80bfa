@@ -1,15 +1,11 @@
 package Bt.Core.Geometry.Collections;
 
-import java.io.BufferedWriter;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.util.Iterator;
 
-import Bt.Core.FileOperations.Strumien;
 import Bt.Core.Geometry.Shapes.Shape;
 
-public class GeometriaIO extends Geometria implements IGeometry,Strumien{
-	
+public class GeometriaIO extends Geometria implements IGeometry{
+
 //	W klasie geometria warto, dla 
 //	uproszczenia obs³ugi we/we zdefiniowaæ 
 //	pola strumieniowe PrintWriter i Scanner.
@@ -17,8 +13,6 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 	public GeometriaIO(Shapes _elementy) {
 		super(_elementy);
 	}
-	
-	
 	
 	public void druk() {
 		
@@ -31,13 +25,13 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 				"B",
 				"C") ); 
 	
-		wyj.println();
+		System.out.println();
 		
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 		{ 
 			Shape el=it.next();
-			wyj.println(el);
-			wyj.println();
+			System.out.println(el);
+			System.out.println();
 		}
 	}
 	

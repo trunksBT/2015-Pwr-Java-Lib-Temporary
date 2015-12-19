@@ -13,26 +13,38 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import Bt.Core.FileOperations.SomethingToWrite;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class TestFileInput_and_Output extends TestCase{
 
-    @Test
-    public void testCreateStream() throws FileNotFoundException
-    {
-    	// arrange
-    	BufferedReader wej= new BufferedReader( new FileReader("dane.txt"));
-    	StreamTokenizer st = new StreamTokenizer(wej);
-    	
-//    	ObjectInputStream wejOb= new ObjectInputStream(wej);
-//    	ObjectOutputStream wyjOb= new ObjectOutputStream(wyj);
-
-    		
-    	
-    	// assert	
-    	assertEquals(3,3);
-    }
+	
+	@Test
+	public void testChangeOutStreamFromClass() throws FileNotFoundException
+	{
+		SomethingToWrite _temp = new SomethingToWrite("Pawel");
+		_temp.print();
+	}
+	
+//    @Test
+//    public void testCreateStream() throws FileNotFoundException
+//    {
+//    	
+//    	
+//    	
+//    	// arrange
+//    	BufferedReader wej= new BufferedReader( new FileReader("dane.txt"));
+//    	StreamTokenizer st = new StreamTokenizer(wej);
+//    	
+////    	ObjectInputStream wejOb= new ObjectInputStream(wej);
+////    	ObjectOutputStream wyjOb= new ObjectOutputStream(wyj);
+//
+//    		
+//    	
+//    	// assert	
+//    	assertEquals(3,3);
+//    }
 }
 

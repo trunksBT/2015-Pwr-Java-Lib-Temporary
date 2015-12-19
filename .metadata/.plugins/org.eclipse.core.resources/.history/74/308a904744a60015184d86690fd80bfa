@@ -11,6 +11,6 @@ public interface Strumien
 { 
 	PrintWriter wyj= new PrintWriter( new BufferedWriter(new OutputStreamWriter(System.out)),true);
 	BufferedReader wej= new BufferedReader( new InputStreamReader(System.in));
-	StreamTokenizer st = new StreamTokenizer(wej);
+	StreamTokenizer st = new StreamTokenizer(wej); // argument typu Reader
 }
 
