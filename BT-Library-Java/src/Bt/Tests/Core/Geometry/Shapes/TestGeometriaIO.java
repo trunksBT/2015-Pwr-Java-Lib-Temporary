@@ -1,11 +1,11 @@
 package Bt.Tests.Core.Geometry.Shapes;
 
+import java.io.IOException;
+
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import Bt.Core.Collections.OneDimTable;
-import Bt.Core.Geometry.Collections.Geometria;
 import Bt.Core.Geometry.Collections.GeometriaIO;
 import Bt.Core.Geometry.Collections.Shapes;
 import Bt.Core.Geometry.Elementaries.LineSegment;
@@ -133,6 +133,90 @@ public class TestGeometriaIO extends TestCase{
     	
     	Circle buff = (Circle) _geo.dajFigure(name3);
     	assertTrue(buff.getRadius().getSecondEdge().equals(new Point(30,0)));
+    }//test it by inserting empty values etc
+    
+    @Test
+    public void test_Save() throws IOException
+    {	  
+    	//arrange
+    	String triaName = "trojkat";
+    	Point vert1 = new Point(0,0);
+    	Point vert2 = new Point(4,0);
+    	Point vert3 = new Point(0,3);
+    	
+    	Triangle _trojkat1 = new Triangle(triaName,vert1,vert2,vert3);
+    	
+    	String name2 = "kolo1";
+    	Point center2 = new Point(0,0);
+    	Point endRadius2 = new Point(4,0);
+    	LineSegment radious2 = new LineSegment(center2,endRadius2);
+    	
+    	Circle _kolo1 = new Circle(name2,center2,radious2);
+    	
+    	String name3 = "kolo2";
+    	Point center3 = new Point(0,0);
+    	Point endRadius3 = new Point(10,0);
+    	LineSegment radious3 = new LineSegment(center3,endRadius3);
+    	
+    	Circle _kolo2 = new Circle(name3,center3,radious3);
+    	
+    	Shapes _figury = new Shapes();
+    	_figury.add(_kolo1);
+    	_figury.add(_kolo2);
+    	_figury.add(_kolo2);
+    	_figury.add(_trojkat1);
+    	
+    	GeometriaIO _geo = new GeometriaIO(_figury);
+    	_geo.save();
+    	
+    	Circle buff = (Circle) _geo.dajFigure(name3);
+    	assertTrue(true);
+    }//test it by inserting empty values etc
+    
+    @Test
+    public void test_Restore() throws IOException, ClassNotFoundException
+    {	  
+    	//arrange
+    	String triaName = "trojkat";
+    	Point vert1 = new Point(0,0);
+    	Point vert2 = new Point(4,0);
+    	Point vert3 = new Point(0,3);
+    	
+    	Triangle _trojkat1 = new Triangle(triaName,vert1,vert2,vert3);
+    	
+    	String name2 = "kolo1";
+    	Point center2 = new Point(0,0);
+    	Point endRadius2 = new Point(4,0);
+    	LineSegment radious2 = new LineSegment(center2,endRadius2);
+    	
+    	Circle _kolo1 = new Circle(name2,center2,radious2);
+    	
+    	String name3 = "kolo2";
+    	Point center3 = new Point(0,0);
+    	Point endRadius3 = new Point(10,0);
+    	LineSegment radious3 = new LineSegment(center3,endRadius3);
+    	
+    	Circle _kolo2 = new Circle(name3,center3,radious3);
+    	
+    	Shapes _figury = new Shapes();
+    	_figury.add(_kolo1);
+    	_figury.add(_kolo2);
+    	_figury.add(_kolo2);
+    	_figury.add(_trojkat1);
+    	
+    	GeometriaIO _geo = new GeometriaIO(_figury);
+    	_geo.saveForTests();
+    	
+    	_geo.usunFigure("kolo1");
+    	_geo.usunFigure("kolo2");
+    	_geo.usunFigure("trojkat");
+    	
+    	boolean partLogic1 = _geo.dajFigure("kolo1") == null;
+    	_geo.restoreForTests();
+    	
+    	boolean partLogic2 = _geo.dajFigure("kolo1") != null;
+
+    	assertTrue(partLogic1 && partLogic2);
     }//test it by inserting empty values etc
 }
 

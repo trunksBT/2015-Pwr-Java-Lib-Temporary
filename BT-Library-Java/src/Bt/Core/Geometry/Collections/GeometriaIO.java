@@ -1,5 +1,10 @@
 package Bt.Core.Geometry.Collections;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Iterator;
 
 import Bt.Core.FileOperations.Strumien;
@@ -9,13 +14,11 @@ import Bt.Core.Geometry.Shapes.Circle;
 import Bt.Core.Geometry.Shapes.Shape;
 import Bt.Core.Geometry.Shapes.Triangle;
 
-public class GeometriaIO extends Geometria implements IGeometry,Strumien{
+public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTestIO {
+
+
 	
-//	W klasie geometria warto, dla 
-//	uproszczenia obs³ugi we/we zdefiniowaæ 
-//	pola strumieniowe i Scanner.
-	
-	public GeometriaIO(Shapes _elementy) {
+	public GeometriaIO(Shapes _elementy){
 		super(_elementy);
 	}
 	
@@ -136,21 +139,55 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 
 		wyj.println("KoniecCzytania");
 		scan.close();
-//		- metoda dodajFigure()  
-//		ma wczytaæ i dodaæ do zbioru figurê , 
-//		oczywiœcie zdefiniowan¹ w czasie dialogu z u¿ytkownikiem
 	}
 	
-	public void save()
+	public void save() throws IOException
 	{
-//	- metoda  zapisuj¹ca zbiór figur do pliku binarnego o
-//		nazwie podanej przez u¿ytkownika
+		String name;
+		wyj.println("Hej Podaj nazwe pliku do ktorego mam zapisac figury");
+		name = scan.next();	
+							
+		FileOutputStream wyjStr = new FileOutputStream(name.concat(".dta"));
+		ObjectOutputStream wyjObj = new ObjectOutputStream(wyjStr);
+		
+		wyjObj.writeObject(_elementy);
+		wyjObj.close();	
+		wyjStr.close();
 	}
 	
-	public void restore()
+	public void saveForTests() throws IOException
+	{							
+		FileOutputStream wyjStr = new FileOutputStream(fileName());
+		ObjectOutputStream wyjObj = new ObjectOutputStream(wyjStr);
+		
+		wyjObj.writeObject(_elementy);
+		wyjObj.close();	
+		wyjStr.close();
+	}
+	
+	public void restore() throws IOException, ClassNotFoundException
 	{
-//		- metoda restore() wczytuj¹ca (do pola figury) 
-//		zbiór figur z pliku binarnego o nazwie podanej przez u¿ytkownika
+		String name;
+		wyj.println("Hej Podaj nazwe pliku z ktorego mam wczytac figury");
+		name = scan.next();	
+							
+		FileInputStream wyjStr = new FileInputStream(name.concat(".dta"));
+		ObjectInputStream wyjObj = new ObjectInputStream(wyjStr);
+		
+		_elementy = (Shapes) wyjObj.readObject();
+		wyjObj.close();	
+		wyjStr.close();
+	}
+	
+	public void restoreForTests() throws IOException, ClassNotFoundException
+	{
+
+		FileInputStream wyjStr = new FileInputStream(fileName());
+		ObjectInputStream wyjObj = new ObjectInputStream(wyjStr);
+		
+		_elementy = (Shapes) wyjObj.readObject();
+		wyjObj.close();	
+		wyjStr.close();
 	}
 	
 	public void powiekszKola ()

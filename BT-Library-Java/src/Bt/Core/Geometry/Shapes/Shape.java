@@ -1,5 +1,6 @@
 package Bt.Core.Geometry.Shapes;
 
+@SuppressWarnings("serial")
 public abstract class Shape implements IShape{
 	
 	public String name;

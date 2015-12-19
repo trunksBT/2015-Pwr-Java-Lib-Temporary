@@ -3,6 +3,7 @@ package Bt.Core.Geometry.Shapes;
 import Bt.Core.Geometry.Elementaries.LineSegment;
 import Bt.Core.Geometry.Elementaries.Point;
 
+@SuppressWarnings("serial")
 public class Triangle extends Shape implements IShape{
 
 	Point vert1;

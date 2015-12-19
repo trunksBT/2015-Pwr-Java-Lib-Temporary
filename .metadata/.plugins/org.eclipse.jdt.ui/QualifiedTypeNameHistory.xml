@@ -21,7 +21,6 @@
 <fullyQualifiedTypeName name="Bt.Core.Collections.Tab"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.Shapes"/>
@@ -29,12 +28,8 @@
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="Bt.Core.ABC.Tests.Circle"/>
 <fullyQualifiedTypeName name="Bt.Core.ABC.OneDimTable"/>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.Circle"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Geometry.Shapes.TestShapes"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
-<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.util.SortedSet"/>
 <fullyQualifiedTypeName name="java.util.TreeSet"/>
@@ -48,10 +43,19 @@
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.Point"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Elements.ToPrint.PointPrinter"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Complex.LineSegment"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Elements.ToPrint.LineSegmentPrinter"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Collections.GeometriaIO"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.IPrintable"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="Bt.Core.FileOperations.Strumien"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.Circle"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.Point"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.LineSegment"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.Triangle"/>
 </qualifiedTypeNameHistroy>

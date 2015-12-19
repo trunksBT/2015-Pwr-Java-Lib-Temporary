@@ -1,6 +1,9 @@
 package Bt.Core.Geometry.Elementaries;
 
-public class LineSegment
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class LineSegment implements Serializable
 {
     private Point _a;
     private Point _b;

@@ -1,6 +1,8 @@
 package Bt.Core.Geometry.Shapes;
 
-public interface IShape {
+import java.io.Serializable;
+
+public interface IShape extends Serializable{
 	boolean equals(Object obj);
 	int hashCode();
 	public double Obwod();
