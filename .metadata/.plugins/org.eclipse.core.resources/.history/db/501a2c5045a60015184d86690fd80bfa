@@ -54,7 +54,7 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 	
 	public void dodajFigure()
 	{
-//		scan
+		scan.
 //		- metoda dodajFigure()  
 //		ma wczytaæ i dodaæ do zbioru figurê , 
 //		oczywiœcie zdefiniowan¹ w czasie dialogu z u¿ytkownikiem
