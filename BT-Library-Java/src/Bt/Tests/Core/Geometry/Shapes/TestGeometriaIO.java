@@ -218,5 +218,20 @@ public class TestGeometriaIO extends TestCase{
 
     	assertTrue(partLogic1 && partLogic2);
     }//test it by inserting empty values etc
+    
+    @Test
+    public void test_WczytaFigury() throws IOException, ClassNotFoundException
+    {	  
+    	// arrange
+    	Shapes _figury = new Shapes();
+    	
+    	GeometriaIO _geo = new GeometriaIO(_figury);
+    	_geo.wczytajFiguryForTests();
+    	
+    	boolean partLogic1 = _geo.dajFigure("kolko") != null;	
+    	boolean partLogic2 = _geo.dajFigure("trojkat") != null;
+
+    	assertTrue(partLogic1 && partLogic2);
+    }
 }
 

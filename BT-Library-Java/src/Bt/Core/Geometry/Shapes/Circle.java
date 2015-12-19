@@ -11,6 +11,8 @@ public class Circle extends Shape{
 	public Circle(String name)
 	{
 		super(name);
+		center = new Point(0,0);
+		radius = new LineSegment(new Point(0,0),new Point(0,0));
 	}
 	
 	public Circle(String name, Point center,LineSegment radius)
@@ -18,6 +20,15 @@ public class Circle extends Shape{
 		super(name);
 		this.center = center;
 		this.radius = radius;
+	}
+	
+	public Circle(String name, Point center,double radiusLength)
+	{
+		super(name);
+		this.center = center;
+		Point copyOfCenter = new Point(center);
+		copyOfCenter.shift(radiusLength,0);
+		this.radius = new LineSegment(this.center,copyOfCenter);
 	}
 
 	@Override

@@ -2,12 +2,17 @@ package Bt.Core.Geometry.Elementaries;
 
 import java.io.Serializable;
 
-@SuppressWarnings("serial")
 public class Point implements Serializable
 {
     double _x;
     double _y;
 
+    public Point(Point val)
+    {
+        _x=val._x;
+        _y=val._y;
+    }
+    
     public Point(double aX,double aY)
     {
         _x=aX;

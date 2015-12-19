@@ -18,7 +18,25 @@ import junit.framework.TestCase;
 public class TestShapes extends TestCase{
 
     @Test
-    public void test_Create_Circle()
+    public void test_CTOR_Circle_Point_Length()
+    {
+    	// arrange
+    	String name = "kolo1";
+    	Point center = new Point(0,0);
+    	double length = 3.0;
+    	
+    	Circle _kolo = new Circle(name,center,length);
+    	
+    	// act 	
+    	System.out.println(_kolo);
+    	
+    	
+    	// assert	
+    	assertEquals(3,3);
+    }
+    
+    @Test
+    public void test_CTOR_Circle_Point_LineSegment()
     {
     	// arrange
     	String name = "kolo1";

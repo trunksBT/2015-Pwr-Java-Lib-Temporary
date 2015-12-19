@@ -10,8 +10,8 @@ import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestLineSegment extends TestCase
-{
-																																			@Test
+{	
+		@Test
 	    public void testEqualsLineSegmentTheSameTrue1()
 	    {
 	        //arrange
@@ -31,9 +31,7 @@ public class TestLineSegment extends TestCase
 	        //assert
 	        boolean result = !(expected ^ reached);
 	        assertTrue(result);
-	    }
-																																			
-																																			
+	    }																																	
 																																			
 	 	@Test
 	    public void testEqualsLineSegmentTheSameButReversedPointsTrue2()

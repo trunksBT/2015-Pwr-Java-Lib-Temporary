@@ -1,10 +1,15 @@
 package Bt.Core.Geometry.Collections;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.StreamTokenizer;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 import Bt.Core.FileOperations.Strumien;
@@ -16,15 +21,13 @@ import Bt.Core.Geometry.Shapes.Triangle;
 
 public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTestIO {
 
-
-	
 	public GeometriaIO(Shapes _elementy){
 		super(_elementy);
 	}
 	
 	public void druk() {
 		
-		System.out.println( String.format("%-15s %-9s %-15s %-9s %-15s %-15s %-15s",
+		System.out.println( String.format("%-15s %-9s %-15s %-9s %-15s %-15s %-15s\n",
 				"Nazwa figury",
 				"Rodzaj",
 				"Srodek",
@@ -32,35 +35,84 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 				"A",
 				"B",
 				"C") ); 
-	
-		wyj.println();
 		
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
-		{ 
-			Shape el=it.next();
-			wyj.println(el);
-			wyj.println();
-		}
+			wyj.println(it.next());
 	}
 	
-	public void wczytajFigury()
+	public void wczytajFigury() throws IOException
 	{
-//		metoda wczytajFigury () 
-//		ma wczytywaæ ci¹g figur zapisanych 
-//		(dowolnym edytorem np. notatnikiem) 
-//		w pliku tekstowym o nazwie podanej przez u¿ytkownika
-//		i oczywiœcie dodawaæ je do zbioru . 
-//		Ka¿da figura ma byæ zapisana w osobnym wierszu. Np.
-//		kó³ko    Kolo       12.5    -1.0    14.0
-//		tr1        Trojk  1.0  -5.1  3.5  17.0   -3.2  234.0
+		wyj.println("Hej Podaj nazwe pliku txt z ktorego mam wczytac figury");
+		String name = scan.next();	
+							
+	    StreamTokenizer plikWej=new StreamTokenizer(new FileReader(name.concat(".txt")));
+	    
+	    while(plikWej.nextToken()!=plikWej.TT_EOF){
+	    	plikWej.pushBack();
+	    	Object buff = plikWej;
+	    }
+	}
+		
+	public void wczytajFiguryForTests() throws IOException
+	{					
+		BufferedReader reader = new BufferedReader(new FileReader("shapes.txt"));
+	    
+		String line = null;
+	    while((line = reader.readLine())!=null){
+	    	String[] infos = line.split("[ (),]");
 
+	    	String[] outTab = new String[9];
+	    	int idx = 0;
+	    	
+	    	for(int i = 0 ; i < infos.length ;i++)
+	    	{
+	    		if(!(infos[i].equals("")))
+	    		{
+	    			outTab[idx++] = infos[i];
+	    		}
+	    	}
+	    	
+	    	if(outTab[1].equals("Circle"))
+	    	{
+	    		double x = Double.parseDouble(outTab[2]);
+	    		double y = Double.parseDouble(outTab[3]);
+	    		double length = Double.parseDouble(outTab[4]);
+	    		
+	    		Point point = new Point(x,y);
+	    		String name = outTab[0];
+	    			
+	    		_elementy.add(new Circle(name,point,length));
+	    	}else
+		    if(outTab[1].equals("Triangle"))
+		    {
+			    double aX = Double.parseDouble(outTab[2]);
+			    double aY = Double.parseDouble(outTab[3]);
+			    
+			    Point pointA = new Point(aX,aY);
+			    
+			    double bX = Double.parseDouble(outTab[4]);
+			    double bY = Double.parseDouble(outTab[5]);
+			    
+			    Point pointB = new Point(bX,bY);
+			    
+			    double cX = Double.parseDouble(outTab[6]);
+			    double cY = Double.parseDouble(outTab[7]);
+			    
+			    Point pointC = new Point(cX,cY);
+			    String name = outTab[0];
+			    	
+			    _elementy.add(new Triangle(name,pointA,pointB,pointC));
+		    }
+	    	
+	    }
+	    
+	    reader.close();
 	}
 	
 	public void dodajFigure()
 	{
-		String name;
 		wyj.println("Hej Podaj nazwe figury");
-		name = scan.next();
+		String name = scan.next();
 		
 		int typ;
 		wyj.println("Wybierz typ figury");
