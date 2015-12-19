@@ -67,72 +67,69 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 		
 		switch(typ)
 		{
-			case 1:// kolo
-			{
-				wyj.println("Podaj srodek");
-				
-				wyj.println("X:");
-				double x = scan.nextDouble();
-				
-				wyj.println("Y:");
-				double y = scan.nextDouble();
-				wyj.println();
-				
-				wyj.println("Podaj dlugosc promienia");
-				double radius = scan.nextDouble();
-				
-				Point center = new Point(x,y);
-				Point onEdge = new Point(x,y);
-				onEdge.shift(radius,0);
-				
-				LineSegment radiusSeg = new LineSegment(center,onEdge);
-				
-				Circle temp = new Circle(name, center,radiusSeg);
-				this.dodaj(temp);
-				wyj.println(temp);
-				break;
-			}			
-			case 2:// trojkat
-			{
-				wyj.println("Podaj PunktA");	
-				wyj.println("X:");
-				double aX = scan.nextDouble();
-				
-				wyj.println("Y:");
-				double aY = scan.nextDouble();
-				wyj.println();
-				
-				wyj.println("Podaj PunktB");	
-				wyj.println("X:");
-				double bX = scan.nextDouble();
-				
-				wyj.println("Y:");
-				double bY = scan.nextDouble();
-				wyj.println();
-				
-				wyj.println("Podaj PunktC");		
-				wyj.println("X:");
-				double cX = scan.nextDouble();
-				
-				wyj.println("Y:");
-				double cY = scan.nextDouble();
-				wyj.println();
-				
-				Point A = new Point(aX,aY);
-				Point B = new Point(bX,bY);
-				Point C = new Point(cX,cY);
-						
-				Triangle temp = new Triangle(name, A,B,C);
-				this.dodaj(temp);
-				wyj.println(temp);
-				break;
-			}
-			default:
-			{
-				wyj.println("Zly wybor,koniec aplikacji");
-				break;
-			}
-		}		
+		case 1:// kolo
+		{
+			wyj.println("Podaj srodek");
+			
+			wyj.println("X:");
+			double x = scan.nextDouble();
+			
+			wyj.println("Y:");
+			double y = scan.nextDouble();
+			wyj.println();
+			
+			wyj.println("Podaj dlugosc promienia");
+			double radius = scan.nextDouble();
+			
+			Point center = new Point(x,y);
+			Point onEdge = new Point(x,y);
+			onEdge.shift(radius,0);
+			
+			LineSegment radiusSeg = new LineSegment(center,onEdge);
+			
+			Circle temp = new Circle(name, center,radiusSeg);
+			this.dodaj(temp);
+			wyj.println(temp);
+			break;
+		}			
+		case 2:// trojkat
+			wyj.println("Podaj PunktA");	
+			wyj.println("X:");
+			double aX = scan.nextDouble();
+			
+			wyj.println("Y:");
+			double aY = scan.nextDouble();
+			wyj.println();
+			
+			wyj.println("Podaj PunktB");	
+			wyj.println("X:");
+			double bX = scan.nextDouble();
+			
+			wyj.println("Y:");
+			double bY = scan.nextDouble();
+			wyj.println();
+			
+			wyj.println("Podaj PunktC");		
+			wyj.println("X:");
+			double cX = scan.nextDouble();
+			
+			wyj.println("Y:");
+			double cY = scan.nextDouble();
+			wyj.println();
+			
+			Point A = new Point(aX,aY);
+			Point B = new Point(bX,bY);
+			Point C = new Point(cX,cY);
+					
+			Triangle temp = new Triangle(name, A,B,C);
+			this.dodaj(temp);
+			wyj.println(temp);
+			break;
+			
+		default:
+			break;
+		}
+		
 
 		wyj.println("KoniecCzytania");
 		scan.close();
@@ -155,17 +152,8 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 	
 	public void powiekszKola ()
 	{
-		wyj.println("Hej podaj wartosc o jaka chcesz pomnozyc promienie kola");
-		wyj.print("Mult: ");
-		double mult = scan.nextDouble();	
-					
-		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
-		{ 
-			Shape el=it.next();
-			if(el instanceof Circle)
-			{
-				((Circle) el).getRadius().extend(mult);
-			}
-		}
+//	- metoda powiekszKola ()  
+//	mno¿¹ca promienie wszystkich kó³ 
+//	przez podany przez u¿ytkownika wspó³czynnik.
 	}
 }

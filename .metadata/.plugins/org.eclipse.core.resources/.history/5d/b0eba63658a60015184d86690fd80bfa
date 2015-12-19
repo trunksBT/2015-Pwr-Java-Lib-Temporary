@@ -163,9 +163,7 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 		{ 
 			Shape el=it.next();
 			if(el instanceof Circle)
-			{
-				((Circle) el).getRadius().extend(mult);
-			}
+				((Circle) el).getRadius().getSecondEdge().shift(mult, 0);
 		}
 	}
 }

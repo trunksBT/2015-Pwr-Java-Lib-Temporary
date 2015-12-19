@@ -158,14 +158,15 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 		wyj.println("Hej podaj wartosc o jaka chcesz pomnozyc promienie kola");
 		wyj.print("Mult: ");
 		double mult = scan.nextDouble();	
-					
+		
+			
+		Shape retVal = null;
+			
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 		{ 
 			Shape el=it.next();
 			if(el instanceof Circle)
-			{
-				((Circle) el).getRadius().extend(mult);
-			}
+				((Circle) el).getRadius().getSecondEdge().shift(mult, 0);
 		}
 	}
 }

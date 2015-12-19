@@ -19,7 +19,7 @@ public class LineSegment
     
     public void extend(double dx)
     {
-    	_b._x*=dx;
+    	_b._x*=dy;
     	_b._y*=dx;
     }
      

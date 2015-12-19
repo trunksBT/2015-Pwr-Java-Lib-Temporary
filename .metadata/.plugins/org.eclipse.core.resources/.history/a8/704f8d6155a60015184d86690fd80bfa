@@ -60,7 +60,7 @@ public class Geometria implements IGeometry{
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 		{ 
 			Shape el=it.next();
-			if(el.name.equals(nazwa))
+			if(el.name == nazwa)
 				retVal = el;
 		}
 		

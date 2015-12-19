@@ -16,21 +16,10 @@ public class LineSegment
         _a.shift(dx, dy);
         _b.shift(dx, dy);
     }
-    
-    public void extend(double dx)
-    {
-    	_b._x*=dx;
-    	_b._y*=dx;
-    }
      
     public double length()
     {
         return _a.distance(_b);
-    }
-    
-    public Point getSecondEdge()
-    {
-    	return _b;
     }
     
     public boolean equals(LineSegment aSecond)
