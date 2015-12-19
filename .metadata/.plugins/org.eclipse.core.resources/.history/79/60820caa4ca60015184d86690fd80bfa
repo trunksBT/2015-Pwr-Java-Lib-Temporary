@@ -1,11 +1,12 @@
 package Bt.Core.Geometry.Collections;
 
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 import Bt.Core.FileOperations.Strumien;
-import Bt.Core.Geometry.Elementaries.LineSegment;
-import Bt.Core.Geometry.Elementaries.Point;
-import Bt.Core.Geometry.Shapes.Circle;
 import Bt.Core.Geometry.Shapes.Shape;
 
 public class GeometriaIO extends Geometria implements IGeometry,Strumien{
@@ -54,56 +55,15 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 	
 	public void dodajFigure()
 	{
-		String name;
-		wyj.println("Hej Podaj nazwe figury");
-		name = scan.next();
-		
-		int typ;
-		wyj.println("Wybierz typ figury");
-		wyj.println("1. Kolo ");
-		wyj.println("2. Trojkat ");
-		typ = scan.nextInt();
-		
-		switch(typ)
+		LinkedList<String> _temp = new LinkedList();
+		while(scan.hasNextLine())
 		{
-		case 1:// kolo
-			wyj.println("Podaj srodek");
-			
-			wyj.println("X:");
-			double x = scan.nextDouble();
-			
-			wyj.println("Y:");
-			double y = scan.nextDouble();
-			wyj.println();
-			
-			wyj.println("Podaj dlugosc promienia");
-			double radius = scan.nextDouble();
-			
-			Point center = new Point(x,y);
-			Point onEdge = new Point(x,y);
-			onEdge.shift(radius,0);
-			
-			LineSegment radiusSeg = new LineSegment(center,onEdge);
-			
-			Circle temp = new Circle(name, center,radiusSeg);
-			wyj.println(temp);
-			break;
-			
-		case 2:// trojkat
-		}
-		
-		scan.nextLine();
-		
-		while(scan.hasNext())
-		{
-			wyj.println("CosJestJeszcze");
-			wyj.println("Dodaje");
-					
-			wyj.println("Czytam");
+			if(scan.nextLine()=="done")
+				scan.close();
+			_temp.add(scan.nextLine());
 		}
 
-		wyj.println("KoniecCzytania");
-		scan.close();
+		_temp.forEach(a -> wyj.println(a));
 //		- metoda dodajFigure()  
 //		ma wczytaæ i dodaæ do zbioru figurê , 
 //		oczywiœcie zdefiniowan¹ w czasie dialogu z u¿ytkownikiem

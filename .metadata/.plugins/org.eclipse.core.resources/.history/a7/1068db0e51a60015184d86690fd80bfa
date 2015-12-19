@@ -7,7 +7,7 @@ import Bt.Core.Geometry.Shapes.Shape;
 
 public class Geometria implements IGeometry{
 
-	protected Shapes _elementy;
+	Shapes _elementy;
 	
 	public Geometria(Shapes _elementy) {
 		this._elementy = _elementy;
@@ -65,10 +65,5 @@ public class Geometria implements IGeometry{
 		}
 		
 		return retVal;
-	}
-
-	@Override
-	public void dodaj(Shape aShape) {
-		_elementy.add(aShape);
 	}
 }

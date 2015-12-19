@@ -59,24 +59,5 @@ public class TestGeometriaIO extends TestCase{
     	// assert	
     	assertEquals(expectedSize,_figury.size());
     }
-    
-    @Test
-    public void testDodajFigure()
-    {	  
-    	// arrange
-    	Shapes _figury = new Shapes();
-    	
-    	int expectedSize = 0;
-    	
-    	// act 	
-    	
-    	GeometriaIO ioGeo = new GeometriaIO(_figury);
-    	ioGeo.druk();
-    	
-    	ioGeo.dodajFigure();
-    	
-    	// assert	
-    	assertEquals(expectedSize,_figury.size());
-    }
 }
 

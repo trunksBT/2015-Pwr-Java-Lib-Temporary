@@ -1,11 +1,12 @@
 package Bt.Core.Geometry.Collections;
 
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 import Bt.Core.FileOperations.Strumien;
-import Bt.Core.Geometry.Elementaries.LineSegment;
-import Bt.Core.Geometry.Elementaries.Point;
-import Bt.Core.Geometry.Shapes.Circle;
 import Bt.Core.Geometry.Shapes.Shape;
 
 public class GeometriaIO extends Geometria implements IGeometry,Strumien{
@@ -79,16 +80,6 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 			wyj.println("Podaj dlugosc promienia");
 			double radius = scan.nextDouble();
 			
-			Point center = new Point(x,y);
-			Point onEdge = new Point(x,y);
-			onEdge.shift(radius,0);
-			
-			LineSegment radiusSeg = new LineSegment(center,onEdge);
-			
-			Circle temp = new Circle(name, center,radiusSeg);
-			wyj.println(temp);
-			break;
-			
 		case 2:// trojkat
 		}
 		
@@ -104,6 +95,7 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 
 		wyj.println("KoniecCzytania");
 		scan.close();
+		_temp.forEach(a -> wyj.println(a));
 //		- metoda dodajFigure()  
 //		ma wczytaæ i dodaæ do zbioru figurê , 
 //		oczywiœcie zdefiniowan¹ w czasie dialogu z u¿ytkownikiem

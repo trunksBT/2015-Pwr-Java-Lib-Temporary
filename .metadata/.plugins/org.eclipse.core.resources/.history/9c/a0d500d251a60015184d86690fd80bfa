@@ -1,6 +1,10 @@
 package Bt.Core.Geometry.Collections;
 
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 import Bt.Core.FileOperations.Strumien;
 import Bt.Core.Geometry.Elementaries.LineSegment;
@@ -82,12 +86,9 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien{
 			Point center = new Point(x,y);
 			Point onEdge = new Point(x,y);
 			onEdge.shift(radius,0);
+			LineSegment radiusSeg = new LineSegment(center,);
 			
-			LineSegment radiusSeg = new LineSegment(center,onEdge);
-			
-			Circle temp = new Circle(name, center,radiusSeg);
-			wyj.println(temp);
-			break;
+			Circle temp = new Circle(new Point(x,y));
 			
 		case 2:// trojkat
 		}

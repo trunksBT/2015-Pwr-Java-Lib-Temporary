@@ -1,6 +1,10 @@
 package Bt.Core.Geometry.Collections;
 
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 import Bt.Core.FileOperations.Strumien;
 import Bt.Core.Geometry.Elementaries.LineSegment;

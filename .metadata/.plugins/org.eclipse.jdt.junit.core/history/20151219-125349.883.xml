@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestGeometriaIO" project="BT-Library-Java" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO" incomplete="true">
+    <testcase name="testCreateGeometryIO" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO" time="0.015"/>
+    <testcase name="testDodajFigure" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO" incomplete="true"/>
+  </testsuite>
+</testrun>
