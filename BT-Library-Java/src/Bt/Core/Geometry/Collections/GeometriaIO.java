@@ -2,13 +2,16 @@ package Bt.Core.Geometry.Collections;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InvalidClassException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 import Bt.Core.FileOperations.Strumien;
 import Bt.Core.Geometry.Elementaries.LineSegment;
@@ -23,7 +26,7 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		super(_elementy);
 	}
 	
-	public void druk() {
+	public boolean druk() {
 		
 		System.out.println( String.format("%-15s %-9s %-15s %-9s %-15s %-15s %-15s\n",
 				"Nazwa figury",
@@ -36,55 +39,87 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 			wyj.println(it.next());
+		
+		return true;
 	}
 		
-	public void wczytajFigury() throws IOException
+	@SuppressWarnings("resource")
+	public boolean wczytajFigury() throws IOException
 	{
-		wyj.println("Podaj nazwe pliku txt z zawartymi figurami");
-		String path = scan.next();
+		BufferedReader reader = null;
+		boolean opened = false;
 		
-		BufferedReader reader = new BufferedReader(new FileReader(path.concat(".txt")));
-	    
-		String line = null;
-	    while((line = reader.readLine())!=null){
-	    	String[] infos = line.split("[ (),]");
-	    	String[] outTab = new String[9];
+		try
+		{
+			wyj.println("Podaj nazwe pliku txt z zawartymi figurami");
+			String path = scan.next();
+			
+			reader = new BufferedReader(new FileReader(path.concat(".txt")));
+			opened = true;
+		    
+			String line = null;
+		    while((line = reader.readLine())!=null){
+		    	String[] infos = line.split("[ (),]");
+		    	String[] outTab = new String[9];
+		    	
+		    	for(int i = 0,idx = 0 ; i < infos.length ;i++)
+		    	{
+		    		if(!(infos[i].equals("")))
+		    			outTab[idx++] = infos[i];
+		    	}
+		    	
+		    	if(outTab[1].equals("Circle"))
+		    	{
+		    		String name = outTab[0];
+		    		double x = Double.parseDouble(outTab[2]);
+		    		double y = Double.parseDouble(outTab[3]);
+		    		double length = Double.parseDouble(outTab[4]);
+		    		
+		    		Point point = new Point(x,y);   			
+		    		_elementy.add(new Circle(name,point,length));
+		    	}
+		    	else if(outTab[1].equals("Triangle"))
+			    {
+				    String name = outTab[0];
+				    double aX = Double.parseDouble(outTab[2]);
+				    double aY = Double.parseDouble(outTab[3]);			    
+				    Point pointA = new Point(aX,aY);
+				    
+				    double bX = Double.parseDouble(outTab[4]);
+				    double bY = Double.parseDouble(outTab[5]);		    
+				    Point pointB = new Point(bX,bY);
+				    
+				    double cX = Double.parseDouble(outTab[6]);
+				    double cY = Double.parseDouble(outTab[7]);		    
+				    Point pointC = new Point(cX,cY);
 	    	
-	    	for(int i = 0,idx = 0 ; i < infos.length ;i++)
-	    	{
-	    		if(!(infos[i].equals("")))
-	    			outTab[idx++] = infos[i];
+				    _elementy.add(new Triangle(name,pointA,pointB,pointC));
+			    }
+		    	else
+		    		throw new InvalidClassException("Not Matched Class");
 	    	}
-	    	
-	    	if(outTab[1].equals("Circle"))
-	    	{
-	    		String name = outTab[0];
-	    		double x = Double.parseDouble(outTab[2]);
-	    		double y = Double.parseDouble(outTab[3]);
-	    		double length = Double.parseDouble(outTab[4]);
-	    		
-	    		Point point = new Point(x,y);   			
-	    		_elementy.add(new Circle(name,point,length));
-	    	}
-	    	else if(outTab[1].equals("Triangle"))
-		    {
-			    String name = outTab[0];
-			    double aX = Double.parseDouble(outTab[2]);
-			    double aY = Double.parseDouble(outTab[3]);			    
-			    Point pointA = new Point(aX,aY);
-			    
-			    double bX = Double.parseDouble(outTab[4]);
-			    double bY = Double.parseDouble(outTab[5]);		    
-			    Point pointB = new Point(bX,bY);
-			    
-			    double cX = Double.parseDouble(outTab[6]);
-			    double cY = Double.parseDouble(outTab[7]);		    
-			    Point pointC = new Point(cX,cY);
-    	
-			    _elementy.add(new Triangle(name,pointA,pointB,pointC));
-		    }  	
-	    }	    
-	    reader.close();
+		}
+	    catch(FileNotFoundException e) {
+	    	wyj.println("Nie odnaleziono takiego pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+	    }
+	    catch(InvalidClassException  e) {
+	    	wyj.println("Zle zapisane obiektu do pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+	    }
+		catch(NumberFormatException e)
+		{
+	    	wyj.println("Zle zapisane obiektu do pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
+		catch(Exception e)
+		{
+	    	wyj.println("Zle zapisane obiektu do pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
+
+		if(opened) reader.close();
+	    return true;
 	}
 	
 	public void wczytajFiguryForTests(String path) throws IOException
@@ -133,90 +168,105 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 	    reader.close();
 	}
 	
-	public void dodajFigure()
+	public boolean dodajFigure()
 	{
-		try
-		{
-			wyj.println("Podaj nazwe figury");
-			String name = scan.next();
-			
-
-			wyj.println("Wybierz typ figury");
-			wyj.println("1 Kolo\2 Trojkat \"");
-			int typ = scan.nextInt();
-			
-			switch(typ)
-			{
-				case 1:// kolo
-				{
-					wyj.println("Podaj srodek");
-					
-					wyj.println("X:");
-					double x = scan.nextDouble();
-					
-					wyj.println("Y:");
-					double y = scan.nextDouble();
-					wyj.println();
-					
-					wyj.println("Podaj dlugosc promienia");
-					double radiusLen = scan.nextDouble();
-					
-					Circle temp = new Circle(name, new Point(x,y),radiusLen);
-					this.dodaj(temp);
-					wyj.println(temp);
-					break;
-				}			
-				case 2:// trojkat
-				{
-					wyj.println("Podaj PunktA");	
-					wyj.println("X:");
-					double aX = scan.nextDouble();
-					
-					wyj.println("Y:");
-					double aY = scan.nextDouble();
-					wyj.println();
-					
-					wyj.println("Podaj PunktB");	
-					wyj.println("X:");
-					double bX = scan.nextDouble();
-					
-					wyj.println("Y:");
-					double bY = scan.nextDouble();
-					wyj.println();
-					
-					wyj.println("Podaj PunktC");		
-					wyj.println("X:");
-					double cX = scan.nextDouble();
-					
-					wyj.println("Y:");
-					double cY = scan.nextDouble();
-					wyj.println();
-					
-					Point A = new Point(aX,aY);
-					Point B = new Point(bX,bY);
-					Point C = new Point(cX,cY);
-							
-					Triangle temp = new Triangle(name, A,B,C);
-					this.dodaj(temp);
-					wyj.println(temp);
-					break;
-				}
-				default:
-				{
-					wyj.println("Zly wybor,koniec aplikacji");
-					break;
-				}
-			}		
-		}catch(InputMismatchException e)
-		{
-			wyj.println("Podales zla wartosc, zacznij od nowa");
-			dodajFigure();
-		}
-		finally
-		{
-			scan.close();
-		}
+		boolean retVal = true;
+		boolean breakFlag = true;
 		
+		do
+		{
+			try
+			{
+				wyj.println("Wybierz typ figury");
+				wyj.println("1 Kolo\n 2 Trojkat\n 3 Powrot do wczesniejszego menu\n 4 Lub cos innego konczy program\n");
+				int typ = scan.nextInt();
+			
+				switch(typ)
+				{
+					case 1:// kolo
+					{			
+						wyj.println("Podaj nazwe figury");
+						String name = scan.next();	
+						
+						wyj.println("Podaj srodek");
+						
+						wyj.println("X:");
+						double x = scan.nextDouble();
+						
+						wyj.println("Y:");
+						double y = scan.nextDouble();
+						wyj.println();
+						
+						wyj.println("Podaj dlugosc promienia");
+						double radiusLen = scan.nextDouble();
+						
+						Circle temp = new Circle(name, new Point(x,y),radiusLen);
+						this.dodaj(temp);
+						wyj.println(temp);
+						break;
+					}			
+					case 2:// trojkat
+					{
+						wyj.println("Podaj nazwe figury");
+						String name = scan.next();	
+						
+						wyj.println("Podaj PunktA");	
+						wyj.println("X:");
+						double aX = scan.nextDouble();
+						
+						wyj.println("Y:");
+						double aY = scan.nextDouble();
+						wyj.println();
+						
+						wyj.println("Podaj PunktB");	
+						wyj.println("X:");
+						double bX = scan.nextDouble();
+						
+						wyj.println("Y:");
+						double bY = scan.nextDouble();
+						wyj.println();
+						
+						wyj.println("Podaj PunktC");		
+						wyj.println("X:");
+						double cX = scan.nextDouble();
+						
+						wyj.println("Y:");
+						double cY = scan.nextDouble();
+						wyj.println();
+						
+						Point A = new Point(aX,aY);
+						Point B = new Point(bX,bY);
+						Point C = new Point(cX,cY);
+								
+						Triangle temp = new Triangle(name, A,B,C);
+						this.dodaj(temp);
+						wyj.println(temp);
+						break;
+					}
+					case 3:
+						retVal = true;
+						breakFlag = false;
+						break;
+						
+					default:
+						retVal = false;
+						breakFlag = false;
+				}		
+			}
+			catch(InputMismatchException e)
+			{
+				wyj.println("Podales zla wartosc, powrot do wczesniejszego menu");	
+				breakFlag = false;
+			}
+			catch(NoSuchElementException e)
+			{
+				wyj.println("StrumienPusty, powrot do wczesniejszego menu");
+				breakFlag = false;
+			}
+		}
+		while(breakFlag == true);
+		
+		return retVal;
 	}
 	
 	public void dodajFigureForTests(String name,
@@ -255,34 +305,111 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		}
 	}
 	
-	public void save() throws IOException
+	public boolean save() throws IOException
 	{
 		wyj.println("Podaj nazwe pliku do ktorego mam zapisac figury");
 		String name = scan.next();	
-							
-		ObjectOutputStream wyjObj = new ObjectOutputStream(new FileOutputStream(name.concat(".dta")));
+		ObjectOutputStream wyjObj = null;
+		boolean opened = false;
 		
-		wyjObj.writeObject(_elementy);
-		wyjObj.close();
+		try
+		{	
+			wyjObj = new ObjectOutputStream(new FileOutputStream(name.concat(".dta")));	
+			opened = true;
+			wyjObj.writeObject(_elementy);
+		
+		}catch(FileNotFoundException e) {
+	    	wyj.println("Nie odnaleziono takiego pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+	    }
+	    catch(IOException e)
+		{
+	    	wyj.println("Blad odczytu z pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
+		catch(Exception e)
+		{
+	    	wyj.println("Wystapil blad");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
+
+		if( opened ) wyjObj.close();
+			
+		return true;
 	}
 		
 	public void saveForTests(String path) throws IOException
-	{							
-		ObjectOutputStream wyjObj = new ObjectOutputStream(new FileOutputStream(path.concat(".dta")));
-
-		wyjObj.writeObject(_elementy);
-		wyjObj.close();	
+	{	
+		ObjectOutputStream wyjObj = null;
+		boolean opened = false;
+		
+		try {		
+			
+			wyjObj =new ObjectOutputStream(new FileOutputStream(path.concat(".dta")));
+			opened = true;
+			
+			wyjObj.writeObject(_elementy);
+			
+		}catch(FileNotFoundException e) {
+	    	wyj.println("Nie odnaleziono takiego pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+	    }
+		catch(InvalidClassException e)
+		{
+	    	wyj.println("Obiekt typu nieoczekiwanego");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
+	    catch(IOException e)
+		{
+	    	wyj.println("Blad odczytu z pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
+		catch(Exception e)
+		{
+	    	wyj.println("Wystapil blad");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
+		
+		if( opened ) wyjObj.close();
+		
 	}
 	
-	public void restore() throws IOException, ClassNotFoundException
+	public boolean restore() throws IOException
 	{
-		wyj.println("Podaj nazwe pliku z ktorego mam wczytac figury");
-		String name = scan.next();	
-							
-		ObjectInputStream wyjObj = new ObjectInputStream(new FileInputStream(name.concat(".dta")));
+		ObjectInputStream wyjObj = null;
+		boolean opened = false;
+		try
+		{
+			wyj.println("Podaj nazwe pliku z ktorego mam wczytac figury");
+			String name = scan.next();	
+								
+			wyjObj = new ObjectInputStream(new FileInputStream(name.concat(".dta")));
+			opened = true;
+			
+			_elementy = (Shapes) wyjObj.readObject();
+			
+		}catch(FileNotFoundException e) {
+	    	wyj.println("Nie odnaleziono takiego pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+	    }
+	    catch(ClassNotFoundException  e) {
+	    	wyj.println("Zle zapisane obiektu do pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+	    }
+		catch(IOException e)
+		{
+	    	wyj.println("Blad odczytu z pliku");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
+		catch(Exception e)
+		{
+	    	wyj.println("Wystapil blad");
+	    	wyj.println("Wracam do wczesniejszego menu");
+		}
 		
-		_elementy = (Shapes) wyjObj.readObject();
-		wyjObj.close();	
+		if( opened )wyjObj.close();	
+	
+		return true;
 	}
 	
 	public void restoreForTests(String path) throws IOException, ClassNotFoundException
@@ -293,7 +420,7 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		wyjObj.close();	
 	}
 	
-	public void powiekszKola ()
+	public boolean powiekszKola()
 	{
 		wyj.println("Podaj wartosc o jaka chcesz pomnozyc promienie kola");
 		wyj.print("Mult: ");
@@ -307,6 +434,8 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 				((Circle) el).getRadius().extend(mult);
 			}
 		}
+		
+		return true;
 	}
 	
 	public boolean powiekszKolaForTests (double val)

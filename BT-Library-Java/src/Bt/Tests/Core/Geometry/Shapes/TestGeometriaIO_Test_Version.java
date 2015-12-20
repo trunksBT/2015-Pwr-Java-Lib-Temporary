@@ -1,6 +1,7 @@
 package Bt.Tests.Core.Geometry.Shapes;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import org.junit.FixMethodOrder;
@@ -242,15 +243,17 @@ public class TestGeometriaIO_Test_Version extends TestCase{
     }
     
     @Test
-    public void test_GUI() throws IOException, ClassNotFoundException
+    public void test_GUI() throws IOException, ClassNotFoundException, NoSuchElementException
     {	  
     	// init
-    	boolean breakFlag = false;
-		Scanner scan = new Scanner(System.in);
+    	boolean breakFlag = true;
+		Scanner scan;
 		GeometriaIO geometry = new GeometriaIO(new Shapes());
 		
     	do 
-    	{ 
+    	{     		
+    		scan = new Scanner(System.in);
+    		
     		System.out.println(
     				"Co chcesz dzisiaj zrobic ?\nPodaj Numer Operacji: \n\n"
     				+ "1 Dodaj figure\n"
@@ -260,34 +263,40 @@ public class TestGeometriaIO_Test_Version extends TestCase{
     				+ "5 Wypisz liste figur\n"
     				+ "6 Poszerz wszystkie kola\n"
     				+ "\nUwaga ! Kazdy inny wpis powoduje koniec programu ! \n  ");
-    		    		
-    		switch (scan.nextInt())
-    		{
-    			case 1:
-    				geometry.dodajFigure();
-    				break;
-    			case 2:
-    				geometry.wczytajFigury();
-    				break;
-    			case 3:
-    				geometry.restore();
-    				break;
-    			case 4:
-    				geometry.save();
-    				break;
-    			case 5:
-    				geometry.druk();
-    				break;
-    			case 6:
-    				geometry.powiekszKola();
-    			default:
-    				breakFlag = true;
-    		}
-    	}
-    	while(breakFlag == false); 
-    	scan.close();
+    		int nextOper = scan.nextInt();
+    		
+	    		switch (nextOper)
+	    		{
+	    			case 1:
+	    				breakFlag = geometry.dodajFigure();
+	    				break;
+	    			case 2:
+	    				breakFlag = geometry.wczytajFigury();
+	    				break;
+	    			case 3:
+	    				breakFlag = geometry.restore();
+	    				break;
+	    			case 4:
+	    				breakFlag = geometry.save();
+	    				break;
+	    			case 5:
+	    				breakFlag = geometry.druk();
+	    				break;
+	    			case 6:
+	    				breakFlag = geometry.powiekszKola();
+	    				break;
+	    			default:
+	    				breakFlag = false;
+	    				break;
+	    		}
+    	}	
+    	while(breakFlag == true); 
 
-    	assertTrue(true);    
+    	scan.close();
+    	
+    	System.out.println("Dzieki za skorzystanie z programu. TrunkBT");
+
+    	assertTrue(true);
     }
 }
 

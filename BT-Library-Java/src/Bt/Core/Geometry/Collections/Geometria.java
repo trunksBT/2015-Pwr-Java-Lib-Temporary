@@ -13,13 +13,14 @@ public class Geometria implements IGeometry{
 		this._elementy = _elementy;
 	}
 	
-	public void druk() {	
+	public boolean druk() {	
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 		{ 
 			Shape el=it.next();
 			System.out.println(el.toString());
 			System.out.println();
 		}
+		return true;
 	}
 
 	public double sumaObwodow() {
