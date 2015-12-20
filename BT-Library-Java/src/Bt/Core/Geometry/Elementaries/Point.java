@@ -2,6 +2,7 @@ package Bt.Core.Geometry.Elementaries;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class Point implements Serializable
 {
     double _x;

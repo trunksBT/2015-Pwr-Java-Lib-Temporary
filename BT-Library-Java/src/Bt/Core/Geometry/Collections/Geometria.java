@@ -50,7 +50,7 @@ public class Geometria implements IGeometry{
 	}
 	
 	public void usunFigure(String nazwa) {
-		_elementy.remove(new Circle(nazwa));
+		_elementy.remove(new Shape(nazwa));
 	}
 	
 	public Shape dajFigure(String nazwa) {

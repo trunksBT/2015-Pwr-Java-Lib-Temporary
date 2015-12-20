@@ -7,9 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.StreamTokenizer;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 
 import Bt.Core.FileOperations.Strumien;
@@ -39,73 +36,99 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 			wyj.println(it.next());
 	}
-	
+		
 	public void wczytajFigury() throws IOException
 	{
-		wyj.println("Hej Podaj nazwe pliku txt z ktorego mam wczytac figury");
-		String name = scan.next();	
-							
-	    StreamTokenizer plikWej=new StreamTokenizer(new FileReader(name.concat(".txt")));
-	    
-	    while(plikWej.nextToken()!=plikWej.TT_EOF){
-	    	plikWej.pushBack();
-	    	Object buff = plikWej;
-	    }
-	}
+		wyj.println("Podaj nazwe pliku txt z zawartymi figurami");
+		String path = scan.next();
 		
-	public void wczytajFiguryForTests() throws IOException
-	{					
-		BufferedReader reader = new BufferedReader(new FileReader("shapes.txt"));
+		BufferedReader reader = new BufferedReader(new FileReader(path.concat(".txt")));
 	    
 		String line = null;
 	    while((line = reader.readLine())!=null){
 	    	String[] infos = line.split("[ (),]");
-
 	    	String[] outTab = new String[9];
-	    	int idx = 0;
 	    	
-	    	for(int i = 0 ; i < infos.length ;i++)
+	    	for(int i = 0,idx = 0 ; i < infos.length ;i++)
 	    	{
 	    		if(!(infos[i].equals("")))
-	    		{
 	    			outTab[idx++] = infos[i];
-	    		}
 	    	}
 	    	
 	    	if(outTab[1].equals("Circle"))
 	    	{
+	    		String name = outTab[0];
 	    		double x = Double.parseDouble(outTab[2]);
 	    		double y = Double.parseDouble(outTab[3]);
 	    		double length = Double.parseDouble(outTab[4]);
 	    		
-	    		Point point = new Point(x,y);
-	    		String name = outTab[0];
-	    			
+	    		Point point = new Point(x,y);   			
 	    		_elementy.add(new Circle(name,point,length));
-	    	}else
-		    if(outTab[1].equals("Triangle"))
+	    	}
+	    	else if(outTab[1].equals("Triangle"))
 		    {
+			    String name = outTab[0];
 			    double aX = Double.parseDouble(outTab[2]);
-			    double aY = Double.parseDouble(outTab[3]);
-			    
+			    double aY = Double.parseDouble(outTab[3]);			    
 			    Point pointA = new Point(aX,aY);
 			    
 			    double bX = Double.parseDouble(outTab[4]);
-			    double bY = Double.parseDouble(outTab[5]);
-			    
+			    double bY = Double.parseDouble(outTab[5]);		    
 			    Point pointB = new Point(bX,bY);
 			    
 			    double cX = Double.parseDouble(outTab[6]);
-			    double cY = Double.parseDouble(outTab[7]);
-			    
+			    double cY = Double.parseDouble(outTab[7]);		    
 			    Point pointC = new Point(cX,cY);
-			    String name = outTab[0];
-			    	
+    	
 			    _elementy.add(new Triangle(name,pointA,pointB,pointC));
-		    }
-	    	
-	    }
+		    }  	
+	    }	    
+	    reader.close();
+	}
+	
+	public void wczytajFiguryForTests(String path) throws IOException
+	{					
+		BufferedReader reader = new BufferedReader(new FileReader(path.concat(".txt")));
 	    
+		String line = null;
+	    while((line = reader.readLine())!=null){
+	    	String[] infos = line.split("[ (),]");
+	    	String[] outTab = new String[9];
+	    	
+	    	for(int i = 0,idx = 0 ; i < infos.length ;i++)
+	    	{
+	    		if(!(infos[i].equals("")))
+	    			outTab[idx++] = infos[i];
+	    	}
+	    	
+	    	if(outTab[1].equals("Circle"))
+	    	{
+	    		String name = outTab[0];
+	    		double x = Double.parseDouble(outTab[2]);
+	    		double y = Double.parseDouble(outTab[3]);
+	    		double length = Double.parseDouble(outTab[4]);
+	    		
+	    		Point point = new Point(x,y);   			
+	    		_elementy.add(new Circle(name,point,length));
+	    	}
+	    	else if(outTab[1].equals("Triangle"))
+		    {
+			    String name = outTab[0];
+			    double aX = Double.parseDouble(outTab[2]);
+			    double aY = Double.parseDouble(outTab[3]);			    
+			    Point pointA = new Point(aX,aY);
+			    
+			    double bX = Double.parseDouble(outTab[4]);
+			    double bY = Double.parseDouble(outTab[5]);		    
+			    Point pointB = new Point(bX,bY);
+			    
+			    double cX = Double.parseDouble(outTab[6]);
+			    double cY = Double.parseDouble(outTab[7]);		    
+			    Point pointC = new Point(cX,cY);
+    	
+			    _elementy.add(new Triangle(name,pointA,pointB,pointC));
+		    }  	
+	    }	    
 	    reader.close();
 	}
 	
@@ -114,11 +137,11 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		wyj.println("Hej Podaj nazwe figury");
 		String name = scan.next();
 		
-		int typ;
+
 		wyj.println("Wybierz typ figury");
 		wyj.println("1. Kolo ");
 		wyj.println("2. Trojkat ");
-		typ = scan.nextInt();
+		int typ = scan.nextInt();
 		
 		switch(typ)
 		{
@@ -134,15 +157,9 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 				wyj.println();
 				
 				wyj.println("Podaj dlugosc promienia");
-				double radius = scan.nextDouble();
+				double radiusLen = scan.nextDouble();
 				
-				Point center = new Point(x,y);
-				Point onEdge = new Point(x,y);
-				onEdge.shift(radius,0);
-				
-				LineSegment radiusSeg = new LineSegment(center,onEdge);
-				
-				Circle temp = new Circle(name, center,radiusSeg);
+				Circle temp = new Circle(name, new Point(x,y),radiusLen);
 				this.dodaj(temp);
 				wyj.println(temp);
 				break;
@@ -193,58 +210,83 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		scan.close();
 	}
 	
-	public void save() throws IOException
-	{
-		String name;
-		wyj.println("Hej Podaj nazwe pliku do ktorego mam zapisac figury");
-		name = scan.next();	
-							
-		FileOutputStream wyjStr = new FileOutputStream(name.concat(".dta"));
-		ObjectOutputStream wyjObj = new ObjectOutputStream(wyjStr);
-		
-		wyjObj.writeObject(_elementy);
-		wyjObj.close();	
-		wyjStr.close();
+	public void dodajFigureForTests(String name,
+			int typ,
+			double x1,
+			double y1, 
+			double radLen,
+			double x2,
+			double y2, 
+			double x3,
+			double y3 )
+	{		
+		switch(typ)
+		{
+			case 1:// kolo
+			{			
+				Circle temp = new Circle(name, new Point(x1,y1),radLen);
+				this.dodaj(temp);
+				break;
+			}			
+			case 2:// trojkat
+			{
+				Point A = new Point(x1,y1);
+				Point B = new Point(x2,y2);
+				Point C = new Point(x3,y3);
+						
+				Triangle temp = new Triangle(name, A,B,C);
+				this.dodaj(temp);
+				break;
+			}
+			default:
+			{
+				wyj.println("Zly wybor,koniec aplikacji");
+				break;
+			}
+		}
 	}
 	
-	public void saveForTests() throws IOException
-	{							
-		FileOutputStream wyjStr = new FileOutputStream(fileName());
-		ObjectOutputStream wyjObj = new ObjectOutputStream(wyjStr);
+	public void save() throws IOException
+	{
+		wyj.println("Podaj nazwe pliku do ktorego mam zapisac figury");
+		String name = scan.next();	
+							
+		ObjectOutputStream wyjObj = new ObjectOutputStream(new FileOutputStream(name.concat(".dta")));
 		
 		wyjObj.writeObject(_elementy);
+		wyjObj.close();
+	}
+		
+	public void saveForTests(String path) throws IOException
+	{							
+		ObjectOutputStream wyjObj = new ObjectOutputStream(new FileOutputStream(path.concat(".dta")));
+
+		wyjObj.writeObject(_elementy);
 		wyjObj.close();	
-		wyjStr.close();
 	}
 	
 	public void restore() throws IOException, ClassNotFoundException
 	{
-		String name;
-		wyj.println("Hej Podaj nazwe pliku z ktorego mam wczytac figury");
-		name = scan.next();	
+		wyj.println("Podaj nazwe pliku z ktorego mam wczytac figury");
+		String name = scan.next();	
 							
-		FileInputStream wyjStr = new FileInputStream(name.concat(".dta"));
-		ObjectInputStream wyjObj = new ObjectInputStream(wyjStr);
+		ObjectInputStream wyjObj = new ObjectInputStream(new FileInputStream(name.concat(".dta")));
 		
 		_elementy = (Shapes) wyjObj.readObject();
 		wyjObj.close();	
-		wyjStr.close();
 	}
 	
-	public void restoreForTests() throws IOException, ClassNotFoundException
+	public void restoreForTests(String path) throws IOException, ClassNotFoundException
 	{
-
-		FileInputStream wyjStr = new FileInputStream(fileName());
-		ObjectInputStream wyjObj = new ObjectInputStream(wyjStr);
+		ObjectInputStream wyjObj = new ObjectInputStream(new FileInputStream(path.concat(".dta")));
 		
 		_elementy = (Shapes) wyjObj.readObject();
 		wyjObj.close();	
-		wyjStr.close();
 	}
 	
 	public void powiekszKola ()
 	{
-		wyj.println("Hej podaj wartosc o jaka chcesz pomnozyc promienie kola");
+		wyj.println("Podaj wartosc o jaka chcesz pomnozyc promienie kola");
 		wyj.print("Mult: ");
 		double mult = scan.nextDouble();	
 					
@@ -257,4 +299,18 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 			}
 		}
 	}
+	
+	public void powiekszKolaForTests (double val)
+	{
+		double mult = val;	
+					
+		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
+		{ 
+			Shape el = it.next();
+			if(el instanceof Circle)
+			{
+				((Circle) el).getRadius().extend(mult);
+			}
+		}
+	}	
 }

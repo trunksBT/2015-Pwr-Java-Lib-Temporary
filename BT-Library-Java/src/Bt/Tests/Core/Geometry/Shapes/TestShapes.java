@@ -4,8 +4,6 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import Bt.Core.Collections.OneDimTable;
-import Bt.Core.Geometry.Collections.Geometria;
 import Bt.Core.Geometry.Collections.Shapes;
 import Bt.Core.Geometry.Elementaries.LineSegment;
 import Bt.Core.Geometry.Elementaries.Point;

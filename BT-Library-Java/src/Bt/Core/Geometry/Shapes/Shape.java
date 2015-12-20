@@ -1,12 +1,10 @@
 package Bt.Core.Geometry.Shapes;
 
 @SuppressWarnings("serial")
-public abstract class Shape implements IShape{
+public class Shape implements IShape{
 	
 	public String name;
-	
-	public abstract double Obwod();
-	
+		
 	public Shape(String name) {
 		this.name = name;
 	}
@@ -21,19 +19,12 @@ public abstract class Shape implements IShape{
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Shape other = (Shape) obj;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		return true;
+		return this.name.equals(((Shape)obj).name);
+	}
+	
+	public double Obwod()
+	{
+		return 0;
 	}
 	
 	public String toString()
