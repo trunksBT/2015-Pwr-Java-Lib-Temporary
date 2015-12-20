@@ -8,16 +8,17 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="&#x09;&#x09;// TODO Auto-generated method stub"/>
+			<item value="fileName"/>
+			<item value="wej"/>
 			<item value="dane"/>
 			<item value="ala"/>
 			<item value="Public"/>
 			<item value="wrongPlace"/>
 			<item value="_buffRet"/>
-			<item value="_queue"/>
-			<item value="Dequeue"/>
-			<item value="Enqueue"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="wrongPlaceIdx"/>
 			<item value="_set"/>
 			<item value="Pop"/>

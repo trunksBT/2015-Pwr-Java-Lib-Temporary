@@ -14,7 +14,7 @@
 		<item value="1025" key="dialogWidth"/>
 		<list key="textEntries">
 			<item value="3"/>
-			<item value="1"/>
+			<item value="2"/>
 			<item value="2"/>
 		</list>
 		<list key="orderedElements">
@@ -28,10 +28,11 @@
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
-			<item value="varia"/>
-			<item value="var"/>
 			<item value="va"/>
+			<item value="var"/>
+			<item value="varia"/>
 			<item value="key"/>
+			<item value="keys"/>
 			<item value="pack"/>
 			<item value="package"/>
 		</list>

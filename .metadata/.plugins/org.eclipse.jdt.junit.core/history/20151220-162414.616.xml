@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestGeometriaIO_Test_Version" project="BT-Library-Java" tests="9" started="9" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.001">
+    <testcase name="test_CTOR_GeometryIO" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.0"/>
+    <testcase name="test_DodajKolo_Test" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.0"/>
+    <testcase name="test_DodajTriangle_Test" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.0"/>
+    <testcase name="test_GUI" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.001"/>
+    <testcase name="test_PoszerzKola_MinusMutli_Test" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.0"/>
+    <testcase name="test_PoszerzKola_PlusMutli_Test" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.0"/>
+    <testcase name="test_RestoreTest" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.0"/>
+    <testcase name="test_SaveTest" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.0"/>
+    <testcase name="test_WczytajFiguryTest" classname="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO_Test_Version" time="0.0"/>
+  </testsuite>
+</testrun>

@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.InputMismatchException;
 import java.util.Iterator;
 
 import Bt.Core.FileOperations.Strumien;
@@ -134,80 +135,88 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 	
 	public void dodajFigure()
 	{
-		wyj.println("Hej Podaj nazwe figury");
-		String name = scan.next();
-		
-
-		wyj.println("Wybierz typ figury");
-		wyj.println("1. Kolo ");
-		wyj.println("2. Trojkat ");
-		int typ = scan.nextInt();
-		
-		switch(typ)
+		try
 		{
-			case 1:// kolo
-			{
-				wyj.println("Podaj srodek");
-				
-				wyj.println("X:");
-				double x = scan.nextDouble();
-				
-				wyj.println("Y:");
-				double y = scan.nextDouble();
-				wyj.println();
-				
-				wyj.println("Podaj dlugosc promienia");
-				double radiusLen = scan.nextDouble();
-				
-				Circle temp = new Circle(name, new Point(x,y),radiusLen);
-				this.dodaj(temp);
-				wyj.println(temp);
-				break;
-			}			
-			case 2:// trojkat
-			{
-				wyj.println("Podaj PunktA");	
-				wyj.println("X:");
-				double aX = scan.nextDouble();
-				
-				wyj.println("Y:");
-				double aY = scan.nextDouble();
-				wyj.println();
-				
-				wyj.println("Podaj PunktB");	
-				wyj.println("X:");
-				double bX = scan.nextDouble();
-				
-				wyj.println("Y:");
-				double bY = scan.nextDouble();
-				wyj.println();
-				
-				wyj.println("Podaj PunktC");		
-				wyj.println("X:");
-				double cX = scan.nextDouble();
-				
-				wyj.println("Y:");
-				double cY = scan.nextDouble();
-				wyj.println();
-				
-				Point A = new Point(aX,aY);
-				Point B = new Point(bX,bY);
-				Point C = new Point(cX,cY);
-						
-				Triangle temp = new Triangle(name, A,B,C);
-				this.dodaj(temp);
-				wyj.println(temp);
-				break;
-			}
-			default:
-			{
-				wyj.println("Zly wybor,koniec aplikacji");
-				break;
-			}
-		}		
+			wyj.println("Podaj nazwe figury");
+			String name = scan.next();
+			
 
-		wyj.println("KoniecCzytania");
-		scan.close();
+			wyj.println("Wybierz typ figury");
+			wyj.println("1 Kolo\2 Trojkat \"");
+			int typ = scan.nextInt();
+			
+			switch(typ)
+			{
+				case 1:// kolo
+				{
+					wyj.println("Podaj srodek");
+					
+					wyj.println("X:");
+					double x = scan.nextDouble();
+					
+					wyj.println("Y:");
+					double y = scan.nextDouble();
+					wyj.println();
+					
+					wyj.println("Podaj dlugosc promienia");
+					double radiusLen = scan.nextDouble();
+					
+					Circle temp = new Circle(name, new Point(x,y),radiusLen);
+					this.dodaj(temp);
+					wyj.println(temp);
+					break;
+				}			
+				case 2:// trojkat
+				{
+					wyj.println("Podaj PunktA");	
+					wyj.println("X:");
+					double aX = scan.nextDouble();
+					
+					wyj.println("Y:");
+					double aY = scan.nextDouble();
+					wyj.println();
+					
+					wyj.println("Podaj PunktB");	
+					wyj.println("X:");
+					double bX = scan.nextDouble();
+					
+					wyj.println("Y:");
+					double bY = scan.nextDouble();
+					wyj.println();
+					
+					wyj.println("Podaj PunktC");		
+					wyj.println("X:");
+					double cX = scan.nextDouble();
+					
+					wyj.println("Y:");
+					double cY = scan.nextDouble();
+					wyj.println();
+					
+					Point A = new Point(aX,aY);
+					Point B = new Point(bX,bY);
+					Point C = new Point(cX,cY);
+							
+					Triangle temp = new Triangle(name, A,B,C);
+					this.dodaj(temp);
+					wyj.println(temp);
+					break;
+				}
+				default:
+				{
+					wyj.println("Zly wybor,koniec aplikacji");
+					break;
+				}
+			}		
+		}catch(InputMismatchException e)
+		{
+			wyj.println("Podales zla wartosc, zacznij od nowa");
+			dodajFigure();
+		}
+		finally
+		{
+			scan.close();
+		}
+		
 	}
 	
 	public void dodajFigureForTests(String name,
@@ -300,17 +309,21 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		}
 	}
 	
-	public void powiekszKolaForTests (double val)
+	public boolean powiekszKolaForTests (double val)
 	{
 		double mult = val;	
+		boolean ifPerformed = false;
 					
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 		{ 
 			Shape el = it.next();
 			if(el instanceof Circle)
 			{
+				ifPerformed = true;
 				((Circle) el).getRadius().extend(mult);
 			}
 		}
+		
+		return ifPerformed;
 	}	
 }
