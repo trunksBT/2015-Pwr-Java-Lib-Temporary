@@ -4,15 +4,14 @@ import java.util.*;
 import java.util.Collections;
 
 import Bt.Core.Collections.Interfaces.IGraf;
-import Bt.Core.Geometry.Shapes.Shape;
 
 public class IndirectedGraph<W,S> implements IGraf<W,S>{
 
-	int[][] connectionMatrix;	
-	Hashtable<W,S> vertices;
+	S[][] matrix;	
+	Hashtable<W,Integer> vertices;
 	
-	public IndirectedGraph(int[][] aConnectionMatrix, Hashtable<W, S> aVertices) {
-		connectionMatrix = aConnectionMatrix;
+	public IndirectedGraph(Hashtable<W, Integer> aVertices,S[][] aConnectionMatrix) {
+		matrix = aConnectionMatrix;
 		vertices = aVertices;
 	}
 
@@ -23,59 +22,20 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 
 	@Override
 	public S krawedz(W w1, W w2) {
-		S reachY = vertices.get(w1);
-		S reachX = vertices.get(w2);
-
-		S reachedLvl = vertices.get(w1);
-		
-		List<W> kraw1 = krawedzie(w1);
-		List<W> kraw2 = krawedzie(w2);
-		
-		kraw1.retainAll(kraw2);
-		
-////		int retVal = (connectionMatrix[(int) reachX][(int) reachY]);
-//		
-////		int[] _vertices = Arrays.asList(connectionMatrix[(int) reachedLvl]).get(0);
-////		
-////		for(int i = 0; i< _vertices.length; i++)
-////		{ 
-////			int buff = _vertices[i];
-////			if(_vertices[i] == (int)reachedLvlY)
-////			{
-////				for(Map.Entry<W, S> entry: vertices.entrySet())
-////				{
-////					if(entry.getValue().equals(_vertices[i]))
-////					{
-////						retVal = entry.getValue();
-////					}
-////				}
-////			}
-////		}
-//		
-		return vertices.get(kraw1.get(0));
+		return matrix[vertices.get(w1)][vertices.get(w2)];
 	}
 
 	@Override
 	public List<W> krawedzie(W w) {
-		S reachedLvl = vertices.get(w);
 		List<W> retVal = new LinkedList<>();
+		S[] connections = matrix[vertices.get(w)];
 		
-		int[] _vertices = Arrays.asList(connectionMatrix[(int) reachedLvl]).get(0);
-		
-		for(int i = 0; i< _vertices.length; i++)
-		{ 
-			if(_vertices[i] != 0)
-			{
-				for(Map.Entry<W, S> entry: vertices.entrySet())
-				{
-					if(entry.getValue().equals(_vertices[i]))
-					{
-						retVal.add((W) entry.getKey());
-					}
-				}
-			}
-		}
-		
+		for(int i = 0 ; i< connections.length;i++)
+			if(connections[i]!=null)
+				for(Map.Entry<W, Integer> entry : vertices.entrySet())
+					if(entry.getValue().equals(i))
+						retVal.add(entry.getKey());
+			
 		return retVal;
 	}
 }

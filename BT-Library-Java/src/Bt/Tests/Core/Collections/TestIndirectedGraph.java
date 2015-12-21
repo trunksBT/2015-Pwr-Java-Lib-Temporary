@@ -16,13 +16,13 @@ import junit.framework.TestCase;
 
 public class TestIndirectedGraph extends TestCase{
 
-	public int[][] initMatrix()
+	public Double[][] initMatrix()
 	{
-		int[][] connectionMatrix = new int[][]{
-			  { 0, 4, 0, 0,},
-			  { 4, 0, 3, 1,},
-			  { 0, 3, 0, 2,},
-			  { 0, 1, 2, 0,},
+		Double[][] connectionMatrix = new Double[][]{
+			  { null, 4.0, null, null,},
+			  { 4.0, null, 3.0, 1.0,},
+			  { null, 3.0, null, 2.0,},
+			  { null, 1.0, 2.0, null,},
 			};
 			
 			return connectionMatrix;
@@ -42,34 +42,57 @@ public class TestIndirectedGraph extends TestCase{
     public void test_CTOR()
     {
         //act
-    	IndirectedGraph<String,Integer> _network = new IndirectedGraph<>(initMatrix(),initMap());
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<String,Double>(initMap(),initMatrix());
         assertTrue(true);
     }
     
     @Test
     public void test_Contains()
     {
+    	// arrange
+    	int expectedSize = 4;
     	boolean expectedVal = true;
     	     
         //act
-    	IndirectedGraph<String,Integer> _network = new IndirectedGraph<>(initMatrix(),initMap());
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
     	boolean reachedVal = _network.wierzcholki().contains("Krakow");
     	reachedVal &= _network.wierzcholki().contains("Gdynia");
     	reachedVal &= _network.wierzcholki().contains("Ostrowiec");
     	reachedVal &= _network.wierzcholki().contains("Wroclaw");
     	
+    	int reachedSize = _network.wierzcholki().size();
+	
         //assert
         boolean reachedLogic = reachedVal == expectedVal;
+        boolean reachedLogic2 = reachedSize == expectedSize;
         boolean expectedLogic = true;
+        boolean result = !(expectedLogic ^ (reachedLogic&&reachedLogic2));
+        assertTrue(result);
+    }
+//    
+    @Test
+    public void test_Krawedzie_Krakow()
+    {    	     
+        //act
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	List<String> reachedList = _network.krawedzie("Krakow");
+    	List<String> expectedList = new ArrayList<>();
+    	expectedList.add("Gdynia");
+    	boolean reachedVal = reachedList.containsAll(expectedList);
+    	boolean expectedVal = true;
+    	boolean expectedLogic = true;
+    	
+        //assert
+        boolean reachedLogic = reachedVal == expectedVal;
         boolean result = !(expectedLogic ^ reachedLogic);
         assertTrue(result);
     }
     
     @Test
-    public void test_Krawedzie()
+    public void test_Krawedzie_Wroclaw()
     {    	     
         //act
-    	IndirectedGraph<String,Integer> _network = new IndirectedGraph<>(initMatrix(),initMap());
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
     	List<String> reachedList = _network.krawedzie("Wroclaw");
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("Gdynia");
@@ -85,16 +108,84 @@ public class TestIndirectedGraph extends TestCase{
     }
     
     @Test
-    public void test_Krawedz()
+    public void test_Krawedzie_Ostrowiec()
     {    	     
         //act
-    	IndirectedGraph<String,Integer> _network = new IndirectedGraph<>(initMatrix(),initMap());
-    	int reachedEdge = _network.krawedz("Wroclaw", "Gdynia");
-    	int expectedEdge = 1;
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	List<String> reachedList = _network.krawedzie("Ostrowiec");
+    	List<String> expectedList = new ArrayList<>();
+    	expectedList.add("Gdynia");
+    	expectedList.add("Wroclaw");
+    	boolean reachedVal = reachedList.containsAll(expectedList);
+    	boolean expectedVal = true;
+    	boolean expectedLogic = true;
+    	
+        //assert
+        boolean reachedLogic = reachedVal == expectedVal;
+        boolean result = !(expectedLogic ^ reachedLogic);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void test_Krawedzie_Gdynia()
+    {    	     
+        //act
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	List<String> reachedList = _network.krawedzie("Gdynia");
+    	List<String> expectedList = new ArrayList<>();
+    	expectedList.add("Krakow");
+    	expectedList.add("Ostrowiec");
+    	boolean reachedVal = reachedList.containsAll(expectedList);
+    	boolean expectedVal = true;
+    	boolean expectedLogic = true;
+    	
+        //assert
+        boolean reachedLogic = reachedVal == expectedVal;
+        boolean result = !(expectedLogic ^ reachedLogic);
+        assertTrue(result);
+    }
+   
+    @Test
+    public void test_Krawedz_Wroclaw_Gdynia()
+    {    	     
+        //act
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	Double reachedEdge = _network.krawedz("Wroclaw", "Gdynia");
+    	Double expectedEdge = 1.0;
+    	boolean expectedLogic = true;
+    	
+        //assert
+        boolean reachedLogic = reachedEdge.doubleValue() == expectedEdge.doubleValue();
+        boolean result = !(expectedLogic ^ reachedLogic);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void test_Krawedz_Wroclaw_Krakow()
+    {    	     
+        //act
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	Double reachedEdge = _network.krawedz("Wroclaw", "Krakow");
+    	Double expectedEdge = null;
     	boolean expectedLogic = true;
     	
         //assert
         boolean reachedLogic = reachedEdge == expectedEdge;
+        boolean result = !(expectedLogic ^ reachedLogic);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void test_Krawedz_Ostrowiec_Gdynia()
+    {    	     
+        //act
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	Double reachedEdge = _network.krawedz("Ostrowiec", "Gdynia");
+    	Double expectedEdge = 3.0;
+    	boolean expectedLogic = true;
+    	
+        //assert
+        boolean reachedLogic = reachedEdge.doubleValue() == expectedEdge.doubleValue();
         boolean result = !(expectedLogic ^ reachedLogic);
         assertTrue(result);
     }
