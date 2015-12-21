@@ -17,14 +17,7 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 
 	@Override
 	public List<W> wierzcholki() {
-		
-		List<W> retVal = new ArrayList<W>();
-		
-		if(vertices!=null)
-			retVal = Collections.list(vertices.keys());
-		
-		return retVal;
-
+		return Collections.list(vertices.keys());
 	}
 
 	@Override
@@ -40,7 +33,7 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 	@Override
 	public List<W> krawedzie(W w) {
 		List<W> retVal = new LinkedList<>();
-		if(w!=null && vertices!=null && matrix!= null)
+		if(w!=null)
 		{
 			S[] connections = matrix[vertices.getOrDefault(w, null)];
 			

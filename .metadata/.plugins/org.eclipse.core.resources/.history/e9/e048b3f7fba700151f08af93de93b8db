@@ -40,7 +40,7 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 	@Override
 	public List<W> krawedzie(W w) {
 		List<W> retVal = new LinkedList<>();
-		if(w!=null && vertices!=null && matrix!= null)
+		if(w!=null && vertices!=null)
 		{
 			S[] connections = matrix[vertices.getOrDefault(w, null)];
 			

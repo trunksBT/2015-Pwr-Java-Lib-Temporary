@@ -190,23 +190,8 @@ public class TestIndirectedGraph extends TestCase{
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(null,initMatrix());
     	List<String> reachedList = _network.krawedzie("Wroclaw");
     	List<String> expectedList = new ArrayList<>();
-    	boolean reachedVal = reachedList.containsAll(expectedList);
-    	boolean expectedVal = true;
-    	boolean expectedLogic = true;
-    	
-        //assert
-        boolean reachedLogic = reachedVal == expectedVal;
-        boolean result = !(expectedLogic ^ reachedLogic);
-        assertTrue(result);
-    }
-    
-    @Test
-    public void test_Krawedzie_Wroclaw_NullMatrix()
-    {    	     
-        //act
-    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),null);
-    	List<String> reachedList = _network.krawedzie("Wroclaw");
-    	List<String> expectedList = new ArrayList<>();
+    	expectedList.add("Gdynia");
+    	expectedList.add("Ostrowiec");
     	boolean reachedVal = reachedList.containsAll(expectedList);
     	boolean expectedVal = true;
     	boolean expectedLogic = true;
