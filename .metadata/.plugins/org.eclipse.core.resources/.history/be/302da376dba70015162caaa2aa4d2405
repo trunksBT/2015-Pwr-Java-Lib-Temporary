@@ -1,0 +1,15 @@
+package Bt.Tests.Core.Collections;
+
+import java.util.Hashtable;
+
+public class IndirectedGraph {
+
+	int[][] connectionMatrix;	
+	Hashtable<String,Integer> vertices;
+	
+	public IndirectedGraph(int[][] aConnectionMatrix, Hashtable<String, Integer> aVertices) {
+		connectionMatrix = aConnectionMatrix;
+		vertices = aVertices;
+	}
+
+}

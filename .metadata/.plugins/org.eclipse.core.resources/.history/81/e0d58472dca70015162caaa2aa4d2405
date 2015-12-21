@@ -1,0 +1,32 @@
+package Bt.Tests.Core.Collections;
+
+import java.util.Hashtable;
+import java.util.List;
+
+import Bt.Core.Collections.Interfaces.IGraf;
+
+public class IndirectedGraph<W,S> implements IGraf<W,S>{
+
+	int[][] connectionMatrix;	
+	Hashtable<W,S> vertices;
+	
+	public IndirectedGraph(int[][] aConnectionMatrix, Hashtable<W, S> aVertices) {
+		connectionMatrix = aConnectionMatrix;
+		vertices = aVertices;
+	}
+
+	@Override
+	public List<W> wierzcholki() {
+		return null;
+	}
+
+	@Override
+	public S krawedz(W w1, W w2) {
+		return null;
+	}
+
+	@Override
+	public List<W> krawedzie(W w) {
+		return null;
+	}
+}

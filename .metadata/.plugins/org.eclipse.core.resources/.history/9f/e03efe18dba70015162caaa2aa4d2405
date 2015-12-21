@@ -1,0 +1,37 @@
+package Bt.Tests.Core.Collections;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import Bt.Core.Collections.OneDimTable;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestIndirectedGraph extends TestCase{
+
+    @Test
+    public void testCTOR()
+    {
+        //arrange
+    	int size =3;
+    	int[][] connectionMatrix = new int[][]{
+    		  { 0, 4, 0, 0,},
+    		  { 4, 0, 3, 1,},
+    		  { 0, 3, 0, 2,},
+    		  { 0, 1, 2, 0,},
+    		};
+//        OneDimTable _pointA = new OneDimTable(size,tab);
+        int expected= 3;
+        
+        //act
+        int reached = _pointA.GetSize();
+        
+        //assert
+        boolean reachedLogic = expected == reached;
+        boolean expectedLogic = true;
+        boolean result = !(reachedLogic ^ reachedLogic);
+        assertTrue(result);
+    }
+}
