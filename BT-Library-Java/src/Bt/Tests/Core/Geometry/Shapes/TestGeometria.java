@@ -59,10 +59,10 @@ public class TestGeometria extends TestCase{
     	_algebra.druk();
     	
     	System.out.println("**************DOWOD ZE OBWODY DOBRE**********");
-    	System.out.println(_algebra.sumaObwodow());
+    	System.out.println(_algebra.iSumaObwodow());
     	
     	System.out.println("**************DOWOD ZE KOLO DODANE RAZ**********");
-    	System.out.println(_algebra.liczbaKol());
+    	System.out.println(_algebra.iLiczbaKol());
     	
     	System.out.println("**************DOWOD ZE KOLO USUNIETE RAZ**********");
     	_algebra.usunFigure("kolo1");

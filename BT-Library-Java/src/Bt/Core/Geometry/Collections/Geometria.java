@@ -23,7 +23,7 @@ public class Geometria implements IGeometry{
 		return true;
 	}
 
-	public double sumaObwodow() {
+	public double iSumaObwodow() {
 		
 		double acc = 0;
 		
@@ -36,7 +36,7 @@ public class Geometria implements IGeometry{
 		return acc;
 	}
 	
-	public int liczbaKol() {
+	public int iLiczbaKol() {
 		
 		int acc = 0;
 		
@@ -50,8 +50,8 @@ public class Geometria implements IGeometry{
 		return acc;
 	}
 	
-	public void usunFigure(String nazwa) {
-		_elementy.remove(new Shape(nazwa));
+	public boolean usunFigure(String nazwa) {
+		return _elementy.remove(new Shape(nazwa));
 	}
 	
 	public Shape dajFigure(String nazwa) {

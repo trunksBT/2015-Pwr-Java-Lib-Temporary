@@ -4,9 +4,9 @@ import Bt.Core.Geometry.Shapes.Shape;
 
 public interface IGeometry {
 	public boolean druk();
-	public double sumaObwodow();	
-	public int liczbaKol();	
+	public double iSumaObwodow();	
+	public int iLiczbaKol();	
 	public void dodaj(Shape aShape);
-	public void usunFigure(String nazwa);	
+	public boolean usunFigure(String nazwa);	
 	public Shape dajFigure(String nazwa);
 }

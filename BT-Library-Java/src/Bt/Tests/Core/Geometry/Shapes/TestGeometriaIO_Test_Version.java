@@ -241,7 +241,7 @@ public class TestGeometriaIO_Test_Version extends TestCase{
 
     	assertTrue(partLogic1 && partLogic2);
     }
-    
+//    
     @Test
     public void test_GUI() throws IOException, ClassNotFoundException, NoSuchElementException
     {	  
@@ -255,13 +255,20 @@ public class TestGeometriaIO_Test_Version extends TestCase{
     		scan = new Scanner(System.in);
     		
     		System.out.println(
-    				"Co chcesz dzisiaj zrobic ?\nPodaj Numer Operacji: \n\n"
-    				+ "1 Dodaj figure\n"
-    				+ "2 Wczytaj figury z pliku txt\n"
-    				+ "3 Wczytaj figury z pliku binarnego\n"
-    				+ "4 Zapisz figury do pliku binarnego\n"
+    				"Co chcesz dzisiaj zrobic ?\n"
+    				+ "Podaj Numer Operacji: \n"
+    				+ "\n"
+    				+ "1 Dodaj figure \n"
+    				+ "2 Wczytaj figury z pliku txt \n"
+    				+ "3 Wczytaj figury z pliku binarnego \n"
+    				+ "4 Zapisz figury do pliku binarnego \n"
     				+ "5 Wypisz liste figur\n"
     				+ "6 Poszerz wszystkie kola\n"
+    				+ "7 Daj figure \n"
+    				+ "8 Liczba kol \n"
+    				+ "9 Usun figure \n"
+    				+ "10 Suma obwodow wszystkich figur \n"
+    				
     				+ "\nUwaga ! Kazdy inny wpis powoduje koniec programu ! \n  ");
     		int nextOper = scan.nextInt();
     		
@@ -284,6 +291,18 @@ public class TestGeometriaIO_Test_Version extends TestCase{
 	    				break;
 	    			case 6:
 	    				breakFlag = geometry.powiekszKola();
+	    				break;
+	    			case 7:
+	    				breakFlag = geometry.dajFigure();
+	    				break;
+	    			case 8:
+	    				breakFlag = geometry.liczbaKol();
+	    				break;
+	    			case 9:
+	    				breakFlag = geometry.usunFigure();
+	    				break;
+	    			case 10:
+	    				breakFlag = geometry.sumaObwodow();
 	    				break;
 	    			default:
 	    				breakFlag = false;

@@ -40,6 +40,8 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 			wyj.println(it.next());
 		
+		System.out.println();
+		
 		return true;
 	}
 		
@@ -119,7 +121,32 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		}
 
 		if(opened) reader.close();
+		
 	    return true;
+	}
+	
+	public boolean liczbaKol()
+	{
+		wyj.println("Liczba Kol: " + iLiczbaKol());
+		return true;
+	}
+	
+	public boolean sumaObwodow()
+	{
+		wyj.println("Suma Obwodow wszystkich figur : " + super.iSumaObwodow() + "\n");
+		return true;
+	}
+	
+	public boolean usunFigure()
+	{
+		wyj.println("Podaj nazwe figury");
+		
+		if(super.usunFigure(scan.next()))
+			wyj.println("Skasowano\n");
+		else
+			wyj.println("Nie bylo takiej figury\n");
+		
+		return true;
 	}
 	
 	public void wczytajFiguryForTests(String path) throws IOException
@@ -267,6 +294,20 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		while(breakFlag == true);
 		
 		return retVal;
+	}
+	
+	public boolean dajFigure()
+	{
+		wyj.println("Podaj nazwe figury");
+		String name = scan.next();
+		super.dajFigure(name);
+		
+		if(super.dajFigure(name)!=null)			
+			wyj.println(super.dajFigure(name)+"\n");
+		else
+			wyj.println("Brak Figury\n");
+		
+		return true;
 	}
 	
 	public void dodajFigureForTests(String name,

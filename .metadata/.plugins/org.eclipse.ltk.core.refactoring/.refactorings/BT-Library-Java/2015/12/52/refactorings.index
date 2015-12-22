@@ -19,3 +19,5 @@
 1450771891299	Extract method 'loopWithNewVertice'
 1450788757101	Rename type 'TestIndirectedGraphAlgos'
 1450788768178	Copy compilation unit
+1450805603966	Rename method 'liczbaKol'
+1450806264159	Rename method 'sumaObwodow'
