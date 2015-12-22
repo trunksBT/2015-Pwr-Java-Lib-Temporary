@@ -51,7 +51,7 @@ public class TestTuple extends TestCase {
 	  
 	  
 	  @Test
-	  public void test_TheLowest()
+	  public void test_TheLowest_String_Double()
 	  {
 	      //arrange
 		List<Tuple<String,Double>> tupleOfVals = new LinkedList<>();
@@ -70,6 +70,33 @@ public class TestTuple extends TestCase {
 	      
 	      //assert
 	      assertEquals(reachedVal,expectedVal);
+	}
+	  
+	  @Test
+	  public void test_TheLowest_String_String()
+	  {
+	      //arrange
+		List<Tuple<String,String>> tupleOfVals = new LinkedList<>();
+		tupleOfVals.add(new Tuple<>("Kot","3.0"));
+		tupleOfVals.add(new Tuple<>("Kot","1.0"));
+		tupleOfVals.add(new Tuple<>("Kot","3.0"));
+		tupleOfVals.add(new Tuple<>("Kot","7.0"));
+		tupleOfVals.add(new Tuple<>("Kot","0.0"));
+			      
+		Optional<Tuple<String, String>> retVal = tupleOfVals.stream()
+			.reduce((tup1,tup2) -> tup1.compareTo(tup2) < 0 ? tup1 : tup2 );
+	      
+//	      //act
+	      String reachedVal = retVal.get().value;
+//	      String expectedVal = "0.0";
+		
+//		System.out.println( tupleOfVals.get(0).compareTo(tupleOfVals.get(1)) );
+//		System.out.println( tupleOfVals.get(1).compareTo(tupleOfVals.get(2)) );
+//		System.out.println( tupleOfVals.get(2).compareTo(tupleOfVals.get(3)) );
+	      System.out.println( reachedVal);
+	      
+	      //assert
+	      assertEquals(true,true);
 	}
 	  
 //		

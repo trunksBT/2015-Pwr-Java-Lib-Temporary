@@ -1,11 +1,6 @@
 package Bt.Core.Algorithms;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -25,11 +20,16 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 	}
 
 	public List<S> dijkstra(W aStart,W aEnd){
-		ArrayList<W> _dirtyVertices = new ArrayList<>();	
+		List<W> _dirtyVertices = new ArrayList<>();	
 		boolean finished = false;
 		boolean notFound = true;
 		
-		if( aStart != null && aEnd!= null ){
+		if( aStart != null 
+				&& aEnd!= null 
+				&& _graf!= null 
+				&& !_graf.Wierzcholki().isEmpty()
+				&& !_graf.Krawedzie(aStart).isEmpty()){
+			
 			while(finished == false){
 				_dirtyVertices.add(aStart);
 								
@@ -47,11 +47,17 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 							notFound = false;
 						}
 					else{
+						
+						List<Tuple<W,S>> tupleOfVals = associations
+						.stream()
+						.map(vert -> new Tuple<W,S>(vert,_graf.Krawedz(curr,vert)))
+						.collect(Collectors.toList());
+						
 						Optional<Tuple<W, S>> theLowestWage = associations
 								.stream()
 								.map(vert -> new Tuple<W,S>(vert,_graf.Krawedz(curr,vert)))
 								.reduce((tup1,tup2) -> tup1.compareTo(tup2) < 0 ? tup1 : tup2 );
-								
+						
 						aStart = theLowestWage.get().key;
 					}
 				}
@@ -128,8 +134,13 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 		
 		List<S> path = dijkstra(aW1,aW2);
 		
-		boolean retVal = path.isEmpty();
-		if(!retVal)
+		boolean isConnect = !path.isEmpty();
+		boolean goodPath = true;
+		
+		if(_graf!= null)
+			goodPath = path.size()<(_graf.Wierzcholki().size()-1);
+		
+		if(isConnect&&goodPath)
 		{
 			System.out.println( " Przeszkody po drodze :"+ aW1 + " - " +aW2 );
 			path.stream().forEach(val -> System.out.print( val +","));
@@ -139,6 +150,6 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 			System.out.println( "Brak Sciezki miedzy wezlami" );
 		}
 	
-		return true;
+		return isConnect && goodPath;
 	}
 }

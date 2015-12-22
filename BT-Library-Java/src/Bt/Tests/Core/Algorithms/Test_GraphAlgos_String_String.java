@@ -37,14 +37,14 @@ public class Test_GraphAlgos_String_String extends TestCase{
 	{
 		String[][] connectionMatrix = new String[][]{
 			
-			  /*A*/{ null, "3.0",  "2.0", null,  "5.0", null, null,  "1.0", },
-			  /*B*/{ "3.0", null, null,  "1.0", null,  "1.0",  "3.0", null, },
-			  /*C*/{ "2.0", null, null, null,  "1.0",  "1.0", null, null, },
-			  /*D*/{ null, "1.0", null, null, null, null,  "4.0", null, },
-			  /*E*/{ "5.0", null,  "1.0", null, null, null, null,  "6.0", },
-			  /*F*/{ null, "1.0",  "1.0", null, null, null, null, null, },
-			  /*G*/{ null, "3.0", null,  "4.0", null, null, null,  "2.0," },
-			  /*H*/{ "1.0", null, null, null,  "6.0", null,  "2.0", null, },
+			  /*A*/{ null,  "3.0", "2.0", null,  "5.0", null,  null,  "1.0", },
+			  /*B*/{ "3.0", null,  null,  "1.0", null,  "1.0", "3.0", null,  },
+			  /*C*/{ "2.0", null,  null,  null,  "1.0", "1.0", null,  null,  },
+			  /*D*/{ null,  "1.0", null,  null,  null,  null,  "4.0", null,  },
+			  /*E*/{ "5.0", null,  "1.0", null,  null,  null,  null,  "6.0", },
+			  /*F*/{ null,  "1.0", "1.0", null,  null,  null,  null,  null,  },
+			  /*G*/{ null,  "3.0", null,  "4.0", null,  null,  null,  "2.0," },
+			  /*H*/{ "1.0", null,  null,  null,  "6.0", null,  "2.0", null,  },
 			};
 			
 			return connectionMatrix;
@@ -186,7 +186,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	String end = null;
     	
     	List<String> expectedList = new ArrayList<>();
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -202,7 +202,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     }
     
     @Test
-    public void test_WT_Dijkstra_Dania_NULL()
+    public void test_WT_Dijkstra_NULL_Dania()
     {    	     
     	// arrange 
     	IndirectedGraph<String,String> _network = new IndirectedGraph<>(initMap(),initMatrix());
@@ -211,7 +211,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	String end = "Dania";
     	
     	List<String> expectedList = new ArrayList<>();
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -253,8 +253,6 @@ public class Test_GraphAlgos_String_String extends TestCase{
         boolean result2= !(expectedVal ^ reachedVal);
         assertTrue(result1&&result2);
     }
-    
-
     
     @Test
     public void test_TT_Dijkstra_Dania_Estonia()
@@ -325,7 +323,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	String end = "Estonia";
     	
     	List<String> expectedList = new ArrayList<>();
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -360,7 +358,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	expectedList.add("1.0");
     	expectedList.add("2.0");
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -386,7 +384,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	
     	List<String> expectedList = new ArrayList<>();
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -412,7 +410,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	
     	List<String> expectedList = new ArrayList<>();
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -438,7 +436,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	
     	List<String> expectedList = new ArrayList<>();
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -464,7 +462,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	
     	List<String> expectedList = new ArrayList<>();
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	

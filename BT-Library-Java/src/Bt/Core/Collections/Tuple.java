@@ -17,6 +17,10 @@ public class Tuple<W,S> implements Comparable<Tuple<W,S>>{
 		if (value instanceof Double)
 		{
 			retVal = (int)(((Double)value).doubleValue()-((Double)o.value).doubleValue());
+		}else
+		if (value instanceof String)
+		{
+			retVal = ((String) value).compareTo((String) o.value);
 		}
 		return retVal;
 	}

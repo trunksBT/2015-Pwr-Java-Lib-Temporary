@@ -11,6 +11,7 @@ import org.junit.runners.MethodSorters;
 import Bt.Core.Algorithms.GraphAlgos;
 import Bt.Core.Algorithms.IGraphAlgo;
 import Bt.Core.Collections.IndirectedGraph;
+import Bt.Core.Collections.Interfaces.IGraf;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -54,7 +55,7 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     public void test_Krawedzie_A()
     {    	     
         //act
-    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	IGraf<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
     	List<String> reachedList = _network.Krawedzie("Anglia");
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("Belgia");
@@ -177,6 +178,106 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     }
     
     @Test
+    public void test_TT_Dijkstra_Dania_Anglia_GrammarNull()
+    {    	     
+    	// arrange 
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	IGraphAlgo<String,Double> _walkAcross = new GraphAlgos<>(null);
+    	String start = "Dania";
+    	String end = "Anglia";
+    	
+    	List<Double> expectedList = new ArrayList<>();
+    	boolean expectedVal = false;
+    	boolean expectedListLogic = true;
+    	
+        // act	
+    	List<Double> reachedList = _walkAcross.dijkstra(start,end);
+    	boolean reachedVal = _walkAcross.ifConnected(start, end);
+    	
+        // assert
+        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
+        boolean reachedLogic2 = expectedVal && reachedVal;
+        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean result2= !(expectedVal ^ reachedVal);
+        assertTrue(result1&&result2);
+    }
+    
+    @Test
+    public void test_TT_Dijkstra_Dania_Anglia_MapNull()
+    {    	     
+    	// arrange 
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(null,initMatrix());
+    	IGraphAlgo<String,Double> _walkAcross = new GraphAlgos<>(_network);
+    	String start = "Dania";
+    	String end = "Anglia";
+    	
+    	List<Double> expectedList = new ArrayList<>();
+    	boolean expectedVal = false;
+    	boolean expectedListLogic = true;
+    	
+        // act	
+    	List<Double> reachedList = _walkAcross.dijkstra(start,end);
+    	boolean reachedVal = _walkAcross.ifConnected(start, end);
+    	
+        // assert
+        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
+        boolean reachedLogic2 = expectedVal && reachedVal;
+        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean result2= !(expectedVal ^ reachedVal);
+        assertTrue(result1&&result2);
+    }
+    
+    @Test
+    public void test_TT_Dijkstra_Dania_Anglia_MatrixNull()
+    {    	     
+    	// arrange 
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),null);
+    	IGraphAlgo<String,Double> _walkAcross = new GraphAlgos<>(_network);
+    	String start = "Dania";
+    	String end = "Anglia";
+    	
+    	List<Double> expectedList = new ArrayList<>();
+    	boolean expectedVal = false;
+    	boolean expectedListLogic = true;
+    	
+        // act	
+    	List<Double> reachedList = _walkAcross.dijkstra(start,end);
+    	boolean reachedVal = _walkAcross.ifConnected(start, end);
+    	
+        // assert
+        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
+        boolean reachedLogic2 = expectedVal && reachedVal;
+        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean result2= !(expectedVal ^ reachedVal);
+        assertTrue(result1&&result2);
+    }
+    
+    @Test
+    public void test_TT_Dijkstra_Dania_Anglia_MatrixNull_MapNull()
+    {    	     
+    	// arrange 
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(null,null);
+    	IGraphAlgo<String,Double> _walkAcross = new GraphAlgos<>(_network);
+    	String start = "Dania";
+    	String end = "Anglia";
+    	
+    	List<Double> expectedList = new ArrayList<>();
+    	boolean expectedVal = false;
+    	boolean expectedListLogic = true;
+    	
+        // act	
+    	List<Double> reachedList = _walkAcross.dijkstra(start,end);
+    	boolean reachedVal = _walkAcross.ifConnected(start, end);
+    	
+        // assert
+        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
+        boolean reachedLogic2 = expectedVal && reachedVal;
+        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean result2= !(expectedVal ^ reachedVal);
+        assertTrue(result1&&result2);
+    }
+    
+    @Test
     public void test_TW_Dijkstra_Dania_NULL()
     {    	     
     	// arrange 
@@ -186,7 +287,7 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     	String end = null;
     	
     	List<Double> expectedList = new ArrayList<>();
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -211,7 +312,32 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     	String end = "Dania";
     	
     	List<Double> expectedList = new ArrayList<>();
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
+    	boolean expectedListLogic = true;
+    	
+        // act	
+    	List<Double> reachedList = _walkAcross.dijkstra(start,end);
+    	boolean reachedVal = _walkAcross.ifConnected(start, end);
+    	
+        // assert
+        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
+        boolean reachedLogic2 = expectedVal && reachedVal;
+        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean result2= !(expectedVal ^ reachedVal);
+        assertTrue(result1&&result2);
+    }
+    
+    @Test
+    public void test_WT_Dijkstra_Dania_NULL_NullGrammar()
+    {    	     
+    	// arrange 
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	IGraphAlgo<String,Double> _walkAcross = new GraphAlgos<>(null);
+    	String start = null;
+    	String end = "Dania";
+    	
+    	List<Double> expectedList = new ArrayList<>();
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -325,7 +451,7 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     	String end = "Estonia";
     	
     	List<Double> expectedList = new ArrayList<>();
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -358,7 +484,7 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     	expectedList.add(1.0);
     	expectedList.add(2.0);
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -384,7 +510,7 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     	
     	List<Double> expectedList = new ArrayList<>();
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -410,7 +536,7 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     	
     	List<Double> expectedList = new ArrayList<>();
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -436,7 +562,7 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     	
     	List<Double> expectedList = new ArrayList<>();
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	
@@ -462,7 +588,7 @@ public class Test_GraphAlgos_String_Double extends TestCase{
     	
     	List<Double> expectedList = new ArrayList<>();
 
-    	boolean expectedVal = true;
+    	boolean expectedVal = false;
     	boolean expectedListLogic = true;
     	
         // act	

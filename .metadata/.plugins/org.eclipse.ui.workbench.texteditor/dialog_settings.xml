@@ -8,6 +8,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Double"/>
 			<item value="W"/>
 			<item value="druk"/>
 			<item value="System.out"/>
@@ -15,7 +16,6 @@
 			<item value="fileName"/>
 			<item value="wej"/>
 			<item value="dane"/>
-			<item value="ala"/>
 		</list>
 		<list key="replacehistory">
 			<item value="String"/>
