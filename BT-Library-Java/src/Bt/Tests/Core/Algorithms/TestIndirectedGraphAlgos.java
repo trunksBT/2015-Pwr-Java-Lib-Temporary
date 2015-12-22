@@ -116,6 +116,33 @@ public class TestIndirectedGraphAlgos extends TestCase{
     	
         // assert
         boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
+//        boolean reachedLogic2 = expectedVal && reachedVal;
+        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean result2= !(expectedVal ^ reachedVal);
+        assertTrue(result1&&result2);
+    }
+    
+    @Test
+    public void test_Dijkstra_Dania_Francja()
+    {    	     
+    	// arrange 
+    	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
+    	IGraphAlgo<String,Double> _walkAcross = new GraphAlgos<>(_network);
+    	String start = "Dania";
+    	String end = "Francja";
+    	
+    	List<Double> expectedList = new ArrayList<>();
+    	expectedList.add(1.0);
+    	expectedList.add(1.0);
+    	boolean expectedVal = true;
+    	boolean expectedListLogic = true;
+    	
+        // act	
+    	List<Double> reachedList = _walkAcross.dijkstra(start,end);
+    	boolean reachedVal = _walkAcross.ifConnected(start, end);
+    	
+        // assert
+        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
         boolean reachedLogic2 = expectedVal && reachedVal;
         boolean result1= !(expectedListLogic ^ reachedLogic1);
         boolean result2= !(expectedVal ^ reachedVal);

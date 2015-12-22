@@ -1,11 +1,15 @@
 package Bt.Core.Algorithms;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import Bt.Core.Collections.IndirectedGraph;
+import Bt.Core.Collections.Tuple;
 import Bt.Core.Collections.Interfaces.IGraf;
 
 public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
@@ -17,8 +21,10 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 		_graf = aGraf;
 	}
 	
+	@SuppressWarnings("unused")
 	public List<S> dijkstra(W aStart,W aEnd){
 		HashMap<W,LinkedList<S>> _mapOfStackTrace = init(_graf);
+		List<W> associations = null;
 		
 		boolean finished = false;
 		
@@ -29,16 +35,31 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 				W buffStart = aStart;
 				W curr = aStart;
 				
-				List<W> associations = _graf.Krawedzie(aStart);
-				associations.stream()
-				.forEach(assoc -> _mapOfStackTrace.get(assoc).add(_graf.Krawedz(curr, assoc)));
-				
+				associations = _graf.Krawedzie(aStart);
+
+				associations
+				.forEach(vert -> _mapOfStackTrace.get(vert).add(_graf.Krawedz(curr, vert)));
+										
 				long ammountOfGood = associations.stream()
 						.filter(vert -> vert.equals(aEnd))
 						.count();
 				
 				if(ammountOfGood!= 0) 
 					finished = true;
+				else
+				{		
+					List<Tuple<W,S>> tupleOfVals = new ArrayList<>();
+					
+					associations
+							.forEach(vert -> tupleOfVals.add(new Tuple<W,S>(vert,_graf.Krawedz(curr, vert))));
+					
+					 Collections.sort(tupleOfVals, new Comparator<Tuple<W,S>>() {
+						    public int compare(Tuple<W,S> u1, Tuple<W,S> u2) {
+						      return u1.compareTo(u2);
+						    }});
+					
+					 aStart = tupleOfVals.get(0).key;
+				}
 			}
 		
 		}
