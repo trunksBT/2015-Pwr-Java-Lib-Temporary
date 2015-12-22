@@ -53,7 +53,7 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 							.filter(vert -> vert.equals(aEnd))
 							.collect(Collectors.toList());
 							
-					_finalStackTrace.add((S) _graf.Krawedz(curr, goods.get(0)));
+					_finalStackTrace.add((S) _graf.Krawedz(curr, vert));
 					finished = true;
 				}
 				else
@@ -74,7 +74,7 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 			}
 		
 		}
-		return _finalStackTrace;	
+		return _mapOfStackTrace.get(aEnd);	
 	}
 	
 	private HashMap<W,LinkedList<S>> init(
@@ -95,9 +95,8 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 		boolean retVal = path.isEmpty();
 		if(!retVal)
 		{
-			System.out.println( " Przeszkody po drodze :"+ aW1 + " - " +aW2 );
+			System.out.println( " Przeszkody po drodze: " );
 			path.stream().forEach(val -> System.out.print( val +","));
-			System.out.println();
 		}else
 		{
 			System.out.println( "Brak Sciezki miedzy wezlami" );

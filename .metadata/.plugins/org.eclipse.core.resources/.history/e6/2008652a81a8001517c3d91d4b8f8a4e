@@ -25,7 +25,6 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 	public List<S> dijkstra(W aStart,W aEnd){
 		HashMap<W,LinkedList<S>> _mapOfStackTrace = init(_graf);
 		ArrayList<W> _dirtyVertices = new ArrayList<>();
-		ArrayList<S> _finalStackTrace = new ArrayList<>();
 		
 		List<W> associations = null;
 		
@@ -36,26 +35,18 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 			while(finished == false)
 			{
 				_dirtyVertices.add(aStart);
-				W curr = aStart;
-				associations = _graf.Krawedzie(curr);
-				associations.removeAll(_dirtyVertices);
+				
+				associations = _graf.Krawedzie(aStart);
 
 				associations
-				.forEach(vert -> _mapOfStackTrace.get(vert).add(_graf.Krawedz(curr, vert)));
+				.forEach(vert -> _mapOfStackTrace.get(vert).add(_graf.Krawedz(aStart, vert)));
 										
 				long ammountOfGood = associations.stream()
 						.filter(vert -> vert.equals(aEnd))
 						.count();
 				
-				if(ammountOfGood!= 0)
-				{
-					List<W> goods =  associations.stream()
-							.filter(vert -> vert.equals(aEnd))
-							.collect(Collectors.toList());
-							
-					_finalStackTrace.add((S) _graf.Krawedz(curr, goods.get(0)));
+				if(ammountOfGood!= 0) 
 					finished = true;
-				}
 				else
 				{		
 					List<Tuple<W,S>> tupleOfVals = new ArrayList<>();
@@ -67,14 +58,13 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 						    public int compare(Tuple<W,S> u1, Tuple<W,S> u2) {
 						      return u1.compareTo(u2);
 						    }});
-					 
-					 _finalStackTrace.add((S) tupleOfVals.get(0).value);
+					
 					 aStart = tupleOfVals.get(0).key;
 				}
 			}
 		
 		}
-		return _finalStackTrace;	
+		return _mapOfStackTrace.get(aEnd);	
 	}
 	
 	private HashMap<W,LinkedList<S>> init(
@@ -95,9 +85,8 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 		boolean retVal = path.isEmpty();
 		if(!retVal)
 		{
-			System.out.println( " Przeszkody po drodze :"+ aW1 + " - " +aW2 );
+			System.out.println( " Przeszkody po drodze: " );
 			path.stream().forEach(val -> System.out.print( val +","));
-			System.out.println();
 		}else
 		{
 			System.out.println( "Brak Sciezki miedzy wezlami" );
