@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestIndirectedGraphAlgos" project="BT-Library-Java" tests="5" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="Bt.Tests.Core.Algorithms.TestIndirectedGraphAlgos" incomplete="true">
-    <testcase name="test_Dijkstra_Dania_Anglia" classname="Bt.Tests.Core.Algorithms.TestIndirectedGraphAlgos" incomplete="true"/>
-    <testcase name="test_Dijkstra_Dania_Belgia" classname="Bt.Tests.Core.Algorithms.TestIndirectedGraphAlgos" incomplete="true"/>
-    <testcase name="test_Dijkstra_Dania_Francja" classname="Bt.Tests.Core.Algorithms.TestIndirectedGraphAlgos" incomplete="true"/>
-    <testcase name="test_Dijkstra_Dania_Grecja" classname="Bt.Tests.Core.Algorithms.TestIndirectedGraphAlgos" incomplete="true"/>
-    <testcase name="test_Krawedzie_A" classname="Bt.Tests.Core.Algorithms.TestIndirectedGraphAlgos" incomplete="true"/>
-  </testsuite>
-</testrun>

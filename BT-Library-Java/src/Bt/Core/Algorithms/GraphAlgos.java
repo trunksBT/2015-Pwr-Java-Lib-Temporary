@@ -19,7 +19,7 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 	
 	IGraf<W,S> _graf;
 	
-	public GraphAlgos(IndirectedGraph<W,S> aGraf)
+	public GraphAlgos(IGraf<W,S> aGraf)
 	{
 		_graf = aGraf;
 	}
