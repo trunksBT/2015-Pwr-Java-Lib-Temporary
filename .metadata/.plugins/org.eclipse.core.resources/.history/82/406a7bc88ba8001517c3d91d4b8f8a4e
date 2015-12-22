@@ -1,0 +1,57 @@
+package Bt.Tests.Core.Collections;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import Bt.Core.Collections.Tuple;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestReduce extends TestCase {
+	
+	List<Person> persons = Arrays.asList(
+	    new Person("Max", 18),
+	    new Person("Peter", 23),
+	    new Person("Pamela", 23),
+	    new Person("David", 12));	  
+	  
+	  @Test
+	  public void test_FoldLeftWithAccInList()
+	  {
+//
+//		Optional<Tuple<String, Double>> retVal = tupleOfVals.stream()
+//			.reduce((tup1,tup2) -> tup1.compareTo(tup2) < 0 ? tup1 : tup2 );
+		
+		Integer ageSum = persons
+			    .parallelStream()
+			    .reduce(0,
+			        (sum, p) -> {
+			            System.out.format("accumulator: sum=%s; person=%s\n", sum, p);
+			            return sum += p.age;
+			        },
+			        (sum1, sum2) -> {
+			            System.out.format("combiner: sum1=%s; sum2=%s\n", sum1, sum2);
+			            return sum1 + sum2;
+			        });
+	      
+//	      //act
+//	      double reachedVal = retVal.get().value;
+		System.out.println( ageSum );
+	      double expectedVal = 0.0;
+	      
+	      //assert
+	      assertEquals(1,1);
+	}
+	  
+//		
+//		Optional<Tuple<W, S>> retVal = tupleOfVals.stream()
+//			.reduce((tup1,tup2) -> tup1.compareTo(tup2) > 0 ? tup1 : tup2 );
+}

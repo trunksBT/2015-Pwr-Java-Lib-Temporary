@@ -10797,3 +10797,58 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.jdt.core 4 4 2015-12-22 09:07:02.818
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: BT-Library-Java
+!STACK 1
+Java Model Exception: Java Model Status [TestTuple [in [Working copy] TestReduce.java [in Bt.Tests.Core.Collections [in src [in BT-Library-Java]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:590)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.Member.getNameRange(Member.java:343)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.createProblemFor(AbstractImageBuilder.java:400)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:182)
+	at org.eclipse.jdt.internal.compiler.Compiler.processCompiledUnits(Compiler.java:589)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:458)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:367)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.compile(IncrementalImageBuilder.java:330)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:304)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.build(IncrementalImageBuilder.java:135)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildDeltas(JavaBuilder.java:267)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:195)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2015-12-22 09:07:02.819
+!MESSAGE TestTuple [in [Working copy] TestReduce.java [in Bt.Tests.Core.Collections [in src [in BT-Library-Java]]]] does not exist
+
+!ENTRY org.eclipse.jdt.debug.ui 4 4 2015-12-22 09:48:16.760
+!MESSAGE org.eclipse.jdi.TimeoutException: Timeout occurred while waiting for packet 80447. occurred retrieving 'this' from stack frame.
+!STACK 0
+org.eclipse.jdi.TimeoutException: Timeout occurred while waiting for packet 80447.
+	at org.eclipse.jdi.internal.connect.PacketReceiveManager.getReply(PacketReceiveManager.java:187)
+	at org.eclipse.jdi.internal.connect.PacketReceiveManager.getReply(PacketReceiveManager.java:198)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:192)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:227)
+	at org.eclipse.jdi.internal.StackFrameImpl.thisObject(StackFrameImpl.java:249)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getUnderlyingThisObject(JDIStackFrame.java:789)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.updateVariables(JDIStackFrame.java:526)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getVariables0(JDIStackFrame.java:365)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getVariables(JDIStackFrame.java:286)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.findVariable(JDIStackFrame.java:719)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugHover.findLocalVariable(JavaDebugHover.java:142)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugHover.getHoverInfo2(JavaDebugHover.java:428)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
