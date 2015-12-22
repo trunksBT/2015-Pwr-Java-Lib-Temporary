@@ -9,7 +9,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import Bt.Core.Algorithms.GraphAlgos;
-import Bt.Core.Algorithms.IGraphAlgo;
 import Bt.Core.Collections.IndirectedGraph;
 import junit.framework.TestCase;
 
@@ -100,25 +99,21 @@ public class TestIndirectedGraphAlgos extends TestCase{
     {    	     
     	// arrange 
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	IGraphAlgo<String,Double> _walkAcross = new GraphAlgos<>(_network);
+    	GraphAlgos<String,Double> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Grecja";
     	
     	List<Double> expectedList = new ArrayList<>();
     	expectedList.add(4.0);
     	boolean expectedVal = true;
-    	boolean expectedListLogic = true;
-    	
+    	boolean expectedLogic = true;
     	
         // act	
     	List<Double> reachedList = _walkAcross.dijkstra(start,end);
-    	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
-        boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        boolean reachedLogic = reachedList.containsAll(expectedList) == expectedVal;
+        boolean result = !(expectedLogic ^ reachedLogic);
+        assertTrue(result);
     }
 }

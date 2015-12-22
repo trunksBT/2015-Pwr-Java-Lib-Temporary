@@ -1,5 +1,6 @@
 package Bt.Core.Algorithms;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.stream.Collectors;
 import Bt.Core.Collections.IndirectedGraph;
 import Bt.Core.Collections.Interfaces.IGraf;
 
-public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
+public class GraphAlgos< W,S> implements IGraphAlgo<W>{
 	
 	IGraf<W,S> _graf;
 	

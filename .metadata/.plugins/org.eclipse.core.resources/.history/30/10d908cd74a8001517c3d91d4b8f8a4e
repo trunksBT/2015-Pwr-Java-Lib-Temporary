@@ -1,5 +1,6 @@
 package Bt.Core.Algorithms;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.stream.Collectors;
 import Bt.Core.Collections.IndirectedGraph;
 import Bt.Core.Collections.Interfaces.IGraf;
 
-public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
+public class GraphAlgos< W,S> implements IGraphAlgo{
 	
 	IGraf<W,S> _graf;
 	
@@ -53,23 +54,5 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 				.collect(Collectors.toMap(
 						vert-> vert,
 						vert-> new LinkedList<S>()));
-	}
-
-	@Override
-	public boolean ifConnected(W aW1, W aW2) {
-		
-		List<S> path = dijkstra(aW1,aW2);
-		
-		boolean retVal = path.isEmpty();
-		if(!retVal)
-		{
-			System.out.println( " Przeszkody po drodze: " );
-			path.stream().forEach(val -> System.out.print( val +","));
-		}else
-		{
-			System.out.println( "Brak Sciezki miedzy wezlami" );
-		}
-	
-		return true;
 	}
 }
