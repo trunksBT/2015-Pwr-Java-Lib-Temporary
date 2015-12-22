@@ -102,12 +102,12 @@ public class TestIndirectedGraph extends TestCase{
     	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(null,initMatrix());
-    	boolean reachedVal = _network.wierzcholki().contains("Krakow");
-    	reachedVal &= _network.wierzcholki().contains("Gdynia");
-    	reachedVal &= _network.wierzcholki().contains("Ostrowiec");
-    	reachedVal &= _network.wierzcholki().contains("Wroclaw");
+    	boolean reachedVal = _network.Wierzcholki().contains("Krakow");
+    	reachedVal &= _network.Wierzcholki().contains("Gdynia");
+    	reachedVal &= _network.Wierzcholki().contains("Ostrowiec");
+    	reachedVal &= _network.Wierzcholki().contains("Wroclaw");
     	
-    	int reachedSize = _network.wierzcholki().size();
+    	int reachedSize = _network.Wierzcholki().size();
 	
         //assert
         boolean reachedLogic = reachedVal == expectedVal;
@@ -126,12 +126,12 @@ public class TestIndirectedGraph extends TestCase{
     	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),null);
-    	boolean reachedVal = _network.wierzcholki().contains("Krakow");
-    	reachedVal &= _network.wierzcholki().contains("Gdynia");
-    	reachedVal &= _network.wierzcholki().contains("Ostrowiec");
-    	reachedVal &= _network.wierzcholki().contains("Wroclaw");
+    	boolean reachedVal = _network.Wierzcholki().contains("Krakow");
+    	reachedVal &= _network.Wierzcholki().contains("Gdynia");
+    	reachedVal &= _network.Wierzcholki().contains("Ostrowiec");
+    	reachedVal &= _network.Wierzcholki().contains("Wroclaw");
     	
-    	int reachedSize = _network.wierzcholki().size();
+    	int reachedSize = _network.Wierzcholki().size();
 	
         //assert
         boolean reachedLogic = reachedVal == expectedVal;
@@ -150,9 +150,9 @@ public class TestIndirectedGraph extends TestCase{
     	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	boolean reachedVal = _network.wierzcholki().contains(null);
+    	boolean reachedVal = _network.Wierzcholki().contains(null);
     	
-    	int reachedSize = _network.wierzcholki().size();
+    	int reachedSize = _network.Wierzcholki().size();
 	
         //assert
         boolean reachedLogic = reachedVal == expectedVal;
@@ -168,7 +168,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	List<String> reachedList = _network.krawedzie("Ala");
+    	List<String> reachedList = _network.Krawedzie("Ala");
     	List<String> expectedList = new ArrayList<>();
     	boolean reachedVal = reachedList.containsAll(expectedList);
     	boolean expectedVal = true;
@@ -185,7 +185,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	List<String> reachedList = _network.krawedzie("Krakow");
+    	List<String> reachedList = _network.Krawedzie("Krakow");
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("Gdynia");
     	boolean reachedVal = reachedList.containsAll(expectedList);
@@ -203,7 +203,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	List<String> reachedList = _network.krawedzie(null);
+    	List<String> reachedList = _network.Krawedzie(null);
     	List<String> expectedList = new ArrayList<>();
     	boolean reachedVal = reachedList.containsAll(expectedList);
     	boolean expectedVal = true;
@@ -220,7 +220,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	List<String> reachedList = _network.krawedzie("Wroclaw");
+    	List<String> reachedList = _network.Krawedzie("Wroclaw");
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("Gdynia");
     	expectedList.add("Ostrowiec");
@@ -239,7 +239,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(null,initMatrix());
-    	List<String> reachedList = _network.krawedzie("Wroclaw");
+    	List<String> reachedList = _network.Krawedzie("Wroclaw");
     	List<String> expectedList = new ArrayList<>();
     	boolean reachedVal = reachedList.containsAll(expectedList);
     	boolean expectedVal = true;
@@ -256,7 +256,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),null);
-    	List<String> reachedList = _network.krawedzie("Wroclaw");
+    	List<String> reachedList = _network.Krawedzie("Wroclaw");
     	List<String> expectedList = new ArrayList<>();
     	boolean reachedVal = reachedList.containsAll(expectedList);
     	boolean expectedVal = true;
@@ -273,7 +273,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	List<String> reachedList = _network.krawedzie("Ostrowiec");
+    	List<String> reachedList = _network.Krawedzie("Ostrowiec");
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("Gdynia");
     	expectedList.add("Wroclaw");
@@ -292,7 +292,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	List<String> reachedList = _network.krawedzie("Gdynia");
+    	List<String> reachedList = _network.Krawedzie("Gdynia");
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("Krakow");
     	expectedList.add("Ostrowiec");
@@ -311,7 +311,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	Double reachedEdge = _network.krawedz("Wroclaw", "Gdynia");
+    	Double reachedEdge = _network.Krawedz("Wroclaw", "Gdynia");
     	Double expectedEdge = 1.0;
     	boolean expectedLogic = true;
     	
@@ -326,7 +326,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	Double reachedEdge = _network.krawedz("Wroclaw", "Krakow");
+    	Double reachedEdge = _network.Krawedz("Wroclaw", "Krakow");
     	Double expectedEdge = null;
     	boolean expectedLogic = true;
     	
@@ -341,7 +341,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	Double reachedEdge = _network.krawedz("Ostrowiec", "Gdynia");
+    	Double reachedEdge = _network.Krawedz("Ostrowiec", "Gdynia");
     	Double expectedEdge = 3.0;
     	boolean expectedLogic = true;
     	
@@ -356,7 +356,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	Double reachedEdge = _network.krawedz(null, "Gdynia");
+    	Double reachedEdge = _network.Krawedz(null, "Gdynia");
     	Double expectedEdge = null;
     	boolean expectedLogic = true;
     	
@@ -371,7 +371,7 @@ public class TestIndirectedGraph extends TestCase{
     {    	     
         //act
     	IndirectedGraph<String,Double> _network = new IndirectedGraph<>(initMap(),initMatrix());
-    	Double reachedEdge = _network.krawedz("Gdynia", null);
+    	Double reachedEdge = _network.Krawedz("Gdynia", null);
     	Double expectedEdge = null;
     	boolean expectedLogic = true;
     	

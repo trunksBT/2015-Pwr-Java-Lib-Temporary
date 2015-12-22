@@ -16,7 +16,7 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 	}
 
 	@Override
-	public List<W> wierzcholki() {	
+	public List<W> Wierzcholki() {	
 		List<W> retVal = new ArrayList<W>();
 		
 		if(vertices!=null)
@@ -26,7 +26,7 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 	}
 
 	@Override
-	public S krawedz(W aW1, W aW2) {
+	public S Krawedz(W aW1, W aW2) {
 		S retVal = null;
 		
 		if(!(aW1 == null || aW2 == null))
@@ -37,7 +37,7 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<W> krawedzie(W aW) {
+	public List<W> Krawedzie(W aW) {
 		List<W> retVal = new LinkedList<>();
 		S lvl = null;
 		if(aW!=null && vertices!=null && matrix!= null)

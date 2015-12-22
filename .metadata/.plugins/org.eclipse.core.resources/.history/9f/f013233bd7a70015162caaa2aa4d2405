@@ -1,9 +1,0 @@
-package Bt.Tests.Core.Collections;
-
-public class TestIndirectedGraph {
-
-	public TestIndirectedGraph() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

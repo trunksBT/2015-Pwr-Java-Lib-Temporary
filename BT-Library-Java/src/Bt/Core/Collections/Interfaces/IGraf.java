@@ -3,7 +3,7 @@ package Bt.Core.Collections.Interfaces;
 import java.util.List;
 
 public interface IGraf<W, S> {
-	List<W> wierzcholki();
-	S krawedz(W w1, W w2);
-	List<W> krawedzie(W w);
+	List<W> Wierzcholki();
+	S Krawedz(W w1, W w2);
+	List<W> Krawedzie(W w);
 }
