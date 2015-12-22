@@ -1,0 +1,40 @@
+package Bt.Core.Algorithms;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.stream.Collectors;
+
+import Bt.Core.Collections.IndirectedGraph;
+
+public class GraphAlgos<W,S> {
+	
+	IndirectedGraph<W,S> _graf;
+	
+	public GraphAlgos(IndirectedGraph<W,S> aGraf)
+	{
+		_graf = aGraf;
+	}
+	
+	public List<S> dijkstra(W aStart,W aEnd){
+		HashMap<String,LinkedList<Double>> _mapOfStackTrace;
+		
+		
+		return null;	
+	}
+	
+	private HashMap<W,LinkedList<S>> init(
+			IndirectedGraph<W,S> aGraf)
+	{
+//		HashMap<W,LinkedList<S>> retVal = new HashMap<>();
+//		
+//		aGraf.wierzcholki()
+//			.forEach(vert -> retVal.put(vert, new LinkedList<S>()));;
+			
+		return aGraf.wierzcholki()
+				.stream()
+				.map(vert -> retVal.put(vert, new LinkedList<S>()))
+				.collect(Collectors.toList());
+	}
+}
