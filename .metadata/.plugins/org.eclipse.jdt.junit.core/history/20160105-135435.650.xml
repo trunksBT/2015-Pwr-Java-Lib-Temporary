@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_GraphAlgos_String_Double" project="BT-Library-Java" tests="21" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true">
+    <testcase name="test_FF_Dijkstra_Wlochy_Rosja" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" time="0.003"/>
+    <testcase name="test_FT_Dijkstra_Polska_Estonia" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="test_FW_Dijkstra_Rosja_NULL" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" time="0.001"/>
+    <testcase name="test_Krawedzie_A" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TF_Dijkstra_Dania_Rosja" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Anglia" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Anglia_GrammarNull" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Anglia_MapNull" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Anglia_MatrixNull" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Anglia_MatrixNull_MapNull" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Belgia" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Czechy" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Estonia" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Francja" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Grecja" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TT_Dijkstra_Dania_Hiszpania" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_TW_Dijkstra_Dania_NULL" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_WF_Dijkstra_NULL_Rosja" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_WT_Dijkstra_Dania_NULL" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_WT_Dijkstra_Dania_NULL_NullGrammar" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+    <testcase name="test_WW_Dijkstra_NULL_NULL" classname="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double" incomplete="true"/>
+  </testsuite>
+</testrun>
