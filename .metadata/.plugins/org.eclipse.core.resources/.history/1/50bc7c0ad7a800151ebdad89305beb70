@@ -17,7 +17,7 @@ public class Geometria implements IGeometry{
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 		{ 
 			Shape el=it.next();
-			System.out.println(el);
+			System.out.println(el.toString());
 			System.out.println();
 		}
 		return true;
@@ -58,8 +58,7 @@ public class Geometria implements IGeometry{
 		
 		Shape retVal = null;
 		
-//		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext())
-		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext() && retVal == null;)
+		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 		{ 
 			Shape el=it.next();
 			if(el.name.equals(nazwa))

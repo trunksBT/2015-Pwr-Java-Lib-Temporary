@@ -13,6 +13,22 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 		vertices = aVertices;
 		matrix = aConnectionMatrix;
 	}
+//
+//	@SuppressWarnings("unchecked")
+//	@Override
+//	public List<W> Wierzcholki() {	
+//		@SuppressWarnings("unchecked")
+//		
+//		
+//		List<W> retVal = new ArrayList<W>();
+//				
+//		
+////			retVal = new ArrayList<W>((Collection<? extends W>) vertices.entrySet());
+//		if(vertices!=null)		 
+//			retVal = Collections.list(vertices.keys());
+//		
+//		return retVal;
+//	}
 
 	@SuppressWarnings("unchecked")
 	@Override

@@ -16,16 +16,24 @@ public class IndirectedGraph<W,S> implements IGraf<W,S>{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<W> Wierzcholki() {			
-
+	public List<W> Wierzcholki() {	
+		@SuppressWarnings("unchecked")
+		
+		
 		List<W> retVal = new ArrayList<W>();
 				
-		if(vertices!=null)		
-			retVal = new ArrayList<W>((Collection<? extends W>) (vertices.entrySet()));
+		
+//			retVal = new ArrayList<W>((Collection<? extends W>) vertices.entrySet());
+		if(vertices!=null)		 
+			retVal = Collections.list(vertices.keys());
 		
 		return retVal;
 	}
 	
+	
+	
+
+
 	@Override
 	public S Krawedz(W aW1, W aW2) {
 		S retVal = null;

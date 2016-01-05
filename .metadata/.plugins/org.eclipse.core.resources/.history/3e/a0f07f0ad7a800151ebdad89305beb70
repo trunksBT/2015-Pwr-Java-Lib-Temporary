@@ -39,8 +39,6 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		
 		for(Iterator<Shape> it = _elementy.iterator(); it.hasNext();)
 			wyj.println(it.next());
-		//kiedy sie przerywa petle wczesniej
-		// ale krocej foreach
 		
 		System.out.println();
 		
@@ -64,8 +62,6 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 			String line = null;
 		    while((line = reader.readLine())!=null){
 		    	String[] infos = line.split("[ (),]");
-		    	// scanner pomija rzeczy !!! TODO
-		    	
 		    	String[] outTab = new String[9];
 		    	
 		    	for(int i = 0,idx = 0 ; i < infos.length ;i++)
@@ -145,7 +141,7 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 	{
 		wyj.println("Podaj nazwe figury");
 		
-		if(usunFigure(scan.next()))
+		if(super.usunFigure(scan.next()))
 			wyj.println("Skasowano\n");
 		else
 			wyj.println("Nie bylo takiej figury\n");
@@ -353,13 +349,13 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 	public boolean save() throws IOException
 	{
 		wyj.println("Podaj nazwe pliku do ktorego mam zapisac figury");
-//		String name = scan.next();	
+		String name = scan.next();	
 		ObjectOutputStream wyjObj = null;
 		boolean opened = false;
 		
 		try
 		{	
-			wyjObj = new ObjectOutputStream(new FileOutputStream(scan.next().concat(".dta")));	
+			wyjObj = new ObjectOutputStream(new FileOutputStream(name.concat(".dta")));	
 			opened = true;
 			wyjObj.writeObject(_elementy);
 		
@@ -426,8 +422,9 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		try
 		{
 			wyj.println("Podaj nazwe pliku z ktorego mam wczytac figury");
+			String name = scan.next();	
 								
-			wyjObj = new ObjectInputStream(new FileInputStream(scan.next().concat(".dta")));
+			wyjObj = new ObjectInputStream(new FileInputStream(name.concat(".dta")));
 			opened = true;
 			
 			_elementy = (Shapes) wyjObj.readObject();
@@ -474,7 +471,9 @@ public class GeometriaIO extends Geometria implements IGeometry,Strumien,IForTes
 		{ 
 			Shape el=it.next();
 			if(el instanceof Circle)
+			{
 				((Circle) el).getRadius().extend(mult);
+			}
 		}
 		
 		return true;
