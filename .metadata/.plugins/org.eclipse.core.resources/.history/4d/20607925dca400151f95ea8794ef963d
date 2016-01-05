@@ -1,9 +1,0 @@
-package Bt.Core.FileOperations;
-
-public class Artykul {
-
-	public Artykul() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

@@ -1,9 +1,0 @@
-package Bt.Core.Geometry.Shapes;
-
-public class TriangleDetailed {
-
-	public TriangleDetailed() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

@@ -1,0 +1,32 @@
+package Bt.Core.Reflections;
+
+import java.lang.reflect.Field;
+
+public class Debug {
+	public static void fields(Object aObj)
+	{
+		StringBuffer info = new StringBuffer();
+		Field[] fields = aObj.getClass().getDeclaredFields();
+		
+		for(Field it : fields)
+		{
+			info.append("Pole: ");
+			it.setAccessible(true);
+			
+			info.append(it.getName());	
+			info.append(" => ");
+			
+			info.append(it.getType());	
+			info.append(", ");
+
+			try {
+				info.append(it.get(aObj));
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				e.printStackTrace();
+			}
+			
+			System.out.println( info );
+			info.delete(0, info.length());
+		}
+	}
+}

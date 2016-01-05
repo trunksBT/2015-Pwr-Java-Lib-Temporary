@@ -1,0 +1,19 @@
+package Bt.Core.Reflections;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Debug {
+	public static void fields(Object aObj)
+	{
+		List<String> infos = new ArrayList<>();
+		Field[] fields = aObj.getClass().getFields();
+		
+		for(Field it : fields)
+		{
+			infos.add(it.getName());
+			infos.add(it.getType().toString());
+		}
+	}
+}

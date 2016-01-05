@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_Reflections" project="BT-Library-Java" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="Bt.Tests.Core.Reflections.Test_Reflections" incomplete="true">
+    <testcase name="test_Fields" classname="Bt.Tests.Core.Reflections.Test_Reflections" incomplete="true"/>
+  </testsuite>
+</testrun>

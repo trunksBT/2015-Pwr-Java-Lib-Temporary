@@ -1,9 +1,0 @@
-package Bt.Core.FileOperations;
-
-public class Publikacja {
-
-	public Publikacja() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

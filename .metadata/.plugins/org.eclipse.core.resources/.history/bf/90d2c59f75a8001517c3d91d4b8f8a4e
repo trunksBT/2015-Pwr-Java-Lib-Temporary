@@ -1,5 +1,0 @@
-package Bt.Core.Algorithms;
-
-public interface IGraphAlgo<W> {
-	boolean ifConnected(W aW1,W aW2);
-}

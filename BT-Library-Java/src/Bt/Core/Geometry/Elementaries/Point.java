@@ -7,6 +7,7 @@ public class Point implements Serializable
 {
     double _x;
     double _y;
+    String _test = "test";
 
     public Point(Point val)
     {

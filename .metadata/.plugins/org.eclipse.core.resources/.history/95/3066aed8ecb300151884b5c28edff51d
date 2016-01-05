@@ -1,0 +1,46 @@
+package Bt.Core.Reflections;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Debug {
+	public static void fields(Object aObj)
+	{
+		List<String> infos = new ArrayList<>();
+		Field[] fields = aObj.getClass().getDeclaredFields();
+		
+		for(Field it : fields)
+		{
+//			Class  aClass = MyObject.class
+//					Field field = aClass.getField("someField");
+//
+//					MyObject objectInstance = new MyObject();
+//
+//					Object value = field.get(objectInstance);
+//
+//					field.set(objetInstance, value);
+					
+			it.setAccessible(true);
+			String name = it.getName();
+			String type = it.getType().toString();
+			
+			try {
+//				Object buff = it.get(it).toString();
+//				infos.add(buff.toString());
+				
+				String val = it.get(aObj).toString();
+				int i = 0;
+				
+				
+				
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}

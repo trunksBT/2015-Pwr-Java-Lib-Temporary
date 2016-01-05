@@ -1,9 +1,0 @@
-package Bt.Core.FileOperations;
-
-public class Spis {
-
-	public Spis() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

@@ -1,7 +1,0 @@
-package Bt.Core.Algorithms;
-
-import java.util.List;
-
-public interface IGraphAlgo<W> {
-	boolean ifConnected(W aW1,W aW2);
-}

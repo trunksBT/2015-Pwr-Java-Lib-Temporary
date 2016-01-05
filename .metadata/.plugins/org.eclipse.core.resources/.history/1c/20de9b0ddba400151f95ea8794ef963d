@@ -1,9 +1,0 @@
-package Bt.Core.FileOperations;
-
-public class Strumien {
-
-	public Strumien() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

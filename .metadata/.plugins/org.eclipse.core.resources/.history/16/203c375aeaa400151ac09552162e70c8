@@ -1,9 +1,0 @@
-package Bt.Core.Geometry.Elements.ToPrint;
-
-public class LineSegmentPrinter {
-
-	public LineSegmentPrinter() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

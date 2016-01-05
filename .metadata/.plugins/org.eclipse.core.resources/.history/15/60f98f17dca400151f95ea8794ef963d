@@ -1,9 +1,0 @@
-package Bt.Core.FileOperations;
-
-public class Ksiazka {
-
-	public Ksiazka() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
