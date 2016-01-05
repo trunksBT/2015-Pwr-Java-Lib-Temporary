@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import Bt.Core.Collections.IndirectedGraph;
 import Bt.Core.Collections.Tuple;
 import Bt.Core.Collections.Interfaces.IGraf;
+import Bt.Core.Geometry.Shapes.Shape;
 
 public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 	
@@ -44,7 +46,13 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 							finished = true;
 							notFound = false;
 						}
-					else{					
+					else{
+						
+						List<Tuple<W,S>> tupleOfVals = associations
+						.stream()
+						.map(vert -> new Tuple<W,S>(vert,_graf.Krawedz(curr,vert)))
+						.collect(Collectors.toList());
+						
 						Optional<Tuple<W, S>> theLowestWage = associations
 								.stream()
 								.map(vert -> new Tuple<W,S>(vert,_graf.Krawedz(curr,vert)))
@@ -138,7 +146,9 @@ public class GraphAlgos< W,S> implements IGraphAlgo<W,S>{
 			path.stream().forEach(val -> System.out.print( val +","));
 			System.out.println();
 		}else
+		{
 			System.out.println( "Brak Sciezki miedzy wezlami" );
+		}
 	
 		return isConnect && goodPath;
 	}

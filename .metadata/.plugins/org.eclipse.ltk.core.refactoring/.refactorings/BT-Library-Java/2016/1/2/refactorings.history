@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AllTests.java&apos; to &apos;BT-Library-Java/src/Bt.Tests.Core.Algorithms&apos;&#x0D;&#x0A;- Original project: &apos;BT-Library-Java&apos;&#x0D;&#x0A;- Destination element: &apos;BT-Library-Java/src/Bt.Tests.Core.Algorithms&apos;&#x0D;&#x0A;- Original element: &apos;Bt.Tests.AllTests.java&apos;" description="Copy compilation unit" destination="/src&lt;Bt.Tests.Core.Algorithms" element1="/src&lt;Bt.Tests{AllTests.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1452029556633" units="1" version="1.0"/>
+</session>

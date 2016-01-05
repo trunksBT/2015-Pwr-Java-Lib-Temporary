@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Bt.Core.ABC.Tests.Circle"/>
-<fullyQualifiedTypeName name="Bt.Core.ABC.OneDimTable"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Geometry.Shapes.TestShapes"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.util.SortedSet"/>
@@ -18,10 +16,8 @@
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
-<fullyQualifiedTypeName name="Bt.Core.FileOperations.Strumien"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.Circle"/>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.Point"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.LineSegment"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.Triangle"/>
 <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
@@ -42,7 +38,6 @@
 <fullyQualifiedTypeName name="Bt.Core.Collections.Interfaces.IGraf"/>
 <fullyQualifiedTypeName name="java.util.Enumeration"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.IndirectedGraph"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
@@ -52,7 +47,6 @@
 <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.Tuple"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.Point"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="Bt.Core.Reflections.Debug"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="Bt.Core.FileOperations.Strumien"/>
 </qualifiedTypeNameHistroy>
