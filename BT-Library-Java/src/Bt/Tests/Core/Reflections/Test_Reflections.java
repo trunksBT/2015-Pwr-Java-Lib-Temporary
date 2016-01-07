@@ -8,6 +8,7 @@ import org.junit.runners.MethodSorters;
 
 import Bt.Core.Collections.SetNatural;
 import Bt.Core.Geometry.Elementaries.Point;
+import Bt.Core.Geometry.Elementaries.PointSecond;
 import Bt.Core.Reflections.Debug;
 import junit.framework.TestCase;
 
@@ -19,11 +20,12 @@ public class Test_Reflections extends TestCase {
   public void test_Fields()
   {
       //arrange
-      Point _a = new Point(3,4);
+      PointSecond _a = new PointSecond(3,4);
       
       //act
 //      Field[] fields = _a.getClass().getDeclaredFields();
       Debug.fields(_a);
+//      Debug.fields2(_a);
       
       //assert
       assertTrue(true);

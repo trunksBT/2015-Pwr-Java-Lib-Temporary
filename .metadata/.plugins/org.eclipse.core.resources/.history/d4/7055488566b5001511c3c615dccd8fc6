@@ -1,0 +1,87 @@
+package Bt.Core.Reflections;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.List;
+
+import Bt.Core.FileOperations.Strumien;
+
+public class Debug implements Strumien{
+	public static void fields(Object aObj)
+	{
+		StringBuffer info = new StringBuffer();
+		Field[] fields = aObj.getClass().getDeclaredFields();
+		 
+		for(Field it : fields)
+		{
+			info.append("Pole: ");
+//			boolean isPrivate = Modifier.isPrivate(it.getModifiers());
+//			boolean isProtected = Modifier.isProtected(it.getModifiers());
+			it.setAccessible(true);
+			
+			info.append(it.getName());	
+			info.append(" => ");
+			
+			info.append(it.getType().getSimpleName());	
+			info.append(", ");
+
+			try {
+				info.append(it.get(aObj));
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				e.printStackTrace();
+			}
+			
+//			if( isPrivate )
+//				it.setAccessible(false);
+//			
+//			else if (isProtected)
+//				it.setAccessible(false);
+			
+			wyj.println(Modifier.isPrivate(it.getModifiers()));
+				
+			wyj.println( info );
+		}
+		
+//		 public static final int PROTECTED 4 
+//		 public static final int PUBLIC 1 
+	}
+	
+	public static void fields2(Object theClass)
+	{
+		StringBuffer info = new StringBuffer();
+		Field[] fields = theClass.getClass().getDeclaredFields();
+		 
+		for(Field it : fields)
+		{
+			info.append("Pole: ");
+//			boolean isPrivate = Modifier.isPrivate(it.getModifiers());
+//			boolean isProtected = Modifier.isProtected(it.getModifiers());
+			it.setAccessible(true);
+			
+			info.append(it.getName());	
+			info.append(" => ");
+			
+			info.append(it.getType().getSimpleName());	
+			info.append(", ");
+
+			try {
+				info.append(it.get(theClass));
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				e.printStackTrace();
+			}
+			
+//			if( isPrivate )
+//				it.setAccessible(false);
+//			
+//			else if (isProtected)
+//				it.setAccessible(false);
+			
+			wyj.println(Modifier.isPrivate(it.getModifiers()));
+				
+			wyj.println( info );
+		}
+		
+//		 public static final int PROTECTED 4 
+//		 public static final int PUBLIC 1 
+	}
+}

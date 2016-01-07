@@ -7,33 +7,35 @@ import Bt.Core.FileOperations.Strumien;
 public class Debug implements Strumien{
 	public static void fields(Object aObj)
 	{
-		String wordToDel = "class ";
 		StringBuffer info = new StringBuffer();
 		Field[] fields = aObj.getClass().getDeclaredFields();
-		
+		 
 		for(Field it : fields)
 		{
-			info.append("Pole: ");
 			it.setAccessible(true);
-			
+			info.append("Pole: ");
+		
 			info.append(it.getName());	
 			info.append(" => ");
 			
-			info.append(it.getType());	
+			info.append(it.getType().getSimpleName());	
 			info.append(", ");
 
-			try {
+			try{
 				info.append(it.get(aObj));
-			} catch (IllegalArgumentException | IllegalAccessException e) {
-				e.printStackTrace();
+			}catch (NullPointerException e ) {
+				wyj.println("NullPtrExcep");
+			}catch (IllegalArgumentException e ){
+				wyj.println("Wrong type in argument");
+			}catch (IllegalAccessException e) {
+				wyj.println("You don't have access to this");
 			}
-			
-			int startToDel = info.indexOf(wordToDel);
-			if(startToDel!= -1)
-				info.delete(startToDel, startToDel+wordToDel.length());
-			
+
+			if( it.isAccessible() )
+				it.setAccessible(false);
+				
 			wyj.println( info );
-			info.delete(0, info.length());
 		}
 	}
+
 }

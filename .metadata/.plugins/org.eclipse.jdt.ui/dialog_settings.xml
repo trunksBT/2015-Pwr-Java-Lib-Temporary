@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="true" key="ProjectSelectionDialog.show_all"/>
+	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
 	<item value="D:\Clouds\OneDrive\Downloads" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="D:\Clouds\OneDrive\Downloads\gson-2.3.1.jar" key="org.eclipse.jdt.ui.lastuserlibrary"/>
+	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
 	<item value="false" key="delegateUpdating"/>
 	<item value="560,476" key="UserLibraryLoadSaveDialog.size"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
