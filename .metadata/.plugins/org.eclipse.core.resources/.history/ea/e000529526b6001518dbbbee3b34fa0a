@@ -14,8 +14,9 @@ public class Debug implements Strumien{
 		{
 			info = new StringBuffer();
 			boolean wasAccess = it.isAccessible();
-
-			it.setAccessible(true );
+			
+			if( !wasAccess )
+				it.setAccessible(true );
 
 			info.append("Pole: ");
 		
