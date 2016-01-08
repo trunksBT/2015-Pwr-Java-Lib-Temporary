@@ -1,0 +1,5 @@
+package btt.core.collections;
+
+public interface ISizeable<T> {
+	int size();
+}

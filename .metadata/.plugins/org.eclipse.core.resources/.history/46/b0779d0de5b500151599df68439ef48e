@@ -1,0 +1,5 @@
+package Bt.Core.collectionsss.interfaces;
+
+public interface IMergable {
+	public void merge(Object aSecond);
+}

@@ -1,0 +1,5 @@
+package Bt.coreee.collections;
+
+public interface ISizeable<T> {
+	int size();
+}

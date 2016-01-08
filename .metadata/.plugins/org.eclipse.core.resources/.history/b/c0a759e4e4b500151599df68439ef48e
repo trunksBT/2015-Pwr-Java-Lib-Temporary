@@ -1,0 +1,5 @@
+package Bt.Core.Collections.interfaces;
+
+public interface IEndian {
+	public int peekFirst();
+}

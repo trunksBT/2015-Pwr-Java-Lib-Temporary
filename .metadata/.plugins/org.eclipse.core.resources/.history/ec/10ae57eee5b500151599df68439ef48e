@@ -1,0 +1,5 @@
+package Bt.coreee.collections.interfaces;
+
+public interface IMergable {
+	public void merge(Object aSecond);
+}

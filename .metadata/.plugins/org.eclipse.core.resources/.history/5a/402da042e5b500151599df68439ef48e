@@ -1,0 +1,21 @@
+package Bt.Tests;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+
+import Bt.Tests.coreee.algorithms.Test_GraphAlgos_String_Double;
+import Bt.Tests.coreee.algorithms.Test_GraphAlgos_String_String;
+import Bt.Tests.coreee.collections.Collections;
+import Bt.Tests.coreee.geometryyy.Geometry;
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({
+	Collections.class,
+	Geometry.class,
+	Test_GraphAlgos_String_String.class,
+	Test_GraphAlgos_String_Double.class
+})
+
+public class AllTests{
+
+}

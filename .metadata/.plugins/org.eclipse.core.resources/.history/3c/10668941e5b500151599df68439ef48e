@@ -1,0 +1,23 @@
+package Bt.Tests.coreee.Geometry;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+
+import Bt.Tests.coreee.Geometry.elementaries.TestLineSegment;
+import Bt.Tests.coreee.Geometry.elementaries.TestPoint;
+import Bt.Tests.coreee.Geometry.shapes.TestGeometria;
+import Bt.Tests.coreee.Geometry.shapes.TestGeometriaIO_Test_Version;
+import Bt.Tests.coreee.Geometry.shapes.TestShapes;
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({
+	TestLineSegment.class,
+	TestPoint.class,
+	TestShapes.class,
+	TestGeometria.class,
+	TestGeometriaIO_Test_Version.class,	
+})
+
+public class Geometry{
+
+}
