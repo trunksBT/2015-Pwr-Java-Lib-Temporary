@@ -41,6 +41,7 @@ public class TestCowariantArray extends TestCase{
         assertTrue(true);
     }
     
+    
     @Test
     public void test_CTOR_Array_Cowariant_Exception_1()
     {
@@ -87,4 +88,5 @@ public class TestCowariantArray extends TestCase{
         assertTrue(true);
     }
     
+
 }
