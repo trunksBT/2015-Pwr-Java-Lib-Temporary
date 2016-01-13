@@ -11,7 +11,6 @@ import bt.core.collections.elems.Bezrobotny;
 import bt.core.collections.elems.Osoba;
 import bt.core.collections.elems.Pracownik;
 import bt.core.collections.elems.Programista;
-import bt.core.collections.elems.Ssak;
 import bt.core.streams.Strumien;
 import junit.framework.TestCase;
 
@@ -78,22 +77,6 @@ public class TestsDrukarka extends TestCase implements Strumien{
     	
     	wyj.println( "SysOut L11_Ex3_4" );
     	Drukarka.drukuj(grupa);
-    	wyj.println();
-    	
-        assertTrue(true);
-    }
-    
-    @Test
-    public void test_Drukarka_ArrayList_Ssak()
-    {
-    	ArrayList<Ssak> grupa = new ArrayList<>(3);
-    	
-    	grupa.add(new Ssak(0));
-    	grupa.add(new Ssak(3));
-    	grupa.add(new Ssak(6));
-    	
-    	wyj.println( "SysOut L11_Ex3_5" );
-//    	Drukarka.drukuj(grupa);
     	wyj.println();
     	
         assertTrue(true);

@@ -5,30 +5,32 @@ import java.io.Serializable;
 import bt.core.collections.interfaces.IPrintable;
 import bt.core.streams.Strumien;
 
-public class Osoba extends Ssak implements IPrintable,Strumien
+public class Ssak implements IPrintable,Strumien
 {
+    double x;
     double y;
 
-    public Osoba()
+    public Ssak()
     {
+        this.x=0;
         this.y=0;
     }
     
-    public Osoba(Osoba p)
+    public Ssak(Ssak p)
     {
-    	super(p);
+        this.x=p.x;
         this.y=p.y;
     }
     
-    public Osoba(double x,double y)
+    public Ssak(double x,double y)
     {
-    	super(x);
+    	this.x=x;
     	this.y=y;
     }
         
     public String toString()
     {
-    	return super.toString() + (String.format("( %#5.1f )",x));
+    	return (String.format("( %#5.1f,%#5.1f )",x,y));
     }
     
     @Override
