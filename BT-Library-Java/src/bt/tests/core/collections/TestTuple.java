@@ -11,7 +11,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.collections.SetNatural;
-import bt.core.collections.Tuple;
+import bt.core.collections.elems.Tuple;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)

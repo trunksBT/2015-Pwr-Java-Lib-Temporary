@@ -1,0 +1,35 @@
+package bt.core.collections.elems;
+
+import java.io.Serializable;
+
+import bt.core.collections.interfaces.IPrintable;
+import bt.core.streams.Strumien;
+
+public class Osoba implements IPrintable,Strumien
+{
+    double x;
+    double y;
+
+    public Osoba(Osoba p)
+    {
+        this.x=p.x;
+        this.y=p.y;
+    }
+    
+    public Osoba(double x,double y)
+    {
+    	this.x=x;
+    	this.y=y;
+    }
+      
+    public boolean equals(Osoba second)
+    {
+        return x == second.x && y == second.y;
+    }
+        
+    @Override
+	public void drukuj() {
+		wyj.println(String.format("( %#5.1f,%#5.1f )",x,y));
+	}
+ }  
+

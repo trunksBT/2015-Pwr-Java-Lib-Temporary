@@ -1,0 +1,12 @@
+package bt.core;
+
+import java.util.Collection;
+
+import bt.core.collections.elems.Osoba;
+
+public class Drukarka {
+	public void drukuj(Collection<? super Osoba> input)
+	{
+		input.forEach(osoba -> ((Osoba) osoba).drukuj());
+	}
+}

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import bt.core.collections.Tuple;
+import bt.core.collections.elems.Tuple;
 import bt.core.collections.interfaces.IGraf;
 import bt.core.collections.interfaces.IGraphAlgo;
 

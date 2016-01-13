@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestBezrobotny" project="BT-Library-Java" tests="2" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.tests.core.collections.elems.TestBezrobotny" incomplete="true">
+    <testcase name="test_Drukuj" classname="bt.tests.core.collections.elems.TestBezrobotny" incomplete="true"/>
+    <testcase name="test_Konstruktor" classname="bt.tests.core.collections.elems.TestBezrobotny" incomplete="true"/>
+  </testsuite>
+</testrun>
