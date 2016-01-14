@@ -25,4 +25,17 @@ public class Test_Reflections extends TestCase {
       //assert
       assertTrue(true);
   }
+  
+  @Test
+  public void test_Nill()
+  {
+      //arrange
+      PointSecond a = new PointSecond(3,4);
+      
+      //act
+      Debug.fields(null);
+      
+      //assert
+      assertTrue(true);
+  }
 }

@@ -5,35 +5,37 @@ import bt.core.streams.Strumien;
 
 public class Programista extends Pracownik implements IPrintable,Strumien 
 {	
-	double projectId;
+	double projektID;
 	
     public Programista()
     {
     	super();
-    	projectId = 0;
+    	projektID = 0;
     }
 	
-    public Programista(Programista p)
+    public Programista(Programista par)
     {
-    	super(p);
+    	super(par);
+    	if(par != null)
+    		projektID = par.projektID;
     }
     
-    public Programista(double x, double y) {
-		super(x, y);
+    public Programista(double iq, double tonMowy) {
+		super(iq, tonMowy);
 	}
     
-    public Programista(double x, double y, double salary) {
-		super(x, y,salary);
+    public Programista(double iq, double tonMowy, double wynagrodzenie) {
+		super(iq, tonMowy,wynagrodzenie);
 	}
     
-    public Programista(double x, double y, double salary,double projectId) {
-		super(x, y,salary);
-		this.projectId = projectId;
+    public Programista(double iq, double tonMowy, double wynagrodzenie,double projektID) {
+		super(iq, tonMowy,wynagrodzenie);
+		this.projektID = projektID;
 	}
         
     public String toString()
     {
-    	return super.toString()+(String.format("( %#5.1f )",projectId));
+    	return super.toString()+(String.format("( %#5.1f )",projektID));
     }
  }  
 

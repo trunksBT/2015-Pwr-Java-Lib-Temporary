@@ -10,3 +10,6 @@
 1452703216952	Rename type 'DrukarkaTests'
 1452703721240	Copy compilation unit
 1452705257556	Copy compilation unit
+1452729822463	Rename field 'salary'
+1452729872823	Rename field 'projectId'
+1452730008723	Rename field 'x'

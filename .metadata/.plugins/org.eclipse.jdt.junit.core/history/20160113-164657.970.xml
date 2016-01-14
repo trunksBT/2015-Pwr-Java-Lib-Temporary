@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestsDrukarka" project="BT-Library-Java" tests="3" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.tests.core.TestsDrukarka" incomplete="true">
-    <testcase name="test_Drukarka_ArrayList_Bezrobotny" classname="bt.tests.core.TestsDrukarka" incomplete="true"/>
-    <testcase name="test_Drukarka_ArrayList_Pracownik" classname="bt.tests.core.TestsDrukarka" incomplete="true"/>
-    <testcase name="test_Drukarka_ArrayList_Programista" classname="bt.tests.core.TestsDrukarka" incomplete="true"/>
-  </testsuite>
-</testrun>

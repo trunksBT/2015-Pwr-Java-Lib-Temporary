@@ -20,6 +20,22 @@ import junit.framework.TestCase;
 public class TestsDrukarka extends TestCase implements Strumien{
 	
     @Test
+    public void test_Drukarka_Null_Osoba()
+    {
+    	ArrayList<Osoba> grupa = new ArrayList<>(3);
+    	
+    	grupa.add(new Osoba(0,1));
+    	grupa.add(new Osoba(3,4));
+    	grupa.add(new Osoba(6,7));
+    	
+    	wyj.println( "SysOut L11_Ex3_1" );
+    	Drukarka.drukuj(null);
+    	wyj.println();
+    	
+        assertTrue(true);
+    }
+    
+    @Test
     public void test_Drukarka_ArrayList_Osoba()
     {
     	ArrayList<Osoba> grupa = new ArrayList<>(3);

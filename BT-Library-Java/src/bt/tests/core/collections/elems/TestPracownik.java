@@ -27,6 +27,13 @@ public class TestPracownik extends TestCase {
 	}
 	
 	@Test
+	public void test_Konstruktor_Domyslny()
+	{
+		Pracownik jan = new Pracownik(null);
+	    assertTrue(jan != null);
+	}
+	
+	@Test
 	public void test_Drukuj()
 	{
 		init();

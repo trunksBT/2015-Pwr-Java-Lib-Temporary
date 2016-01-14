@@ -5,31 +5,33 @@ import bt.core.streams.Strumien;
 
 public class Pracownik extends Osoba implements IPrintable,Strumien 
 {
-	double salary;
+	double wynagrodzenie;
 	
     public Pracownik()
     {
     	super();
-    	salary = 0;
+    	wynagrodzenie = 0;
     }
     
-    public Pracownik(Pracownik p)
+    public Pracownik(Pracownik par)
     {
-    	super(p);
+    	super(par);
+    	if( par!= null )
+    		wynagrodzenie = par.wynagrodzenie;
     }
     
-    public Pracownik(double x, double y) {
-		super(x, y);
+    public Pracownik(double iq, double tonMowy) {
+		super(iq, tonMowy);
 	}
     
-    public Pracownik(double x, double y, double salary) {
-		super(x, y);
-		this.salary = salary;
+    public Pracownik(double iq, double tonMowy, double wynagrodzenie) {
+		super(iq, tonMowy);
+		this.wynagrodzenie = wynagrodzenie;
 	}
         
     public String toString()
     {
-    	return super.toString()+(String.format("( %#5.1f )",salary));
+    	return super.toString()+(String.format("( %#5.1f )",wynagrodzenie));
     }
  }  
 

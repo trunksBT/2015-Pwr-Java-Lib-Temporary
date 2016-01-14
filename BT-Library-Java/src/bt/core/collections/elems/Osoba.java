@@ -1,34 +1,33 @@
 package bt.core.collections.elems;
 
-import java.io.Serializable;
-
 import bt.core.collections.interfaces.IPrintable;
 import bt.core.streams.Strumien;
 
 public class Osoba extends Ssak implements IPrintable,Strumien
 {
-    double y;
+    double tonMowy;
 
     public Osoba()
     {
-        this.y=0;
+        this.tonMowy=0;
     }
     
-    public Osoba(Osoba p)
+    public Osoba(Osoba par)
     {
-    	super(p);
-        this.y=p.y;
+    	super(par);
+    	if(par != null )
+    		this.tonMowy=par.tonMowy;
     }
     
-    public Osoba(double x,double y)
+    public Osoba(double iq,double tonMowy)
     {
-    	super(x);
-    	this.y=y;
+    	super(iq);
+    	this.tonMowy=tonMowy;
     }
         
     public String toString()
     {
-    	return super.toString() + (String.format("( %#5.1f )",x));
+    	return super.toString() + (String.format("( %#5.1f )",iq));
     }
     
     @Override

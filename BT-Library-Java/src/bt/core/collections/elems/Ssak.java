@@ -5,26 +5,27 @@ import bt.core.streams.Strumien;
 
 public class Ssak implements IPrintable,Strumien
 {
-    double x;
+    double iq;
 
     public Ssak()
     {
-        this.x=0;
+        this.iq=0;
     }
     
-    public Ssak(Ssak p)
+    public Ssak(Ssak par)
     {
-        this.x=p.x;
+    	if(par != null)
+    		this.iq=par.iq;
     }
     
-    public Ssak(double x)
+    public Ssak(double iq)
     {
-    	this.x=x;
+   		this.iq=iq;
     }
         
     public String toString()
     {
-    	return (String.format("( %#5.1f )",x));
+    	return (String.format("( %#5.1f )",iq));
     }
     
     @Override

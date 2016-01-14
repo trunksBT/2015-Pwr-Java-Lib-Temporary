@@ -1,0 +1,38 @@
+package bt.core.collections.elems;
+
+import java.util.Optional;
+
+import bt.core.collections.interfaces.IPrintable;
+import bt.core.streams.Strumien;
+
+public class Ssak implements IPrintable,Strumien
+{
+    double iq;
+
+    public Ssak()
+    {
+        this.iq=0;
+    }
+    
+    public Ssak(Ssak p)
+    {
+    	if(p != null)
+    		this.iq=p.iq;
+    }
+    
+    public Ssak(double x)
+    {
+   		this.iq=x;
+    }
+        
+    public String toString()
+    {
+    	return (String.format("( %#5.1f )",iq));
+    }
+    
+    @Override
+	public void drukuj() {
+		wyj.println(toString());
+	}
+ }  
+

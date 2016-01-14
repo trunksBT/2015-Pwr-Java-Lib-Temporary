@@ -22,10 +22,7 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 		boolean finished = false;
 		boolean notFound = true;
 		
-		if( aStart != null 
-				&& aEnd!= null 
-				&& graf!= null 
-				&& !graf.Wierzcholki().isEmpty()
+		if( aStart != null && aEnd!= null && graf!= null && !graf.Wierzcholki().isEmpty()
 				&& !graf.Krawedzie(aStart).isEmpty()){
 			
 			while(finished == false){
