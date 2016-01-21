@@ -22,7 +22,7 @@ public class GraphIndirected<W,S> implements IGraf<W,S>{
 
 	@Override
 	public List<W> Wierzcholki() {
-		List<W> retVal = new ArrayList<W>();
+		List<W> retVal = new ArrayList<W>();// CTOR make it
 				
 		if(vertices != null)		
 			retVal = vertices;

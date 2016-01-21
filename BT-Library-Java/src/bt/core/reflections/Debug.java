@@ -4,43 +4,40 @@ import java.lang.reflect.Field;
 
 import bt.core.streams.Strumien;
 
-public class Debug implements Strumien{
-	public static void fields(Object aObj)
-	{
-		if( aObj != null )
-		{
+public class Debug implements Strumien {
+	public static void fields(Object aObj) {
+		if (aObj != null) {
 			StringBuffer info = null;
 			Field[] fields = aObj.getClass().getDeclaredFields();
-			 
-			for(Field it : fields)
-			{
+
+			for (Field it : fields) {
 				info = new StringBuffer();
 				boolean wasAccess = it.isAccessible();
-	
-				it.setAccessible(true );
-	
+
+				it.setAccessible(true);
+
 				info.append("Pole: ");
-			
-				info.append(it.getName());	
+
+				info.append(it.getName());
 				info.append(" => ");
-				
+
 				info.append(it.getType().getTypeName());
 				info.append(", ");
-	
-				try{
+
+				try {
 					info.append(it.get(aObj));
-				}catch (NullPointerException e ) {
+				} catch (NullPointerException e) {
 					wyj.println("NullPtrExcep");
-				}catch (IllegalArgumentException e ){
+				} catch (IllegalArgumentException e) {
 					wyj.println("Wrong type in argument");
-				}catch (IllegalAccessException e) {
+				} catch (IllegalAccessException e) {
 					wyj.println("You don't have access to this");
 				}
-	
-				if( !wasAccess )
+
+				if (!wasAccess)
 					it.setAccessible(false);
-					
-				wyj.println( info );
+
+				wyj.println(info);
 			}
 		}
 	}

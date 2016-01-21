@@ -8,6 +8,7 @@ import bt.core.collections.elems.Bezrobotny;
 import bt.core.collections.elems.Osoba;
 import bt.core.collections.elems.Pracownik;
 import bt.core.collections.elems.Programista;
+import bt.core.collections.elems.Ssak;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -36,13 +37,25 @@ public class TestCowariantArray extends TestCase{
     public void test_CTOR_Array_Cowariant_3()
     {
     	Osoba[] grupa = { new Osoba(3,4)};
-    	Object[] grupaSpecjalizujaca = grupa;
+    	Ssak[] grupaSpecjalizujaca = grupa;
     	
         assertTrue(true);
     }
     
     @Test
-    public void test_CTOR_Array_Cowariant_Exception_1()
+    public void test_getPerson_()
+    {
+    	Osoba os1 = new Osoba();
+    	Bezrobotny os2 = new Bezrobotny();
+    	
+    	Osoba os3 = os1.getPerson();
+    	Osoba os4 = os2.getPerson();
+    	
+        assertTrue(true);
+    }
+    
+    @Test
+    public void test_CTORArray_Cowariant_Exception_1()
     {
     	Pracownik[] grupa = { new Pracownik(0,1,2),new Pracownik(3,4,5)};
     	Osoba[] grupaSpecjalizujaca = grupa;
@@ -56,8 +69,91 @@ public class TestCowariantArray extends TestCase{
         }
     	
         assertTrue(true);
-    } // wnioski : po zwiazaniu zmiennej z wartoscia
-      // nie mozna sie cofnac z dziedziczeniem?
+    }
+    
+    @Test
+    public void test_CTORArray_Cowariant_Exception_2()
+    {
+    	Osoba[] grupa = { new Osoba(0,1),new Osoba(3,4)};
+    	Osoba[] grupaSpecjalizujaca = grupa;
+    	
+        try
+        {
+        	grupaSpecjalizujaca[0] = new Bezrobotny(6,7);
+        }catch(ArrayStoreException e)
+        {
+        	System.out.println( "ArrayStoreException" );
+        }
+    	
+        assertTrue(true);
+    }
+    
+    @Test
+    public void test_CTORArray_Cowariant_Exception_12()
+    {
+    	Pracownik[] grupa = { new Pracownik(0,1,2),new Pracownik(3,4,5)};
+    	Osoba[] grupaSpecjalizujaca = grupa;
+    	
+        try
+        {
+        	grupaSpecjalizujaca[0] = new Osoba(6,7);
+        }catch(ArrayStoreException e)
+        {
+        	System.out.println( "ArrayStoreException" );
+        }
+    	
+        assertTrue(true);
+    }
+    
+    @Test
+    
+    public void test_CTOR_Cowariant_Exception_5()
+    {
+//    	Pracownik grupa = new Pracownik(0,1,2);
+//    	Osoba grupaSpecjalizujaca = grupa;    	
+//    //	((Pracownik) grupaSpecjalizujaca).mP();
+//    	
+//    	//((Bezrobotny) grupaSpecjalizujaca).drukuj();
+//    	
+////        try
+////        {
+//    	System.out.println( grupaSpecjalizujaca.getClass() );
+//        grupaSpecjalizujaca= new Bezrobotny(6,7);
+//        
+//        System.out.println( grupaSpecjalizujaca.getClass() );
+//        	
+//        Pracownik grupa2 = new Pracownik(0,1,2);
+//        Osoba grupaSpecjalizujaca2 = grupa2;
+//
+//        grupaSpecjalizujaca2= new Osoba(6,7);
+//        	
+//        	System.out.println( "ClassCastException" );
+        	
+        	/////////////////////////////////////////
+        	
+        	Pracownik grupa = new Pracownik(0,1,2);
+        	Osoba grupaSpecjalizujaca = grupa;    	
+        //	((Pracownik) grupaSpecjalizujaca).mP();
+        	
+        	//((Bezrobotny) grupaSpecjalizujaca).drukuj();
+        	
+//            try
+//            {
+        	System.out.println( grupaSpecjalizujaca.getClass());
+            grupaSpecjalizujaca= new Bezrobotny(6,7);
+            
+            System.out.println( grupaSpecjalizujaca.getClass() );
+            	
+            Pracownik grupa2 = new Pracownik(0,1,2);
+            Osoba grupaSpecjalizujaca2 = grupa2;
+
+            grupaSpecjalizujaca2= new Osoba(6,7);
+            	
+            System.out.println( "ClassCastException" );
+
+    	
+        assertTrue(true);
+    }
     
     @Test
     public void test_CTOR_Array_Cowariant_Exception_2()
@@ -86,5 +182,4 @@ public class TestCowariantArray extends TestCase{
         
         assertTrue(true);
     }
-    
 }

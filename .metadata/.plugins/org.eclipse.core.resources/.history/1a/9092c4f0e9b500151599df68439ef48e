@@ -1,7 +1,0 @@
-package bt.core.collections.interfaces;
-
-public interface IBigEndian extends IEndian{
-}
-
-
-

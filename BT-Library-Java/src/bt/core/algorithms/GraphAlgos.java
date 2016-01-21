@@ -17,7 +17,7 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 		this.graf = graf;
 	}
 
-	public List<S> dijkstra(W aStart,W aEnd){
+	public List<S> dijkstrable(W aStart,W aEnd){
 		List<W> dirtyVertices = new ArrayList<>();	
 		boolean finished = false;
 		boolean notFound = true;
@@ -68,7 +68,7 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 	@Override
 	public boolean ifConnected(W aW1, W aW2) {
 		
-		List<S> path = dijkstra(aW1,aW2);
+		List<S> path = dijkstrable(aW1,aW2);
 		
 		boolean isConnect = !path.isEmpty();
 		boolean goodPath = true;

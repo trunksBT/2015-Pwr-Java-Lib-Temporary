@@ -1,5 +1,0 @@
-package Bt.core.collections.interfaces;
-
-public interface IMergable {
-	public void merge(Object aSecond);
-}

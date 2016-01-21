@@ -33,5 +33,10 @@ public class Pracownik extends Osoba implements IPrintable,Strumien
     {
     	return super.toString()+(String.format("( %#5.1f )",wynagrodzenie));
     }
+    
+    public String mP()
+    {
+    	return "mp";
+    }
  }  
 

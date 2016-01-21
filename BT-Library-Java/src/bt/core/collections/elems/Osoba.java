@@ -24,6 +24,11 @@ public class Osoba extends Ssak implements IPrintable,Strumien
     	super(iq);
     	this.tonMowy=tonMowy;
     }
+    
+    public Osoba getPerson()
+    {
+    	return new Osoba();
+    }
         
     public String toString()
     {

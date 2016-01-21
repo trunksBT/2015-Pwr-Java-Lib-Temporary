@@ -10,13 +10,18 @@ public class Bezrobotny extends Osoba implements IPrintable,Strumien
     	super();
     }
     
-    public Bezrobotny(Bezrobotny p)
+    public Bezrobotny(Bezrobotny par)
     {
-    	super(p);
+    	super(par);
     }
     
-    public Bezrobotny(double x, double y) {
-		super(x, y);
+    public Bezrobotny getPerson()
+    {
+    	return new Bezrobotny();
+    }
+    
+    public Bezrobotny(double iq, double tonMowy) {
+		super(iq, tonMowy);
 	}
  }  
 

@@ -1,4 +1,0 @@
-package Bt.Core.collections.interfaces;
-
-public interface ILittleEndian extends IEndian{
-}

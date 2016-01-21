@@ -1,5 +1,0 @@
-package btt.core.collections.interfaces;
-
-public interface IEndian {
-	public int peekFirst();
-}

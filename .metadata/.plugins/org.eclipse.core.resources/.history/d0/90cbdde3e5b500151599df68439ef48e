@@ -1,5 +1,0 @@
-package Bt.Core.collections;
-
-public interface ISizeable<T> {
-	int size();
-}

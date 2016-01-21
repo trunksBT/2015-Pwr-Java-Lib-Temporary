@@ -84,7 +84,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	
         // assert
         boolean reachedLogic = reachedList.containsAll(expectedList) == expectedVal;
@@ -108,7 +108,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -135,7 +135,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start, end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start, end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -162,7 +162,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -187,7 +187,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -212,7 +212,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -240,7 +240,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -269,7 +269,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -299,7 +299,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -324,7 +324,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -359,7 +359,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -385,7 +385,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -411,7 +411,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -437,7 +437,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
@@ -463,7 +463,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	boolean expectedListLogic = true;
     	
         // act	
-    	List<String> reachedList = _walkAcross.dijkstra(start,end);
+    	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
