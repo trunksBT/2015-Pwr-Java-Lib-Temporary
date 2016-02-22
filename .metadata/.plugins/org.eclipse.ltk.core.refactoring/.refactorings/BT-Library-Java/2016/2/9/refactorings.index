@@ -12,3 +12,6 @@
 1456128103800	Delete element
 1456128188129	Rename package 'bt.core.ABC.Tests'
 1456128399459	Delete element
+1456129892763	Copy compilation unit
+1456129900425	Rename type 'TestLineSegment'
+1456131089835	Rename local variable 'pointsIter'

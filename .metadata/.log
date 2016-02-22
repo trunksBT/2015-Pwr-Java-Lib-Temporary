@@ -7866,3 +7866,24 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2016-02-22 08:40:05.169
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-22 08:40:05.169
+!MESSAGE A conflict occurred for CTRL+SHIFT+F12:
+Binding(CTRL+SHIFT+F12,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.Terminate,Terminate,
+		Terminate,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@403ec182,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,user)
+Binding(CTRL+SHIFT+F12,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.Terminate,Terminate,
+		Terminate,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@403ec182,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,user)

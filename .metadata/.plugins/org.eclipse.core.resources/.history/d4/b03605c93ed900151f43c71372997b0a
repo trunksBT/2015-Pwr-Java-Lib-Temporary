@@ -1,0 +1,34 @@
+package bt.tests.core.collections.iterators;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.geometry.elementaries.LineSegment;
+import bt.core.geometry.elementaries.Point;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TestArrayIterator extends TestCase
+{																																		@Test
+	public void TestEqualsLineSegmentTheSameTrue1()
+	{
+	    //arrange
+	    Point _pointA = new Point(2,2);
+	    Point _pointB = new Point(3,3);
+	    
+	    Point _pointC = new Point(2,2);
+	    Point _pointD = new Point(3,3);
+	    
+	    LineSegment _arcAB = new LineSegment(_pointA,_pointB);
+	    LineSegment _arcCD = new LineSegment(_pointC,_pointD); 
+	    boolean expected = true;
+	    
+	    //act
+	    boolean reached = _arcAB.equals(_arcCD);
+	    
+	    //assert
+	    boolean result = !(expected ^ reached);
+	    assertTrue(result);
+	}																																		
+}
