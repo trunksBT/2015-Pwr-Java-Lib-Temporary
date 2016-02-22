@@ -1,11 +1,10 @@
 package bt.tests.core.reflections;
 
-
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import bt.core.geometry.elementaries.PointSecond;
+import bt.core.geometry.elementaries.Point;
 import bt.core.reflections.Debug;
 import junit.framework.TestCase;
 
@@ -17,7 +16,7 @@ public class Test_Reflections extends TestCase {
   public void test_Fields()
   {
       //arrange
-      PointSecond a = new PointSecond(3,4);
+      Point a = new Point(3,4);
       
       //act
       Debug.fields(a);
@@ -30,7 +29,7 @@ public class Test_Reflections extends TestCase {
   public void test_Nill()
   {
       //arrange
-      PointSecond a = new PointSecond(3,4);
+	  Point a = new Point(3,4);
       
       //act
       Debug.fields(null);

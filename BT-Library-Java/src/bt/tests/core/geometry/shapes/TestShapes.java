@@ -8,6 +8,7 @@ import bt.core.geometry.collections.Shapes;
 import bt.core.geometry.elementaries.LineSegment;
 import bt.core.geometry.elementaries.Point;
 import bt.core.geometry.shapes.Circle;
+import bt.core.geometry.shapes.Shape;
 import bt.core.geometry.shapes.Triangle;
 import junit.framework.TestCase;
 
@@ -15,6 +16,24 @@ import junit.framework.TestCase;
 
 public class TestShapes extends TestCase{
 
+    @Test
+    public void test_CTOR_Circle_OnShape()
+    {
+    	// arrange
+    	String name = "kolo1";
+    	Point center = new Point(0,0);
+    	double length = 3.0;
+    	
+    	Shape _kolo = new Circle(name,center,length);
+    	
+    	// act 	
+    	System.out.println(_kolo);
+    	
+    	
+    	// assert	
+    	assertEquals(3,3);
+    }
+    
     @Test
     public void test_CTOR_Circle_Point_Length()
     {
