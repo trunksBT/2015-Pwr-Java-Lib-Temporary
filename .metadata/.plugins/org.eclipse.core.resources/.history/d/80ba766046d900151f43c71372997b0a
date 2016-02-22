@@ -1,0 +1,43 @@
+package bt.core.collections.iterators;
+
+public class FilterIterator implements Iterator {
+	private final Iterator it;
+	private final Predicate pred;
+	
+	@Override
+	public void previous() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void next() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Object current() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void first() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void last() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean isDone() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,11 @@
+package bt.core.collections.iterators;
+
+public class EvenCordsPred implements Predicate {
+
+	@Override
+	public boolean accept(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -44,6 +44,14 @@ public class Point implements Serializable
         return distance;
     }  
     
+    public double getX(){
+    	return x;
+    }
+    
+    public double getY(){
+    	return y;
+    }
+    
     public String toString()
     {			
         return String.format("( %#5.1f,%#5.1f )",x,y);
