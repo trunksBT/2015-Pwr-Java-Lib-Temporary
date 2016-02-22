@@ -1,6 +1,6 @@
 package bt.core.collections.iterators;
 
-public class ArrayIterator  extends ItPrint implements Iterator{
+public class ArrayIterator extends ItPrint implements Iterator{
 	Object[] array;
 	final int first;
 	final int last;

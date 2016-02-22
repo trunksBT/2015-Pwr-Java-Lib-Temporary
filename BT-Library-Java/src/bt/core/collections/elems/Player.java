@@ -2,14 +2,14 @@ package bt.core.collections.elems;
 
 public class Player {
 	private final String name;
-	private final int points;
+	private final double points;
 	
-	public Player (String name, int points){
+	public Player (String name, double points){
 		this.name = name;
 		this.points = points;
 	}
 	
-	public int getPoints() {
+	public double getPoints() {
 		return points;
 	}
 	

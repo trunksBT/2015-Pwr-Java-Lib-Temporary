@@ -1,0 +1,10 @@
+package bt.core.collections.various;
+
+import bt.core.collections.elems.Player;
+
+public class Group extends Competition{
+	public Competition(Player[] players) {
+		this.players = players;
+		this.pred = new MoreThanTwoPred();
+	}
+}

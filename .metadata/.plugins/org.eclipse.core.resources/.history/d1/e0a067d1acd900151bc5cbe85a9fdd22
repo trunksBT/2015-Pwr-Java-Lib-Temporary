@@ -1,0 +1,5 @@
+package bt.core.collections.various;
+
+public class Group extends Competition{
+
+}

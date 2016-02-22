@@ -24,7 +24,7 @@ public class TestArrayIterator extends TestCase
 	    
 	    Iterator it = new ArrayIterator(points);
 	    Point expVal = new Point(0,0);
-	    it.next();
+	    it.first();
 	    Point rcVal = (Point) it.current();
 	    boolean expBool = true;
 	      

@@ -7,14 +7,17 @@ import bt.core.collections.iterators.Iterator;
 import bt.core.collections.iterators.Predicate;
 
 public class Competition {
-	private final Player[] players;
+	protected final Player[] players;
+	protected Predicate pred;
 	
 	public Competition(Player[] players) {
 		this.players = players;
+		this.pred = new MoreThanTwoPred();
 	}
 	
 	public Competition() {
 		this.players = new Player[0];
+		this.pred = new MoreThanTwoPred();
 	}
 	
 	public void printAll() {
@@ -27,7 +30,7 @@ public class Competition {
 	}	
 		
 	public void printAllOk() {
-		Iterator it = new FilterIterator(new ArrayIterator(players),new MoreThanTwoPred());
+		Iterator it = new FilterIterator(new ArrayIterator(players),pred);
 		for(it.first();!it.isDone();it.next()) 
 			System.out.println( it.current() );
 	}
