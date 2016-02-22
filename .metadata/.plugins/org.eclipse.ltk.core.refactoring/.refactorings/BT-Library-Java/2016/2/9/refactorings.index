@@ -17,3 +17,12 @@
 1456131089835	Rename local variable 'pointsIter'
 1456132263656	Copy compilation unit
 1456133016570	Copy compilation unit
+1456139821494	Move compilation unit
+1456139824220	Delete element
+1456139854773	Rename package 'bt.core.collections'
+1456140001570	Rename type 'Zawody'
+1456140220980	Copy compilation unit
+1456140226638	Rename type 'TestArrayIterator'
+1456140350944	Rename method 'wydruki'
+1456140743553	Rename type 'PlayerOk'
+1456140767776	Rename type 'PlayerOkPred'

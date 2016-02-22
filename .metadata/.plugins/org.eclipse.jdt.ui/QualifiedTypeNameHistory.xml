@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Elements.ToPrint.LineSegmentPrinter"/>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Collections.GeometriaIO"/>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.IPrintable"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.Circle"/>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.LineSegment"/>
-<fullyQualifiedTypeName name="Bt.Core.Geometry.Shapes.Triangle"/>
-<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-<fullyQualifiedTypeName name="java.io.Serializable"/>
-<fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-<fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="java.io.StreamTokenizer"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Geometry.Shapes.TestGeometria"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Geometry.Shapes.TestGeometriaIO"/>
@@ -60,4 +44,20 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="bt.core.collections.elems.Ssak"/>
+<fullyQualifiedTypeName name="bt.core.geometry.complex.LineSegment"/>
+<fullyQualifiedTypeName name="bt.tests.core.geometry.elementaries.TestLineSegment"/>
+<fullyQualifiedTypeName name="bt.tests.core.geometry.elementaries.TestPoint"/>
+<fullyQualifiedTypeName name="bt.core.geometry.elementaries.LineSegment"/>
+<fullyQualifiedTypeName name="bt.core.geometry.shapes.Triangle"/>
+<fullyQualifiedTypeName name="bt.core.geometry.shapes.Circle"/>
+<fullyQualifiedTypeName name="bt.core.geometry.shapes.Shape"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.ReverseIterator"/>
+<fullyQualifiedTypeName name="bt.core.geometry.elementaries.Point"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.EvenCordsPred"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.Predicate"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.ArrayIterator"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
+<fullyQualifiedTypeName name="bt.core.collections.various.Competition"/>
+<fullyQualifiedTypeName name="bt.core.collections.elems.Player"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.FilterIterator"/>
 </qualifiedTypeNameHistroy>

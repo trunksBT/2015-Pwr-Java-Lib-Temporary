@@ -5,8 +5,8 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.ABC.OneDimTable;
-import bt.core.collections.Geometria;
-import bt.core.collections.Shapes;
+import bt.core.collections.various.Geometria;
+import bt.core.collections.various.Shapes;
 import bt.core.geometry.elementaries.*;
 import bt.core.geometry.shapes.Circle;
 import bt.core.geometry.shapes.Triangle;

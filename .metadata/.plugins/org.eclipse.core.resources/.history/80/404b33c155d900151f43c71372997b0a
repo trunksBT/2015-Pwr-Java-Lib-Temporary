@@ -1,0 +1,11 @@
+package bt.core.elementaries;
+
+public class Player {
+	private final String name;
+	private final int points;
+	
+	public Player (String name, int points){
+		this.name = name;
+		this.points = points;
+	}
+}

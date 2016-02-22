@@ -8,9 +8,9 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.GraphAlgos;
-import bt.core.collections.GraphIndirected;
 import bt.core.collections.interfaces.IGraf;
 import bt.core.collections.interfaces.IGraphAlgo;
+import bt.core.collections.various.GraphIndirected;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)

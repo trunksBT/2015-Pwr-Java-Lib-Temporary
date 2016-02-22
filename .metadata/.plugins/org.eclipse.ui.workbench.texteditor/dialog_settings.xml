@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Bezrobotny" key="selection"/>
+		<item value="collections" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Collections"/>
+			<item value="Bt.Core"/>
 			<item value="Programista"/>
 			<item value="[]"/>
 			<item value="Pracownik"/>
 			<item value="Osoba"/>
 			<item value=",true);"/>
 			<item value="initMatrix());"/>
-			<item value="initMap"/>
-			<item value="initList"/>
 		</list>
 		<list key="replacehistory">
+			<item value="collections"/>
+			<item value="bt.core"/>
 			<item value="Bezrobotny"/>
 			<item value="Programista"/>
 			<item value="Pracownik"/>
 			<item value=");"/>
 			<item value="initMatrix(),true);"/>
 			<item value="initList"/>
-			<item value=""/>
-			<item value="dirtyVertices"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

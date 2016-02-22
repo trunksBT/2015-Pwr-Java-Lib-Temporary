@@ -4,7 +4,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import bt.core.collections.OneDimTable;
+import bt.core.collections.various.OneDimTable;
 import bt.core.geometry.elementaries.Point;
 import junit.framework.TestCase;
 

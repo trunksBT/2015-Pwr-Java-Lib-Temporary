@@ -1,0 +1,5 @@
+package bt.core.elementaries;
+
+public class Player {
+
+}

@@ -4,8 +4,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import bt.core.collections.OneDimTable;
-import bt.core.collections.SetNatural;
+import bt.core.collections.various.OneDimTable;
+import bt.core.collections.various.SetNatural;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
