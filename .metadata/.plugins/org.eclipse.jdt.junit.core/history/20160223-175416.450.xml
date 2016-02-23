@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestFibbIterator" project="BT-Library-Java" tests="9" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.tests.core.collections.iterators.TestFibbIterator" incomplete="true">
+    <testcase name="test_CTOR_FibIterator_Fst_True" classname="bt.tests.core.collections.iterators.TestFibbIterator" time="0.0"/>
+    <testcase name="test_ForLoopNext_Step2_True" classname="bt.tests.core.collections.iterators.TestFibbIterator" time="0.0"/>
+    <testcase name="test_ForLoopPrevious_Step2_True" classname="bt.tests.core.collections.iterators.TestFibbIterator" time="0.0"/>
+    <testcase name="test_WhileLoopNext_0" classname="bt.tests.core.collections.iterators.TestFibbIterator" time="0.0"/>
+    <testcase name="test_WhileLoopNext_1" classname="bt.tests.core.collections.iterators.TestFibbIterator" incomplete="true"/>
+    <testcase name="test_WhileLoopNext_2" classname="bt.tests.core.collections.iterators.TestFibbIterator" incomplete="true"/>
+    <testcase name="test_WhileLoopNext_35" classname="bt.tests.core.collections.iterators.TestFibbIterator" incomplete="true"/>
+    <testcase name="test_WhileLoopNext_m1_Exception" classname="bt.tests.core.collections.iterators.TestFibbIterator" incomplete="true"/>
+    <testcase name="test_WhileLoopPrevious_Step2_True" classname="bt.tests.core.collections.iterators.TestFibbIterator" incomplete="true"/>
+  </testsuite>
+</testrun>

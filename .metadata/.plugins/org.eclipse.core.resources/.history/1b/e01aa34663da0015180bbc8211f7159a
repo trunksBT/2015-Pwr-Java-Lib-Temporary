@@ -1,0 +1,98 @@
+package bt.tests.core.algorithms;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.algorithms.Sequences;
+import bt.core.algorithms.Strings;
+import bt.core.collections.iterators.FibIterator;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TestSequences extends TestCase
+{				
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_Ascending_False()
+	{
+	    //arrange	    
+	    int[] chain = {0,1,2,3,4};	    
+	      
+	    //act
+	    boolean rcVal = Sequences.isNotAscending(chain);
+	    
+	    //assert
+	    assertFalse(rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_NotAscending1_True()
+	{
+	    //arrange	    
+	    int[] chain = {4,3,2,1,0};	    
+	      
+	    //act
+	    boolean rcVal = Sequences.isNotAscending(chain);
+	    
+	    //assert
+	    assertTrue(rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_NotAscending2_True()
+	{
+	    //arrange	    
+	    int[] chain = {4,4,4,4,4};	    
+	      
+	    //act
+	    boolean rcVal = Sequences.isNotAscending(chain);
+	    
+	    //assert
+	    assertTrue(rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_NotAscending3_True()
+	{
+	    //arrange	    
+	    int[] chain = {4,3,3,2,0};	    
+	      
+	    //act
+	    boolean rcVal = Sequences.isNotAscending(chain);
+	    
+	    //assert
+	    assertTrue(rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_NotAscending4_True()
+	{
+	    //arrange	    
+	    int[] chain = {4,3,5,2,1};	    
+	      
+	    //act
+	    boolean rcVal = Sequences.isNotAscending(chain);
+	    
+	    //assert
+	    assertTrue(rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_NotAscending5_True()
+	{
+	    //arrange	    
+	    int[] chain = {4,5,3,2,1};	    
+	      
+	    //act
+	    boolean rcVal = Sequences.isNotAscending(chain);
+	    
+	    //assert
+	    assertTrue(rcVal);
+	}
+}

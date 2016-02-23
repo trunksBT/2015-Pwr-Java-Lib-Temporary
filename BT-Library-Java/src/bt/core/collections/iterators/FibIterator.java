@@ -42,11 +42,7 @@ public class FibIterator implements Iterator{
 	}
 	
 	private void calcForward() {
-		if( n == 0 ) {
-			fn = fnm1 = curr = 0;
-			++n;
-		}
-		else if ( n == 1 ) {
+		if( n <= 1) {
 			fn = curr = 1;
 			fnm1 = 0;
 			++n;

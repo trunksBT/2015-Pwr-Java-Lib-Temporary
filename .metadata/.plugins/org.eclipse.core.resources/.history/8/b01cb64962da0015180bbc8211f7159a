@@ -1,0 +1,13 @@
+package bt.core.algorithms;
+
+public class Sequences {
+	public static boolean isNotAscending( int[] chain ) {
+		int i = 0;
+		int size = chain.length;
+		
+		while(i < size-1 && chain[i] <= chain[i+1])
+				i++;
+		
+		return i >= size-1;
+	}
+}

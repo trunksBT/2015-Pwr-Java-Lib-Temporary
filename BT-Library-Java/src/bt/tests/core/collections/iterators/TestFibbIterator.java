@@ -30,6 +30,30 @@ public class TestFibbIterator extends TestCase
 	    assertTrue(result);
 	}	
 
+	@Test
+	public void test_WhileLoopNext_m1()
+	{
+	    //arrange	    
+	    FibIterator it = new FibIterator(-1);
+	    boolean expBool = true;
+	    int expVal = 0;
+	    int rcVal = 0;
+	    int i = 0;
+	      
+	    //act
+	    it.first();
+	    while(!it.isDone()) {
+	    	rcVal = (int) it.current();
+	    	it.next();
+	    	System.out.println( "I: "+ i++ + " val: " + rcVal);
+	    }
+	    
+	    //assert
+	    boolean rcBool = rcVal == expVal;
+	    boolean result = !(expBool ^ rcBool);
+	    assertTrue(result);
+	}
+	
 	//Test_StateUnderTest_Expect_ExpectedBehavior
 	@Test
 	public void test_WhileLoopNext_0()
@@ -61,9 +85,34 @@ public class TestFibbIterator extends TestCase
 	{
 	    //arrange	    
 	    FibIterator it = new FibIterator(1);
-	    it.first();
 	    boolean expBool = true;
 	    int expVal = 0;
+	    int rcVal = 0;
+	    int i = 0;
+	      
+	    //act
+	    it.first();
+	    while(!it.isDone()) {
+	    	rcVal = (int) it.current();
+	    	it.next();
+	    	System.out.println( "I: "+ i++ + " val: " + rcVal);
+	    }
+	    
+	    //assert
+	    boolean rcBool = rcVal == expVal;
+	    boolean result = !(expBool ^ rcBool);
+	    assertTrue(result);
+	}
+	
+	//Test_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_WhileLoopNext_2()
+	{
+	    //arrange	    
+	    FibIterator it = new FibIterator(2);
+	    it.first();
+	    boolean expBool = true;
+	    int expVal = 1;
 	    int rcVal = 0;
 	    int i = 0;
 	      
@@ -104,35 +153,117 @@ public class TestFibbIterator extends TestCase
 	    boolean result = !(expBool ^ rcBool);
 	    assertTrue(result);
 	}
-	
-	//Test_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_WhileLoopPrevious_Step2_True()
+	public void test_ForLoopNext_m1()
 	{
-	    //arrange
+	    //arrange	    
+	    FibIterator it = new FibIterator(-1);
+	    boolean expBool = true;
+	    int expVal = 0;
+	    int rcVal = 0;
+	    int i = 0;
+	      
+	    //act
+	    for(it.first(); !it.isDone(); it.next()) {
+	    	rcVal = (int) it.current();
+	    	System.out.println( "I: "+ i++ + " val: " + rcVal);
+	    }
 	    
-
-	    
-	    assertTrue(true);
+	    //assert
+	    boolean rcBool = rcVal == expVal;
+	    boolean result = !(expBool ^ rcBool);
+	    assertTrue(result);
 	}
 	
 	//Test_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_ForLoopNext_Step2_True()
+	public void test_ForLoopNext_0()
 	{
-	    //arrange
-
+	    //arrange	    
+	    FibIterator it = new FibIterator(0);
+	    boolean expBool = true;
+	    int expVal = 0;
+	    int rcVal = 0;
+	    int i = 0;
+	      
+	    //act
+	    for(it.first(); !it.isDone(); it.next()) {
+	    	rcVal = (int) it.current();
+	    	System.out.println( "I: "+ i++ + " val: " + rcVal);
+	    }
 	    
-	    assertTrue(true);	
+	    //assert
+	    boolean rcBool = rcVal == expVal;
+	    boolean result = !(expBool ^ rcBool);
+	    assertTrue(result);
 	}
 	
 	//Test_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_ForLoopPrevious_Step2_True()
+	public void test_ForLoopNext_1()
 	{
-	    //arrange
-
+	    //arrange	    
+	    FibIterator it = new FibIterator(1);
+	    boolean expBool = true;
+	    int expVal = 0;
+	    int rcVal = 0;
+	    int i = 0;
+	      
+	    //act
+	    for(it.first(); !it.isDone(); it.next()) {
+	    	rcVal = (int) it.current();
+	    	System.out.println( "I: "+ i++ + " val: " + rcVal);
+	    }
 	    
-	    assertTrue(true);	
+	    //assert
+	    boolean rcBool = rcVal == expVal;
+	    boolean result = !(expBool ^ rcBool);
+	    assertTrue(result);
+	}
+	
+	//Test_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_ForLoopNext_2()
+	{
+	    //arrange	    
+	    FibIterator it = new FibIterator(2);
+	    boolean expBool = true;
+	    int expVal = 1;
+	    int rcVal = 0;
+	    int i = 0;
+	      
+	    //act
+	    for(it.first(); !it.isDone(); it.next()) {
+	    	rcVal = (int) it.current();
+	    	System.out.println( "I: "+ i++ + " val: " + rcVal);
+	    }
+	    
+	    //assert
+	    boolean rcBool = rcVal == expVal;
+	    boolean result = !(expBool ^ rcBool);
+	    assertTrue(result);
+	}
+	
+	//Test_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_ForLoopNext_35()
+	{
+	    //arrange	    
+	    FibIterator it = new FibIterator(35);
+	    boolean expBool = true;
+	    int expVal = 34;
+	    int rcVal = 0;
+	    int i = 0;
+	      
+	    //act
+	    for(it.first(); !it.isDone(); it.next()) {
+	    	rcVal = (int) it.current();
+	    	System.out.println( "I: "+ i++ + " val: " + rcVal);
+	    }
+	    
+	    //assert
+	    boolean rcBool = rcVal == expVal;
+	    boolean result = !(expBool ^ rcBool);
+	    assertTrue(result);
 	}
 }

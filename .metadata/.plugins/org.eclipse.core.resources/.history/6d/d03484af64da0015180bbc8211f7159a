@@ -1,0 +1,22 @@
+package bt.core.algorithms;
+
+public class Sequences {
+	public static boolean isNotAscending( int[] chain ) {
+		int i = 0;
+		boolean methPred = true;
+		int size = chain.length;
+		
+		if(size >= 2) {
+			while(i < size-1 && chain[i] <= chain[i+1])
+				i++;
+		}
+		
+		return i >= size-1;
+//		
+//		
+//		while(i < size-1 && chain[i] >= chain[i+1])
+//				i++;
+//		
+//		return i <= size-1;
+	}
+}
