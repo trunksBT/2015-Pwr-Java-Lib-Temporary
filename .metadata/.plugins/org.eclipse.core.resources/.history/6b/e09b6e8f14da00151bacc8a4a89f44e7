@@ -1,5 +1,6 @@
 package bt.core.collections.various;
 
+import bt.core.collections.elems.Player;
 import bt.core.collections.elems.Student;
 import bt.core.collections.iterators.ArrayIterator;
 import bt.core.collections.iterators.FilterIterator;
@@ -19,8 +20,8 @@ public class Group extends Competition{
 			System.out.println( it.current() );
 	}
 	
-	public Iterator iterator(double avrg) {
-		return new FilterIterator(new ArrayIterator(super.players),new GoodAveragePred(avrg));
+	public Iterator iterator() {
+		return new FilterIterator(new ArrayIterator(super.players),this.pred);
 	}
 	
 	private class GoodAveragePred implements Predicate{

@@ -13,14 +13,14 @@
 		<item value="525" key="dialogHeight"/>
 		<item value="1025" key="dialogWidth"/>
 		<list key="textEntries">
-			<item value="1"/>
 			<item value="3"/>
+			<item value="1"/>
 			<item value="2"/>
 			<item value="2"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.ui.console.ConsoleView"/>
 			<item value="org.eclipse.debug.ui.VariableView"/>
+			<item value="org.eclipse.ui.console.ConsoleView"/>
 			<item value="org.eclipse.ui.preferencePages.Keys"/>
 			<item value="org.eclipse.jdt.ui.PackageExplorer"/>
 		</list>
@@ -31,10 +31,10 @@
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
-			<item value="con"/>
 			<item value="variabl"/>
-			<item value="var"/>
 			<item value="varia"/>
+			<item value="var"/>
+			<item value="con"/>
 			<item value="key"/>
 			<item value="keys"/>
 			<item value="pack"/>

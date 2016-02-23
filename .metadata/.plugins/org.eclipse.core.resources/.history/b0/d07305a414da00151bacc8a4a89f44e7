@@ -83,11 +83,11 @@ public class TestGroup extends TestCase
 	    				new Student("Ad",3.0),
 	    				new Student("Ala",4.0),
 	    		}, 2.0);
+	    	      
+	    //act
 	    LinkedList<Student> studs = new LinkedList<>();
-	    double average = 0.0;
-	        	      
-	    //act	    
-	    Iterator it = comp.iterator(average);
+	    
+	    Iterator it = comp.iterator();
 	    for(it.first();!it.isDone();it.next())
 	    	studs.add((Student) it.current());
 	    
