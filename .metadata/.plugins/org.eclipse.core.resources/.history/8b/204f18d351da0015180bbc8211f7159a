@@ -1,0 +1,56 @@
+package bt.core.collections.iterators;
+
+public class FibIterator implements Iterator{
+	final int upperLim;
+	final int fstVal;
+	final int sndVal;
+	
+	int lastVal;
+	int curr;
+	
+	public FibIterator(int upperLim) {
+		this.upperLim = upperLim;
+		this.fstVal = 1;
+		this.sndVal = fstVal;
+		this.curr = -1;
+	}
+	
+	@Override
+	public void previous() {
+		// TODO Auto-generated method stub	
+	}
+
+	@Override
+	public void next() {
+		
+		if(curr == 1)
+		{
+			lastVal = 1;
+			curr+= lastVal;
+		}		
+		else
+		{
+			curr+= lastVal;
+			lastVal = curr;		
+		}		
+	}
+
+	@Override
+	public Object current() {
+		return curr;
+	}
+
+	@Override
+	public void first() {
+		curr = fstVal;
+	}
+
+	@Override
+	public void last() {
+	}
+
+	@Override
+	public boolean isDone() {
+		return curr >= upperLim;
+	}
+}
