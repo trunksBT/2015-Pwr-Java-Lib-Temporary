@@ -31,9 +31,9 @@
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
-			<item value="variabl"/>
 			<item value="varia"/>
 			<item value="var"/>
+			<item value="va"/>
 			<item value="con"/>
 			<item value="key"/>
 			<item value="keys"/>

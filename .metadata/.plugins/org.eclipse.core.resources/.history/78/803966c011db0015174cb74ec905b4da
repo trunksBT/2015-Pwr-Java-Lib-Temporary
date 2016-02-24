@@ -1,0 +1,30 @@
+package bt.tests.core.wrox.algosFromBegg;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TestAssert extends TestCase{
+	
+		@Test
+		public void test_arrayCopy_WithRefs_True()
+		{
+			//arrange
+	      
+			//act
+			assertSomething();
+			
+			//assert
+			assertTrue(true);
+		}
+		
+		private void assertSomething() {
+			Double var1 = new Double(3.0);
+			Double var2 = null;
+	        assert var1 != null : "var1 puste";
+	        assert var2 != null : "var2 puste";
+		}
+}

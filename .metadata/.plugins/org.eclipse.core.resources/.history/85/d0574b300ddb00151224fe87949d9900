@@ -1,0 +1,32 @@
+package bt.tests.core.wrox.algosFromBegg;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.collections.elems.Tuple;
+import junit.framework.TestCase;
+
+public class TestAssertEqualsAndSome {
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestTuple extends TestCase {
+	  @Test
+	  public void test_assertSame_Aliasing_True()
+	  {
+	      //arrange
+	      Tuple<String,Double> _tupA = new Tuple<>("Kot",3.0);
+	      Tuple<String,Double> _tupB = _tupA;
+	      
+	      //act
+	      
+	      //assert
+	      assertSame(_tupA,_tupB);
+	}
+}
+}
