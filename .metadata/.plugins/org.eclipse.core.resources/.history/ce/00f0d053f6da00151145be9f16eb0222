@@ -7,7 +7,7 @@ public class Sequences {
 			boolean methodPred = true;
 			int lastProperIdx = seq.length - 2;
 	
-			while( methodPred & ++i < lastProperIdx ) {
+			while( ++i < lastProperIdx & methodPred) {
 				if(seq[i] >= seq[i+1])
 					methodPred &= true;
 				else

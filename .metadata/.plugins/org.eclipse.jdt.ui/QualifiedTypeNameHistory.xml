@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.util.Hashtable"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.Interfaces.IGraf"/>
 <fullyQualifiedTypeName name="java.util.Enumeration"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.IndirectedGraph"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="bt.core.algorithms.Sequences"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.Arrays"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="bt.core.algorithms.SequencesCopy"/>
+<fullyQualifiedTypeName name="bt.core.algorithms.ArraysCopy"/>
 </qualifiedTypeNameHistroy>

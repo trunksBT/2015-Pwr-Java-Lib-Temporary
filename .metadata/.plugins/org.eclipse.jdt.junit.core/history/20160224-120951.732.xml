@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestArrays" project="BT-Library-Java" tests="5" started="5" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.tests.core.algorithms.TestArrays" time="0.001">
-    <testcase name="test_null_3_Exception" classname="bt.tests.core.algorithms.TestArrays" time="0.0"/>
-    <testcase name="test_sumValsOnMultiOfK_1_48" classname="bt.tests.core.algorithms.TestArrays" time="0.0"/>
-    <testcase name="test_sumValsOnMultiOfK_2_24" classname="bt.tests.core.algorithms.TestArrays" time="0.0"/>
-    <testcase name="test_sumValsOnMultiOfK_3_30" classname="bt.tests.core.algorithms.TestArrays" time="0.0"/>
-    <testcase name="test_sumValsOnMultiOfK_KmoreThanTwiceOfSizeOfTable_0" classname="bt.tests.core.algorithms.TestArrays" time="0.0"/>
-  </testsuite>
-</testrun>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestArrays" project="BT-Library-Java" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.tests.core.algorithms.TestArrays" incomplete="true">
-    <testcase name="test_sumValsOnMultiOfK_2_24" classname="bt.tests.core.algorithms.TestArrays" time="0.0"/>
-    <testcase name="test_sumValsOnMultiOfK_3_24" classname="bt.tests.core.algorithms.TestArrays" incomplete="true"/>
-  </testsuite>
-</testrun>
