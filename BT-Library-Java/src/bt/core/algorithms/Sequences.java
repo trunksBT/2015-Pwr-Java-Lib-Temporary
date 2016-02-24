@@ -1,13 +1,13 @@
 package bt.core.algorithms;
 
 public class Sequences {
-	public static boolean isNotAscending( int[] chain ) {
+	public static boolean isNotAscending( int[] seq ) {
 		int i = -1;
 		boolean methodPred = true;
-		int size = chain.length;
+		int lastProperIdx = seq.length - 2;
 
-		while(i++ < size-2 && methodPred) {
-			if(chain[i] >= chain[i+1])
+		while( ++i < lastProperIdx && methodPred) {
+			if(seq[i] >= seq[i+1])
 				methodPred &= true;
 			else
 				methodPred &= false;
@@ -24,6 +24,8 @@ public class Sequences {
 		
 		return licz;
 	}
+	
+	
 		
 //		
 //		public static boolean isNotAscending( int[] chain ,int n) {

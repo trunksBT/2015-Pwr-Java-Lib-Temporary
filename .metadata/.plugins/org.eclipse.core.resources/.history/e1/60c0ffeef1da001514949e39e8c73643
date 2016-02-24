@@ -1,0 +1,18 @@
+package bt.core.algorithms;
+
+public class SequencesCopy {
+	public static boolean isNotAscending(int[] seq) {
+		int i = 0;
+		int lastProperIdx = seq.length -2;
+		boolean isNotAsc = true;
+		
+		while( isNotAsc && i < lastProperIdx ) {
+			if(seq[i]>=seq[i+1])
+				isNotAsc &= true;
+			else
+				isNotAsc &= false;
+		}
+		
+		return isNotAsc;
+	}
+}

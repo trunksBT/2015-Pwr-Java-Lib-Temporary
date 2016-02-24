@@ -5,7 +5,7 @@ public class Strings {
 		int licz = 0;
 		int i = 0;
 		
-		while(i < chain.length() && licz >= 0) {
+		while( i < chain.length() && licz >= 0 ) {
 			if(chain.charAt(i) == '(')
 				licz++;
 			else if( chain.charAt(i) == ')') 

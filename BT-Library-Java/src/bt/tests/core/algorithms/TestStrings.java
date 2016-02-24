@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.Strings;
-import bt.core.collections.iterators.FibIterator;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
