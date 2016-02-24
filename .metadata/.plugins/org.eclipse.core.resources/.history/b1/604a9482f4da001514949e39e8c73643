@@ -1,0 +1,8 @@
+package bt.core.algorithms;
+
+public class ArraysCopy {
+	public static int sumValsOnMultiOfK( int [][] matrix, int multi ) {
+		return 0;
+	}
+
+}

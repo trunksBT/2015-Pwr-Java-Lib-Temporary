@@ -13,24 +13,19 @@ public class Sequences {
 				else
 					methodPred &= false;
 				
-			
-			}
 			return methodPred;
 		}else
 			throw new NullPointerException();
 	}
 	
 	public static int amountOfZeroOnBegin( int[] seq ) {
-		if( seq != null) {
-			int licz = 0;
-			int idx = seq.length;
-			
-			while( idx-- >0 )
-				licz = seq[idx] != 0 ? 0 : licz + 1;
-			
-			return licz;
-		}else
-			throw new NullPointerException();
+		int licz = 0;
+		int idx = seq.length;
+		
+		while( idx-- >0 )
+			licz = seq[idx] != 0 ? 0 : licz + 1;
+		
+		return licz;
 	}
 	
 	

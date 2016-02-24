@@ -147,18 +147,14 @@ public class TestSequences extends TestCase
 	public void test_Null_False()
 	{
 	    //arrange	    
-	    int[] chain = null;
-	    boolean rcVal = true;
+	    int[] chain = null;	
+	    int expVal = 0;
 	      
 	    //act
-	    try {
-	    	Sequences.amountOfZeroOnBegin(chain);
-	    }catch(NullPointerException e) {
-	    	rcVal = false;
-	    }
+	    int rcVal = Sequences.amountOfZeroOnBegin(chain);
 	    
 	    //assert
-	    assertFalse(rcVal);
+	    assertTrue(expVal == rcVal);
 	}
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior

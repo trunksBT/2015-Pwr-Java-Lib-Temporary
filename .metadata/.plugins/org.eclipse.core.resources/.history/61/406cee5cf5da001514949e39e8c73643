@@ -12,25 +12,6 @@ public class TestSequences extends TestCase
 {				
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_Null_Ascending_False()
-	{
-	    //arrange	    
-	    int[] chain = null;	
-	    boolean rcVal = true;
-	      
-	    //act
-	    try {
-	    	rcVal = Sequences.isNotAscending(chain);
-	    }catch( NullPointerException e) {
-	    	rcVal = false;
-	    }
-	    
-	    //assert
-	    assertFalse(rcVal);
-	}
-	
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
 	public void test_isNotAscending_Ascending_False()
 	{
 	    //arrange	    
@@ -144,29 +125,10 @@ public class TestSequences extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_Null_False()
-	{
-	    //arrange	    
-	    int[] chain = null;
-	    boolean rcVal = true;
-	      
-	    //act
-	    try {
-	    	Sequences.amountOfZeroOnBegin(chain);
-	    }catch(NullPointerException e) {
-	    	rcVal = false;
-	    }
-	    
-	    //assert
-	    assertFalse(rcVal);
-	}
-	
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
 	public void test_idxOfFirstNotZero_NoZeroOnStart_0()
 	{
 	    //arrange	    
-	    int[] chain = {1,0,1,2};	
+	    int[] chain = {1,0,1,2,};	
 	    int expVal = 0;
 	      
 	    //act

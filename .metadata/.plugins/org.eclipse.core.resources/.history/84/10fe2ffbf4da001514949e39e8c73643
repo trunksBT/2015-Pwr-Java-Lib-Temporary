@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.Arrays;
-import bt.core.algorithms.Arrays;
+import bt.core.algorithms.ArraysCopy;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -27,7 +27,7 @@ public class TestArrays extends TestCase
 	    int expVal = 24;
 	      
 	    //act
-	    int rcVal = Arrays.sumValsOnMultiOfK(chain, multipler);
+	    int rcVal = ArraysCopy.sumValsOnMultiOfK(chain, multipler);
 	    
 	    //assert
 	    assertTrue(expVal == rcVal);
@@ -49,7 +49,7 @@ public class TestArrays extends TestCase
 	    int expVal = 0;
 	      
 	    //act
-	    int rcVal = Arrays.sumValsOnMultiOfK(chain, multipler);
+	    int rcVal = ArraysCopy.sumValsOnMultiOfK(chain, multipler);
 	    
 	    //assert
 	    assertTrue(expVal == rcVal);
@@ -71,7 +71,7 @@ public class TestArrays extends TestCase
 	    int expVal = 48;
 	      
 	    //act
-	    int rcVal = Arrays.sumValsOnMultiOfK(chain, multipler);
+	    int rcVal = ArraysCopy.sumValsOnMultiOfK(chain, multipler);
 	    
 	    //assert
 	    assertTrue(expVal == rcVal);
@@ -94,7 +94,7 @@ public class TestArrays extends TestCase
 	    int expVal = 30;
 	      
 	    //act
-	    int rcVal = Arrays.sumValsOnMultiOfK(chain, multipler);
+	    int rcVal = ArraysCopy.sumValsOnMultiOfK(chain, multipler);
 	    
 	    //assert
 	    assertTrue(expVal == rcVal);
@@ -113,7 +113,7 @@ public class TestArrays extends TestCase
 	    //act
 	    try
 	    {
-	    	int rcVal = Arrays.sumValsOnMultiOfK(chain, multipler);
+	    	int rcVal = ArraysCopy.sumValsOnMultiOfK(chain, multipler);
 	    }catch(NullPointerException e)
 	    {
 	    	endVal = false;

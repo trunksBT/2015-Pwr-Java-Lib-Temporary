@@ -5,30 +5,12 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.Sequences;
+import bt.core.algorithms.SequencesCopy;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestSequences extends TestCase
 {				
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
-	public void test_Null_Ascending_False()
-	{
-	    //arrange	    
-	    int[] chain = null;	
-	    boolean rcVal = true;
-	      
-	    //act
-	    try {
-	    	rcVal = Sequences.isNotAscending(chain);
-	    }catch( NullPointerException e) {
-	    	rcVal = false;
-	    }
-	    
-	    //assert
-	    assertFalse(rcVal);
-	}
-	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
 	public void test_isNotAscending_Ascending_False()
@@ -144,33 +126,14 @@ public class TestSequences extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_Null_False()
-	{
-	    //arrange	    
-	    int[] chain = null;
-	    boolean rcVal = true;
-	      
-	    //act
-	    try {
-	    	Sequences.amountOfZeroOnBegin(chain);
-	    }catch(NullPointerException e) {
-	    	rcVal = false;
-	    }
-	    
-	    //assert
-	    assertFalse(rcVal);
-	}
-	
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
 	public void test_idxOfFirstNotZero_NoZeroOnStart_0()
 	{
 	    //arrange	    
-	    int[] chain = {1,0,1,2};	
+	    int[] chain = {1,0,1,2,};	
 	    int expVal = 0;
 	      
 	    //act
-	    int rcVal = Sequences.amountOfZeroOnBegin(chain);
+	    int rcVal = SequencesCopy.amountOfZeroOnBegin(chain);
 	    
 	    //assert
 	    assertTrue(expVal == rcVal);
@@ -185,7 +148,7 @@ public class TestSequences extends TestCase
 	    int expVal = 1;
 	      
 	    //act
-	    int rcVal = Sequences.amountOfZeroOnBegin(chain);
+	    int rcVal = SequencesCopy.amountOfZeroOnBegin(chain);
 	    
 	    //assert
 	    assertTrue(expVal == rcVal);
@@ -200,7 +163,7 @@ public class TestSequences extends TestCase
 	    int expVal = 4;
 	      
 	    //act
-	    int rcVal = Sequences.amountOfZeroOnBegin(chain);
+	    int rcVal = SequencesCopy.amountOfZeroOnBegin(chain);
 	    
 	    //assert
 	    assertTrue(expVal == rcVal);
@@ -215,7 +178,7 @@ public class TestSequences extends TestCase
 	    int expVal = 2;
 	      
 	    //act
-	    int rcVal = Sequences.amountOfZeroOnBegin(chain);
+	    int rcVal = SequencesCopy.amountOfZeroOnBegin(chain);
 	    
 	    //assert
 	    assertTrue(expVal == rcVal);

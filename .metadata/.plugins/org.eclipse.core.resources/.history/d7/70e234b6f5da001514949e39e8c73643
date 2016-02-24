@@ -17,6 +17,6 @@ public class Strings {
 			return licz ==0;
 		}
 		else
-			throw new NullPointerException();
+			throw  new NullPointerException();
 	}
 }
