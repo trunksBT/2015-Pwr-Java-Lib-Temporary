@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.interfaces.List;
 import junit.framework.TestCase;
 import static org.junit.Assert.*;
@@ -34,7 +35,7 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
+    	String toAdd1 = new String("0");
     	int expSize = 1;
     	
     	// act
@@ -51,12 +52,14 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
+    	String toAdd0 = new String("0");
+    	String toAdd1 =  new String("1");
     	int expSize = 2;
     	
     	// act
-    	tape.add(new Integer(1));
+    	tape.add(toAdd0);
     	tape.add(toAdd1);
+    	
     	
     	// assert
     	assertSame(toAdd1, tape.get(1));
@@ -69,16 +72,18 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
+    	String toAdd0 = new String("0");
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
     	int expSize = 3;
     	
     	// act
-    	tape.add(new Integer(1));
-    	tape.add(new Integer(2));
+    	tape.add(toAdd0);
     	tape.add(toAdd1);
+    	tape.add(toAdd2);
     	
     	// assert
-    	assertSame(toAdd1, tape.get(2));
+    	assertSame(toAdd2, tape.get(2));
     	assertEquals(tape.size(), expSize);
     }
     
@@ -89,10 +94,12 @@ public class TestArrayList extends TestCase {
     	// arrange
     	List tape = new ArrayList();
     	int expSize = 0;
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
     	
     	// act
-    	tape.add(new Integer(1));
-    	tape.add(new Integer(2));
+    	tape.add(toAdd1);
+    	tape.add(toAdd2);
     	tape.clear();
     	
     	// assert
@@ -120,7 +127,7 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer searchedVal = new Integer(0);
+    	String searchedVal = new String("0");
     	boolean rcVal = false;
     	
     	// act
@@ -136,13 +143,16 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer searchedVal = new Integer(0);
+    	String searchedVal = new String("0");
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
+    	String toAdd3 =  new String("3");
     	boolean rcVal = false;
     	
     	// act
-    	tape.add(new Integer(1));
-    	tape.add(new Integer(2));
-    	tape.add(new Integer(3));
+    	tape.add(toAdd1);
+    	tape.add(toAdd2);
+    	tape.add(toAdd3);
     	rcVal = tape.contains(searchedVal);
     	
     	// assert
@@ -155,13 +165,17 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer searchedVal = new Integer(0);
+    	String searchedVal = new String("0");
+    	String toAdd0 =  new String("0");
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
+    	
     	boolean rcVal = false;
     	
     	// act
-    	tape.add(new Integer(0));
-    	tape.add(new Integer(1));
-    	tape.add(new Integer(2));
+    	tape.add(toAdd0);
+    	tape.add(toAdd1);
+    	tape.add(toAdd2);
     	rcVal = tape.contains(searchedVal);
     	
     	// assert
@@ -195,10 +209,11 @@ public class TestArrayList extends TestCase {
     	// arrange
     	List tape = new ArrayList();
     	int searchedIdx = 1;
+    	String toAdd0 =  new String("0");
     	boolean rcVal = true;
     	
     	// act
-    	tape.add(new Integer(0));
+    	tape.add(toAdd0);
     	
     	try{
     		tape.delete(searchedIdx);
@@ -216,11 +231,12 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
+    	String toAdd0 =  new String("0");
     	int searchedIdx = 0;
     	boolean rcVal = true;
     	
     	// act
-    	tape.add(new Integer(0));
+    	tape.add(toAdd0);
     	
     	try{
     		tape.delete(searchedIdx);
@@ -238,11 +254,15 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer searchedVal = new Integer(0);
+    	String searchedVal = new String("0");
     	boolean rcVal = true;
     	
     	// act
-    	rcVal = tape.delete(searchedVal);
+    	try {
+    		rcVal = tape.delete(searchedVal);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcVal = false;
+    	}
     	
     	// assert
     	assertFalse(rcVal);
@@ -254,12 +274,17 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer searchedVal = new Integer(1);
+    	String yetAdded0 =  new String("0");
+    	String searchedVal = new String("1");
     	boolean rcVal = true;
     	
     	// act
-    	tape.add(new Integer(0));
-    	rcVal = tape.delete(searchedVal);
+    	tape.add(yetAdded0);
+    	try {
+    		rcVal = tape.delete(searchedVal);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcVal = false;
+    	}
     	
     	// assert
     	assertFalse(rcVal);
@@ -271,13 +296,15 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer searchedVal = new Integer(1);
+    	String toAdd0 =  new String("0");
+    	String toAdd1 =  new String("1");
+    	String searchedVal = new String("1");
     	boolean rcVal = true;
     	
     	// act
-    	tape.add(new Integer(0));
-    	tape.add(new Integer(1));
-    	tape.add(new Integer(1));
+    	tape.add(toAdd0);
+    	tape.add(toAdd1);
+    	tape.add(toAdd1);
     	
     	rcVal = tape.delete(searchedVal);
     	
@@ -293,7 +320,7 @@ public class TestArrayList extends TestCase {
     	// arrange
     	List tape = new ArrayList();
     	Object rcVal = null;
-    	Integer expVal =  new Integer(0);
+    	String expVal =  new String("0");
     	int searchedIdx = 0;
     	
     	// act
@@ -314,11 +341,12 @@ public class TestArrayList extends TestCase {
     	// arrange
     	List tape = new ArrayList();
     	Object rcVal = null;
-    	Integer expVal =  new Integer(1);
+    	String expVal =  new String("1");
+    	String toAdd1 =  new String("0");
     	int searchedIdx = 0;
     	
     	// act
-    	tape.add(new Integer(0));
+    	tape.add(toAdd1);
     	
     	try {
     		rcVal = tape.get(searchedIdx);
@@ -337,11 +365,12 @@ public class TestArrayList extends TestCase {
     	// arrange
     	List tape = new ArrayList();
     	Object rcVal = null;
-    	Integer expVal =  new Integer(0);
+    	String toAdd1 =  new String("0");
+    	String expVal =  new String("0");
     	int searchedIdx = 0;
     	
     	// act
-    	tape.add(new Integer(0));
+    	tape.add(toAdd1);
     	rcVal = tape.get(searchedIdx);
 
     	// assert
@@ -357,7 +386,7 @@ public class TestArrayList extends TestCase {
     	List tape = new ArrayList();
     	int rcVal = -1;
     	int expVal =  -1;
-    	Integer searchedVal = new Integer(0);
+    	String searchedVal = new String("0");
     	
     	// act
     	rcVal = tape.indexOf(searchedVal);
@@ -374,10 +403,10 @@ public class TestArrayList extends TestCase {
     	List tape = new ArrayList();
     	int rcVal = -1;
     	int expVal =  -1;
-    	Integer searchedVal = new Integer(0);
+    	String searchedVal = new String("0");
     	
     	// act
-    	tape.add(new Integer(1));
+    	tape.add(new Double(1));
     	rcVal = tape.indexOf(searchedVal);
 
     	// assert
@@ -392,10 +421,11 @@ public class TestArrayList extends TestCase {
     	List tape = new ArrayList();
     	int rcVal = -1;
     	int expVal = 0;
-    	Integer searchedVal = new Integer(0);
+    	String yetAdded0 = new String("0");
+    	String searchedVal = new String("0");
     	
     	// act
-    	tape.add(new Integer(0));
+    	tape.add(yetAdded0);
     	rcVal = tape.indexOf(searchedVal);
 
     	// assert
@@ -408,7 +438,7 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
+    	String toAdd1 = new String("0");
     	int desIdx = 1;
     	int expSize = 0;
     	int rcSize = -1;
@@ -430,7 +460,7 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
+    	String toAdd1 = new String("0");
     	int desIdx = 0;
     	int expSize = 1;
     	int rcSize = -1;
@@ -450,13 +480,13 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
+    	String toAdd1 = new String("0");
     	int desIdx = 0;
     	int expSize = 2;
     	int rcSize = -1;
     	
     	// act
-    	tape.add(new Integer(1));
+    	tape.add(new Double(1));
     	tape.insert(desIdx,toAdd1);
     	rcSize = tape.size();
     	
@@ -471,14 +501,14 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
+    	String toAdd1 = new String("0");
     	int desIdx = 0;
     	int expSize = 3;
     	int rcSize = -1;
     	
     	// act
-    	tape.add(new Integer(1));
-    	tape.add(new Integer(2));
+    	tape.add(new Double(1));
+    	tape.add(new Double(2));
     	tape.insert(desIdx,toAdd1);
     	rcSize = tape.size();
     	
@@ -493,8 +523,8 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
-    	Integer yetAdded1 = new Integer(1);
+    	String toAdd1 = new String("0");
+    	String yetAdded1 = new String("1");
     	int desIdx = 1;
     	int expSize = 2;
     	int rcSize = -1;
@@ -515,9 +545,9 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
-    	Integer yetAdded1 = new Integer(1);
-    	Integer yetAdded2 = new Integer(2);
+    	String toAdd0 = new String("0");
+    	String yetAdded1 = new String("1");
+    	String yetAdded2 = new String("2");
     	int desIdx = 1;
     	int expSize = 3;
     	int rcSize = -1;
@@ -525,13 +555,13 @@ public class TestArrayList extends TestCase {
     	// act
     	tape.add(yetAdded1);
     	tape.add(yetAdded2);
-    	tape.insert(desIdx,toAdd1);
+    	tape.insert(desIdx,toAdd0);
     	rcSize = tape.size();
     	
     	// assert
     	assertSame(tape.get(0),yetAdded1);
     	assertSame(tape.get(2),yetAdded2);
-    	assertSame(tape.get(desIdx),toAdd1);
+    	assertSame(tape.get(desIdx),toAdd0);
     	assertThat(rcSize, is(expSize));
     }
     
@@ -541,9 +571,9 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(0);
-    	Integer yetAdded1 = new Integer(1);
-    	Integer yetAdded2 = new Integer(2);
+    	String toAdd1 = new String("0");
+    	String yetAdded1 = new String("1");
+    	String yetAdded2 = new String("2");
     	int desIdx = 3;
     	int expSize = 2;
     	int rcSize = -1;
@@ -583,7 +613,7 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer yetAdded1 = new Integer(1);
+    	String yetAdded1 = new String("1");
     	boolean rcVal = false;
     	
     	// act
@@ -616,8 +646,8 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer yetAdded1 = new Integer(1);
-    	Integer yetAdded2 = new Integer(2);
+    	String yetAdded1 = new String("1");
+    	String yetAdded2 = new String("2");
     	int rcVal = -1;
     	int expVal = 2;
     	
@@ -636,7 +666,7 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer toAdd1 = new Integer(1);
+    	String toAdd1 = new String("1");
     	Object rcVal = null;
     	int desIdx = 0;
     	
@@ -657,8 +687,8 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer yetAdded1 = new Integer(0);
-    	Integer toAdd1 = new Integer(1);
+    	String yetAdded1 = new String("0");
+    	String toAdd1 = new String("1");
     	Object rcVal = null;
     	int desIdx = 1;
     	
@@ -681,8 +711,8 @@ public class TestArrayList extends TestCase {
     {
     	// arrange
     	List tape = new ArrayList();
-    	Integer yetAdded1 = new Integer(0);
-    	Integer toAdd1 = new Integer(1);
+    	String yetAdded1 = new String("0");
+    	String toAdd1 = new String("1");
     	Object rcVal = null;
     	int desIdx = 0;
     	

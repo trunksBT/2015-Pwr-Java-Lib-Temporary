@@ -1,0 +1,113 @@
+package bt.core.collections.dataTypes;
+
+import java.util.Iterator;
+import bt.core.collections.interfaces.List;
+import bt.core.collections.iterators.ArrayIterator;
+
+public class ArrayListCopy implements List{
+	private final static int DEFAULT_INIT_CAPACITY = 16;
+	private final int initCapacity;
+	private Object[] array;
+	private int size;
+	
+	public ArrayListCopy() {
+		this(DEFAULT_INIT_CAPACITY);
+	}
+	
+	public ArrayListCopy(int initCapacity) {
+		this.initCapacity = initCapacity;
+		clear();
+	}
+
+	@SuppressWarnings("rawtypes")
+	@Override
+	public Iterator iterator() {
+		return (Iterator) new ArrayIterator(array);
+	}
+
+	@Override
+	public void add(Object val) {
+		insert(size,val);
+	}
+
+	@Override
+	public void clear() {
+		this.array = new Object[initCapacity];
+		size = 0;
+	}
+
+	@Override
+	public boolean contains(Object val) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object delete(int idx) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean delete(Object val) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object get(int idx) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int indexOf(Object val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void insert(int idx, Object val) throws IndexOutOfBoundsException {
+		checkOutOfBounds(idx);
+		ensureCapacity(size+1);
+		
+		System.arraycopy(array,idx,array,idx,size-idx);
+		array[idx] = val;	
+	}
+
+	public void ensureCapacity(int capacity) {
+		if( initCapacity <= capacity) {
+			Object newArray[] = new Object[capacity + capacity/2];
+			System.arraycopy(array, 0, newArray, 0, size-1);
+			array = newArray;
+		}	
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object set(int idx, Object val) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	private void checkOutOfBounds(int idx) {
+		if( isOutOfBound(idx) )
+			throw new IndexOutOfBoundsException();
+	}
+
+	private boolean isOutOfBound(int idx) {
+		return idx < 0 | idx > size;
+	}
+	
+}

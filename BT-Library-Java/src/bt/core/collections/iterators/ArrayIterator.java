@@ -46,5 +46,4 @@ public class ArrayIterator extends ItPrint implements Iterator{
 	public boolean isDone() {
 		return current < first || current >last;
 	}
-
 }
