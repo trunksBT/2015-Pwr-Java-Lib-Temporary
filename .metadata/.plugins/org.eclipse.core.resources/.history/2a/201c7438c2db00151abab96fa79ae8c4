@@ -3,7 +3,6 @@ package bt.core.collections.dataTypes;
 import java.util.Iterator;
 
 import bt.core.collections.interfaces.List;
-import bt.core.collections.iterators.ArrayIterator;
 
 public class ArrayList implements List {
 	
@@ -18,12 +17,12 @@ public class ArrayList implements List {
 	
 	public ArrayList(int initCapacity) {
 		this.initCapacity = initCapacity;
-		array = new Object[initCapacity];
 	}
 
 	@Override
 	public Iterator iterator() {
-		return (Iterator) new ArrayIterator( array, 0, size);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -47,25 +46,14 @@ public class ArrayList implements List {
 		checkOutOfBounds(idx);
 		Object oldValue = array[idx];
 		int nextValIdx = idx+1;
-		
 		if(nextValIdx < size)
 			System.arraycopy(array,nextValIdx,array,idx, size - nextValIdx);
-		
-		array[size] = null;
-		return oldValue;
 	}
 
 	@Override
 	public boolean delete(Object val) {
-		int idxOfSearched = indexOf(val);
-		boolean retVal = false;
-		
-		if( idxOfSearched != -1) {
-			delete(idxOfSearched);
-			retVal = true;
-		}
-		
-		return retVal;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
@@ -98,7 +86,8 @@ public class ArrayList implements List {
 
 	@Override
 	public boolean isEmpty() {
-		return size == 0;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override

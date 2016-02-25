@@ -18,7 +18,6 @@ public class ArrayList implements List {
 	
 	public ArrayList(int initCapacity) {
 		this.initCapacity = initCapacity;
-		array = new Object[initCapacity];
 	}
 
 	@Override

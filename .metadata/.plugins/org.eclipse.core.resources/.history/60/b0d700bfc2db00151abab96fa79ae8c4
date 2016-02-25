@@ -604,7 +604,7 @@ public class TestArrayList extends TestCase {
     	int expVal = 0;
     	
     	// act
-    	rcVal = tape.size();
+    	expVal = tape.size();
     	
     	// assert
     	assertThat(rcVal,is(expVal));
@@ -624,7 +624,7 @@ public class TestArrayList extends TestCase {
     	// act
     	tape.add(yetAdded1);
     	tape.add(yetAdded2);
-    	rcVal = tape.size();
+    	expVal = tape.size();
     	
     	// assert
     	assertThat(rcVal,is(expVal));
