@@ -7,14 +7,12 @@ public class Sequences {
 			boolean methodPred = true;
 			int lastProperIdx = seq.length - 2;
 	
-			while( methodPred & ++i < lastProperIdx ) {
+			while( methodPred & ++i < lastProperIdx )
 				if(seq[i] >= seq[i+1])
 					methodPred &= true;
 				else
 					methodPred &= false;
-				
-			
-			}
+
 			return methodPred;
 		}else
 			throw new NullPointerException();

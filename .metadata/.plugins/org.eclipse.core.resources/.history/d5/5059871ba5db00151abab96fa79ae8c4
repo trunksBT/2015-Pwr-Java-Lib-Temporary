@@ -1,0 +1,21 @@
+package bt.core.algorithms;
+
+public class StringsCopy {
+	public static boolean parenthesisOK(String chain) {
+		if( chain!= null)
+		{
+			int i = chain.length();
+			int counter = 0;
+			
+			while(counter >=0 && --i>-1)
+				if(chain.charAt(i)== '(')
+					counter--;
+				else if(chain.charAt(i) == ')')
+					counter++;
+			
+			return counter == 0;
+				
+		}else
+			throw new NullPointerException();
+	}
+}

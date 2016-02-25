@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Bt.Core.Collections.Interfaces.IGraf"/>
-<fullyQualifiedTypeName name="java.util.Enumeration"/>
-<fullyQualifiedTypeName name="Bt.Core.Collections.IndirectedGraph"/>
-<fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="Bt.Core.Algorithms.GraphAlgos"/>
@@ -11,7 +7,6 @@
 <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.Tuple"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_String"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.SequencesCopy"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.ArraysCopy"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="bt.core.wrox.algosFromBegg.RecursiveFolderTreeProcessing"/>
+<fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>

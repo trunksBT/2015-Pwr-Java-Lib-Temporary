@@ -1,0 +1,11 @@
+package bt.core.algorithms;
+
+public class StringsCopy {
+	public static int amountOfZeroOnBegin(String chain) {
+		return 0;
+	}
+	
+	public static boolean isNotAscending(String chain) {
+		
+	}
+}

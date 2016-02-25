@@ -1,0 +1,79 @@
+package bt.tests.core.collections.dataTypes;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.collections.various.StackNatural;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestArrayList extends TestCase {
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_add()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_clear()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_contains()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byIdx()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byVal()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_get()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_indexOf()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_insert()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_isEmpty()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_set()
+    {
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_size()
+    {
+    }
+}

@@ -1,0 +1,29 @@
+package bt.tests.core.collections.dataTypes;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.collections.various.StackNatural;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestArrayList extends TestCase {
+
+    @Test
+    public void testEqualsQueuesTheSameTrue()
+    {
+        //arrange
+        StackNatural _queueA = new StackNatural(212);
+        StackNatural _queueB = new StackNatural(212);
+        boolean expected = true;
+        
+        //act
+        boolean reached = _queueA.equals(_queueB);
+        
+        //assert
+        boolean result = !(expected ^ reached);
+        assertTrue(result);
+    }
+}

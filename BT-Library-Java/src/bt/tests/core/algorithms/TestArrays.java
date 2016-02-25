@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.Arrays;
-import bt.core.algorithms.Arrays;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)

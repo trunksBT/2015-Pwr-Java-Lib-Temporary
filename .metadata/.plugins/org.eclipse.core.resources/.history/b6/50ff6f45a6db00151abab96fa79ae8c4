@@ -1,0 +1,17 @@
+package bt.core.algorithms;
+
+public class ArraysCopy {
+	public static int sumValsOnMultiOfK(int [][] matrix, int multi) {
+		if( matrix != null) {
+			int size = matrix.length;
+			int acc = 0;
+			
+			for(int i =0; i< size; i++)
+				for(int j = (multi-(i % multi)) % multi; j<size; j+= multi)
+					acc+= matrix[i][j];
+			
+			return acc;
+		}else
+			throw new NullPointerException();
+	}
+}
