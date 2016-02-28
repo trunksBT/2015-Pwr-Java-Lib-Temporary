@@ -2,37 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Arrays" key="selection"/>
+		<item value="isNotAscendingMy" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="ArraysCopy"/>
-			<item value="Arrays"/>
-			<item value="SequencesCopy"/>
-			<item value="Sequences"/>
-			<item value="Collections"/>
-			<item value="Bt.Core"/>
-			<item value="Programista"/>
-			<item value="[]"/>
+			<item value="isNotAscending"/>
+			<item value="isNotAscending(chain,chain.length)"/>
+			<item value="Sequences.isNotAscending(chain)"/>
+			<item value="ArrayListCopy"/>
+			<item value="Double expVal =  new Double(0);"/>
+			<item value="String searchedVal = new String(0);"/>
+			<item value="Double searchedVal = new Double(0);"/>
+			<item value="Double toAdd1 = new Double(1);"/>
 		</list>
 		<list key="replacehistory">
-			<item value="Arrays"/>
-			<item value="ArraysCopy"/>
-			<item value="Sequences"/>
-			<item value="SequencesCopy"/>
-			<item value="collections"/>
-			<item value="bt.core"/>
-			<item value="Bezrobotny"/>
-			<item value="Programista"/>
+			<item value="isNotAscendingMy"/>
+			<item value="isNotAscending(chain)"/>
+			<item value="Sequences.isNotAscending(chain,chain.length)"/>
+			<item value="ArrayList"/>
+			<item value="String searchedVal = new String(&quot;0&quot;);"/>
+			<item value="String searchedVal = new String(0);"/>
+			<item value="String toAdd1 = new String(&quot;1&quot;);"/>
+			<item value="String yetAdded1 = new String(&quot;0&quot;);"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="1670" key="DIALOG_X_ORIGIN"/>
-		<item value="488" key="DIALOG_Y_ORIGIN"/>
+		<item value="888" key="DIALOG_X_ORIGIN"/>
+		<item value="320" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

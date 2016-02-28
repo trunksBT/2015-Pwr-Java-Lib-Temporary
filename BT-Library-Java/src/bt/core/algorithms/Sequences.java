@@ -1,16 +1,14 @@
 package bt.core.algorithms;
 
 public class Sequences {
-	public static boolean isNotAscending( int[] seq ) {
+	public static boolean isNotAscendingMy( int[] seq ) {
 		if( seq != null) {
 			int i = -1;
 			boolean methodPred = true;
 			int lastProperIdx = seq.length - 2;
 	
 			while( methodPred & ++i < lastProperIdx )
-				if(seq[i] >= seq[i+1])
-					methodPred &= true;
-				else
+				if(seq[i] < seq[i+1])
 					methodPred &= false;
 
 			return methodPred;
@@ -30,17 +28,13 @@ public class Sequences {
 		}else
 			throw new NullPointerException();
 	}
-	
-	
 		
-//		
-//		public static boolean isNotAscending( int[] chain ,int n) {
-//			int i = 0;
-//			int size = chain.length; // n to byl rozmiar
-//
-//			while(i < size-1 && chain[i] <= chain[i+1])
-//				i++;
-//	//
-//			return i >= size-1;
-//		}
+		public static boolean isNotAscending( int[] chain ,int n) {
+			int i = 0;
+
+			while(i < n-1 && chain[i] <= chain[i+1])
+				i++;
+	
+			return i >= n-1;
+		}
 }

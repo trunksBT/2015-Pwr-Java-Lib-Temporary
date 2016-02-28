@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-<fullyQualifiedTypeName name="Bt.Core.Algorithms.GraphAlgos"/>
 <fullyQualifiedTypeName name="Bt.Core.Algorithms.IGraphAlgo"/>
 <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 <fullyQualifiedTypeName name="Bt.Core.Collections.Tuple"/>
@@ -39,7 +36,6 @@
 <fullyQualifiedTypeName name="bt.core.collections.iterators.ReverseIterator"/>
 <fullyQualifiedTypeName name="bt.core.geometry.elementaries.Point"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.EvenCordsPred"/>
-<fullyQualifiedTypeName name="bt.core.collections.iterators.ArrayIterator"/>
 <fullyQualifiedTypeName name="bt.core.collections.various.Competition"/>
 <fullyQualifiedTypeName name="bt.core.collections.elems.Player"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.FilterIterator"/>
@@ -47,17 +43,21 @@
 <fullyQualifiedTypeName name="bt.core.collections.iterators.Predicate"/>
 <fullyQualifiedTypeName name="bt.core.collections.various.Group"/>
 <fullyQualifiedTypeName name="bt.core.collections.elems.Student"/>
-<fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.FibIterator"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.Strings"/>
-<fullyQualifiedTypeName name="bt.core.algorithms.Sequences"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.Arrays"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.SequencesCopy"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.ArraysCopy"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="junit.framework.TestCase"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="bt.core.wrox.algosFromBegg.RecursiveFolderTreeProcessing"/>
 <fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="bt.core.algorithms.Sequences"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayListCopy"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.ArrayIterator"/>
 </qualifiedTypeNameHistroy>

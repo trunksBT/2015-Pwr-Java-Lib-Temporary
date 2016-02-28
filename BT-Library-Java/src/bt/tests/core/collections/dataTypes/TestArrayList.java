@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.collections.dataTypes.ArrayList;
-import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.dataTypes.ArrayListCopy;
 import bt.core.collections.interfaces.List;
 import junit.framework.TestCase;
 import static org.junit.Assert.*;
@@ -20,7 +20,7 @@ public class TestArrayList extends TestCase {
     public void test_CTOR_emptyList_size0()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int expSize = 0;
     	
     	// act
@@ -34,7 +34,7 @@ public class TestArrayList extends TestCase {
     public void test_add_emptyList_size1()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd1 = new String("0");
     	int expSize = 1;
     	
@@ -51,7 +51,7 @@ public class TestArrayList extends TestCase {
     public void test_add_NotEmptyList_size2()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd0 = new String("0");
     	String toAdd1 =  new String("1");
     	int expSize = 2;
@@ -71,7 +71,7 @@ public class TestArrayList extends TestCase {
     public void test_add_NotEmptyList_size3()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd0 = new String("0");
     	String toAdd1 =  new String("1");
     	String toAdd2 =  new String("2");
@@ -92,7 +92,7 @@ public class TestArrayList extends TestCase {
     public void test_clear_notEmpty_size0()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int expSize = 0;
     	String toAdd1 =  new String("1");
     	String toAdd2 =  new String("2");
@@ -111,7 +111,7 @@ public class TestArrayList extends TestCase {
     public void test_clear_empty_size0()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int expSize = 0;
     	
     	// act
@@ -126,7 +126,7 @@ public class TestArrayList extends TestCase {
     public void test_contains_empty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String searchedVal = new String("0");
     	boolean rcVal = false;
     	
@@ -142,7 +142,7 @@ public class TestArrayList extends TestCase {
     public void test_contains_notEmpty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String searchedVal = new String("0");
     	String toAdd1 =  new String("1");
     	String toAdd2 =  new String("2");
@@ -164,7 +164,7 @@ public class TestArrayList extends TestCase {
     public void test_contains_notEmpty_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String searchedVal = new String("0");
     	String toAdd0 =  new String("0");
     	String toAdd1 =  new String("1");
@@ -187,7 +187,7 @@ public class TestArrayList extends TestCase {
     public void test_delete_byIdx_empty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int searchedIdx = 0;
     	boolean rcVal = true;
     	
@@ -207,7 +207,7 @@ public class TestArrayList extends TestCase {
     public void test_delete_byIdx_notEmpty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int searchedIdx = 1;
     	String toAdd0 =  new String("0");
     	boolean rcVal = true;
@@ -230,7 +230,7 @@ public class TestArrayList extends TestCase {
     public void test_delete_byIdx_notEmpty_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd0 =  new String("0");
     	int searchedIdx = 0;
     	boolean rcVal = true;
@@ -245,6 +245,7 @@ public class TestArrayList extends TestCase {
     	}
     	
     	// assert
+    	assertEquals(tape.size() , 0);
     	assertTrue(rcVal);
     }
     
@@ -253,7 +254,7 @@ public class TestArrayList extends TestCase {
     public void test_delete_byVal_empty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String searchedVal = new String("0");
     	boolean rcVal = true;
     	
@@ -273,7 +274,7 @@ public class TestArrayList extends TestCase {
     public void test_delete_byVal_notEmpty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String yetAdded0 =  new String("0");
     	String searchedVal = new String("1");
     	boolean rcVal = true;
@@ -295,7 +296,7 @@ public class TestArrayList extends TestCase {
     public void test_delete_byVal_notEmpty_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd0 =  new String("0");
     	String toAdd1 =  new String("1");
     	String searchedVal = new String("1");
@@ -318,7 +319,7 @@ public class TestArrayList extends TestCase {
     public void test_get_empty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	Object rcVal = null;
     	String expVal =  new String("0");
     	int searchedIdx = 0;
@@ -339,7 +340,7 @@ public class TestArrayList extends TestCase {
     public void test_get_notEmpty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	Object rcVal = null;
     	String expVal =  new String("1");
     	String toAdd1 =  new String("0");
@@ -363,7 +364,7 @@ public class TestArrayList extends TestCase {
     public void test_get_notEmpty_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	Object rcVal = null;
     	String toAdd1 =  new String("0");
     	String expVal =  new String("0");
@@ -383,7 +384,7 @@ public class TestArrayList extends TestCase {
     public void test_indexOf_empty_m1()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int rcVal = -1;
     	int expVal =  -1;
     	String searchedVal = new String("0");
@@ -400,7 +401,7 @@ public class TestArrayList extends TestCase {
     public void test_indexOf_notEmpty_m1()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int rcVal = -1;
     	int expVal =  -1;
     	String searchedVal = new String("0");
@@ -418,7 +419,7 @@ public class TestArrayList extends TestCase {
     public void test_indexOf_notEmpty_0()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int rcVal = -1;
     	int expVal = 0;
     	String yetAdded0 = new String("0");
@@ -437,7 +438,7 @@ public class TestArrayList extends TestCase {
     public void test_insert_on1_empty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd1 = new String("0");
     	int desIdx = 1;
     	int expSize = 0;
@@ -459,7 +460,7 @@ public class TestArrayList extends TestCase {
     public void test_insert_on0_empty_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd1 = new String("0");
     	int desIdx = 0;
     	int expSize = 1;
@@ -479,7 +480,7 @@ public class TestArrayList extends TestCase {
     public void test_insert_on0_oneElInTape_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd1 = new String("0");
     	int desIdx = 0;
     	int expSize = 2;
@@ -500,7 +501,7 @@ public class TestArrayList extends TestCase {
     public void test_insert_on0_twoElInTape_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd1 = new String("0");
     	int desIdx = 0;
     	int expSize = 3;
@@ -522,7 +523,7 @@ public class TestArrayList extends TestCase {
     public void test_insert_on1_oneElInTape_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd1 = new String("0");
     	String yetAdded1 = new String("1");
     	int desIdx = 1;
@@ -544,7 +545,7 @@ public class TestArrayList extends TestCase {
     public void test_insert_on1_twoElInTape_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd0 = new String("0");
     	String yetAdded1 = new String("1");
     	String yetAdded2 = new String("2");
@@ -570,7 +571,7 @@ public class TestArrayList extends TestCase {
     public void test_insert_on3_twoElInTape_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd1 = new String("0");
     	String yetAdded1 = new String("1");
     	String yetAdded2 = new String("2");
@@ -594,10 +595,65 @@ public class TestArrayList extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_isEmpty_empty_true()
+    public void test_insert_on15_15elOnTape_true()
     {
     	// arrange
     	List tape = new ArrayList();
+    	String toAdd1 = new String("17");
+    	String yetAdded1 = new String("1");
+    	String yetAdded2 = new String("2");
+    	String yetAdded3 = new String("3");
+    	String yetAdded4 = new String("4");
+    	String yetAdded5 = new String("5");
+    	String yetAdded6 = new String("6");
+    	String yetAdded7 = new String("7");
+    	String yetAdded8 = new String("8");
+    	String yetAdded9 = new String("9");
+    	String yetAdded10= new String("10");
+    	String yetAdded11 = new String("11");
+    	String yetAdded12 = new String("12");
+    	String yetAdded13 = new String("13");
+    	String yetAdded14 = new String("14");
+    	String yetAdded15 = new String("15");
+    	
+    	
+    	int desIdx = 15;
+    	int expSize = 16;
+    	int rcSize = -1;
+    	
+    	// act
+    	tape.add(yetAdded1);
+    	tape.add(yetAdded2);
+    	tape.add(yetAdded3);
+    	tape.add(yetAdded4);
+    	tape.add(yetAdded5);
+    	tape.add(yetAdded6);
+    	tape.add(yetAdded7);
+    	tape.add(yetAdded8);
+    	tape.add(yetAdded9);
+    	tape.add(yetAdded10);
+    	tape.add(yetAdded11);
+    	tape.add(yetAdded12);
+    	tape.add(yetAdded13);
+    	tape.add(yetAdded14);
+    	tape.add(yetAdded15);
+    	
+    	try {
+    		tape.insert(desIdx,toAdd1);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcSize = tape.size();
+    	}
+    	
+    	// assert
+    	assertThat(tape.size(), is(expSize));
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_isEmpty_empty_true()
+    {
+    	// arrange
+    	List tape = new ArrayListCopy();
     	boolean rcVal = false;
     	
     	// act
@@ -612,7 +668,7 @@ public class TestArrayList extends TestCase {
     public void test_isEmpty_notEmpty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String yetAdded1 = new String("1");
     	boolean rcVal = false;
     	
@@ -629,7 +685,7 @@ public class TestArrayList extends TestCase {
     public void test_size_empty_0()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	int rcVal = -1;
     	int expVal = 0;
     	
@@ -645,7 +701,7 @@ public class TestArrayList extends TestCase {
     public void test_size_notEmpty_2()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String yetAdded1 = new String("1");
     	String yetAdded2 = new String("2");
     	int rcVal = -1;
@@ -665,7 +721,7 @@ public class TestArrayList extends TestCase {
     public void test_set_empty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String toAdd1 = new String("1");
     	Object rcVal = null;
     	int desIdx = 0;
@@ -686,7 +742,7 @@ public class TestArrayList extends TestCase {
     public void test_set_notEmpty_false()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String yetAdded1 = new String("0");
     	String toAdd1 = new String("1");
     	Object rcVal = null;
@@ -710,7 +766,7 @@ public class TestArrayList extends TestCase {
     public void test_set_notEmpty_true()
     {
     	// arrange
-    	List tape = new ArrayList();
+    	List tape = new ArrayListCopy();
     	String yetAdded1 = new String("0");
     	String toAdd1 = new String("1");
     	Object rcVal = null;

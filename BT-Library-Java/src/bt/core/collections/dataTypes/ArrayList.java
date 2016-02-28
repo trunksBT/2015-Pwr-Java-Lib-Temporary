@@ -51,7 +51,7 @@ public class ArrayList implements List {
 		if(nextValIdx < size)
 			System.arraycopy(array,nextValIdx,array,idx, size - nextValIdx);
 		
-		array[size] = null;
+		array[size--] = null;
 		return oldValue;
 	}
 
@@ -78,8 +78,8 @@ public class ArrayList implements List {
 	public int indexOf(Object val) {
 		int retIdx = -1;
 		
-		for(int i = 0 ; i<size; i++)
-			if( array[i].equals(val) && retIdx == -1)
+		for(int i = 0 ; i<size && retIdx == -1; i++)
+			if( array[i].equals(val) )
 				retIdx = i;
 		
 		return retIdx;
