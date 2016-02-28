@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="isNotAscendingMy" key="selection"/>
+		<item value="ArrayList" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ArrayListCopy"/>
+			<item value="ArrayList"/>
 			<item value="isNotAscending"/>
 			<item value="isNotAscending(chain,chain.length)"/>
 			<item value="Sequences.isNotAscending(chain)"/>
-			<item value="ArrayListCopy"/>
 			<item value="Double expVal =  new Double(0);"/>
 			<item value="String searchedVal = new String(0);"/>
 			<item value="Double searchedVal = new Double(0);"/>
-			<item value="Double toAdd1 = new Double(1);"/>
 		</list>
 		<list key="replacehistory">
+			<item value="ArrayList"/>
+			<item value="ArrayListCopy"/>
 			<item value="isNotAscendingMy"/>
 			<item value="isNotAscending(chain)"/>
 			<item value="Sequences.isNotAscending(chain,chain.length)"/>
-			<item value="ArrayList"/>
 			<item value="String searchedVal = new String(&quot;0&quot;);"/>
 			<item value="String searchedVal = new String(0);"/>
 			<item value="String toAdd1 = new String(&quot;1&quot;);"/>
-			<item value="String yetAdded1 = new String(&quot;0&quot;);"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

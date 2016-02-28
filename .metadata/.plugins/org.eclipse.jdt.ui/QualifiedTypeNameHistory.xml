@@ -57,7 +57,7 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayListCopy"/>
+<fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.ArrayIterator"/>
 </qualifiedTypeNameHistroy>
