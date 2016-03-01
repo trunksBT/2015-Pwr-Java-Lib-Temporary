@@ -1,0 +1,103 @@
+package bt.core.collections.dataTypes;
+
+import bt.core.collections.interfaces.List;
+import bt.core.collections.iterators.Iterator;
+
+public class GuardedLinkedListDouble implements List {
+	private final Element hdAndTl = new Element(null);
+	private int size;
+	
+	@Override
+	public Iterator iterator() {
+		return null;
+	}
+
+	@Override
+	public void add(Object val) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void clear() {
+		hdAndTl.next = hdAndTl;
+		hdAndTl.prev = hdAndTl;
+		size = 0;
+	}
+
+	@Override
+	public boolean contains(Object val) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object delete(int idx) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean delete(Object val) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object get(int idx) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int indexOf(Object val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void insert(int idx, Object val) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return size == 0;
+	}
+
+	@Override
+	public Object set(int idx, Object val) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		return size;
+	}
+
+	private final class Element {
+		private Object val;
+		private Element prev;
+		private Element next;
+		
+		public Element(Object val) {
+			this.val = val;
+		}
+		
+		public void attachBefore(Element successor) {
+			Element succPrev = successor.prev;
+			
+			this.next = successor;
+			this.prev= succPrev;
+			
+			successor.prev = this;
+			prev.next = this;
+		}
+		
+		public void detach() {
+			prev.next = next;
+			next.prev = prev; 
+		}
+	}
+}

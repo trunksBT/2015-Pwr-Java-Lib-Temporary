@@ -1,11 +1,10 @@
 package bt.core.collections.dataTypes;
 
-import java.util.Iterator;
-
 import bt.core.collections.interfaces.List;
 import bt.core.collections.iterators.ArrayIterator;
+import bt.core.collections.iterators.Iterator;
 
-public class ArrayList implements List {
+public class ArrayList extends AbstractList implements List {
 	private static final int DEFAULT_INIT_CAPACITY = 16;
 	private final int initCapacity;
 	private Object[] array;
@@ -20,7 +19,6 @@ public class ArrayList implements List {
 		array = new Object[initCapacity];
 	}
 
-	@SuppressWarnings("rawtypes")
 	@Override
 	public Iterator iterator() {
 		return (Iterator) new ArrayIterator( array, 0, size);
