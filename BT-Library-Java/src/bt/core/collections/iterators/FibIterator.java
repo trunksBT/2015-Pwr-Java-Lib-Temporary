@@ -1,57 +1,50 @@
 package bt.core.collections.iterators;
 
 public class FibIterator implements Iterator{
-	final int upperLim;
-	int n;
-	int fn;
-	int fnm1;
-	int curr;
+	private int n = 0;
+	private int fnm1 = 0;
+	private int fn = 0;
+	private final int lim;
 	
-	public FibIterator(int upperLim) {
-		this.upperLim = upperLim;
-		this.fn = fnm1 = n = 0;
-		this.curr = -1;
+	public FibIterator( int lim) {
+		this.lim = lim;
 	}
 	
 	@Override
 	public void previous() {
+
 	}
 
 	@Override
 	public void next() {
-		calcForward();		
+		if( n <= 1) {
+			fn = 1;
+			n++;
+		}else {
+			int oldFnm1 = fnm1;
+			fnm1 = fn;
+			fn += oldFnm1;
+			n++;
+		}
 	}
 
 	@Override
 	public Object current() {
-		return curr;
+		return fnm1 + fn;
 	}
 
 	@Override
 	public void first() {
-		curr = 0;
+		n = 0;
 	}
 
 	@Override
 	public void last() {
+		
 	}
 
 	@Override
 	public boolean isDone() {
-		return curr >= upperLim;
-	}
-	
-	private void calcForward() {
-		if( n <= 1) {
-			fn = curr = 1;
-			fnm1 = 0;
-			++n;
-		}
-		else {
-			fnm1 = fn;
-			fn = curr;
-			curr = fnm1 +fn;
-			++n;
-		}
+		return fn + fnm1 >= lim;
 	}
 }

@@ -1,5 +1,0 @@
-package bt.core.collections.iterators;
-
-public class ReverseIterator extends Iterator {
-
-}

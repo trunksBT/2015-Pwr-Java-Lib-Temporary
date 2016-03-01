@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestPrimeIter.test_CTOR_downLimIsPrime_Expect_True" project="BT-Library-Java" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="test_CTOR_downLimIsPrime_Expect_True" classname="bt.tests.core.collections.iterators.TestPrimeIter" time="0.002"/>
+</testrun>

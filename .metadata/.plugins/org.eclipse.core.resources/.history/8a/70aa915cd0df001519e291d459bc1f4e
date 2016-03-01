@@ -1,0 +1,43 @@
+package bt.core.collections.iterators;
+
+public class PrimeIterator extends ItPrint implements Iterator {
+	private final int downLim;
+	private final int upLim;
+	private int curr;
+	
+	public PrimeIterator(int downLim, int upLim) {
+		this.downLim = downLim;
+		this.upLim = upLim;
+		curr = upLim + 1;
+	}
+
+	@Override
+	public void previous() {
+		throw new NotImplementedException();
+	}
+
+	@Override
+	public void next() {
+
+	}
+
+	@Override
+	public Object current() {
+		return null;
+	}
+
+	@Override
+	public void first() {
+
+	}
+
+	@Override
+	public void last() {
+
+	}
+
+	@Override
+	public boolean isDone() {
+		return curr > upLim;
+	}
+}

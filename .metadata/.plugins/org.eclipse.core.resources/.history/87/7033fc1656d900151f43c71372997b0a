@@ -1,7 +1,0 @@
-package bt.core.collections.various;
-
-import bt.core.collections.elems.Player;
-
-public class Zawody {
-	private final Player[] players = new Player[5];
-}

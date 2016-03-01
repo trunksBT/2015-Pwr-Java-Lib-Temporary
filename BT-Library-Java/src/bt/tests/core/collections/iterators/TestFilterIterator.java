@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.collections.iterators.ArrayIterator;
+import bt.core.collections.iterators.ArrayIteratorCopy;
 import bt.core.collections.iterators.EvenCordsPred;
 import bt.core.collections.iterators.FilterIterator;
 import bt.core.collections.iterators.Iterator;
@@ -23,16 +24,18 @@ public class TestFilterIterator extends TestCase
 	    		new Point(0,0),
 	    		new Point(1,1),
 	    		new Point(2,2)};
+	    int size = points.length;
+	    int start = 0;
 	    
-	    Iterator it = new ArrayIterator(points);
+	    Iterator it = new ArrayIterator(points,start,size);
 	    Iterator fIt = new FilterIterator(it, new EvenCordsPred());
 	    
 	    Point expVal = new Point(0,0);
-	    fIt.next();
-	    Point rcVal = (Point) fIt.current();
 	    boolean expBool = true;
 	      
 	    //act
+	    fIt.first();
+	    Point rcVal = (Point) fIt.current();
 	    boolean rcBool = rcVal.equals(expVal);
 	    
 	    //assert
@@ -49,16 +52,20 @@ public class TestFilterIterator extends TestCase
 	    		new Point(0,0),
 	    		new Point(1,1),
 	    		new Point(2,2)};
+	    int size = points.length;
+	    int start = 0;
 	    
-	    Iterator it = new ArrayIterator(points);
+	    Iterator it = new ArrayIterator(points,start,size);
 	    Iterator fIt = new FilterIterator(it, new EvenCordsPred());
-	    fIt.first();
 	    
+	    //act
+	    fIt.first();    
 	    while(!fIt.isDone()) {
 	    	System.out.println( fIt.current() );
 	    	fIt.next();
 	    }
 	    
+	    //assert
 	    assertTrue(true);
 	}
 	
@@ -71,16 +78,20 @@ public class TestFilterIterator extends TestCase
 	    		new Point(0,0),
 	    		new Point(1,1),
 	    		new Point(2,2)};
+	    int size = points.length;
+	    int start = 0;
 	    
-	    Iterator it = new ArrayIterator(points);
+	    Iterator it = new ArrayIterator(points,start,size);
 	    Iterator fIt = new FilterIterator(it, new EvenCordsPred());
-	    fIt.last();
 	    
+	    //act
+	    fIt.last();    
 	    while(!fIt.isDone()) {
 	    	System.out.println( fIt.current() );
 	    	fIt.previous();
 	    }
 	    
+	    //assert
 	    assertTrue(true);
 	}
 	
@@ -93,13 +104,17 @@ public class TestFilterIterator extends TestCase
 	    		new Point(0,0),
 	    		new Point(1,1),
 	    		new Point(2,2)};
+	    int size = points.length;
+	    int start = 0;
 	    
-	    Iterator it = new ArrayIterator(points);
+	    Iterator it = new ArrayIterator(points,start,size);
 	    Iterator fIt = new FilterIterator(it, new EvenCordsPred());
 	    
+	    //act  
 	    for( fIt.first(); !fIt.isDone(); fIt.next())
 	    	System.out.println( fIt.current() );
 	    
+	    //assert
 	    assertTrue(true);	
 	}
 	
@@ -112,13 +127,17 @@ public class TestFilterIterator extends TestCase
 	    		new Point(0,0),
 	    		new Point(1,1),
 	    		new Point(2,2)};
+	    int size = points.length;
+	    int start = 0;
 	    
-	    Iterator it = new ArrayIterator(points);
+	    Iterator it = new ArrayIterator(points,start,size);
 	    Iterator fIt = new FilterIterator(it, new EvenCordsPred());
 	    
+	    //act   
 	    for( fIt.last(); !fIt.isDone(); fIt.previous())
 	    	System.out.println( fIt.current() );
 	    
+	    //assert
 	    assertTrue(true);	
 	}
 }

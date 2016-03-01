@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Bt.Core.Algorithms.IGraphAlgo"/>
-<fullyQualifiedTypeName name="java.util.stream.Stream"/>
-<fullyQualifiedTypeName name="Bt.Core.Collections.Tuple"/>
-<fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_String"/>
 <fullyQualifiedTypeName name="Bt.Tests.Core.Algorithms.Test_GraphAlgos_String_Double"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayListCopy"/>
 <fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.ArrayIterator"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.FibIteratorCopy"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.ArrayIteratorCopy"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.FilterIteratorCopy"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.EvenCordsPredCopy"/>
 </qualifiedTypeNameHistroy>
