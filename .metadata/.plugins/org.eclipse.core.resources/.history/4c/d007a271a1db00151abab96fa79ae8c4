@@ -1,7 +1,0 @@
-package bt.core.algorithms;
-
-public class StringsCopy {
-	public static int amountOfZeroOnBegin(String chain) {
-		return 0;
-	}
-}

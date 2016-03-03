@@ -1,7 +1,0 @@
-package bt.core.algorithms;
-
-public class StringsCopy {
-	public static boolean parenthesisOK(String chain) {
-		return true;
-	}
-}

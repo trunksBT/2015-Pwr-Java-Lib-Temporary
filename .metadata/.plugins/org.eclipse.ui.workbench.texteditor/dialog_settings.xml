@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="GuardedLinkedListDoubleCopy" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="GuardedLinkedListDouble"/>
+			<item value="GuardedLinkedListDouble();"/>
+			<item value="ArrayList"/>
+			<item value="FibIterator"/>
 			<item value="Copy"/>
 			<item value="ArrayIterator"/>
-			<item value="FibIterator"/>
 			<item value="ArrayListCopy"/>
-			<item value="ArrayList"/>
 			<item value="isNotAscending"/>
-			<item value="isNotAscending(chain,chain.length)"/>
-			<item value="Sequences.isNotAscending(chain)"/>
 		</list>
 		<list key="replacehistory">
+			<item value="GuardedLinkedListDoubleCopy"/>
+			<item value="LinkedList"/>
+			<item value="PrimeIterator"/>
 			<item value=""/>
 			<item value="ArrayIteratorCopy"/>
 			<item value="FibIteratorCopy"/>
 			<item value="ArrayList"/>
 			<item value="ArrayListCopy"/>
-			<item value="isNotAscendingMy"/>
-			<item value="isNotAscending(chain)"/>
-			<item value="Sequences.isNotAscending(chain,chain.length)"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

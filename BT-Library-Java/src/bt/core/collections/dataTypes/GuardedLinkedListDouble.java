@@ -4,7 +4,7 @@ import bt.core.collections.interfaces.List;
 import bt.core.collections.iterators.Iterator;
 
 public class GuardedLinkedListDouble implements List {
-	private final Element hdAndTl = new Element(null);
+	Element hdAndTl = new Element(null);
 	private int size;
 	
 	public GuardedLinkedListDouble() {
@@ -13,7 +13,7 @@ public class GuardedLinkedListDouble implements List {
 	
 	@Override
 	public Iterator iterator() {
-		return null;
+		return new ValueIterator(hdAndTl);
 	}
 
 	@Override
@@ -142,30 +142,5 @@ public class GuardedLinkedListDouble implements List {
 			el = el.prev;
 		
 		return el;
-	}
-
-	private final class Element {
-		private Object val;
-		private Element prev;
-		private Element next;
-		
-		public Element(Object val) {
-			this.val = val;
-		}
-		
-		public void attachBefore(Element successor) {
-			Element succPrev = successor.prev;
-			
-			this.next = successor;
-			this.prev= succPrev;
-			
-			successor.prev = this;
-			prev.next = this;
-		}
-		
-		public void detach() {
-			prev.next = next;
-			next.prev = prev; 
-		}
 	}
 }

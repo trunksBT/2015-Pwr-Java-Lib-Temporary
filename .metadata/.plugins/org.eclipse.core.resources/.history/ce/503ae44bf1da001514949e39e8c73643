@@ -1,7 +1,0 @@
-package bt.core.algorithms;
-
-public class SequencesCopy {
-	public static boolean isNotAscending(String chain) {
-		
-	}
-}

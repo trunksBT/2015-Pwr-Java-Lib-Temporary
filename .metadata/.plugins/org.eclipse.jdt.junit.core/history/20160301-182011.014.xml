@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestAbstractList" project="BT-Library-Java" tests="2" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.tests.core.collections.dataTypes.TestAbstractList" incomplete="true">
-    <testcase name="test_equals_notEmpty_null_false" classname="bt.tests.core.collections.dataTypes.TestAbstractList" incomplete="true"/>
-    <testcase name="test_equals_null_notEmpty_false" classname="bt.tests.core.collections.dataTypes.TestAbstractList" incomplete="true"/>
-  </testsuite>
-</testrun>
