@@ -650,6 +650,63 @@ public class TestGuardedLinkedListDoubleCopy extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
+    public void test_insert_on10_15elOnTape_true()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDoubleCopy();
+    	String toAdd1 = new String("17");
+    	String yetAdded1 = new String("1");
+    	String yetAdded2 = new String("2");
+    	String yetAdded3 = new String("3");
+    	String yetAdded4 = new String("4");
+    	String yetAdded5 = new String("5");
+    	String yetAdded6 = new String("6");
+    	String yetAdded7 = new String("7");
+    	String yetAdded8 = new String("8");
+    	String yetAdded9 = new String("9");
+    	String yetAdded10= new String("10");
+    	String yetAdded11 = new String("11");
+    	String yetAdded12 = new String("12");
+    	String yetAdded13 = new String("13");
+    	String yetAdded14 = new String("14");
+    	String yetAdded15 = new String("15");
+    	
+    	
+    	int desIdx = 10;
+    	int expSize = 16;
+    	int rcSize = -1;
+    	
+    	// act
+    	tape.add(yetAdded1);
+    	tape.add(yetAdded2);
+    	tape.add(yetAdded3);
+    	tape.add(yetAdded4);
+    	tape.add(yetAdded5);
+    	tape.add(yetAdded6);
+    	tape.add(yetAdded7);
+    	tape.add(yetAdded8);
+    	tape.add(yetAdded9);
+    	tape.add(yetAdded10);
+    	tape.add(yetAdded11);
+    	tape.add(yetAdded12);
+    	tape.add(yetAdded13);
+    	tape.add(yetAdded14);
+    	tape.add(yetAdded15);
+    	
+    	try {
+    		tape.insert(desIdx,toAdd1);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcSize = tape.size();
+    	}
+    	
+    	System.out.println( tape.get(0) );
+    	
+    	// assert
+    	assertThat(tape.size(), is(expSize));
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
     public void test_isEmpty_empty_true()
     {
     	// arrange

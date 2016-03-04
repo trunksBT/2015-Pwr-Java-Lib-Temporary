@@ -52,10 +52,10 @@ public class GuardedLinkedListDouble implements List {
 		while(el != hdAndTl && ! val.equals(el.val))
 			el = el.next;
 		
-		if( el != hdAndTl ) {
+		if( !el.equals( hdAndTl )) {
 			el.detach();
 			--size;
-			return true;
+			retVal = true;
 		}
 
 		return retVal;
@@ -85,6 +85,7 @@ public class GuardedLinkedListDouble implements List {
 			el = el.next;
 			++idx;
 		}
+		
 		return el != hdAndTl ? idx : -1;		
 	}
 
@@ -122,8 +123,7 @@ public class GuardedLinkedListDouble implements List {
 	private Element getElement(int idx) {
 		return idx < size /2 ? 
 				getElementForwards(idx) :
-					getElementBackwards(idx);
-				
+					getElementBackwards(idx);		
 	}
 	
 	private Element getElementForwards(int idx) {

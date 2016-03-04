@@ -10,6 +10,11 @@ public class Element {
 	}
 	
 	public void attachBefore(Element successor) {
+//		this.next = successor;
+//		this.prev = successor.prev;
+//		
+//		this.prev.next = this;
+//		this.next.prev = this;
 		Element succPrev = successor.prev;
 		
 		this.next = successor;
@@ -21,6 +26,6 @@ public class Element {
 	
 	public void detach() {
 		prev.next = next;
-		next.prev = prev; 
+		next.prev = prev;
 	}
 }
