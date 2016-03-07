@@ -3,12 +3,12 @@ package bt.core.collections.dataTypes;
 import bt.core.collections.iterators.Iterator;
 
 public class ValueIterator implements Iterator {
-	private Element cur;
-	private final Element hdAndTl;
+	final Element hdAndTlcopy;
+	Element cur;
 	
 	public ValueIterator(Element hdAndTl) {
-		cur = hdAndTl;
-		this.hdAndTl = hdAndTl;
+		this.hdAndTlcopy = hdAndTl;
+		this.cur = hdAndTl;
 	}
 	
 	@Override
@@ -23,24 +23,26 @@ public class ValueIterator implements Iterator {
 
 	@Override
 	public Object current() {
-		if (isDone())
+		if(isDone())
 			throw new IndexOutOfBoundsException();
 		
-		return cur;
+		return cur.val;
+		
 	}
 
 	@Override
 	public void first() {
-		cur = hdAndTl.next;
+		cur = hdAndTlcopy.next;
 	}
 
 	@Override
 	public void last() {
-		cur = hdAndTl.prev;
+		cur = hdAndTlcopy.prev;
 	}
 
 	@Override
 	public boolean isDone() {
-		return cur == hdAndTl;
+		return cur == hdAndTlcopy;
 	}
+
 }

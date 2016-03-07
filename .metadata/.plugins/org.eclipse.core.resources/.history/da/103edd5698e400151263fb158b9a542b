@@ -1,0 +1,143 @@
+package bt.core.collections.dataTypes;
+
+import bt.core.collections.interfaces.List;
+import bt.core.collections.iterators.Iterator;
+
+public class GuardedLinkedListDoubleCopy extends AbstractList implements List {
+	Element hdAndTl;
+	int size;
+	
+	public GuardedLinkedListDoubleCopy() {
+		hdAndTl = new Element(null);
+		clear();
+	}
+
+	@Override
+	public Iterator iterator() {
+		return new ValueIterator(hdAndTl);
+	}
+
+	@Override
+	public void add(Object val) {
+		insert(size,val);
+	}
+
+	@Override
+	public void clear() {
+		hdAndTl.next = hdAndTl;
+		hdAndTl.prev = hdAndTl;
+		
+		size = 0;
+	}
+
+	@Override
+	public boolean contains(Object val) {
+		return indexOf(val) != -1;
+	}
+
+	@Override
+	public Object delete(int idx) throws IndexOutOfBoundsException {
+		checkOutOfBounds(idx);
+		Element cur = hdAndTl.next;
+		int curIdx = -1;
+		
+		while( ++curIdx != idx)
+			cur = cur.next;
+		
+		Object oldVal = cur.val;
+		cur.detach();
+		
+		return oldVal;
+	}
+
+	@Override
+	public boolean delete(Object val) {
+		int idx = indexOf(val);
+		boolean retVal = false;
+		
+		if ( idx != -1 ) {
+			retVal = true;
+			delete(idx);
+		}
+			
+		return retVal;
+	}
+
+	@Override
+	public Object get(int idx) throws IndexOutOfBoundsException {
+		checkOutOfBounds(idx);
+		return getElement(idx).val;
+	}
+
+	private Element getElement(int idx) {
+		return idx < size/2 ?
+				getElementForwards(idx) :
+					getElementBackwards(idx);
+	}
+
+	private Element getElementBackwards(int idx) {
+		Element retVal = hdAndTl;
+		
+		for(int i = size - idx; i>0 ;i--)
+			retVal = retVal.prev;
+		
+		return retVal;
+	}
+
+	private Element getElementForwards(int idx) {
+		Element retVal = hdAndTl;
+		
+		for(int i = idx; i>0 ;i--)
+			retVal = retVal.next;
+		
+		return retVal;
+	}
+
+	private void checkOutOfBounds(int idx) {
+		if( isOutOfBounds (idx))
+			throw new IndexOutOfBoundsException();
+	}
+
+	private boolean isOutOfBounds(int idx) {
+		return idx < 0 || idx >= size;
+	}
+
+	@Override
+	public int indexOf(Object val) {
+		Element cur = hdAndTl.next;	
+		int idx = 0;
+		
+		while( cur!= hdAndTl && !cur.val.equals(val) ) {
+			cur = cur.next;
+			idx++;
+		}
+		
+		return idx == size ? -1 : idx;
+	}
+
+	@Override
+	public void insert(int idx, Object val) throws IndexOutOfBoundsException {
+		checkOutOfBounds(idx);
+		new Element(val).attachBefore(getElement(idx));
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return size == 0;
+	}
+
+	@Override
+	public Object set(int idx, Object val) throws IndexOutOfBoundsException {
+		checkOutOfBounds(idx);
+		Element oldElement = getElement(idx);
+		Object oldVal = oldElement.val;
+		oldElement.val = val;
+		
+		return oldVal;
+	}
+
+	@Override
+	public int size() {
+		return size;
+	}
+}

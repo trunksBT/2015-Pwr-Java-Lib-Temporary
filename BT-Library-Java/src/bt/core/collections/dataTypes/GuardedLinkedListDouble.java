@@ -3,7 +3,7 @@ package bt.core.collections.dataTypes;
 import bt.core.collections.interfaces.List;
 import bt.core.collections.iterators.Iterator;
 
-public class GuardedLinkedListDouble implements List {
+public class GuardedLinkedListDouble extends AbstractList implements List {
 	Element hdAndTl = new Element(null);
 	private int size;
 	
@@ -81,7 +81,7 @@ public class GuardedLinkedListDouble implements List {
 		int idx = 0;
 		Element el = hdAndTl.next;
 		
-		while(el != hdAndTl && ! val.equals(el.val)) {
+		while(el != hdAndTl && ! el.val.equals(val)) {
 			el = el.next;
 			++idx;
 		}

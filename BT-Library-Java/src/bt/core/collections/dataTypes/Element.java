@@ -1,27 +1,22 @@
 package bt.core.collections.dataTypes;
 
 public class Element {
-	Object val;
 	Element prev;
 	Element next;
+	Object val;
 	
 	public Element(Object val) {
 		this.val = val;
 	}
 	
 	public void attachBefore(Element successor) {
-//		this.next = successor;
-//		this.prev = successor.prev;
-//		
-//		this.prev.next = this;
-//		this.next.prev = this;
 		Element succPrev = successor.prev;
 		
-		this.next = successor;
-		this.prev= succPrev;
+		next = successor;
+		prev = succPrev;
 		
 		successor.prev = this;
-		prev.next = this;
+		succPrev.next = this;
 	}
 	
 	public void detach() {

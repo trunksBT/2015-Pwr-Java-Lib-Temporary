@@ -4,9 +4,10 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import bt.core.collections.dataTypes.AbstractList;
 import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.dataTypes.GuardedLinkedListDouble;
-import bt.core.collections.dataTypes.GuardedLinkedListDoubleCopy;
+//import bt.core.collections.dataTypes.GuardedLinkedListDoubleCopy;
 import bt.core.collections.interfaces.List;
 import junit.framework.TestCase;
 import static org.junit.Assert.*;
@@ -572,7 +573,7 @@ public class TestGuardedLinkedListDouble extends TestCase {
     public void test_toString_true()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDoubleCopy();
+    	List tape = new GuardedLinkedListDouble();
     	String yetAdded1 = new String("1");
     	String yetAdded2 = new String("2");
     	String yetAdded3 = new String("3");
@@ -645,7 +646,7 @@ public class TestGuardedLinkedListDouble extends TestCase {
     public void test_insert_on6_10elOnTape_false()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	AbstractList tape = new GuardedLinkedListDouble();
     	String toAdd1 = new String("0");
     	String yetAdded1 = new String("1");
     	String yetAdded2 = new String("2");
@@ -680,8 +681,9 @@ public class TestGuardedLinkedListDouble extends TestCase {
     		rcSize = tape.size();
     	}
     	
+    	System.out.println( tape.toString() );
     	// assert
-    	assertThat(rcSize, is(expSize));
+    	assertThat(tape.size(), is(expSize));
     }
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
