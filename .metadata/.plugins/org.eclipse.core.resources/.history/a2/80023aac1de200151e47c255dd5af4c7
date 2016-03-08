@@ -1,7 +1,0 @@
-package bt.core.collections.dataTypes;
-
-import bt.core.collections.interfaces.List;
-import bt.core.collections.iterators.Iterator;
-
-public class GuardedLinkedListDoubleCopy extends AbstractList implements List {
-}

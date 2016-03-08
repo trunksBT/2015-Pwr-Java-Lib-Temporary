@@ -1,0 +1,5 @@
+package bt.tests.core.collections.dataTypes;
+
+public class TestRataList {
+
+}

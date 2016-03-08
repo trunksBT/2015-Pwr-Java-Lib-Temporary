@@ -1,7 +1,0 @@
-package bt.core.collections.dataTypes;
-
-import bt.core.collections.interfaces.List;
-
-public abstract class AbstractList implements List {
-
-}

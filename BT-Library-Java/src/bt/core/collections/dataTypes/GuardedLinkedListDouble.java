@@ -126,20 +126,20 @@ public class GuardedLinkedListDouble extends AbstractList implements List {
 					getElementBackwards(idx);		
 	}
 	
-	private Element getElementForwards(int idx) {
-		Element el = hdAndTl.next;
-		
-		for(int i = idx; i>0 ; --i)
-			el = el.next;
-		
-		return el;
-	}
-	
 	private Element getElementBackwards(int idx) {
 		Element el = hdAndTl;
 		
 		for(int i = size - idx ; i > 0 ; --i )
 			el = el.prev;
+		
+		return el;
+	}
+	
+	private Element getElementForwards(int idx) {
+		Element el = hdAndTl.next;
+		
+		for(int i = idx; i>0 ; --i)
+			el = el.next;
 		
 		return el;
 	}
