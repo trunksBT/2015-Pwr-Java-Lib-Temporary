@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRatajList" project="BT-Library-Java" tests="29" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true">
+    <testcase name="test_CTOR_1size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" time="0.0"/>
+    <testcase name="test_CTOR_null_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" time="0.0"/>
+    <testcase name="test_add_On1size_Expect_size2" classname="bt.tests.core.collections.dataTypes.TestRatajList" time="0.0"/>
+    <testcase name="test_add_On2size_Expect_size3" classname="bt.tests.core.collections.dataTypes.TestRatajList" time="0.0"/>
+    <testcase name="test_add_On3size_Expect_size4" classname="bt.tests.core.collections.dataTypes.TestRatajList" time="0.0"/>
+    <testcase name="test_add_Onnull_Expect_size1" classname="bt.tests.core.collections.dataTypes.TestRatajList" time="0.0"/>
+    <testcase name="test_attachAfter_0_On1size_Expect_size2" classname="bt.tests.core.collections.dataTypes.TestRatajList" time="0.0"/>
+    <testcase name="test_attachAfter_0_On2size_Expect_size3" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_attachAfter_0_OnNullOrEmpty_Expect_size1" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_delete_On1size_Expect_size0" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_delete_On1size_Expect_size1" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_delete_On2size_Expect_size1" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_delete_On3size_Expect_size2" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_delete_Onnull_Expect_size0" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_druk_1size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_druk_3size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_druk_null_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_0_On1size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_0_On2size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_0_On3size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_0_OnNull_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_1_On2size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_1_On3size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_2_On2size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_2_On3size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_get_3_On3size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_maxVal_1size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_maxVal_3size_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+    <testcase name="test_maxVal_null_true" classname="bt.tests.core.collections.dataTypes.TestRatajList" incomplete="true"/>
+  </testsuite>
+</testrun>

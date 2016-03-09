@@ -1,0 +1,20 @@
+package bt.core.collections.dataTypes;
+
+public class RatajList {
+	RatajElem poc;
+	
+	public RatajList() {
+		this.poc = null;
+	}
+	
+	public RatajList(RatajElem poc) {
+		this.poc = poc;
+	}
+	
+	public static void print(RatajElem l) {
+		while(l != null) {
+			System.out.println( l.val + ',' );
+			l = l.next;
+		}
+	}
+}

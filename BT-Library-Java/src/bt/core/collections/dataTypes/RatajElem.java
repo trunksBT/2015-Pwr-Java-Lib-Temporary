@@ -13,4 +13,12 @@ public class RatajElem {
 		this.next = null;
 		this.val = val;
 	}
+	
+	public int getVal() {
+		return val;
+	}
+	
+	public void setNext(RatajElem next) {
+		this.next = next;
+	}
 }

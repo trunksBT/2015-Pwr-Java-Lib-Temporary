@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.Point"/>
 <fullyQualifiedTypeName name="Bt.Core.Reflections.Debug"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.Element"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.AbstractList"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.RatajElem"/>
 </qualifiedTypeNameHistroy>
