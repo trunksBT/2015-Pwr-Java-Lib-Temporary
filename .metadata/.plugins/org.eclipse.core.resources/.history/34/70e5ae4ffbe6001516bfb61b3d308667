@@ -70,16 +70,16 @@ public class RatajListCopy {
 	}
 	
 	public void delete(int val) {
-		if( poc != null) {
-			if( poc.val == val) poc = poc.next;
+		RatajElemCopy it = poc;
+		
+		if( it != null ) {
+			if( poc.val == val ) poc = poc.next;
 			else {
-				RatajElemCopy it = poc;
-				while( poc.next != null && poc.next.val != val)
+				while( it.next != null && it.next.val != val)
 					it = it.next;
 				
-				if( it.next != null)
+//				if( it.next != null)
 					it.next = it.next.next;
-			
 			}
 		}
 	}	

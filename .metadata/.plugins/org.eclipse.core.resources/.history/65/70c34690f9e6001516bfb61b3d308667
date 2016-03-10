@@ -61,27 +61,5 @@ public class RatajListCopy {
 		
 		return it;
 	}
-	
-	public void attachAfter(RatajElemCopy afterThis, int x) {
-		if( afterThis == null)
-			poc = new RatajElemCopy(x,poc);
-		else
-			afterThis.next = new RatajElemCopy(x, afterThis.next);
-	}
-	
-	public void delete(int val) {
-		if( poc != null) {
-			if( poc.val == val) poc = poc.next;
-			else {
-				RatajElemCopy it = poc;
-				while( poc.next != null && poc.next.val != val)
-					it = it.next;
-				
-				if( it.next != null)
-					it.next = it.next.next;
-			
-			}
-		}
-	}	
 }
 

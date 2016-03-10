@@ -456,105 +456,88 @@ public class TestRatajListCopy extends TestCase {
     	// assert
     	assertEquals(l1.size(), expSize);
     }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_delete_Onnull_Expect_size0()
-    {
-    	// arrange
-    	RatajListCopy l1 = new RatajListCopy();
-    	int expVal = 0;
-    	int toDel = 0;
-    		
-    	// act
-    	l1.delete(toDel);
-    	
-    	// assert
-    	assertEquals(l1.size(), expVal);
-    }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_delete_On1size_Expect_size0()
-    {
-    	// arrange
-    	RatajElemCopy elem = new RatajElemCopy(0, null);
-    	RatajListCopy l1 = new RatajListCopy(elem);
-    	int toDel = 0;
-    	int expVal = 0;
-    	
-    	// act
-    	l1.delete(toDel);
-    	
-    	// assert
-    	assertEquals(l1.size(), expVal);
-    }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_delete_On1size_Expect_size1()
-    {
-    	// arrange
-    	RatajElemCopy elem = new RatajElemCopy(0, null);
-    	RatajListCopy l1 = new RatajListCopy(elem);
-    	int toDel = 1;
-    	int expVal = 1;
-    	
-    	// act
-    	l1.delete(toDel);
-    	
-    	// assert
-    	assertEquals(l1.size(), expVal);
-    }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_delete_On2size_Expect_size1()
-    {
-    	// arrange
-    	RatajElemCopy elem = new RatajElemCopy(0, new RatajElemCopy(1, null));
-    	RatajListCopy l1 = new RatajListCopy(elem);
-    	int expVal = 1;
-    	int toDel = 1;
-    	
-    	// act
-    	l1.delete(toDel);
-    	
-    	// assert
-    	assertEquals(l1.size(), expVal);
-    }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_delete_On3size_Expect_size2()
-    {
-    	// arrange
-    	RatajElemCopy elem = new RatajElemCopy(0, new RatajElemCopy(1, new RatajElemCopy(2, null)));
-    	RatajListCopy l1 = new RatajListCopy(elem);
-    	int expVal = 2;
-    	int toDel = 1;
-    	
-    	// act
-    	l1.delete(toDel);
-    	
-    	// assert
-    	assertEquals(l1.size(), expVal);
-    }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_delete_fst_On3size_Expect_size2()
-    {
-    	// arrange
-    	RatajElemCopy elem = new RatajElemCopy(0, new RatajElemCopy(1, new RatajElemCopy(2, null)));
-    	RatajListCopy l1 = new RatajListCopy(elem);
-    	int expVal = 2;
-    	int toDel = 0;
-    	
-    	// act
-    	l1.delete(toDel);
-    	
-    	// assert
-    	assertEquals(l1.size(), expVal);
-    }
+//    
+//	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+//    @Test
+//    public void test_delete_Onnull_Expect_size0()
+//    {
+//    	// arrange
+//    	RatajListCopy l1 = new RatajListCopy();
+//    	int expVal = 0;
+//    	int toDel = 0;
+//    		
+//    	// act
+//    	l1.delete(toDel);
+//    	
+//    	// assert
+//    	assertEquals(l1.size(), expVal);
+//    }
+//    
+//	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+//    @Test
+//    public void test_delete_On1size_Expect_size0()
+//    {
+//    	// arrange
+//    	RatajElemCopy elem = new RatajElemCopy(0, null);
+//    	RatajListCopy l1 = new RatajListCopy(elem);
+//    	int toDel = 0;
+//    	int expVal = 0;
+//    	
+//    	// act
+//    	l1.delete(toDel);
+//    	
+//    	// assert
+//    	assertEquals(l1.size(), expVal);
+//    }
+//    
+//	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+//    @Test
+//    public void test_delete_On1size_Expect_size1()
+//    {
+//    	// arrange
+//    	RatajElemCopy elem = new RatajElemCopy(0, null);
+//    	RatajListCopy l1 = new RatajListCopy(elem);
+//    	int toDel = 1;
+//    	int expVal = 1;
+//    	
+//    	// act
+//    	l1.delete(toDel);
+//    	
+//    	// assert
+//    	assertEquals(l1.size(), expVal);
+//    }
+//    
+//	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+//    @Test
+//    public void test_delete_On2size_Expect_size1()
+//    {
+//    	// arrange
+//    	RatajElemCopy elem = new RatajElemCopy(0, new RatajElemCopy(1, null));
+//    	RatajListCopy l1 = new RatajListCopy(elem);
+//    	int expVal = 1;
+//    	int toDel = 1;
+//    	
+//    	// act
+//    	l1.delete(toDel);
+//    	
+//    	// assert
+//    	assertEquals(l1.size(), expVal);
+//    }
+//    
+//	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+//    @Test
+//    public void test_delete_On3size_Expect_size2()
+//    {
+//    	// arrange
+//    	RatajElemCopy elem = new RatajElemCopy(0, new RatajElemCopy(1, new RatajElemCopy(2, null)));
+//    	RatajListCopy l1 = new RatajListCopy(elem);
+//    	int expVal = 2;
+//    	int toDel = 1;
+//    	
+//    	// act
+//    	l1.delete(toDel);
+//    	
+//    	// assert
+//    	assertEquals(l1.size(), expVal);
+//    }
 }

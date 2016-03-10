@@ -540,21 +540,4 @@ public class TestRatajListCopy extends TestCase {
     	// assert
     	assertEquals(l1.size(), expVal);
     }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_delete_fst_On3size_Expect_size2()
-    {
-    	// arrange
-    	RatajElemCopy elem = new RatajElemCopy(0, new RatajElemCopy(1, new RatajElemCopy(2, null)));
-    	RatajListCopy l1 = new RatajListCopy(elem);
-    	int expVal = 2;
-    	int toDel = 0;
-    	
-    	// act
-    	l1.delete(toDel);
-    	
-    	// assert
-    	assertEquals(l1.size(), expVal);
-    }
 }
