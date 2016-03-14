@@ -8,8 +8,8 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.GraphAlgos;
-import bt.core.collections.interfaces.IGraf;
-import bt.core.collections.interfaces.IGraphAlgo;
+import bt.core.algorithms.interfaces.IGraf;
+import bt.core.algorithms.interfaces.IGraphAlgo;
 import bt.core.collections.various.GraphIndirected;
 import junit.framework.TestCase;
 

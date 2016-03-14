@@ -2,7 +2,7 @@ package bt.core.collections.various;
 
 import java.util.*;
 
-import bt.core.collections.interfaces.IGraf;
+import bt.core.algorithms.interfaces.IGraf;
 
 public class GraphIndirected<W,S> implements IGraf<W,S>{
 	S[][] matrix;	

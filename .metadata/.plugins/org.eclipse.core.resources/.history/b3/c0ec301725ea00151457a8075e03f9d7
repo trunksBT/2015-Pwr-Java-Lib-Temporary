@@ -1,0 +1,11 @@
+package bt.core.algorithms.comparators;
+
+public class NaturalComparator implements Comparator {
+
+	@Override
+	public int compare(Object left, Object right) throws ClassCastException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import bt.core.algorithms.interfaces.IGraf;
+import bt.core.algorithms.interfaces.IGraphAlgo;
 import bt.core.collections.elems.Tuple;
-import bt.core.collections.interfaces.IGraf;
-import bt.core.collections.interfaces.IGraphAlgo;
 
 public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 	IGraf<W,S> graf;

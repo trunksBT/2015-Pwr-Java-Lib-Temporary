@@ -2,6 +2,7 @@ package bt.core.collections.various;
 import java.util.*;
 
 public class OneDimTable {
+
 	int []tab;
 	int size;
 	
@@ -19,14 +20,17 @@ public class OneDimTable {
 			this.tab = null;
 		}
 	}
-	
+
+		
 	public void wczytaj()
 	{
 		Scanner scanner = new Scanner(System.in);
 		int n = 0;
 		
 		while(scanner.hasNextInt())
+		{
 			tab[n++]=scanner.nextInt();
+		}
 		
 		scanner.close();
 	}
@@ -53,7 +57,9 @@ public class OneDimTable {
 		System.out.println("Tablica");
 		
 		for(int i = 0;i<size;i++)
+		{
 				System.out.print(tab[i]);
+		}
 		
 		System.out.println();
 		System.out.println("Koniec");

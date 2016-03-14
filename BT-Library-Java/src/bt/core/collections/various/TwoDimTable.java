@@ -7,10 +7,10 @@ public class TwoDimTable {
 	int x;
 	int y;
 	
-	TwoDimTable(int xSize,int ySize)
+	TwoDimTable(int aXSize,int aYSize)
 	{
-		x = xSize;
-		y = ySize;
+		x = aXSize;
+		y = aYSize;
 		tab = new int[x][y];
 	}
 	
@@ -20,8 +20,10 @@ public class TwoDimTable {
 		int yC=0;
 		
 		int cV = 0;
-			
-		tab[xC][yC] = cV++;	
+		
+		
+		tab[xC][yC] = cV++;
+		
 	}
 		
 //	void wczytaj()
