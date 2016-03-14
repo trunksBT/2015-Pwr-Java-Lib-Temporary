@@ -1,0 +1,321 @@
+package bt.tests.core.collections.dataTypes;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.collections.dataTypes.AbstractList;
+import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.dataTypes.GuardedLinkedListDouble;
+//import bt.core.collections.dataTypes.GuardedLinkedListDoubleCopy;
+import bt.core.collections.interfaces.List;
+import junit.framework.TestCase;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestQueue extends TestCase {
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_CTOR_emptyList_size0()
+    {
+    	// arrange
+    	Queue tape = new Queue();
+    	int expSize = 0;
+    	
+    	// act
+    	
+    	// assert
+    	assertEquals(tape.size(), expSize);
+    }
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_enqueue_emptyList_size1()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	Queue queue = new Queue(tape);
+    	String toAdd1 = new String("0");
+    	int expSize = 1;
+    	
+    	// act
+    	queue.enqueue(toAdd1);
+    	
+    	// assert
+    	assertSame(toAdd1, tape.get(0));
+    	assertEquals(tape.size(), expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_enqueue_NotEmptyList_size2()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String toAdd0 = new String("0");
+    	String toAdd1 =  new String("1");
+    	int expSize = 2;
+    	
+    	// act
+    	tape.add(toAdd0);
+    	tape.add(toAdd1);
+    	
+    	
+    	// assert
+    	assertSame(toAdd1, tape.get(1));
+    	assertEquals(tape.size(), expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_enqueue_NotEmptyList_size3()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String toAdd0 = new String("0");
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
+    	int expSize = 3;
+    	
+    	// act
+    	tape.add(toAdd0);
+    	tape.add(toAdd1);
+    	tape.add(toAdd2);
+    	
+    	// assert
+    	assertSame(toAdd2, tape.get(2));
+    	assertEquals(tape.size(), expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_clear_NotEmpty_Expect_True()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	Queue queue = new Queue(tape);
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
+    	boolean isEmptyAfterAdd = false;
+    	
+    	// act
+    	tape.add(toAdd1);
+    	tape.add(toAdd2);
+    	isEmptyAfterAdd = queue.isEmpty();
+    	queue.clear();
+    	
+    	// assert
+    	assertTrue(queue.isEmpty()^isEmptyAfterAdd);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_clear_Empty_Expect_True()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	Queue queue = new Queue(tape);
+    	
+    	// act
+    	queue.clear();
+    	
+    	// assert
+    	assertTrue(queue.isEmpty());
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_isEmpty_empty_false()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String searchedVal = new String("0");
+    	boolean rcVal = false;
+    	
+    	// act
+    	rcVal = tape.contains(searchedVal);
+    	
+    	// assert
+    	assertFalse(rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_isEmpty_notEmpty_false()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String searchedVal = new String("0");
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
+    	String toAdd3 =  new String("3");
+    	boolean rcVal = false;
+    	
+    	// act
+    	tape.add(toAdd1);
+    	tape.add(toAdd2);
+    	tape.add(toAdd3);
+    	rcVal = tape.contains(searchedVal);
+    	
+    	// assert
+    	assertFalse(rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_isEmpty_notEmpty_true()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String searchedVal = new String("0");
+    	String toAdd0 =  new String("0");
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
+    	
+    	boolean rcVal = false;
+    	
+    	// act
+    	tape.add(toAdd0);
+    	tape.add(toAdd1);
+    	tape.add(toAdd2);
+    	rcVal = tape.contains(searchedVal);
+    	
+    	// assert
+    	assertTrue(rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byIdx_empty_false()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	int searchedIdx = 0;
+    	boolean rcVal = true;
+    	
+    	// act
+    	try{
+    		tape.delete(searchedIdx);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcVal = false;
+    	}
+    	
+    	// assert
+    	assertFalse(rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byIdx_notEmpty_false()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	int searchedIdx = 1;
+    	String toAdd0 =  new String("0");
+    	boolean rcVal = true;
+    	
+    	// act
+    	tape.add(toAdd0);
+    	
+    	try{
+    		tape.delete(searchedIdx);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcVal = false;
+    	}
+    	
+    	// assert
+    	assertFalse(rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byIdx_notEmpty_true()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String toAdd0 =  new String("0");
+    	int searchedIdx = 0;
+    	boolean rcVal = true;
+    	
+    	// act
+    	tape.add(toAdd0);
+    	
+    	try{
+    		tape.delete(searchedIdx);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcVal = false;
+    	}
+    	
+    	// assert
+    	assertEquals(tape.size() , 0);
+    	assertTrue(rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byVal_empty_false()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String searchedVal = new String("0");
+    	boolean rcVal = true;
+    	
+    	// act
+    	try {
+    		rcVal = tape.delete(searchedVal);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcVal = false;
+    	}
+    	
+    	// assert
+    	assertFalse(rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byVal_notEmpty_false()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String yetAdded0 =  new String("0");
+    	String searchedVal = new String("1");
+    	boolean rcVal = true;
+    	
+    	// act
+    	tape.add(yetAdded0);
+    	try {
+    		rcVal = tape.delete(searchedVal);
+    	}catch(IndexOutOfBoundsException e) {
+    		rcVal = false;
+    	}
+    	
+    	// assert
+    	assertFalse(rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byVal_notEmpty_true()
+    {
+    	// arrange
+    	List tape = new GuardedLinkedListDouble();
+    	String toAdd0 =  new String("0");
+    	String toAdd1 =  new String("1");
+    	String searchedVal = new String("1");
+    	boolean rcVal = true;
+    	
+    	// act
+    	tape.add(toAdd0);
+    	tape.add(toAdd1);
+    	tape.add(toAdd1);
+    	
+    	rcVal = tape.delete(searchedVal);
+    	
+    	// assert
+    	assertTrue(rcVal);
+    	assertEquals(tape.get(1),searchedVal);
+    }
+}
