@@ -1,0 +1,5 @@
+package bt.core.algorithms.elems;
+
+public class IntegerComp {
+
+}

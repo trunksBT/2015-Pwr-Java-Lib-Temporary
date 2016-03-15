@@ -1,0 +1,5 @@
+package bt.core.algorithms.interfaces;
+
+public interface ListSorter {
+
+}

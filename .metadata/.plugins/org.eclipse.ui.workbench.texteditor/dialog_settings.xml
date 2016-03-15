@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="RatajElemCopy" key="selection"/>
+		<item value="stack" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="queue"/>
+			<item value="dequeued"/>
+			<item value="Queue"/>
 			<item value="RatajElem"/>
 			<item value="RatajList"/>
 			<item value="RatajLista"/>
 			<item value="curr"/>
 			<item value="set"/>
-			<item value="GuardedLinkedListDouble"/>
-			<item value="GuardedLinkedListDouble();"/>
-			<item value="ArrayList"/>
 		</list>
 		<list key="replacehistory">
+			<item value="stack"/>
+			<item value="peeked"/>
+			<item value="Stack"/>
 			<item value="RatajElemCopy"/>
 			<item value="RatajListCopy"/>
 			<item value="RatajList"/>
 			<item value="cur"/>
 			<item value="GuardedLinkedListDoubleCopy"/>
-			<item value="LinkedList"/>
-			<item value="PrimeIterator"/>
-			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

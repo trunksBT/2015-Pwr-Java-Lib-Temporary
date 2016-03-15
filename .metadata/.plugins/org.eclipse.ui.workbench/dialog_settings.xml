@@ -66,6 +66,7 @@
 	<section name="ZipFileImportWizard">
 		<item value="false" key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardZipFileResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="D:\Clouds\OneDrive\Downloads\apache-groovy-sdk-2.4.6\groovy-2.4.6\lib\groovy-2.4.6.jar"/>
 			<item value="D:\Clouds\OneDrive\Downloads\gson-2.3.1.jar"/>
 		</list>
 	</section>

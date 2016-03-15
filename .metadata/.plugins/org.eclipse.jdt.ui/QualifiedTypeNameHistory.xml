@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Bt.Core.Reflections.Debug"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
-<fullyQualifiedTypeName name="Bt.Core.FileOperations.Strumien"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Modifier"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="Bt.Core.Geometry.Elementaries.PointSecond"/>
 <fullyQualifiedTypeName name="Bt.Core.collectionsss.Tuple"/>
 <fullyQualifiedTypeName name="bt.core.collections.elems.Pracownik"/>
@@ -44,20 +39,25 @@
 <fullyQualifiedTypeName name="bt.core.wrox.algosFromBegg.RecursiveFolderTreeProcessing"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.Sequences"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayListCopy"/>
-<fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.ArrayIterator"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.FibIteratorCopy"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.ArrayIteratorCopy"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.FilterIteratorCopy"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.EvenCordsPredCopy"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.LinkedListSingle"/>
-<fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.Element"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.AbstractList"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.RatajElem"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.RatajList"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.GuardedLinkedListDouble"/>
+<fullyQualifiedTypeName name="bt.core.exceptions.EmptyQueueException"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.Stack"/>
+<fullyQualifiedTypeName name="bt.core.exceptions.EmptyStackException"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayList"/>
+<fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
 </qualifiedTypeNameHistroy>

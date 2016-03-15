@@ -1,5 +1,4 @@
 package bt.core.collections.various;
-import java.util.*;
 
 public class TwoDimTable {
 	

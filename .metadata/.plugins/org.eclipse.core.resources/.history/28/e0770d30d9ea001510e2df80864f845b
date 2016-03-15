@@ -1,0 +1,49 @@
+package bt.tests.core.algorithms.sorting;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.algorithms.Sequences;
+import bt.core.algorithms.comparators.NaturalComparator;
+import bt.core.algorithms.sorting.BubbleSortPrimitive;
+import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.interfaces.List;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TestSequencesMy extends TestCase
+{
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_63124805_Expect_01234568_True()
+	{
+	    //arrange	    
+		List tape = new ArrayList(10);
+		List orderedTape = null;
+		tape.add(6);
+		tape.add(3);
+		tape.add(1);
+		tape.add(2);
+		tape.add(4);
+		tape.add(8);
+		tape.add(0);
+		tape.add(5);
+		List expectedTape = new ArrayList(10);
+		expectedTape.add(0);
+		expectedTape.add(1);
+		expectedTape.add(2);
+		expectedTape.add(3);
+		expectedTape.add(4);
+		expectedTape.add(5);
+		expectedTape.add(6);
+		expectedTape.add(8);
+	      
+	    //act
+		orderedTape = new BubbleSortPrimitive(NaturalComparator.INSTANCE).sort(tape);
+	    
+	    //assert
+	    assertEquals(expectedTape,orderedTape);
+	}
+
+}
