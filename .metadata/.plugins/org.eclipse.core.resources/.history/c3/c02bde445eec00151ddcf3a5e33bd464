@@ -15,7 +15,13 @@ public class ShellSort implements ListSorter{
 	
 	public List sort(List tape) {
 		int size = tape.size();
-		hMaxGrowth(size);			
+		hMaxGrowth(size);	
+//				
+//		do {
+//			for(int i = growth; i<size; i+= growth)
+//				insert(tape,i);
+//		}while((growth/=3) > 0);
+		
 		do {
 			for(int i = growth; i<size; i++)
 				insert(tape,i);
