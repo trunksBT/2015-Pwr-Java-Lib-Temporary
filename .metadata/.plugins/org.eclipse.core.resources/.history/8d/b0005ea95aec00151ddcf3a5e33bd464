@@ -71,7 +71,7 @@ public class TestJavaStructures extends TestCase{
     	itWillNotChangeRef(stud);
     	
     	// assert	
-    	assertEquals(stud.getNick(),"testMethod");
+    	assertEquals(stud.getNick(),"inMethod");
     }
            
     public FriendlyStudent thisWillChangeRef1(FriendlyStudent stud) {

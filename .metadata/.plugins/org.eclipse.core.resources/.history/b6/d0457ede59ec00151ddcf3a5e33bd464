@@ -30,14 +30,14 @@ public class TestJavaStructures extends TestCase{
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_thisWillChangeRef1_Expect_VarRefferToOtherObject()
+    public void test_assignNewObject1_OrderOfPerformedActions_Expect_1_DivideAndReturnDividedValue()
     {
     	// arrange
     	FriendlyStudent stud = new FriendlyStudent("testMethod","Adam",123);
     	FriendlyStudent rcVal = null;
     	
     	// act
-    	rcVal = thisWillChangeRef1(stud);
+    	rcVal = assignNewObject1(stud);
     	
     	// assert	
     	assertEquals(rcVal.getNick(),"inMethod");
@@ -46,14 +46,14 @@ public class TestJavaStructures extends TestCase{
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_thisWillChangeRef2_Expect_VarRefferToOtherObject()
+    public void test_assignNewObject2_OrderOfPerformedActions_Expect_1_DivideAndReturnDividedValue()
     {
     	// arrange
     	FriendlyStudent stud = new FriendlyStudent("testMethod","Adam",123);
     	FriendlyStudent rcVal = null;
     	
     	// act
-    	rcVal = thisWillChangeRef2(stud);
+    	rcVal = assignNewObject2(stud);
     	
     	// assert	
     	assertEquals(rcVal.getNick(),"inMethod");
@@ -62,7 +62,7 @@ public class TestJavaStructures extends TestCase{
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_itWillNotChangeRef_Expect_1_VarWillNotRefferToOtherObject()
+    public void test_itWillNotChangeRef_OrderOfPerformedActions_Expect_1_DivideAndReturnDividedValue()
     {
     	// arrange
     	FriendlyStudent stud = new FriendlyStudent("testMethod","Adam",123);
@@ -71,20 +71,38 @@ public class TestJavaStructures extends TestCase{
     	itWillNotChangeRef(stud);
     	
     	// assert	
-    	assertEquals(stud.getNick(),"testMethod");
+    	assertEquals(stud.getNick(),"inMethod");
     }
-           
-    public FriendlyStudent thisWillChangeRef1(FriendlyStudent stud) {
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_thisWillChangeRef_OrderOfPerformedActions_Expect_1_DivideAndReturnDividedValue()
+    {
+    	// arrange
+    	FriendlyStudent stud = new FriendlyStudent("testMethod","Adam",123);
+    	
+    	// act
+    	thisWillChangeRef(stud);
+    	
+    	// assert	
+    	assertEquals(stud.getNick(),"inMethod");
+    }
+    
+    public FriendlyStudent assignNewObject1(FriendlyStudent stud) {
     	return stud=new FriendlyStudent("inMethod","jan",123);
     }
     
-    public FriendlyStudent thisWillChangeRef2(FriendlyStudent stud) {
-    	stud=new FriendlyStudent("inMethod","jan",123);
-    	return stud;
+    public FriendlyStudent assignNewObject2(FriendlyStudent stud) {
+    	return new FriendlyStudent("inMethod","jan",123);
     }
     
     public void itWillNotChangeRef(FriendlyStudent stud) {
     	stud=new FriendlyStudent("inMethod","jan",123);
+    }
+    
+    public FriendlyStudent thisWillChangeRef(FriendlyStudent stud) {
+    	stud=new FriendlyStudent("inMethod","jan",123);
+    	return stud;
     }
 }
 

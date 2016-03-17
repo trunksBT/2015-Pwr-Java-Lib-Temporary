@@ -60,19 +60,21 @@ public class TestJavaStructures extends TestCase{
     	assertNotSame(stud,rcVal);
     }
     
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_itWillNotChangeRef_Expect_1_VarWillNotRefferToOtherObject()
-    {
-    	// arrange
-    	FriendlyStudent stud = new FriendlyStudent("testMethod","Adam",123);
-    	
-    	// act
-    	itWillNotChangeRef(stud);
-    	
-    	// assert	
-    	assertEquals(stud.getNick(),"testMethod");
-    }
+//	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+//    @Test
+//    public void test_itWillNotChangeRef_Expect_1_VarWillNotRefferToOtherObject()
+//    {
+//    	// arrange
+//    	FriendlyStudent stud = new FriendlyStudent("testMethod","Adam",123);
+//    	FriendlyStudent rcVal = null;
+//    	
+//    	// act
+//    	rcVal = assignNewObject2(stud);
+//    	
+//    	// assert	
+//    	assertEquals(rcVal.getNick(),"inMethod");
+//    	assertNotSame(stud,rcVal);
+//    }
            
     public FriendlyStudent thisWillChangeRef1(FriendlyStudent stud) {
     	return stud=new FriendlyStudent("inMethod","jan",123);
