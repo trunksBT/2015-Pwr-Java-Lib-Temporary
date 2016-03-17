@@ -9,6 +9,6 @@ public class NaturalComparator implements Comparator {
 
 	@Override
 	public int compare(Object left, Object right) throws ClassCastException {		
-		return ((Integer)left).compareTo((Integer) right);
+		return ((Comparable)left).compareTo(right);
 	}
 }

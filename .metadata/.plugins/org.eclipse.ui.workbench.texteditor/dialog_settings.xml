@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="stack" key="selection"/>
+		<item value="leftIdx" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="start"/>
 			<item value="queue"/>
 			<item value="dequeued"/>
 			<item value="Queue"/>
@@ -15,9 +16,9 @@
 			<item value="RatajList"/>
 			<item value="RatajLista"/>
 			<item value="curr"/>
-			<item value="set"/>
 		</list>
 		<list key="replacehistory">
+			<item value="leftIdx"/>
 			<item value="stack"/>
 			<item value="peeked"/>
 			<item value="Stack"/>
@@ -25,7 +26,6 @@
 			<item value="RatajListCopy"/>
 			<item value="RatajList"/>
 			<item value="cur"/>
-			<item value="GuardedLinkedListDoubleCopy"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

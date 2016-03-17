@@ -1,0 +1,22 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class ShellSort implements ListSorter{
+	private final Comparator order;
+	private int growth;
+
+	public ShellSort(Comparator comparator) {
+		order = comparator;
+		growth = 1;
+	}
+	
+
+	public List sort(List tape) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

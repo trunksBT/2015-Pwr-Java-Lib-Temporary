@@ -1,0 +1,34 @@
+package bt.test.core.ABC;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.collections.various.Geometria;
+import bt.core.collections.various.OneDimTable;
+import bt.core.collections.various.Shapes;
+import bt.core.geometry.elementaries.*;
+import bt.core.geometry.shapes.Circle;
+import bt.core.geometry.shapes.Triangle;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestJavaStructures extends TestCase{
+    @Test
+    public void testCreateCircle()
+    {
+    	// arrange
+    	int changedVal = 100;
+    	int rcVal = -1;
+    	int expVal = 1;
+    	
+    	// act 	
+    	if((changedVal/=2) <= 50)
+    		rcVal = 1;
+    	
+    	// assert	
+    	assertEquals(rcVal,expVal);
+    }
+}
+

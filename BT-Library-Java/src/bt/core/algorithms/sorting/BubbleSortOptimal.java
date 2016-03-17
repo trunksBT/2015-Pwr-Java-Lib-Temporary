@@ -29,7 +29,7 @@ public class BubbleSortOptimal implements ListSorter{
 						tape.set(leftIdx, tape.get(leftIdx+1));
 						leftIdx++;
 					}
-					lastSwap = leftIdx; // idx of start of ascending 2-el subSeq
+					lastSwap = leftIdx; // idx of s of ascending 2-el subSeq
 					tape.set(leftIdx, temp); // bubbleUp On Begin
 				}
 			}
