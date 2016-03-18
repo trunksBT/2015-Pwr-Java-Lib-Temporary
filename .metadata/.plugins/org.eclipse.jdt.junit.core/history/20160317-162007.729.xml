@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestShellSort" project="BT-Library-Java" tests="2" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.tests.core.algorithms.sorting.TestShellSort" incomplete="true">
-    <testcase name="test_ShellSort_63124805_10_7_9_15_11_13_12_14_Expect_0123456789101112131415_True" classname="bt.tests.core.algorithms.sorting.TestShellSort" incomplete="true"/>
-    <testcase name="test_ShellSort_63124805_Expect_01234568_True" classname="bt.tests.core.algorithms.sorting.TestShellSort" incomplete="true"/>
-  </testsuite>
-</testrun>

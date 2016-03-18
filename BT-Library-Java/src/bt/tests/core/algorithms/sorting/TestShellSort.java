@@ -7,6 +7,7 @@ import org.junit.runners.MethodSorters;
 import bt.core.algorithms.Sequences;
 import bt.core.algorithms.comparators.NaturalComparator;
 import bt.core.algorithms.sorting.BubbleSortOptimal;
+import bt.core.algorithms.sorting.BubbleSortPrimitive;
 import bt.core.algorithms.sorting.ShellSort;
 import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.interfaces.List;
@@ -100,4 +101,91 @@ public class TestShellSort extends TestCase
 	    //assert
 	    assertEquals(expectedTape,orderedTape);
 	}
+
+		//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+		@Test
+		public void test_ShellSort_empty_Expect_empty_True()
+		{
+		    //arrange	    
+			List tape = new ArrayList(10);
+			List orderedTape = null;
+			List expectedTape = new ArrayList(10);
+			
+		    //act
+			orderedTape = new ShellSort(NaturalComparator.INSTANCE).sort(tape);
+		    
+		    //assert
+		    assertEquals(expectedTape,orderedTape);
+		}
+		
+		//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+		@Test
+		public void test_ShellSort_012345678_Expect_012345678_True()
+		{
+		    //arrange	    
+			List tape = new ArrayList(10);
+			List orderedTape = null;
+			List expectedTape = new ArrayList(10);			
+			expectedTape.add(new Integer(0));
+			expectedTape.add(new Integer(1));
+			expectedTape.add(new Integer(2));
+			expectedTape.add(new Integer(3));
+			expectedTape.add(new Integer(4));
+			expectedTape.add(new Integer(5));
+			expectedTape.add(new Integer(6));
+			expectedTape.add(new Integer(7));
+			expectedTape.add(new Integer(8));
+			
+			tape.add(new Integer(0));
+			tape.add(new Integer(1));
+			tape.add(new Integer(2));
+			tape.add(new Integer(3));
+			tape.add(new Integer(4));
+			tape.add(new Integer(5));
+			tape.add(new Integer(6));
+			tape.add(new Integer(7));
+			tape.add(new Integer(8));
+						      
+		    //act
+			orderedTape = new ShellSort(NaturalComparator.INSTANCE).sort(tape);
+		    
+		    //assert
+		    assertEquals(expectedTape,orderedTape);
+		}
+		
+		//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+		@Test
+		public void test_ShellSort_876543210_Expect_012345678_True()
+		{
+		    //arrange	    
+			List tape = new ArrayList(10);
+			List orderedTape = null;
+			List expectedTape = new ArrayList(10);		
+			tape.add(new Integer(8));
+			tape.add(new Integer(7));
+			tape.add(new Integer(6));
+			tape.add(new Integer(5));
+			tape.add(new Integer(4));
+			tape.add(new Integer(3));
+			tape.add(new Integer(2));
+			tape.add(new Integer(1));
+			tape.add(new Integer(0));
+			
+			expectedTape.add(new Integer(0));
+			expectedTape.add(new Integer(1));
+			expectedTape.add(new Integer(2));
+			expectedTape.add(new Integer(3));
+			expectedTape.add(new Integer(4));
+			expectedTape.add(new Integer(5));
+			expectedTape.add(new Integer(6));
+			expectedTape.add(new Integer(7));
+			expectedTape.add(new Integer(8));
+			
+						      
+		    //act
+			orderedTape = new ShellSort(NaturalComparator.INSTANCE).sort(tape);
+		    
+		    //assert
+		    assertEquals(expectedTape,orderedTape);
+		}
 }
