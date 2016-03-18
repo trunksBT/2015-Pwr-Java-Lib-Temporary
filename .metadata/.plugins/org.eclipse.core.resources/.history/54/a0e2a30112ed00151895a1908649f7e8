@@ -1,0 +1,27 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class BubbleSortPrimitive implements ListSorter{
+	public Comparator order ;
+	
+	public BubbleSortPrimitive(Comparator order) {
+		this.order = order;
+	}
+	
+	@Override
+	public List sort(List tape) {
+		if( tape!= null) {
+			int size = tape.size();
+			for( int lvl = 1; lvl < size-1 ; lvl++) {
+				for(int currIdx = 0 ; currIdx < size -1; currIdx++)
+				{
+					
+				}
+			}
+		}
+	}
+
+}

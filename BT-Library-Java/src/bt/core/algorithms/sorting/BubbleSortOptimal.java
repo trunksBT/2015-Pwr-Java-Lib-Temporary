@@ -5,36 +5,31 @@ import bt.core.algorithms.interfaces.ListSorter;
 import bt.core.collections.interfaces.List;
 
 public class BubbleSortOptimal implements ListSorter{
-	private final Comparator comparator;
+	private final Comparator order;
 	
-	public BubbleSortOptimal(Comparator comparator) {
-		this.comparator = comparator;
+	public BubbleSortOptimal(Comparator order) {
+		this.order = order;
 	}
-
+	
 	@Override
 	public List sort(List tape) {
-		int lastSwap = tape.size() - 1;
+		int lastSwap = tape.size() -1;
 		while(lastSwap > 0) {
-			int end = lastSwap; // idx of last performed elem
+			int end = lastSwap;
 			lastSwap = 0;
 			
-			// analyze while any changes
-			for(int leftIdx = 0; leftIdx < end; ++leftIdx) {
-				// if found any 2-el descending subSeq
-				if( comparator.compare(tape.get(leftIdx), tape.get(leftIdx+1))> 0) {
-					Object temp = tape.get(leftIdx); // save 1-el of this subSeq
-					
-					// shift list left, while not found 2-el asc subSeq
-					while( leftIdx< end && comparator.compare(temp, tape.get(leftIdx+1)) > 0) {
+			for( int leftIdx = 0 ; leftIdx < end; ++leftIdx) {
+				if(order.compare(tape.get(leftIdx),tape.get(leftIdx+1))> 0) {
+					Object temp = tape.get(leftIdx);
+					while( leftIdx< end && order.compare(temp,tape.get(leftIdx+1))>0) {
 						tape.set(leftIdx, tape.get(leftIdx+1));
-						leftIdx++;
+						leftIdx ++;
 					}
-					lastSwap = leftIdx; // idx of s of ascending 2-el subSeq
-					tape.set(leftIdx, temp); // bubbleUp On Begin
+					lastSwap = leftIdx;
+					tape.set(leftIdx,temp);;
 				}
 			}
 		}
 		return tape;
 	}
-
 }

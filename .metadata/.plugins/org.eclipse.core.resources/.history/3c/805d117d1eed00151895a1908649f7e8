@@ -1,0 +1,46 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class BubbleSortOptimal implements ListSorter{
+	private final Comparator order;
+	
+	public BubbleSortOptimal(Comparator order) {
+		this.order = order;
+	}
+	
+	@Override
+	public List sort(List tape) {
+		if(tape!= null) {
+			int lastSwap = tape.size()-1;
+			int currIdx =-1;
+			boolean somethingChanged = false;
+			int size = tape.size()-1;
+			Object currPerf = null;
+			while(lastSwap > 0) {
+				if(currIdx >= tape.size() -1)
+					currIdx = -1;
+				
+				Object firstFromQueue = null;
+				firstFromQueue = tape.get(++currIdx);	
+				
+				while(currIdx<size && order.compare(firstFromQueue,currPerf = tape.get(currIdx+1))>0) {
+					tape.set(currIdx, currPerf);
+					currIdx++;
+					somethingChanged = true;
+				}
+				if(!somethingChanged)
+					size--;
+				
+				tape.set(currIdx,firstFromQueue);
+				lastSwap = currIdx;
+				somethingChanged = false;
+			}
+			return tape;		
+		}
+		else
+			throw new NullPointerException();
+	}
+}
