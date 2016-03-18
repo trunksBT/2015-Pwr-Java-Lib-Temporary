@@ -4,10 +4,10 @@ import bt.core.algorithms.interfaces.Comparator;
 import bt.core.algorithms.interfaces.ListSorter;
 import bt.core.collections.interfaces.List;
 
-public class InsertSort implements ListSorter {
+public class SelectSort implements ListSorter {
 	private final Comparator order;
 	
-	public InsertSort(Comparator order) {
+	public SelectSort(Comparator order) {
 		this.order = order;
 	}
 	

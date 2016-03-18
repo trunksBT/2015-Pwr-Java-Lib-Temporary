@@ -73,20 +73,6 @@ public class TestJavaStructures extends TestCase{
     	// assert	
     	assertEquals(stud.getNick(),"testMethod");
     }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_itWillChangeNick_Expect_1_VarWillNotRefferToOtherObject()
-    {
-    	// arrange
-    	FriendlyStudent stud = new FriendlyStudent("testMethod","Adam",123);
-    	
-    	// act
-    	itWillChangeNick(stud);
-    	
-    	// assert	
-    	assertEquals(stud.getNick(),"changedThanksToCopiedRef");
-    }
            
     public FriendlyStudent thisWillChangeRef1(FriendlyStudent stud) {
     	return stud=new FriendlyStudent("inMethod","jan",123);
@@ -99,10 +85,6 @@ public class TestJavaStructures extends TestCase{
     
     public void itWillNotChangeRef(FriendlyStudent stud) {
     	stud=new FriendlyStudent("inMethod","jan",123);
-    }
-    
-    public void itWillChangeNick(FriendlyStudent stud) {
-    	stud.setNick("changedThanksToCopiedRef");
     }
 }
 
