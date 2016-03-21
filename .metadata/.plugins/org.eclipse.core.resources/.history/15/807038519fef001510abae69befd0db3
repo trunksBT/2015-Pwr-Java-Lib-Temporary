@@ -13,18 +13,22 @@ public class InsertSort implements ListSorter {
 
 	@Override
 	public List sort(List tape) {
-		if(tape== null)
+		if( tape== null)
 			throw new NullPointerException();
-		Object curr,fromQueue;
-		for(int i = 1; i<tape.size();i++) {
-			fromQueue = tape.get(i);
-			int j = i;
-			for(j = i; 
-					j>0 && (order.compare(curr =tape.get(j-1), fromQueue)>0);
-						j--)
-				tape.set(j, curr);
-			tape.set(j,fromQueue);
-		}
-		return tape;
+		
+		int size = tape.size();
+		for(int i = 1; i<size; i++) {
+			for(int j = 0; j<i; j++) {
+				Object fromQueue = tape.get(i);
+				if(order.compare(fromQueue, tape.get(j))<0)
+					swap(tape,i,j);
+			}
+		}	
+	}
+
+	private void swap(List tape, int i, int j) {
+		Object oldLeft = tape.get(i);
+		tape.set(i, tape.get(j));
+		tape.set(j, oldLeft);
 	}
 }

@@ -21,7 +21,7 @@ public class SelectSort implements ListSorter {
 			Object theLowest = tape.get(i);
 			int theLowestIdx = i;
 			for(int j = i+1; j< size; j++) {
-				if(order.compare(tape.get(j), theLowest)<0) {
+				if(order.compare(theLowest, tape.get(j))>0) {
 					theLowest = tape.get(j);
 					theLowestIdx = j;
 				}

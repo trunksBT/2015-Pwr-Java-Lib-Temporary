@@ -13,14 +13,16 @@ public class InsertSort2 implements ListSorter {
 	
 	@Override
 	public List sort(List tape) {
+		// start from first
 		for(int idxFrom = 1; idxFrom<tape.size(); ++idxFrom) {
+			// get next in queue
 			Object toInsert = tape.get(idxFrom),ordered;
 			int idxTo;
 			for(idxTo = idxFrom; 
 					idxTo > 0 && order.compare(toInsert, ordered = tape.get(idxTo-1)) < 0; 
-						--idxTo)
-				tape.set(idxTo, ordered);
-			tape.set(idxTo,toInsert);
+						--idxTo) // compare and save idx while curr elem in order part is higher than "toInsert"
+				tape.set(idxTo, ordered); // shift table in right
+			tape.set(idxTo,toInsert); // insert on proper place
 		}
 		return tape;
 	}

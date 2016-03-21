@@ -14,12 +14,12 @@ public class SelectSort2 implements ListSorter {
 	@Override
 	public List sort(List tape) {
 		int size = tape.size();
-		for(int i = 0; i< size -1 ; ++i) {
-			int smallestIdx = i;
-			for(int j = i+1; j< size; ++j)
-				if(order.compare(tape.get(j), tape.get(smallestIdx)) < 0)
-					smallestIdx = j;
-			swap(tape, smallestIdx, i);
+		for(int slotIdx = 0; slotIdx< size -1 ; ++slotIdx) {
+			int smallestIdx = slotIdx;
+			for(int checkedIdx = slotIdx+1; checkedIdx< size; ++checkedIdx)
+				if(order.compare(tape.get(checkedIdx), tape.get(smallestIdx)) < 0)
+					smallestIdx = checkedIdx;
+			swap(tape, smallestIdx, slotIdx);
 		}
 		return tape;
 	}

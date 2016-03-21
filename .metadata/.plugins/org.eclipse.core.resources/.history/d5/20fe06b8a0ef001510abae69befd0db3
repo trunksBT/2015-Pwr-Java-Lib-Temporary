@@ -4,10 +4,10 @@ import bt.core.algorithms.interfaces.Comparator;
 import bt.core.algorithms.interfaces.ListSorter;
 import bt.core.collections.interfaces.List;
 
-public class SelectSort implements ListSorter {
+public class InsertSort implements ListSorter {
 	private final Comparator order;
 	
-	public SelectSort(Comparator order) {
+	public InsertSort(Comparator order) {
 		this.order = order;
 	}
 
@@ -17,16 +17,15 @@ public class SelectSort implements ListSorter {
 			throw new NullPointerException();
 		
 		int size = tape.size();
-		for(int i = 0; i <size; i++) {
-			Object theLowest = tape.get(i);
-			int theLowestIdx = i;
-			for(int j = i+1; j< size; j++) {
-				if(order.compare(tape.get(j), theLowest)<0) {
-					theLowest = tape.get(j);
-					theLowestIdx = j;
-				}
+		boolean found = false;
+		for(int i = 1; i<size; i++) {
+			Object fromQueue = tape.get(i);
+			Object curr;
+			for(int j = i-1; j>-1 && !found; j--) {
+				while(found = order.compare(fromQueue, curr = tape.get(j))>0) {}			
+					swap(tape,i,j);
 			}
-			swap(tape,i,theLowestIdx);
+			found = false;
 		}
 		return tape;
 	}
@@ -34,6 +33,6 @@ public class SelectSort implements ListSorter {
 	private void swap(List tape, int i, int j) {
 		Object oldLeft = tape.get(i);
 		tape.set(i, tape.get(j));
-		tape.set(j,oldLeft);
+		tape.set(j, oldLeft);
 	}
 }
