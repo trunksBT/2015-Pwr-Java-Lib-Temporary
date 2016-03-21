@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestBubbleSorts" project="BT-Library-Java" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.tests.core.algorithms.sorting.TestBubbleSorts" time="0.037">
-    <testcase name="test_BubleSortOptimal_63124805_Expect_01234568_True" classname="bt.tests.core.algorithms.sorting.TestBubbleSorts" time="0.035"/>
-    <testcase name="test_BubleSortOptimal_empty_Expect_empty_True" classname="bt.tests.core.algorithms.sorting.TestBubbleSorts" time="0.0"/>
-    <testcase name="test_BubleSortPrimitive_63124805_Expect_01234568_True" classname="bt.tests.core.algorithms.sorting.TestBubbleSorts" time="0.001"/>
-    <testcase name="test_BubleSortPrimitive_empty_Expect_empty_True" classname="bt.tests.core.algorithms.sorting.TestBubbleSorts" time="0.001"/>
-  </testsuite>
-</testrun>

@@ -13,9 +13,27 @@ public class SelectSort implements ListSorter {
 
 	@Override
 	public List sort(List tape) {
-		// TODO Auto-generated method stub
-		return null;
+		if( tape== null)
+			throw new NullPointerException();
+		
+		int size = tape.size();
+		for(int i = 0; i <size; i++) {
+			Object theLowest = tape.get(i);
+			int theLowestIdx = i;
+			for(int j = i+1; j< size; j++) {
+				if(order.compare(theLowest, tape.get(j))>0) {
+					theLowest = tape.get(j);
+					theLowestIdx = j;
+				}
+			}
+			swap(tape,i,theLowestIdx);
+		}
+		return tape;
 	}
 
-
+	private void swap(List tape, int i, int j) {
+		Object oldLeft = tape.get(i);
+		tape.set(i, tape.get(j));
+		tape.set(j,oldLeft);
+	}
 }
