@@ -1,0 +1,410 @@
+package bt.tests.core.collections.dataTypes;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.collections.dataTypes.RatajElem;
+import bt.core.collections.dataTypes.RatajList;
+import bt.core.collections.dataTypes.RatajListRec;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
+public class TestRatajListRec extends TestCase {
+
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_CTOR_oneEl_true()
+    {
+    	// arrange
+    	int toAdd0 = 0;
+    	RatajListRec list1 = new RatajListRec(toAdd0);
+    	
+    	// act
+    	
+    	// assert
+    	assertTrue(true);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_CTOR_associateTwoLists_true()
+    {
+    	// arrange
+    	int toAdd0 = 0;
+    	int toAdd1 = 0;
+    	RatajListRec list1 = new RatajListRec(toAdd0);
+    	RatajListRec list2 = new RatajListRec(toAdd1,list1);
+    	
+    	// act
+    	
+    	// assert
+    	assertTrue(true);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_sumStatic_null_Expect_0_true()
+    {
+    	// arrange
+    	RatajListRec list1 = null;
+    	int expVal = 0;
+    	int rcVal = -1;
+    	
+    	// act
+    	rcVal = RatajListRec.sum(list1);
+   	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_sumStatic_1size_Expect_1_true()
+    {
+    	// arrange
+    	RatajListRec list = new RatajListRec(1, null);
+    	int expVal = 1;
+    	int rcVal = -1;
+    	
+    	// act
+    	rcVal = RatajListRec.sum(list);
+
+    	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_sumStatic_3size_Expect_6_true()
+    {
+    	// arrange
+    	RatajListRec list = 
+    			new RatajListRec(1, 
+    			new RatajListRec(2, 
+    			new RatajListRec(3, null)));
+    	int expVal = 6;
+    	int rcVal = -1;
+    	
+    	// act
+    	rcVal = RatajListRec.sum(list);
+    	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_add_Onnull_Expect_size1()
+    {
+    	// arrange
+    	RatajList l1 = new RatajList();
+    	int expVal = 1;
+    	int toAdd1 = 0;
+    		
+    	// act
+    	l1.add(toAdd1);
+    	
+    	// assert
+    	assertEquals(l1.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_add_On1size_Expect_size2()
+    {
+    	// arrange
+    	RatajListRec list = new RatajListRec(0, null);
+    	int toAdd1 = 1;
+    	int expVal = 2;
+    	
+    	// act
+    	list.add(toAdd1);
+    	
+    	// assert
+    	assertEquals(list.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_add_On2size_Expect_size3()
+    {
+    	// arrange
+    	RatajListRec list = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, null));
+    	int expVal = 3;
+    	int toAdd1 = 2;
+    	    	
+    	// act
+    	list.add(toAdd1);
+    	
+    	// assert
+    	assertEquals(list.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_add_On3size_Expect_size4()
+    {
+    	// arrange
+    	RatajListRec list = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, 
+    							new RatajListRec(2, null)));
+    	int expVal = 4;
+    	int toAdd1 = 3;
+
+    	// act
+    	list.add(toAdd1);
+    	
+    	// assert
+    	assertEquals(list.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_get_0val_On1size_true()
+    {
+    	// arrange
+    	int yetAdded0 = 0;
+    	int expVal = 0;
+    	int searchedVal = 0;
+    	RatajListRec list = new RatajListRec(0);
+    	int rcVal = -1;
+
+    	// act
+    	try {
+    	rcVal = list.getElem(searchedVal).getVal();
+    	}catch(NullPointerException e)
+    	{
+    		rcVal = -1;
+    	}
+    	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+    public void test_get_0val_On2size_true()
+    {
+    	// arrange
+    	int expVal = 0;
+    	int searchedVal = 0;
+    	RatajListRec l1 = 
+    			new RatajListRec(0,
+    							new RatajListRec(1));
+    	int rcVal = -1;
+    	
+    	// act
+    	try {
+    	rcVal = l1.getElem(searchedVal).getVal();
+    	}catch(NullPointerException e)
+    	{
+    		rcVal = -1;
+    	}
+
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+    public void test_get_1val_On2size_true()
+    {
+    	// arrange
+    	int expVal = 1;
+    	int searchedVal = 1;
+    	RatajListRec l1 = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1));
+    	int rcVal = -1;
+    	
+    	// act
+    	try {
+    	rcVal = l1.getElem(searchedVal).getVal();
+    	}catch(NullPointerException e)
+    	{
+    		rcVal = -1;
+    	}
+    	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+    public void test_get_2val_On2size_true()
+    {
+    	// arrange
+    	int yetAdded0 = 0;
+    	int yetAdded1 = 1;
+    	int expVal = -1;
+    	int searchedVal = 2;
+    	RatajListRec l1 = 
+    			new RatajListRec(0,
+    					new RatajListRec(1));
+    	int rcVal = -1;
+    	
+    	// act
+    	try {
+    	rcVal = l1.getElem(searchedVal).getVal();
+		}catch(NullPointerException e)
+		{
+			rcVal = -1;
+		}
+    	
+
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+     
+    public void test_get_0val_On3size_true()
+    {
+    	// arrange
+    	int expVal = 0;
+    	int searchedVal = 0;
+    	RatajListRec l1 = 
+    			new RatajListRec(0,
+    					new RatajListRec(1,
+    							new RatajListRec(2)));
+    	int rcVal = -1;
+    	
+    	// act
+    	try {
+    		rcVal = l1.getElem(searchedVal).getVal();
+    	}catch(NullPointerException e)
+    	{
+    		rcVal = -1;
+    	}
+    	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+    public void test_get_1val_On3size_true()
+    {
+    	// arrange
+    	int expVal = 1;
+    	int searchedVal = 1;
+    	RatajListRec l1 = 
+    			new RatajListRec(0,
+    					new RatajListRec(1,
+    							new RatajListRec(2)));
+    	int rcVal = -1;
+
+    	// act
+    	try {
+    		rcVal = l1.getElem(searchedVal).getVal();
+    	}catch(NullPointerException e)
+    	{
+    		rcVal = -1;
+    	}
+    	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+    public void test_get_2val_On3size_true()
+    {
+    	// arrange
+    	int yetAdded0 = 0;
+    	int yetAdded1 = 1;
+    	int yetAdded2 = 2;
+    	int expVal = 2;
+    	int searchedVal = 2;
+    	RatajListRec l1 = 
+    			new RatajListRec(0,
+    					new RatajListRec(1,
+    							new RatajListRec(2)));
+    	int rcVal = -1;
+
+    	// act
+    	try {
+    		rcVal = l1.getElem(searchedVal).getVal();
+    	}catch(NullPointerException e)
+    	{
+    		rcVal = -1;
+    	}
+    	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_Onnull_Expect_size0()
+    {
+    	// arrange
+    	RatajListRec list = new RatajListRec();
+    	int expVal = 0;
+    	int toDel = 0;
+    		
+    	// act
+    	l1.delete(toDel);
+    	
+    	// assert
+    	assertEquals(l1.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_On1size_Expect_size0()
+    {
+    	// arrange
+    	RatajListRec list = new RatajListRec(0, null);
+    	int toDel = 0;
+    	int expVal = 0;
+    	
+    	// act
+    	list.delete(toDel);
+    	
+    	// assert
+    	assertEquals(list.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_On1size_Expect_size1()
+    {
+    	// arrange
+    	RatajListRec list = new RatajListRec(0, null);
+    	int toDel = 1;
+    	int expVal = 1;
+    	
+    	// act
+    	list.delete(toDel);
+    	
+    	// assert
+    	assertEquals(list.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_On2size_Expect_size1()
+    {
+    	// arrange
+    	RatajListRec elem = new RatajListRec(0, new RatajListRec(1, null));
+    	int expVal = 1;
+    	int toDel = 1;
+    	
+    	// act
+    	elem.delete(toDel);
+    	
+    	// assert
+    	assertEquals(elem.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_On3size_Expect_size2()
+    {
+    	// arrange
+    	RatajListRec elem = new RatajListRec(0, new RatajListRec(1, new RatajListRec(2, null)));
+    	int expVal = 2;
+    	int toDel = 1;
+    	
+    	// act
+    	l1.delete(toDel);
+    	
+    	// assert
+    	assertEquals(l1.size(), expVal);
+    }
+}

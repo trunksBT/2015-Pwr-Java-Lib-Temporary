@@ -1,0 +1,24 @@
+package bt.core.collections.dataTypes;
+
+public class RatajListRec {
+	RatajListRec next;
+	int val;
+	
+	public RatajListRec(int val, RatajListRec next) {
+		this.next = next;
+		this.val = val;
+	}
+	
+	public RatajListRec(int val) {
+		this.next = null;
+		this.val = val;
+	}
+	
+	public int getVal() {
+		return val;
+	}
+	
+	public void setNext(RatajListRec next) {
+		this.next = next;
+	}
+}

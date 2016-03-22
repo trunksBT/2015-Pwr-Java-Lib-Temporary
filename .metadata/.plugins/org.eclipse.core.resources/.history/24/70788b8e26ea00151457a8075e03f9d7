@@ -1,5 +1,0 @@
-package bt.core.algorithms.comparators;
-
-public interface Comparator {
-	public int compare(Object left,Object right) throws ClassCastException;
-}

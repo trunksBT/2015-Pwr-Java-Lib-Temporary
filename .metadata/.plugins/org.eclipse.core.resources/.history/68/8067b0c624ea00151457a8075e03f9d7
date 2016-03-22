@@ -1,5 +1,0 @@
-package bt.core.collections.comparators;
-
-public interface Comparable {
-	public int compareTo(Object other);
-}

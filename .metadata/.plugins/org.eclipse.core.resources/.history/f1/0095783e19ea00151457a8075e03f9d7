@@ -1,6 +1,0 @@
-package bt.core.collections.interfaces;
-
-public interface Queue {
-	public void enqueue(Object val);
-	public Object dequeue() throws EmptyQueueException;
-}

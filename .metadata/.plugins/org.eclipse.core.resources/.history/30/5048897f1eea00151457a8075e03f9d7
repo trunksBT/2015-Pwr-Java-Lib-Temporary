@@ -1,7 +1,0 @@
-package bt.core.collections.interfaces;
-
-public interface Stack extends Queue {
-	public void push(Object val);
-	public Object pop() throws EmptyStackException;
-	public Object peek() throws EmptyStackException;
-}

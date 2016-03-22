@@ -1,0 +1,45 @@
+package bt.core.collections.dataTypes;
+
+public class RatajListRec {
+	RatajListRec tail;
+	int val;
+	
+	public RatajListRec(int val, RatajListRec next) {
+		this.tail = next;
+		this.val = val;
+	}
+	
+	public RatajListRec(int val) {
+		this.tail = null;
+		this.val = val;
+	}
+	
+	public int getVal() {
+		return val;
+	}
+
+	public static int sum(RatajListRec list1) {
+		return -1;
+	}
+
+	public void add(int toAdd1) {
+		// TODO Auto-generated method stub	
+	}
+
+	public RatajListRec getElem(int searchedVal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int size() {
+		return tail == null ? 1 : 1+ tail.size();
+	}
+
+	public void delete(int toDel) {
+		// TODO Auto-generated method stub
+	}
+
+	public int sum() {
+		return tail == null ? val : tail.sum();
+	}
+}
