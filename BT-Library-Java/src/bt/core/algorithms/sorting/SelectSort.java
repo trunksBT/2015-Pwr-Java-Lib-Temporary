@@ -6,34 +6,30 @@ import bt.core.collections.interfaces.List;
 
 public class SelectSort implements ListSorter {
 	private final Comparator order;
-	
+
 	public SelectSort(Comparator order) {
 		this.order = order;
 	}
-
+	
 	@Override
 	public List sort(List tape) {
-		if( tape== null)
-			throw new NullPointerException();
-		
 		int size = tape.size();
-		for(int i = 0; i <size; i++) {
-			Object theLowest = tape.get(i);
-			int theLowestIdx = i;
-			for(int j = i+1; j< size; j++) {
-				if(order.compare(tape.get(j), theLowest)<0) {
-					theLowest = tape.get(j);
-					theLowestIdx = j;
-				}
-			}
-			swap(tape,i,theLowestIdx);
+		for(int i = 0; i< size -1 ; ++i) {
+			int smallestIdx = i;
+			for(int j = i+1; j< size; ++j)
+				if(order.compare(tape.get(j), tape.get(smallestIdx)) < 0)
+					smallestIdx = j;
+			swap(tape, smallestIdx, i);
 		}
 		return tape;
 	}
 
-	private void swap(List tape, int i, int j) {
-		Object oldLeft = tape.get(i);
-		tape.set(i, tape.get(j));
-		tape.set(j,oldLeft);
+	private void swap(List tape, int smallestIdx, int slotIdx) {
+		if( smallestIdx != slotIdx ) {
+			Object oldSmallest = tape.get(smallestIdx);
+			tape.set(smallestIdx, tape.get(slotIdx));
+			tape.set(slotIdx, oldSmallest);
+		}
 	}
+
 }

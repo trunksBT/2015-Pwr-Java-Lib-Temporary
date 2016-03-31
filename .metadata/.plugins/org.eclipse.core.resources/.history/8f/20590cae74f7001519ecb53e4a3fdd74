@@ -1,0 +1,11 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.comparators.NaturalComparator;
+
+public class QuickSort {
+
+	public QuickSort(NaturalComparator instance) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

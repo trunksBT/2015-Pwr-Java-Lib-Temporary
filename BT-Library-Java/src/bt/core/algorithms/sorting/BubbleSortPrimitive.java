@@ -5,31 +5,29 @@ import bt.core.algorithms.interfaces.ListSorter;
 import bt.core.collections.interfaces.List;
 
 public class BubbleSortPrimitive implements ListSorter{
-	public Comparator order ;
+	private final Comparator comparator;
 	
-	public BubbleSortPrimitive(Comparator order) {
-		this.order = order;
+	public BubbleSortPrimitive(Comparator comparator) {
+		this.comparator = comparator;
 	}
 	
 	@Override
 	public List sort(List tape) {
-		if( tape!= null) {
-			int size = tape.size();
-			int rightIdx = -1;
-			for( int lvl = 1; lvl < size ; lvl++) {
-				for(int currIdx = 0 ; currIdx < (size -lvl); currIdx++)
-					if( order.compare(tape.get(currIdx), tape.get(rightIdx= currIdx+1)) > 0 )
-						swap( tape, currIdx, rightIdx);
+		int size = tape.size();
+		
+		for(int pass = 1; pass< size; ++pass) {
+			for(int leftIdx = 0; leftIdx < (size-pass); ++leftIdx) {
+				int rightIdx = leftIdx +1;
+				if( comparator.compare(tape.get(leftIdx), tape.get(rightIdx)) > 0)
+					swap(tape, leftIdx, rightIdx);
 			}
-			return tape;
-		}else
-			throw new NullPointerException();
+		}
+		return tape;
 	}
-
-	private void swap(List tape, int currIdx, int rightIdx) {
-		Object oldLeft = tape.get(currIdx);
-		tape.set(currIdx, tape.get(rightIdx));
-		tape.set(rightIdx,oldLeft);
+	
+	private void swap(List list, int idxOfLeft, int idxOfRight) {
+		Object temp = list.get(idxOfLeft);
+		list.set(idxOfLeft, list.get(idxOfRight));
+		list.set(idxOfRight,temp);
 	}
-
 }

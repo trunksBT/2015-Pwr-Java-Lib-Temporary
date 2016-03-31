@@ -1,0 +1,19 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class QuickSort implements ListSorter{
+	private final Comparator order;
+	
+	public QuickSort(Comparator order) {
+		this.order = order;
+	}
+
+	public List sort(List tape) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

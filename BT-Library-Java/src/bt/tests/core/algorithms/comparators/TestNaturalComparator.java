@@ -29,6 +29,23 @@ public class TestNaturalComparator extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
+	public void test_NaturalComparator_2y1_Expect_1_True()
+	{
+	    //arrange
+		Integer val1 = new Integer(2);
+		Integer val2 = new Integer(1);
+		int expVal = 1;
+		int rcVal = 0;
+		
+		//act
+		rcVal = NaturalComparator.INSTANCE.compare(val1, val2);
+	    
+	    //assert
+	    assertEquals(expVal,rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
 	public void test_nativeComparator_1y2_Expect_m1_True()
 	{
 	    //arrange
