@@ -23,7 +23,7 @@ public class MergeSortRec implements ListSorter {
 		if(startIdx == endIdx) {
 			List result = new ArrayList();
 			result.add(tape.get(startIdx)); // here empty list will throw exception
-			System.out.println("Result Partial:"+result);
+//			System.out.println("Result Partial:"+result);
 			return result;
 		}
 		int splitIdx = startIdx + (endIdx- startIdx)/2;
