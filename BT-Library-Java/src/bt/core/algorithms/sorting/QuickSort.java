@@ -24,14 +24,13 @@ public class QuickSort implements ListSorter{
 		}
 	}
 
-	private int partition(List tape, int leftIdx, int rightIdx) {
-		// jako element dzielacy bierzemy ostatni
-		Object val = tape.get(rightIdx);
-		int cursor = leftIdx - 1;
-		while( leftIdx<= rightIdx ) {
-			if(order.compare(tape.get(leftIdx),val) <= 0)
-				swap(tape, ++cursor, leftIdx);
-			++leftIdx;
+	private int partition(List tape, int itIdx, int rightIdx) {
+		Object val = tape.get(rightIdx); // pivot ostatni elem
+		int cursor = itIdx - 1; // ustaw kursor poza pierwszy elem
+		while( itIdx<= rightIdx ) { // jesli nie doszles do konca
+			if(order.compare(tape.get(itIdx),val) <= 0) // if iter mniejszy od pivota
+				swap(tape, ++cursor, itIdx); // zamien z kursorem, przesun kursor
+			++itIdx; // iter++
 		}
 		return cursor< rightIdx ? cursor: cursor-1;
 	}
