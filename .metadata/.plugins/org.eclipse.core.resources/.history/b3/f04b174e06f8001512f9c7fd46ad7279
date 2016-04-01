@@ -28,7 +28,7 @@ public class MergeSortRec implements ListSorter {
 		}
 		int splitIdx = startIdx + (endIdx- startIdx)/2;
 		return merge(mergesort(tape, startIdx, splitIdx),
-				mergesort(tape, splitIdx+1, endIdx)); 
+				mergesort(tape, splitIdx+1, endIdx));
 	}
 
 	private List merge(List leftArray, List rightArray) {
