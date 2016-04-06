@@ -1,0 +1,19 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class HeapSort implements ListSorter {
+	private final Comparator order;
+	
+	public HeapSort(Comparator order) {
+		this.order = order;
+	}
+	
+	@Override
+	public List sort(List tape) {
+		return null;
+	}
+
+}

@@ -1,0 +1,37 @@
+package bt.core.algorithms.sorting;
+
+import java.util.PriorityQueue;
+
+import bt.core.algorithms.comparators.ReverseComparator;
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.dataTypes.HeapPriorityQueue;
+import bt.core.collections.dataTypes.Queue;
+import bt.core.collections.interfaces.List;
+import bt.core.collections.iterators.Iterator;
+
+public class HeapSort implements ListSorter {
+	private final Comparator order;
+	
+	public HeapSort(Comparator order) {
+		this.order = order;
+	}
+	
+	@Override
+	public List sort(List tape) {
+		Queue queue = createPriorityQueue(tape);
+	}
+
+	private Queue createPriorityQueue(List tape) {
+		Comparator comp = new ReverseComparator(order);
+		Queue queue = new HeapPriorityQueue(comp);
+		Iterator it = tape.iterator();
+		it.first();
+		while(!it.isDone()) {
+			queue.enqueue(it.current())	;
+			it.next();
+		}
+		return null;
+	}
+
+}

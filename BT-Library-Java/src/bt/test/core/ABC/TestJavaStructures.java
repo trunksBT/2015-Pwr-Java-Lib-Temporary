@@ -1,11 +1,12 @@
 package bt.test.core.ABC;
 
+import java.util.PriorityQueue;
+
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.core.collections.elems.FriendlyStudent;
-import bt.core.collections.elems.Student;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -74,6 +75,94 @@ public class TestJavaStructures extends TestCase{
     	assertEquals(stud.getNick(),"testMethod");
     }
     
+  //Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_priorityQueue_enqueue_Expect_size_1()
+    {
+    	// arrange
+    	java.util.Queue<Integer> queue = new PriorityQueue<>();
+    	
+    	// act
+    	queue.add(new Integer(0));
+    	
+    	// assert	
+    	assertEquals(queue.size(),1);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_priorityQueue_enqueueTwice_Expect_size_2()
+    {
+    	// arrange
+    	java.util.Queue<Integer> queue = new PriorityQueue<>();
+    	
+    	// act
+    	queue.add(new Integer(0));
+    	queue.add(new Integer(1));
+    	
+    	// assert	
+    	assertEquals(queue.size(),2);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_priorityQueue_enqueueTwice_dequeue_Expect_size_1()
+    {
+    	// arrange
+    	java.util.Queue<Integer> queue = new PriorityQueue<>();
+    	queue.add(new Integer(0));
+    	queue.add(new Integer(1));
+    	Integer expVal = new Integer(0);
+    	Integer rcVal = null;
+    	
+    	// act
+    	rcVal = (Integer) queue.poll();
+    	
+    	// assert	
+    	assertEquals(queue.size(),1);
+    	assertEquals(rcVal,expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_priorityQueue_enqueueThreeTimes_dequeue_Expect_0()
+    {
+    	// arrange
+    	java.util.Queue<Integer> queue = new PriorityQueue<>();
+    	queue.add(new Integer(1));
+    	queue.add(new Integer(0));
+    	queue.add(new Integer(0));
+    	Integer expVal = new Integer(0);
+    	Integer rcVal = null;
+    	
+    	// act
+    	rcVal = (Integer) queue.poll();
+    	
+    	// assert	
+    	assertEquals(queue.size(),2);
+    	assertEquals(rcVal,expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_priorityQueue_enqueueThreeTimes_dequeue_Expect_1()
+    {
+    	// arrange
+    	java.util.Queue<Integer> queue = new PriorityQueue<>();
+    	queue.add(new Integer(0));
+    	queue.add(new Integer(0));
+    	queue.add(new Integer(1));
+    	Integer expVal = new Integer(0);
+    	Integer rcVal = null;
+    	
+    	// act
+    	rcVal = (Integer) queue.poll();
+    	
+    	// assert	
+    	assertEquals(queue.size(),2);
+    	assertEquals(rcVal,expVal);
+    }
+    	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
     public void test_itWillChangeNick_Expect_1_VarWillNotRefferToOtherObject()

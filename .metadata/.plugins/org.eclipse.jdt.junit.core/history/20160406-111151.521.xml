@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestMergeSortIter" project="BT-Library-Java" tests="5" started="5" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.tests.core.algorithms.sorting.TestMergeSortIter" time="0.002">
-    <testcase name="test_MergeSortIter_012345678_Expect_012345678_True" classname="bt.tests.core.algorithms.sorting.TestMergeSortIter" time="0.001"/>
-    <testcase name="test_MergeSortIter_63124805_10_7_9_15_11_13_12_14_Expect_0123456789101112131415_True" classname="bt.tests.core.algorithms.sorting.TestMergeSortIter" time="0.0"/>
-    <testcase name="test_MergeSortIter_63124805_Expect_01234568_True" classname="bt.tests.core.algorithms.sorting.TestMergeSortIter" time="0.0"/>
-    <testcase name="test_MergeSortIter_876543210_Expect_012345678_True" classname="bt.tests.core.algorithms.sorting.TestMergeSortIter" time="0.0"/>
-    <testcase name="test_MergeSortIter_empty_Expect_empty_catchExc_false" classname="bt.tests.core.algorithms.sorting.TestMergeSortIter" time="0.0"/>
-  </testsuite>
-</testrun>
