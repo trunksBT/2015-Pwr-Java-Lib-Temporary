@@ -47,8 +47,6 @@
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.Stack"/>
 <fullyQualifiedTypeName name="bt.core.exceptions.EmptyStackException"/>
-<fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayList"/>
 <fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.sorting.BubbleSortPrimitive"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.comparators.NaturalComparator"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.RatajListRec"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.interfaces.ListSorter"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.interfaces.Comparator"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayList"/>
+<fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
 </qualifiedTypeNameHistroy>

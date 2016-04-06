@@ -1,0 +1,25 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+import bt.core.collections.interfaces.Queue;
+import bt.core.collections.dataTypes.IQueue;
+
+public class MergeSortIter implements ListSorter {
+	private final Comparator order;
+	
+	public MergeSortIter(Comparator order) {
+		this.order = order;
+	}
+	
+	@Override
+	public List sort(List tape) {
+		return mergeSubLists(createQueue(tape));
+	}
+
+	private Object createQueue(List tape) {
+		IQueue result = new Queue();
+		return null;
+	}
+}

@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="QuickSort" key="selection"/>
+		<item value="MergeSortRec" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="QuickSort"/>
+			<item value="QuickSor"/>
 			<item value="ShellSort"/>
 			<item value="RatajList "/>
 			<item value="RatajElem"/>
 			<item value="Insert"/>
 			<item value="Buble"/>
 			<item value="_BubleSortPrimitive_"/>
-			<item value="_BubleSortOptimal_"/>
-			<item value="_BubbleSortOptimal_"/>
 		</list>
 		<list key="replacehistory">
+			<item value="MergeSortRec"/>
 			<item value="QuickSort"/>
 			<item value="Rataj"/>
 			<item value="RatajListRec"/>
@@ -25,7 +26,6 @@
 			<item value="InsertSort"/>
 			<item value="Bubble"/>
 			<item value="_ShellSort_"/>
-			<item value="ShellSort"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -17,21 +17,26 @@ public class QuickSort implements ListSorter{
 	}
 	
 	private void quicksort(List tape, int startIdx, int endIdx) {
+		System.out.println(tape+",["+startIdx+endIdx+"]");
 		if( endIdx> startIdx) {
 			int partition = partition(tape, startIdx, endIdx);
+			System.out.println(tape+",["+startIdx+endIdx+"]"+"AftPart");
 			quicksort(tape, startIdx, partition);
 			quicksort(tape, partition + 1, endIdx);
 		}
 	}
 
+	 // reorder array to lower vals before pivot and higher after it
 	private int partition(List tape, int itIdx, int rightIdx) {
-		Object val = tape.get(rightIdx); // pivot ostatni elem
+		List locTape = tape;
+		Object val = locTape.get(rightIdx); // pivot ostatni elem
 		int cursor = itIdx - 1; // ustaw kursor poza pierwszy elem
 		while( itIdx<= rightIdx ) { // jesli nie doszles do konca
-			if(order.compare(tape.get(itIdx),val) <= 0) // if iter mniejszy od pivota
-				swap(tape, ++cursor, itIdx); // zamien z kursorem, przesun kursor
+			if(order.compare(locTape.get(itIdx),val) <= 0) // if iter mniejszy od pivota
+				swap(locTape, ++cursor, itIdx); // zamien z kursorem, przesun kursor
 			++itIdx; // iter++
 		}
+		tape = locTape;
 		return cursor< rightIdx ? cursor: cursor-1;
 	}
 	
