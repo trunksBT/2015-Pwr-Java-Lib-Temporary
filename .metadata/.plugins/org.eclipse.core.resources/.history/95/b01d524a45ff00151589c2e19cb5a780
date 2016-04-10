@@ -1,0 +1,20 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.interfaces.List;
+
+public class CountingSort implements ListSorter{
+	private final int upperLim;
+	
+	public CountingSort(int upperLim) {
+		this.upperLim = upperLim;
+	}
+	@Override
+	public List sort(List tape) {
+		List result = new ArrayList();
+		int i;
+		for( i = 0; i<)
+		return null;
+	} // array only
+}
