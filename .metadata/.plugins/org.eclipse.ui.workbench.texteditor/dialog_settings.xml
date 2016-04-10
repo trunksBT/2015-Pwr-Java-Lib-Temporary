@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="MergeSortIter" key="selection"/>
+		<item value="size" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="size"/>
+			<item value="size()"/>
+			<item value="(E)"/>
+			<item value="E"/>
+			<item value="&lt;? super E&gt;"/>
+			<item value=" E "/>
+			<item value="MergeSortIter"/>
 			<item value="MergeSortRec"/>
-			<item value="QuickSort"/>
-			<item value="QuickSor"/>
-			<item value="ShellSort"/>
-			<item value="RatajList "/>
-			<item value="RatajElem"/>
-			<item value="Insert"/>
-			<item value="Buble"/>
 		</list>
 		<list key="replacehistory">
+			<item value="(Object)"/>
+			<item value=""/>
+			<item value=" Object"/>
+			<item value="HeapSort"/>
 			<item value="MergeSortIter"/>
 			<item value="MergeSortRec"/>
 			<item value="QuickSort"/>
 			<item value="Rataj"/>
-			<item value="RatajListRec"/>
-			<item value="Select"/>
-			<item value="InsertSort"/>
-			<item value="Bubble"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
