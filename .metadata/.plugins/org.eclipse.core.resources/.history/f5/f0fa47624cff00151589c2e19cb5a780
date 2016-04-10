@@ -25,9 +25,12 @@ public class CountingSort implements ListSorter{
 			countings.set(buffVal=(int)tape.get(i), (int)countings.get(buffVal)+1);
 		for( i = 1; i<tape.size(); i++)
 			countings.set(i, (int)countings.get(i-1)+(int)countings.get(i) );
-		for( i = tape.size()-1; i>=0; i--)
-			resultTape.set((int)countings.get((int)tape.get(i))-1, tape.get(i));
+		for( i = tape.size()-1; i>=0; i--) {
+			resultTape.set(buffVal=(int)countings.get((int)tape.get(i)), tape.get(i));
+			countings.set((int)tape.get(i),buffVal-1);
+		}
 			
-		return resultTape;
+			
+		return null;
 	} // only integer array only
 }
