@@ -177,7 +177,7 @@ public class TestAbstractList extends TestCase {
     	}
  
     	// assert
-    	assertEquals(hashCodeOfTape1,hashCodeOfTape2);
+    	assertNotEquals(hashCodeOfTape1,hashCodeOfTape2);
     }
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior

@@ -6,9 +6,12 @@ import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.comparators.NaturalComparator;
 import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.dataTypes.GuardedLinkedListDouble;
+import bt.core.collections.dataTypes.Queue;
 import bt.core.collections.dataTypes.trees.BST;
 import bt.core.collections.interfaces.List;
 import bt.core.collections.interfaces.Tree;
+import bt.core.exceptions.ItemNotFoundException;
 import junit.framework.TestCase;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -130,9 +133,9 @@ public class TestBST extends TestCase {
     	
     	// act
     	tape1.insert(yetAdded1);
-    	tape1.insert(yetAdded1);
-    	tape2.insert(yetAdded1);
+    	tape1.insert(yetAdded2);
     	tape2.insert(yetAdded2);
+    	tape2.insert(yetAdded1);
     	rcLog = tape2.equals(tape1);
 
     	// assert
@@ -152,35 +155,12 @@ public class TestBST extends TestCase {
     	
     	// act
     	tape1.insert(yetAdded1);
-    	tape1.insert(yetAdded1);
+    	tape1.insert(yetAdded2);
     	tape2.insert(yetAdded1);
-    	tape2.insert(yetAdded2);
-    	tape2.insert(yetAdded2);
     	rcLog = tape2.equals(tape1);
 
     	// assert
     	assertFalse(rcLog);
-    }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_hashCode_empty_null_equals_true()
-    {
-    	// arrange
-    	Tree tape1 = new BST(NaturalComparator.INSTANCE);
-    	Tree tape2 = null;
-    	int hashCodeOfTape1 = 0;
-    	int hashCodeOfTape2 = 0;
-    	
-    	// act
-    	try {
-    		hashCodeOfTape1 = tape1.hashCode();
-    		hashCodeOfTape2 = tape2.hashCode();
-    	}catch(NullPointerException e) {
-    	}
- 
-    	// assert
-    	assertEquals(hashCodeOfTape1,hashCodeOfTape2);
     }
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
@@ -289,7 +269,7 @@ public class TestBST extends TestCase {
     	boolean rcLog = false;
     	
     	// act
-    	tape1.insert(yetAdded1);
+    	tape1.insert(yetAdded2);
     	tape1.insert(yetAdded1);
     	tape2.insert(yetAdded1);
     	tape2.insert(yetAdded2);
@@ -315,14 +295,209 @@ public class TestBST extends TestCase {
     	
     	// act
     	tape1.insert(yetAdded1);
-    	tape1.insert(yetAdded1);
+    	tape1.insert(yetAdded2);
+    	tape2.insert(yetAdded2);
     	tape2.insert(yetAdded1);
-    	tape2.insert(yetAdded2);
-    	tape2.insert(yetAdded2);
     	hashCodeOfTape1 = tape1.hashCode();
     	hashCodeOfTape2 = tape2.hashCode();
 
     	// assert
     	assertNotEquals(hashCodeOfTape1,hashCodeOfTape2);
+    }
+    
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_insert_emptyList_Expect_size1()
+    {
+    	// arrange
+    	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	String toAdd1 = new String("0");
+    	int expSize = 1;
+    	
+    	// act
+    	tape.insert(toAdd1);
+    	
+    	// assert
+    	assertEquals(tape.size(), expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_insert_notEmptyList_Expect_size2()
+    {
+    	// arrange
+    	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	String toAdd0 = new String("0");
+    	String toAdd1 = new String("1");
+    	int expSize = 2;
+    	
+    	// act
+    	tape.insert(toAdd0);
+    	tape.insert(toAdd1);
+    	
+    	// assert
+    	assertEquals(tape.size(), expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_insert_NotEmptyList_Expect_size3()
+    {
+    	// arrange
+    	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	String toAdd0 = new String("0");
+    	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
+    	int expSize = 2;
+    	
+    	// act
+    	tape.insert(toAdd0);
+    	tape.insert(toAdd1);
+    	
+    	// assert
+    	assertEquals(tape.size(), expSize);
+    }
+    
+    
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byVal_empty_false()
+    {
+    	// arrange
+    	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	String searchedVal = new String("0");
+    	boolean rcVal = true;
+    	int expSize = 0;
+    	
+    	// act
+    	try {
+    		tape.delete(searchedVal);
+    	}catch(ItemNotFoundException e) {
+    		rcVal = false;
+    	}
+    	
+    	// assert
+    	assertFalse(rcVal);
+    	assertEquals(tape.size(),expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byVal_notEmpty_false()
+    {
+    	// arrange
+    	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	String yetAdded0 =  new String("0");
+    	String searchedVal = new String("1");
+    	boolean rcVal = true;
+    	int expSize = 1;
+    	
+    	// act
+    	tape.insert(yetAdded0);
+    	try {
+    		tape.delete(searchedVal);
+    	}catch(ItemNotFoundException e) {
+    		rcVal = false;
+    	}
+    	
+    	// assert
+    	assertFalse(rcVal);
+    	assertEquals(expSize,tape.size());
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_byVal_notEmpty_true()
+    {
+    	// arrange
+    	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	String toAdd0 =  new String("0");
+    	String toAdd1 =  new String("1");
+    	String searchedVal = new String("1");
+    	boolean rcVal = true;
+    	int expSize = 1;
+    	
+    	// act
+    	
+    	tape.insert(toAdd0);
+    	tape.insert(toAdd1);
+    	
+    	try {
+    		tape.delete(searchedVal);
+    	}catch(ItemNotFoundException e) {
+    		rcVal = false;
+    	}
+    	
+    	// assert
+    	assertTrue(rcVal);
+    	assertEquals(tape.size(),expSize);
+    }
+    
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_find_empty_false()
+    {
+    	// arrange
+       	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	Object rcVal = null;
+    	String expVal =  new String("0");
+       	String searchedIdx = new String("0");
+    	
+    	// act
+    	try {
+    		rcVal = tape.find(searchedIdx);
+    	}catch(IndexOutOfBoundsException e)
+    	{
+    		
+    	}
+    	
+    	// assert
+    	assertNull(rcVal);
+    }
+    
+    @Test
+    public void test_find_notEmpty_false()
+    {
+    	// arrange
+       	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	Object rcVal = null;
+    	String expVal =  new String("1");
+    	String toAdd1 =  new String("0");
+    	String searchedIdx = new String("0");
+    	
+    	// act
+    	tape.insert(toAdd1);
+    	
+    	try {
+    		rcVal = tape.find(searchedIdx);
+    	}catch(IndexOutOfBoundsException e){
+    		
+    	}
+    	
+    	// assert
+    	assertNotNull(rcVal);
+    	assertThat(expVal, not(equals(rcVal)));
+    }
+    
+    @Test
+    public void test_find_notEmpty_true()
+    {
+    	// arrange
+       	Tree tape = new BST(NaturalComparator.INSTANCE);
+    	Object rcVal = null;
+    	String toAdd1 =  new String("0");
+    	String expVal =  new String("0");
+       	String searchedIdx = new String("0");
+    	
+    	// act
+    	tape.insert(toAdd1);
+    	rcVal = tape.find(searchedIdx);
+
+    	// assert
+    	assertNotNull(rcVal);
+    	assertThat(expVal, is(rcVal));
     }
 }
