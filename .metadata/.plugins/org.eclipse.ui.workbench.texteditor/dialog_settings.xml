@@ -2,37 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Tree " key="selection"/>
+		<item value="BST2" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="List "/>
-			<item value="ArrayList()"/>
-			<item value="ArrayList"/>
+			<item value="BST"/>
+			<item value="test_hashCode_empty_null_equals_true"/>
+			<item value="hashCode"/>
+			<item value="hashChode"/>
+			<item value="equals"/>
+			<item value="get"/>
 			<item value="add"/>
-			<item value="Counting"/>
-			<item value="Radix"/>
-			<item value="BucketSort"/>
-			<item value="QuickSort"/>
+			<item value="List tape = new GuardedLinkedListDouble();"/>
 		</list>
 		<list key="replacehistory">
-			<item value="Tree "/>
-			<item value="BST(NaturalComparator.INSTANCE)"/>
+			<item value="BST2"/>
+			<item value="find"/>
+			<item value="c"/>
 			<item value="insert"/>
-			<item value="Radix"/>
-			<item value="Counting"/>
-			<item value="RadixSort"/>
-			<item value="BucketSort"/>
-			<item value="(Object)"/>
+			<item value="    &#x09;Tree tape = new BST(NaturalComparator.INSTANCE);"/>
+			<item value="BST(NaturalComparator.INSTANCE);"/>
+			<item value="Tree"/>
+			<item value="Tree "/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="311" key="DIALOG_WIDTH"/>
 		<item value="1|DejaVu Sans Mono|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|-18|3|2|1|49|DejaVu Sans Mono" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="888" key="DIALOG_X_ORIGIN"/>
-		<item value="320" key="DIALOG_Y_ORIGIN"/>
+		<item value="781" key="DIALOG_X_ORIGIN"/>
+		<item value="319" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

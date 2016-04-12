@@ -73,14 +73,14 @@ public class BST implements Tree {
 		return currNode;
 	}
 
-	private Node detachMin(Node rightNode, Node currNode) {
-		if( rightNode.left != null)
-			rightNode.left = detachMin(rightNode.left, currNode);
+	private Node detachMin(Node tree, Node del) {
+		if( tree.left != null) // if isn't the most left
+			tree.left = detachMin(tree.left, del); // go left
 		else {
-			currNode.val = rightNode.val;
-			rightNode = rightNode.right	;
+			del.val = tree.val; // interchange values
+			tree = tree.right; // delete the most left node 
 		}
-		return rightNode;
+		return tree;
 	}
 
 	@Override

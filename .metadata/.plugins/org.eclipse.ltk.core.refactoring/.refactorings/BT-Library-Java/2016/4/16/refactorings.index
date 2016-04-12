@@ -12,3 +12,5 @@
 1460485449311	Copy compilation unit
 1460485452207	Copy compilation unit
 1460485459047	Copy compilation unit
+1460490687444	Rename local variable 'rightNode'
+1460490697344	Rename local variable 'currNode'
