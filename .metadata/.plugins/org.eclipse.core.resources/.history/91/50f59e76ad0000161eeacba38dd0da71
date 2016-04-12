@@ -1,0 +1,32 @@
+package bt.core.collections.dataTypes.trees;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.collections.interfaces.Tree;
+
+public class BST implements Tree {
+	private final Comparator order;
+	private Node root;
+	
+	public BST(Comparator order) {
+		this.order = order;
+	}
+	
+	@Override
+	public Object find(Object x) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insert(Object x) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Object x) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
