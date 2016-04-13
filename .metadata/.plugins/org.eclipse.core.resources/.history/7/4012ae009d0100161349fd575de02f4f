@@ -20,7 +20,7 @@ public class BST2 implements Tree {
 	public Object find(Object searchedVal) {
 		Node2 refToRoot = root;
 		refToRoot = search( searchedVal, root);
-		return refToRoot != null ? refToRoot.val : null; 
+		return refToRoot != null ? refToRoot.val : null;
 	}
 
 	private Node2 search(Object searchedVal, Node2 currNode) {
