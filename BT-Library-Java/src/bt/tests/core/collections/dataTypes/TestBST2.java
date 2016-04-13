@@ -361,6 +361,43 @@ public class TestBST2 extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
+    public void test_insert_NotEmptyList_Expect_size11()
+    {
+    	// arrange
+    	Tree tape = new BST2(NaturalComparator.INSTANCE);
+    	String toAdd0 = new String("50");
+    	String toAdd1 =  new String("17");
+    	String toAdd2 =  new String("72");
+    	String toAdd3 =  new String("12");
+    	String toAdd4 =  new String("23");
+    	String toAdd5 =  new String("54");
+    	String toAdd6 =  new String("76");
+    	String toAdd7 =  new String("09");
+    	String toAdd8 =  new String("14");
+    	String toAdd9 =  new String("19");
+    	String toAdd10 =  new String("67");
+    	int expSize = 10;
+    	tape.insert(toAdd0 );
+    	tape.insert(toAdd1 );
+    	tape.insert(toAdd2 );
+    	tape.insert(toAdd3 );
+    	tape.insert(toAdd4 );
+    	tape.insert(toAdd5 );
+    	tape.insert(toAdd6 );
+    	tape.insert(toAdd7 );
+    	tape.insert(toAdd8 );
+    	tape.insert(toAdd9 );
+    	tape.insert(toAdd10);
+    	
+    	// act
+    	tape.delete( toAdd0);    	
+    	
+    	// assert
+    	assertEquals(tape.size(), expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
     public void test_insert_NotEmptyList2_Expect_size3()
     {
     	// arrange

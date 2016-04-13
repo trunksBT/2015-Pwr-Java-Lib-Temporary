@@ -39,6 +39,7 @@ public class BST implements Tree {
 		if(currNode == null)
 			currNode = new Node(insertedVal);
 		else {
+			System.out.println( currNode.val );
 			int localOrder = order.compare(insertedVal,currNode.val);
 			if(localOrder<0)
 				currNode.left = insert(insertedVal, currNode.left);
@@ -73,14 +74,14 @@ public class BST implements Tree {
 		return currNode;
 	}
 
-	private Node detachMin(Node tree, Node del) {
-		if( tree.left != null) // if isn't the most left
-			tree.left = detachMin(tree.left, del); // go left
+	private Node detachMin(Node theMostLeft, Node toDel) {
+		if( theMostLeft.left != null )
+			theMostLeft = detachMin( theMostLeft.left, toDel);
 		else {
-			del.val = tree.val; // interchange values
-			tree = tree.right; // delete the most left node 
+			toDel.val = theMostLeft.val	;
+			theMostLeft = theMostLeft.right;
 		}
-		return tree;
+		return theMostLeft;
 	}
 
 	@Override

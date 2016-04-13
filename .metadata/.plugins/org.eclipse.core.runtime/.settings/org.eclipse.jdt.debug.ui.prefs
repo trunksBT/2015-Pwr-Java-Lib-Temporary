@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
 org.eclipse.debug.ui.ExpressionView.org.eclipse.jdt.debug.ui.show_null_entries=true
 org.eclipse.debug.ui.VariableView.org.eclipse.jdt.debug.ui.show_null_entries=true
-org.eclipse.jdt.debug.ui.detail_formatters=Bt.Core.Collections.StackNatural,toString(),1,Bt.Core.Collections.Tuple,"K\:"+key+" "+"V\:"+value,1,bt.core.collections.dataTypes.HeapPriorityQueue,"Size\:"+size()+"\u0000Tape\:"+this.list,1,bt.core.collections.iterators.ArrayIterator,toString(\t);,1,bt.core.collections.dataTypes.ArrayListCopy,array.toString();,1,bt.core.collections.dataTypes.GuardedLinkedListDoubleCopy,toString(),1
+org.eclipse.jdt.debug.ui.detail_formatters=Bt.Core.Collections.StackNatural,toString(),1,Bt.Core.Collections.Tuple,"K\:"+key+" "+"V\:"+value,1,bt.core.collections.dataTypes.HeapPriorityQueue,"Size\:"+size()+"\u0000Tape\:"+this.list,1,bt.core.collections.iterators.ArrayIterator,toString(\t);,1,bt.core.collections.dataTypes.trees.Node2,"Val\:"+val\r\n,1,bt.core.collections.dataTypes.ArrayListCopy,array.toString();,1,bt.core.collections.dataTypes.GuardedLinkedListDoubleCopy,toString(),1

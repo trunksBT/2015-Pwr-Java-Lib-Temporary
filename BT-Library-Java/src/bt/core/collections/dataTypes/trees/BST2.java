@@ -19,19 +19,15 @@ public class BST2 implements Tree {
 
 	@Override
 	public Object find(Object searchedVal) {
-		Node2 copyOfRoot = root;
-		copyOfRoot = find( searchedVal, root);
+		Node2 copyOfRoot = search( searchedVal);
 		return copyOfRoot != null ? copyOfRoot.val : null;
 	}
 
-	private Node2 find(Object searchedVal, Node2 currNode) {
+	private Node2 search(Object searchedVal) {
+		Node2 currNode = root;
 		int localOrder;
-		while( currNode != null && (localOrder = order.compare( searchedVal, currNode.val )) != 0) {
-			if ( localOrder < 0)
-				currNode.left = find( searchedVal, currNode.left);
-			else
-				currNode.right = find( searchedVal ,currNode.right);
-		}
+		while( currNode != null && (localOrder = order.compare( searchedVal, currNode.val )) != 0)
+				currNode = localOrder < 0 ? currNode.left : currNode.right;
 		return currNode;
 	}
 
@@ -45,6 +41,7 @@ public class BST2 implements Tree {
 		if( currNode == null )
 			currNode = new Node2( newVal);
 		else {
+			System.out.println( currNode.val );
 			int localOrder = order.compare( newVal, currNode.val);
 			if( localOrder< 0 )
 				currNode.left = insert( newVal, currNode.left );
@@ -62,10 +59,11 @@ public class BST2 implements Tree {
 		size--;
 	}
 
-	private Node2 delete(Object searchedVal, Node2 currNode) {
+	private Node2 delete(Object searchedVal, Node2 currNode) {		
 		if( currNode == null )
 			throw new ItemNotFoundException( searchedVal.toString());
 		else {
+			System.out.println( currNode.val );
 			int localOrder = order.compare( searchedVal, currNode.val);
 			if( localOrder < 0 )
 				currNode.left = delete( searchedVal, currNode.left );
@@ -81,10 +79,10 @@ public class BST2 implements Tree {
 
 	private Node2 detachMin(Node2 theMostLeft, Node2 toDel) {
 		if( theMostLeft.left != null )
-			theMostLeft = detachMin( theMostLeft.left, toDel	);
+			theMostLeft = detachMin( theMostLeft.left, toDel);
 		else {
 			toDel.val = theMostLeft.val	;
-			theMostLeft = theMostLeft.left;
+			theMostLeft = theMostLeft.right;
 		}
 		return theMostLeft;
 	}
