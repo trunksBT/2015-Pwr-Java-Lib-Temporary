@@ -20,7 +20,7 @@ public class BST2 implements Tree {
 	public Object find(Object searchedVal) {
 		Node2 refToRoot = root;
 		refToRoot = search( searchedVal, root);
-		return refToRoot;
+		return refToRoot != null ? refToRoot.val : null;
 	}
 
 	private Node2 search(Object searchedVal, Node2 currNode) {
@@ -29,9 +29,9 @@ public class BST2 implements Tree {
 		else {
 			int localOrder = order.compare(searchedVal, currNode.val);
 			if( localOrder < 0 )
-				currNode = search(searchedVal, currNode.left);
+				currNode.left = search(searchedVal, currNode.left);
 			else if( localOrder > 0 )
-				currNode = search(searchedVal, currNode.right);
+				currNode.left = search(searchedVal, currNode.right);
 			else
 				currNode = currNode;
 		}
@@ -45,27 +45,24 @@ public class BST2 implements Tree {
 	}
 	
 	private Node2 insert(Object insertedVal, Node2 currNode) {
-		if ( currNode != null )
-			System.out.println("Curr" + currNode.val);
-		else
-			System.out.println("Curr null");
-		
 		if( currNode == null )
 			currNode = new Node2(insertedVal);
 		else {
 			int localOrder  = order.compare(insertedVal, currNode.val);
 			if( localOrder < 0)
-				insert(insertedVal, currNode.left);
-			else if ( localOrder > 0) {
-				insert(insertedVal, currNode.right);
+				currNode.left = insert(insertedVal, currNode.left);
+			else if ( localOrder > 0)
+				currNode.right = insert(insertedVal, currNode.right);
+			else
+				throw new DuplicateItemException( insertedVal.toString());
 			}
-		}
 		return currNode;
 	}
 
 	@Override
 	public void delete(Object searchedVal) {
 		root = delete( searchedVal, root);
+		size--;
 	}
 
 	private Node2 delete(Object searchedVal, Node2 currNode) {
@@ -74,54 +71,54 @@ public class BST2 implements Tree {
 		else {
 			int localOrder = order.compare(searchedVal, currNode.val);
 			if( localOrder < 0)
-				currNode = delete(searchedVal, currNode.left);
+				currNode.left = delete(searchedVal, currNode.left);
 			else if ( localOrder > 0 )
-				currNode = delete(searchedVal, currNode.right);
-			else if ( currNode.left != null && currNode.right != null) {
-				currNode = detachMin(currNode.right, currNode);
-			}
+				currNode.right = delete(searchedVal, currNode.right);
+			else if ( currNode.left != null && currNode.right != null)
+				currNode.right = detachMin(currNode.right, currNode);
 			else
 				currNode =  ( currNode.left!= null ) ? currNode.left : currNode.right;
 		}
 		return currNode;
 	}
 
-	private Node2 detachMin(Node2 right, Node2 currNode) {
-		if( currNode == null )
-			currNode = currNode.right;
+	private Node2 detachMin(Node2 theMostLeft, Node2 deletedNode) {
+		if( theMostLeft.left != null )
+			theMostLeft.left = detachMin( theMostLeft.left, deletedNode);
 		else {
-			
+			deletedNode.val = theMostLeft.val;
+			theMostLeft = theMostLeft.right;
 		}
-		return currNode;
+		return theMostLeft;
 	}
 
 	@Override
 	public int size() {
 		return size;
 	}
-//
-//	@Override
-//	public int hashCode() {
-//		final int prime = 31;
-//		int result = 1;
-//		result = prime * result + ((root == null) ? 0 : root.hashCode());
-//		return result;
-//	}
-//
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj)
-//			return true;
-//		if (obj == null)
-//			return false;
-//		if (getClass() != obj.getClass())
-//			return false;
-//		BST2 other = (BST2) obj;
-//		if (root == null) {
-//			if (other.root != null)
-//				return false;
-//		} else if (!root.equals(other.root))
-//			return false;
-//		return true;
-//	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((root == null) ? 0 : root.hashCode());
+		return result;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BST2 other = (BST2) obj;
+		if (root == null) {
+			if (other.root != null)
+				return false;
+		} else if (!root.equals(other.root))
+			return false;
+		return true;
+	}
 }
