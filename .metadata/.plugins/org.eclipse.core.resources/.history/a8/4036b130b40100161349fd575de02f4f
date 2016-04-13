@@ -452,7 +452,7 @@ public class TestBST extends TestCase {
     	String toAdd9 =  new String("19");
     	String toAdd10 =  new String("67");
     	String toAdd11 =  new String("15");
-    	int expSize = 11;
+    	int expSize = 10;
     	tape.insert(toAdd0 );
     	tape.insert(toAdd1 );
     	tape.insert(toAdd2 );
@@ -492,7 +492,7 @@ public class TestBST extends TestCase {
       	String toAdd9 =  new String("19");
       	String toAdd10 =  new String("67");
       	String toAdd11 =  new String("15");
-      	int expSize = 11;
+      	int expSize = 10;
       	tape.insert(toAdd0 );
       	tape.insert(toAdd1 );
       	tape.insert(toAdd2 );

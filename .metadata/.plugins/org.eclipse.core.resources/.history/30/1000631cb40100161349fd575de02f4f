@@ -9,7 +9,6 @@ import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.dataTypes.GuardedLinkedListDouble;
 import bt.core.collections.dataTypes.Queue;
 import bt.core.collections.dataTypes.trees.BST;
-import bt.core.collections.dataTypes.trees.BST;
 import bt.core.collections.interfaces.List;
 import bt.core.collections.interfaces.Tree;
 import bt.core.exceptions.ItemNotFoundException;
@@ -26,7 +25,7 @@ public class TestBST extends TestCase {
     public void test_equals_empty_null_false()
     {
     	// arrange
-       	Tree tape1 = new BST(NaturalComparator.INSTANCE);
+    	Tree tape1 = new BST(NaturalComparator.INSTANCE);
     	Tree tape2 = null;
     	boolean rcLog = false;
     	
@@ -349,6 +348,7 @@ public class TestBST extends TestCase {
     	Tree tape = new BST(NaturalComparator.INSTANCE);
     	String toAdd0 = new String("0");
     	String toAdd1 =  new String("1");
+    	String toAdd2 =  new String("2");
     	int expSize = 2;
     	
     	// act
@@ -359,178 +359,8 @@ public class TestBST extends TestCase {
     	assertEquals(tape.size(), expSize);
     }
     
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_insert_NotEmptyList_deleteRoot_Expect_size11()
-    {
-    	// arrange
-    	Tree tape = new BST(NaturalComparator.INSTANCE);
-    	String toAdd0 = new String("50");
-    	String toAdd1 =  new String("17");
-    	String toAdd2 =  new String("72");
-    	String toAdd3 =  new String("12");
-    	String toAdd4 =  new String("23");
-    	String toAdd5 =  new String("54");
-    	String toAdd6 =  new String("76");
-    	String toAdd7 =  new String("09");
-    	String toAdd8 =  new String("14");
-    	String toAdd9 =  new String("19");
-    	String toAdd10 =  new String("67");
-    	int expSize = 10;
-    	tape.insert(toAdd0 );
-    	tape.insert(toAdd1 );
-    	tape.insert(toAdd2 );
-    	tape.insert(toAdd3 );
-    	tape.insert(toAdd4 );
-    	tape.insert(toAdd5 );
-    	tape.insert(toAdd6 );
-    	tape.insert(toAdd7 );
-    	tape.insert(toAdd8 );
-    	tape.insert(toAdd9 );
-    	tape.insert(toAdd10);
-    	
-    	// act
-    	tape.delete( toAdd0);    	
-    	
-    	// assert
-    	assertEquals(tape.size(), expSize);
-    }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_insert_NotEmptyList_delete14_Expect_size11()
-    {
-    	// arrange
-    	Tree tape = new BST(NaturalComparator.INSTANCE);
-    	String toAdd0 = new String("50");
-    	String toAdd1 =  new String("17");
-    	String toAdd2 =  new String("72");
-    	String toAdd3 =  new String("12");
-    	String toAdd4 =  new String("23");
-    	String toAdd5 =  new String("54");
-    	String toAdd6 =  new String("76");
-    	String toAdd7 =  new String("09");
-    	String toAdd8 =  new String("14");
-    	String toAdd9 =  new String("19");
-    	String toAdd10 =  new String("67");
-    	int expSize = 10;
-    	tape.insert(toAdd0 );
-    	tape.insert(toAdd1 );
-    	tape.insert(toAdd2 );
-    	tape.insert(toAdd3 );
-    	tape.insert(toAdd4 );
-    	tape.insert(toAdd5 );
-    	tape.insert(toAdd6 );
-    	tape.insert(toAdd7 );
-    	tape.insert(toAdd8 );
-    	tape.insert(toAdd9 );
-    	tape.insert(toAdd10);
-    	
-    	// act
-    	tape.delete( toAdd8);    	
-    	
-    	// assert
-    	assertEquals(tape.size(), expSize);
-    }
     
     
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_insert_NotEmptyList_delete12_Expect_size11()
-    {
-    	// arrange
-    	Tree tape = new BST(NaturalComparator.INSTANCE);
-    	String toAdd0 = new String("50");
-    	String toAdd1 =  new String("17");
-    	String toAdd2 =  new String("72");
-    	String toAdd3 =  new String("12");
-    	String toAdd4 =  new String("23");
-    	String toAdd5 =  new String("54");
-    	String toAdd6 =  new String("76");
-    	String toAdd7 =  new String("09");
-    	String toAdd8 =  new String("14");
-    	String toAdd9 =  new String("19");
-    	String toAdd10 =  new String("67");
-    	String toAdd11 =  new String("15");
-    	int expSize = 11;
-    	tape.insert(toAdd0 );
-    	tape.insert(toAdd1 );
-    	tape.insert(toAdd2 );
-    	tape.insert(toAdd3 );
-    	tape.insert(toAdd4 );
-    	tape.insert(toAdd5 );
-    	tape.insert(toAdd6 );
-    	tape.insert(toAdd7 );
-    	tape.insert(toAdd8 );
-    	tape.insert(toAdd9 );
-    	tape.insert(toAdd10);
-    	tape.insert(toAdd11);
-    	
-    	// act
-    	tape.delete( toAdd3);    	
-    	
-    	// assert
-    	assertEquals(tape.size(), expSize);
-    }
-    
-    
-  	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-      @Test
-      public void test_insert_NotEmptyList_delete54_Expect_size11()
-      {
-      	// arrange
-      	Tree tape = new BST(NaturalComparator.INSTANCE);
-      	String toAdd0 = new String("50");
-      	String toAdd1 =  new String("17");
-      	String toAdd2 =  new String("72");
-      	String toAdd3 =  new String("12");
-      	String toAdd4 =  new String("23");
-      	String toAdd5 =  new String("54");
-      	String toAdd6 =  new String("76");
-      	String toAdd7 =  new String("09");
-      	String toAdd8 =  new String("14");
-      	String toAdd9 =  new String("19");
-      	String toAdd10 =  new String("67");
-      	String toAdd11 =  new String("15");
-      	int expSize = 11;
-      	tape.insert(toAdd0 );
-      	tape.insert(toAdd1 );
-      	tape.insert(toAdd2 );
-      	tape.insert(toAdd3 );
-      	tape.insert(toAdd4 );
-      	tape.insert(toAdd5 );
-      	tape.insert(toAdd6 );
-      	tape.insert(toAdd7 );
-      	tape.insert(toAdd8 );
-      	tape.insert(toAdd9 );
-      	tape.insert(toAdd10);
-      	tape.insert(toAdd11);
-      	
-      	// act
-      	tape.delete( toAdd5);    	
-      	
-      	// assert
-      	assertEquals(tape.size(), expSize);
-      }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_insert_NotEmptyList2_Expect_size3()
-    {
-    	// arrange
-    	Tree tape = new BST(NaturalComparator.INSTANCE);
-    	String toAdd0 = new String("0");
-    	String toAdd1 =  new String("1");
-    	int expSize = 2;
-    	
-    	// act
-    	tape.insert(toAdd1);
-    	tape.insert(toAdd0);
-    	
-    	// assert
-    	assertEquals(tape.size(), expSize);
-    }
-       
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
     public void test_delete_byVal_empty_false()
@@ -590,6 +420,7 @@ public class TestBST extends TestCase {
     	int expSize = 1;
     	
     	// act
+    	
     	tape.insert(toAdd0);
     	tape.insert(toAdd1);
     	
