@@ -94,39 +94,5 @@ public class BST2 implements Tree {
 		return size;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((order == null) ? 0 : order.hashCode());
-		result = prime * result + ((root == null) ? 0 : root.hashCode());
-		result = prime * result + size;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		BST2 other = (BST2) obj;
-		if (order == null) {
-			if (other.order != null)
-				return false;
-		} else if (!order.equals(other.order))
-			return false;
-		if (root == null) {
-			if (other.root != null)
-				return false;
-		} else if (!root.equals(other.root))
-			return false;
-		if (size != other.size)
-			return false;
-		return true;
-	}
-
 
 }

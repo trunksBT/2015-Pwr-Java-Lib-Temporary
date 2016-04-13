@@ -1,0 +1,34 @@
+package bt.core.collections.dataTypes.trees;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.collections.interfaces.Tree;
+import bt.core.exceptions.DuplicateItemException;
+import bt.core.exceptions.ItemNotFoundException;
+
+public class BST2 implements Tree {
+
+	@Override
+	public Object find(Object x) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insert(Object x) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Object x) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

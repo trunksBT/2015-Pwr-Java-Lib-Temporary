@@ -1,0 +1,9 @@
+package bt.core.collections.dataTypes.trees;
+
+public class Node2 {	
+	Node2 left,right;
+	Object val;
+	Node2( Object val){
+		this.val = val;
+	}
+}
