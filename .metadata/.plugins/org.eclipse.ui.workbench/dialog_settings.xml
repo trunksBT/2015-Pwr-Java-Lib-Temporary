@@ -13,24 +13,26 @@
 		<item value="525" key="dialogHeight"/>
 		<item value="1025" key="dialogWidth"/>
 		<list key="textEntries">
-			<item value="3"/>
 			<item value="2"/>
+			<item value="3"/>
 			<item value="2"/>
 			<item value="2"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.jdt.ui.PackageExplorer"/>
 			<item value="org.eclipse.debug.ui.VariableView"/>
 			<item value="org.eclipse.ui.console.ConsoleView"/>
 			<item value="org.eclipse.ui.preferencePages.Keys"/>
-			<item value="org.eclipse.jdt.ui.PackageExplorer"/>
 		</list>
 		<list key="orderedProviders">
 			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.e4.ui.parts"/>
-			<item value="org.eclipse.ui.preferences"/>
 			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.ui.preferences"/>
 		</list>
 		<list key="textArray">
+			<item value="package"/>
+			<item value="pack"/>
 			<item value="varia"/>
 			<item value="va"/>
 			<item value="var"/>
@@ -38,8 +40,6 @@
 			<item value="con"/>
 			<item value="key"/>
 			<item value="keys"/>
-			<item value="pack"/>
-			<item value="package"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">

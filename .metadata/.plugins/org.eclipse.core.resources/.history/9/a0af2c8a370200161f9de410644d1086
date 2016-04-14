@@ -1,0 +1,46 @@
+package bt.core.collections.dataTypes.trees;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.collections.interfaces.Tree;
+
+public class BST2 implements Tree {
+	private final Comparator order;
+	private Node2 root;
+	private int size;
+	
+	public BST2(Comparator order) {
+		this.order = order;
+	}
+
+	@Override
+	public Object find(Object searchedVal) {
+		Node2 copyOfRoot = search(searchedVal);
+		return copyOfRoot != null ? copyOfRoot.val : null;
+	}
+
+	private Node2 search(Object searchedVal) {
+		Node2 copyOfRoot = root;
+		int localOrder =-1;
+		while( copyOfRoot!= null &&
+				(localOrder = order.compare(searchedVal,copyOfRoot.val)) != 0)
+		return null;
+	}
+
+	@Override
+	public void insert(Object x) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Object x) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int size() {
+		return size;
+	}
+
+}

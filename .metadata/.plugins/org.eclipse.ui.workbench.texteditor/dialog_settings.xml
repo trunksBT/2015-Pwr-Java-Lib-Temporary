@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="BST2" key="selection"/>
+		<item value="BST" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="BST2"/>
 			<item value="BST"/>
 			<item value="test_hashCode_empty_null_equals_true"/>
 			<item value="hashCode"/>
@@ -15,9 +16,9 @@
 			<item value="equals"/>
 			<item value="get"/>
 			<item value="add"/>
-			<item value="List tape = new GuardedLinkedListDouble();"/>
 		</list>
 		<list key="replacehistory">
+			<item value="BST"/>
 			<item value="BST2"/>
 			<item value="find"/>
 			<item value="c"/>
@@ -25,7 +26,6 @@
 			<item value="    &#x09;Tree tape = new BST(NaturalComparator.INSTANCE);"/>
 			<item value="BST(NaturalComparator.INSTANCE);"/>
 			<item value="Tree"/>
-			<item value="Tree "/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
