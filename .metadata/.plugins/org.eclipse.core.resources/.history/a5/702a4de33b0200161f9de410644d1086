@@ -1,0 +1,18 @@
+package bt.core.collections.dataTypes;
+
+public class RatajListRec2 {
+
+	public RatajListRec2(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public RatajListRec2(int i, RatajListRec2 list1) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Object size() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
