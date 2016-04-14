@@ -1,0 +1,41 @@
+package bt.tests.core.wrox.algosFromBegg;
+
+import java.util.Arrays;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.interfaces.List;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TestArgumentInMethods extends TestCase{
+	
+		@Test
+		public void test_changeSomething_expectedNotChanged_true()
+		{
+			//arrange
+			ArrayList inVal1 = new ArrayList();
+			inVal1.add(1);
+			int expSize = 2;
+	      
+			//act
+			addTwo(inVal1);
+			
+			//assert
+			assertEquals(expSize,inVal1.size());
+		}
+		
+		public void addTwo(List arg) {
+			arg.add(2);
+		}	
+		
+		public void setNewObject(List arg) {
+			arg = new ArrayList();
+			arg.add(1);
+			arg.add(2);
+			arg.add(3);
+		}	
+}

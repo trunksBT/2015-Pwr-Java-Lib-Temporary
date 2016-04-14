@@ -19,13 +19,10 @@ public class TestRecursiveFolderTreeProcessing extends TestCase{
 		{
 			// arrange
 			
-			
-			
 			// act
 			
 			RecursiveFolderTreeProcessing.print(new File("E:\\Games\\"), SPACES);
-			
-			
+				
 			// assert
 			assertTrue(true);
 		}

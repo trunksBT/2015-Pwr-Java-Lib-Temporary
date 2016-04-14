@@ -56,8 +56,8 @@
 <fullyQualifiedTypeName name="bt.core.algorithms.comparators.NaturalComparator"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.BST"/>
 <fullyQualifiedTypeName name="bt.core.collections.interfaces.Tree"/>
+<fullyQualifiedTypeName name="bt.core.exceptions.DuplicateItemException"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.BST2"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.interfaces.Comparator"/>
 <fullyQualifiedTypeName name="bt.core.exceptions.ItemNotFoundException"/>
-<fullyQualifiedTypeName name="bt.core.exceptions.DuplicateItemException"/>
 </qualifiedTypeNameHistroy>
