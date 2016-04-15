@@ -1,0 +1,11 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class BubbleSortOptimal2 implements ListSorter {
+	@Override
+	public List sort(List tape) {
+
+	}
+}

@@ -16,15 +16,12 @@ public class BubbleSortOptimal implements ListSorter{
 		int lastSwap = tape.size() -1;
 		while(lastSwap > 0) {
 			int end = lastSwap;
-			lastSwap = 0;
-			
+			lastSwap = 0;	
 			for( int leftIdx = 0 ; leftIdx < end; ++leftIdx) {
 				if(order.compare(tape.get(leftIdx),tape.get(leftIdx+1))> 0) {
 					Object temp = tape.get(leftIdx);
-					while( leftIdx< end && order.compare(temp,tape.get(leftIdx+1))>0) {
-						tape.set(leftIdx, tape.get(leftIdx+1));
-						leftIdx ++;
-					}
+					while( leftIdx< end && order.compare(temp,tape.get(leftIdx+1))>0)
+						tape.set(leftIdx, tape.get(leftIdx+++1));
 					lastSwap = leftIdx;
 					tape.set(leftIdx,temp);;
 				}

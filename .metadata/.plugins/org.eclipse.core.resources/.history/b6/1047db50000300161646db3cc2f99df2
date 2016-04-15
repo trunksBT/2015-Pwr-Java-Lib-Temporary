@@ -1,0 +1,32 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class BubbleSortOptimal2 implements ListSorter {
+	private final Comparator order;
+	public BubbleSortOptimal2(Comparator order) {
+		this.order = order;
+	}
+
+	@Override
+	public List sort(List tape) {
+		int lastSwap = tape.size()-1;
+		while(lastSwap > 1) {	
+			int end = lastSwap;
+			lastSwap = 0;
+			for( int idx = 0; idx < end; idx++) {
+				if( order.compare(tape.get(idx), tape.get(idx+1))>0) {
+					Object notProper = tape.get(idx);
+					while( idx<end && 
+							order.compare( notProper,tape.get(idx+1))>0)
+						tape.set(idx,tape.get(idx+++1));
+					lastSwap = idx;				
+					tape.set(idx, notProper);
+				}
+			}
+		}
+		return tape;
+	}
+}
