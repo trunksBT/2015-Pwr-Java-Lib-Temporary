@@ -4,10 +4,10 @@ import bt.core.algorithms.interfaces.Comparator;
 import bt.core.algorithms.interfaces.ListSorter;
 import bt.core.collections.interfaces.List;
 
-public class BubbleSortPrimitive implements ListSorter{
+public class BubbleSortPrimitive2 implements ListSorter {
 	private final Comparator order;
 	
-	public BubbleSortPrimitive( Comparator order ) {
+	public BubbleSortPrimitive2( Comparator order ) {
 		this.order = order;
 	}
 	@Override
