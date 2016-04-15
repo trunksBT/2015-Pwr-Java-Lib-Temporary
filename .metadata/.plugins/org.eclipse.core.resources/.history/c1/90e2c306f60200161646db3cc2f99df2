@@ -1,0 +1,9 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class InsertSort2 implements ListSorter {
+
+}

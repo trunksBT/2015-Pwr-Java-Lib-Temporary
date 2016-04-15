@@ -1,0 +1,27 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.comparators.NaturalComparator;
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class InsertSort2 implements ListSorter {
+	private final Comparator order;
+	
+	public InsertSort2(Comparator order) {
+		this.order = order;
+	}
+
+	@Override
+	public List sort(List tape) {
+		for(int i = 1; i<tape.size() ; i++) {
+			Object toInsert = tape.get(i);
+			int j = i;
+			for( ; j > -1 &&
+					order.compare(tape.get(j-1),toInsert) > 0 ; j--)
+				tape.set(j,tape.get(j-1));
+			tape.set(j, toInsert);
+		}
+		return tape;
+	}
+}
