@@ -19,6 +19,7 @@ public class MergeSortIter implements ListSorter {
 	public List sort(List tape) {
 		return mergeSubLists(createQueue(tape));
 	}
+
 	private List mergeSubLists(IQueue tape) {
 		while(tape.size()>1)
 				tape.enqueue(mergePair((List)tape.dequeue(),(List)tape.dequeue()));
@@ -26,11 +27,11 @@ public class MergeSortIter implements ListSorter {
 	}
 
 	private List mergePair(List dequeuedFst, List dequeuedSnd) {
-		List result = new ArrayList(dequeuedFst.size()+ dequeuedSnd.size());
+		List result = new ArrayList(dequeuedFst.size()+dequeuedSnd.size());
 		Iterator itFst = dequeuedFst.iterator();
 		Iterator itSnd = dequeuedSnd.iterator();
-		itFst.first();itSnd.first();
-		
+		itFst.first();
+		itSnd.first();
 		while(!itFst.isDone() && !itSnd.isDone()) {
 			if(order.compare(itFst.current(), itSnd.current())<=0) {
 				result.add(itFst.current());
@@ -48,21 +49,19 @@ public class MergeSortIter implements ListSorter {
 			result.add(itSnd.current());
 			itSnd.next();
 		}
-		
 		return result;
 	}
+
 	private IQueue createQueue(List tape) {
 		IQueue result = new Queue();
 		Iterator it = tape.iterator();
 		it.first();
-		
 		while(! it.isDone()) {
 			List singletonList = new ArrayList(1);
 			singletonList.add(it.current());
 			result.enqueue(singletonList);
 			it.next();
 		}
-		
 		return result;
 	}
 }

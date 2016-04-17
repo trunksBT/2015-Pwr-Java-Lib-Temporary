@@ -30,7 +30,6 @@ public class MergeSortRec implements ListSorter {
 		Iterator leftIt = leftArray.iterator();
 		Iterator rightIt = rightArray.iterator();
 		leftIt.first();rightIt.first();	
-		
 		while(!leftIt.isDone()&& !rightIt.isDone()) {
 			if(order.compare(leftIt.current(), rightIt.current())<= 0) {
 				result.add(leftIt.current());
@@ -48,7 +47,6 @@ public class MergeSortRec implements ListSorter {
 			result.add(rightIt.current());
 			rightIt.next();
 		}
-		
 		return result;
 	}
 }

@@ -48,7 +48,6 @@ public class MergeSortRec implements ListSorter {
 			result.add(rightIt.current());
 			rightIt.next();
 		}
-		
 		return result;
 	}
 }

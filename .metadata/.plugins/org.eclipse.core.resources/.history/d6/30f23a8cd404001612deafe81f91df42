@@ -1,0 +1,20 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.dataTypes.GuardedLinkedListDouble;
+import bt.core.collections.dataTypes.Queue;
+import bt.core.collections.interfaces.IQueue;
+import bt.core.collections.interfaces.List;
+import bt.core.collections.iterators.Iterator;
+
+public class MergeSortIter2 implements ListSorter {
+
+	@Override
+	public List sort(List tape) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
