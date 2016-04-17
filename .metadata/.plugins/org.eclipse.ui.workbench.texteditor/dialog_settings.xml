@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="InsertSort2" key="selection"/>
+		<item value="BubbleSortOptimal2" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="BubbleSortOptimal"/>
+			<item value="BubbleSortPrimitive"/>
+			<item value="package bt.tests.core.algorithms.sorting;"/>
 			<item value="InsertSort"/>
 			<item value="SelectSort"/>
 			<item value="copyOfNode"/>
 			<item value="RatajListRec"/>
 			<item value="BST"/>
-			<item value="BST2"/>
-			<item value="test_hashCode_empty_null_equals_true"/>
-			<item value="hashCode"/>
 		</list>
 		<list key="replacehistory">
+			<item value="BubbleSortOptimal2"/>
+			<item value="BubbleSortPrimitive2"/>
 			<item value="InsertSort2"/>
 			<item value="SelectSort2"/>
 			<item value="refToNode"/>
 			<item value="RatajListRec2"/>
 			<item value="RatajList"/>
 			<item value="BST2"/>
-			<item value="BST"/>
-			<item value="find"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -4,13 +4,12 @@ import bt.core.algorithms.interfaces.Comparator;
 import bt.core.algorithms.interfaces.ListSorter;
 import bt.core.collections.interfaces.List;
 
-public class BubbleSortOptimal implements ListSorter{
+public class BubbleSortOptimal2 implements ListSorter {
 	private final Comparator order;
-	
-	public BubbleSortOptimal(Comparator order) {
+	public BubbleSortOptimal2(Comparator order) {
 		this.order = order;
 	}
-	
+
 	@Override
 	public List sort(List tape) {
 		int lastSwap = tape.size()-1;
@@ -27,6 +26,6 @@ public class BubbleSortOptimal implements ListSorter{
 				}
 			}
 		}
-		return tape;
 	}
+
 }
