@@ -4,10 +4,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import bt.core.algorithms.Sequences;
 import bt.core.algorithms.comparators.NaturalComparator;
-import bt.core.algorithms.sorting.BubbleSortOptimal;
-import bt.core.algorithms.sorting.BubbleSortPrimitive;
 import bt.core.algorithms.sorting.MergeSortRec;
 import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.interfaces.List;

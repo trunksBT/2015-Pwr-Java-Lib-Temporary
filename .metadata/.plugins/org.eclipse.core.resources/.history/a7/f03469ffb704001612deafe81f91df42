@@ -1,0 +1,62 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.dataTypes.ArrayList;
+import bt.core.collections.interfaces.List;
+import bt.core.collections.iterators.Iterator;
+
+public class MergeSortRec2 implements ListSorter {
+	private final Comparator order;
+	public MergeSortRec2(Comparator order) {
+		this.order = order;
+	}
+	@Override
+	public List sort(List tape) {
+		return mergeSort(0, tape.size()-1, tape);
+	}
+	private List mergeSort(int startIdx, int endIdx, List tape) {
+		System.out.println( "St:"+startIdx + "End:" + endIdx );
+		if( startIdx == endIdx ) {
+			ArrayList retVal = new ArrayList();
+			retVal.add(tape.get(startIdx));
+			return retVal;
+		}
+		int splitIdx = startIdx + (endIdx - startIdx)/2;
+		return merge(mergeSort(startIdx,splitIdx, tape),
+				mergeSort(splitIdx+1, endIdx, tape));
+	}
+	private List merge(List leftArray, List rightArray) {
+		ArrayList retVal = new ArrayList();
+		Iterator lIt = leftArray.iterator();
+		Iterator rIt = rightArray.iterator();
+		lIt.first();rIt.first();
+		while( !lIt.isDone() && !rIt.isDone() ) {
+			if( order.compare( lIt.current(), rIt.current())<0) {
+				retVal.add(lIt.current());
+				lIt.next();
+			}else {
+				retVal.add(rIt.current());
+				rIt.next();
+			}
+		}
+		while( !lIt.isDone() ) {
+			retVal.add( lIt.current());
+			lIt.next();
+		}
+		while( !rIt.isDone() ) {
+			retVal.add( rIt.current() );
+			rIt.next();
+		}
+		return retVal;
+	}
+}
+
+
+
+
+
+
+
+
+

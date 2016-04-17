@@ -1,0 +1,23 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+import bt.core.collections.iterators.Iterator;
+
+public class MergeSortIter2 implements ListSorter {
+	private final Comparator order;
+	public MergeSortIter2(Comparator order) {
+		this.order = order;
+	}
+	@Override
+	public List sort(List tape) {
+		return mergeSort(createQueue(tape));
+	}
+	private Object createQueue(List tape) {
+		Iterator it = tape.iterator();
+		while( !it.isDone() ) {
+			
+		}
+	}
+}

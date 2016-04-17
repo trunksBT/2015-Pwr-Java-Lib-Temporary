@@ -19,11 +19,9 @@ public class MergeSortRec implements ListSorter {
 	}
 
 	private List mergesort(List tape, int startIdx, int endIdx) {
-		System.out.println("StartIdx:"+startIdx+", EndIdx:"+ endIdx);
 		if(startIdx == endIdx) {
 			List result = new ArrayList();
 			result.add(tape.get(startIdx)); // here empty list will throw exception
-			System.out.println("Result Partial:"+result);
 			return result;
 		}
 		int splitIdx = startIdx + (endIdx- startIdx)/2;
@@ -32,7 +30,7 @@ public class MergeSortRec implements ListSorter {
 	}
 
 	private List merge(List leftArray, List rightArray) {
-		List result = new ArrayList();
+		List result = new ArrayList(leftArray.size()+rightArray.size());
 		Iterator leftIt = leftArray.iterator();
 		Iterator rightIt = rightArray.iterator();
 		leftIt.first();
@@ -55,7 +53,6 @@ public class MergeSortRec implements ListSorter {
 			result.add(rightIt.current());
 			rightIt.next();
 		}
-		System.out.println("Result:"+result);
 		return result;
 	}
 }

@@ -1,0 +1,13 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class MergeSortRec2 implements ListSorter {
+
+	@Override
+	public List sort(List tape) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
