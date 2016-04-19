@@ -1,0 +1,10 @@
+package bt.core.collections.dataTypes.trees;
+
+public class RatBST {
+
+	public static int countInnerNods(RatNode mock) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

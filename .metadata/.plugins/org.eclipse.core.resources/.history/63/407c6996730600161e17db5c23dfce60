@@ -29,15 +29,14 @@ public class TestRatBST extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_countInternalNods_null_0()
+    public void test_countInternalNods_null_8()
     {
     	// arrange
-    	RatNode tape = null;
     	int expVal = 0;
     	int recVal;
     	
     	// act
-    	recVal = RatBST.countInternalNods(tape);
+    	recVal = RatBST.countInternalNods(getMock());
     	
     	// assert
     	assertEquals(expVal, recVal);
@@ -48,30 +47,14 @@ public class TestRatBST extends TestCase {
     public void test_countInternalNods_Mock_8()
     {
     	// arrange
-    	RatNode tape = getMock();
     	int expVal = 8;
     	int recVal;
     	
     	// act
-    	recVal = RatBST.countInternalNods(tape);
+    	recVal = RatBST.countInternalNods(getMock());
     	
     	// assert
     	assertEquals(expVal, recVal);
-    }
-    
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_preorder_Mock_4213657()
-    {
-    	// arrange
-    	RatNode tape = getMock();
-    	
-    	// act
-    	RatBST.preorder(tape);
-    	
-    	// assert
-    	assertTrue(true);
     }
     
     public RatNode getMock() {

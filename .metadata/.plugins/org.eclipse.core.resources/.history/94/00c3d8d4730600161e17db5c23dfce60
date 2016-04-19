@@ -1,0 +1,9 @@
+package bt.core.collections.dataTypes.trees;
+
+public class RatBST {
+
+	public static int countInternalNods(RatNode root) {
+		return root == null ? 0 : 1 + countInternalNods(root.left) +
+										countInternalNods(root.right);
+	}
+}

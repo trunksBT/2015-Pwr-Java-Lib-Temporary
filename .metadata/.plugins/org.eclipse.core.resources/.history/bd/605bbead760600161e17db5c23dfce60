@@ -24,6 +24,7 @@ public class RatBST {
 			System.out.println( root.val );
 			preorder(root.left);
 			preorder(root.right);
-		}
+//		return root == null ? 0 : 1 + countInternalNods(root.left) +
+//										countInternalNods(root.right);
 	}
 }

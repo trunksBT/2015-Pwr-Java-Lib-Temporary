@@ -66,12 +66,14 @@ public class TestRatBST extends TestCase {
     {
     	// arrange
     	RatNode tape = getMock();
+    	int expVal = 8;
+    	int recVal;
     	
     	// act
     	RatBST.preorder(tape);
     	
     	// assert
-    	assertTrue(true);
+    	assertEquals(expVal, recVal);
     }
     
     public RatNode getMock() {

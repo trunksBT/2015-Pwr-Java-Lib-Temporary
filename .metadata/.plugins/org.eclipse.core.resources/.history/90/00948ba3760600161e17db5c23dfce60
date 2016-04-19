@@ -59,21 +59,6 @@ public class TestRatBST extends TestCase {
     	assertEquals(expVal, recVal);
     }
     
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_preorder_Mock_4213657()
-    {
-    	// arrange
-    	RatNode tape = getMock();
-    	
-    	// act
-    	RatBST.preorder(tape);
-    	
-    	// assert
-    	assertTrue(true);
-    }
-    
     public RatNode getMock() {
     	return 						new RatNode(4,
     					new RatNode(2,

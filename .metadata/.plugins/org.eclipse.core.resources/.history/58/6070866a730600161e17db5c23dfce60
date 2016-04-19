@@ -1,0 +1,9 @@
+package bt.core.collections.dataTypes.trees;
+
+public class RatBST {
+
+	public static int countInnerNods(RatNode root) {
+		return 0;
+	}
+	
+}
