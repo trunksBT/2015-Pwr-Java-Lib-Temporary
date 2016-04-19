@@ -1,0 +1,11 @@
+package bt.core.collections.dataTypes.trees;
+
+public class RatNode{
+	int val;
+	RatNode left;
+	RatNode right;
+	public RatNode(int val) {
+		this.val = val;
+		left = right = null;
+	}
+}
