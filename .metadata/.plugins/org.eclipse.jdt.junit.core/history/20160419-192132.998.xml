@@ -1,20 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestQuickSort2" project="BT-Library-Java" tests="5" started="5" failures="0" errors="2" ignored="0">
-  <testsuite name="bt.tests.core.algorithms.sorting.TestQuickSort2" time="0.002">
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestQuickSort2" project="BT-Library-Java" tests="5" started="5" failures="2" errors="0" ignored="0">
+  <testsuite name="bt.tests.core.algorithms.sorting.TestQuickSort2" time="0.001">
     <testcase name="test_QuickSort2_012345678_Expect_012345678_True" classname="bt.tests.core.algorithms.sorting.TestQuickSort2" time="0.0"/>
-    <testcase name="test_QuickSort2_63124805_10_7_9_15_11_13_12_14_Expect_0123456789101112131415_True" classname="bt.tests.core.algorithms.sorting.TestQuickSort2" time="0.001">
-      <error>java.lang.IndexOutOfBoundsException&#13;
-	at bt.core.collections.dataTypes.ArrayList.checkOutOfBounds(ArrayList.java:117)&#13;
-	at bt.core.collections.dataTypes.ArrayList.get(ArrayList.java:71)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.partition(QuickSort2.java:30)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.quickSort(QuickSort2.java:19)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.quickSort(QuickSort2.java:20)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.quickSort(QuickSort2.java:20)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.quickSort(QuickSort2.java:20)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.quickSort(QuickSort2.java:20)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.quickSort(QuickSort2.java:20)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.quickSort(QuickSort2.java:20)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.sort(QuickSort2.java:14)&#13;
-	at bt.tests.core.algorithms.sorting.TestQuickSort2.test_QuickSort2_63124805_10_7_9_15_11_13_12_14_Expect_0123456789101112131415_True(TestQuickSort2.java:99)&#13;
+    <testcase name="test_QuickSort2_63124805_10_7_9_15_11_13_12_14_Expect_0123456789101112131415_True" classname="bt.tests.core.algorithms.sorting.TestQuickSort2" time="0.0">
+      <failure>junit.framework.AssertionFailedError: expected:&lt;[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]&gt; but was:&lt;[ 0, 1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 15, 14, 16, 17, 18]&gt;&#13;
+	at junit.framework.Assert.fail(Assert.java:57)&#13;
+	at junit.framework.Assert.failNotEquals(Assert.java:329)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:78)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:86)&#13;
+	at junit.framework.TestCase.assertEquals(TestCase.java:253)&#13;
+	at bt.tests.core.algorithms.sorting.TestQuickSort2.test_QuickSort2_63124805_10_7_9_15_11_13_12_14_Expect_0123456789101112131415_True(TestQuickSort2.java:102)&#13;
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
@@ -35,17 +29,17 @@
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
 &#13;
-</error>
+</failure>
     </testcase>
     <testcase name="test_QuickSort2_63124805_Expect_01234568_True" classname="bt.tests.core.algorithms.sorting.TestQuickSort2" time="0.0"/>
     <testcase name="test_QuickSort2_876543210_Expect_012345678_True" classname="bt.tests.core.algorithms.sorting.TestQuickSort2" time="0.0">
-      <error>java.lang.IndexOutOfBoundsException&#13;
-	at bt.core.collections.dataTypes.ArrayList.checkOutOfBounds(ArrayList.java:117)&#13;
-	at bt.core.collections.dataTypes.ArrayList.get(ArrayList.java:71)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.partition(QuickSort2.java:30)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.quickSort(QuickSort2.java:19)&#13;
-	at bt.core.algorithms.sorting.QuickSort2.sort(QuickSort2.java:14)&#13;
-	at bt.tests.core.algorithms.sorting.TestQuickSort2.test_QuickSort2_876543210_Expect_012345678_True(TestQuickSort2.java:186)&#13;
+      <failure>junit.framework.AssertionFailedError: expected:&lt;[ 0, 1, 2, 3, 4, 5, 6, 7, 8]&gt; but was:&lt;[ 0, 2, 4, 5, 6, 3, 7, 1, 8]&gt;&#13;
+	at junit.framework.Assert.fail(Assert.java:57)&#13;
+	at junit.framework.Assert.failNotEquals(Assert.java:329)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:78)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:86)&#13;
+	at junit.framework.TestCase.assertEquals(TestCase.java:253)&#13;
+	at bt.tests.core.algorithms.sorting.TestQuickSort2.test_QuickSort2_876543210_Expect_012345678_True(TestQuickSort2.java:189)&#13;
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
@@ -66,7 +60,7 @@
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
 &#13;
-</error>
+</failure>
     </testcase>
     <testcase name="test_QuickSort2_empty_Expect_empty_True" classname="bt.tests.core.algorithms.sorting.TestQuickSort2" time="0.0"/>
   </testsuite>

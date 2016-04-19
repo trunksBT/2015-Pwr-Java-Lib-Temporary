@@ -1,0 +1,42 @@
+package bt.core.algorithms.sorting;
+
+import bt.core.algorithms.interfaces.Comparator;
+import bt.core.algorithms.interfaces.ListSorter;
+import bt.core.collections.interfaces.List;
+
+public class QuickSort2 implements ListSorter {
+	private final Comparator order;
+	public QuickSort2(Comparator order) {
+		this.order = order;
+	}
+	@Override
+	public List sort(List tape) {
+		quickSort(0, tape.size()-1, tape);
+		return tape;
+	}
+	private void quickSort(int idxStart, int idxEnd, List tape) {
+		if(idxEnd> idxStart) {
+			int splitIdx = partition(idxStart, idxEnd, tape);
+			quickSort(idxStart, splitIdx-1, tape );
+			quickSort(splitIdx+1, idxEnd, tape );
+		}
+	}
+	private int partition(int idxStart, int idxEnd, List tape) {
+		Object pivot = tape.get(idxEnd);
+		int lIt = idxStart-1; // stops on higher than pivot
+		int rIt = idxEnd; // stops on lower than pivot
+		while(rIt> lIt) {
+			while(order.compare(tape.get(++lIt), pivot)<0);
+			while(rIt>idxStart && order.compare(tape.get(--rIt), pivot)>0);
+			if( rIt> lIt)
+				swap( lIt, rIt, tape);
+		}
+		swap(lIt, idxEnd, tape);
+		return rIt;
+	}
+	private void swap(int idxStart, int idxEnd, List tape) {
+		Object oldVal = tape.get(idxStart);
+		tape.set(idxStart, tape.get(idxEnd));
+		tape.set(idxEnd, oldVal);
+	}
+}

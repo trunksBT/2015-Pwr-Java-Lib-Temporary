@@ -55,9 +55,9 @@
 <fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.sorting.InsertSort2"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.GuardedLinkedListDouble"/>
-<fullyQualifiedTypeName name="bt.core.algorithms.interfaces.Comparator"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.Queue"/>
 <fullyQualifiedTypeName name="bt.core.collections.interfaces.IQueue"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayList"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
+<fullyQualifiedTypeName name="bt.core.algorithms.interfaces.Comparator"/>
 </qualifiedTypeNameHistroy>

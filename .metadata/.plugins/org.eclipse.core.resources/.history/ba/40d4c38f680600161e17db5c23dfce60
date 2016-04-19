@@ -16,26 +16,26 @@ public class QuickSort implements ListSorter{
 		return tape;
 	}
 	
-	private void quicksort(List tape, int idxStart, int idxEnd) {
-		if( idxEnd> idxStart) {
-			int idxSplit = partition(tape, idxStart, idxEnd);
-			quicksort(tape, idxStart, idxSplit-1);
-			quicksort(tape, idxSplit + 1, idxEnd);
+	private void quicksort(List tape, int startIdx, int endIdx) {
+		if( endIdx> startIdx) {
+			int idxSplit = partition(tape, startIdx, endIdx);
+			quicksort(tape, startIdx, idxSplit-1);
+			quicksort(tape, idxSplit + 1, endIdx);
 		}
 	}
 	private int partition(List tape, int idxLeft, int idxOfPivot) {	
 		Object pivot = tape.get(idxOfPivot); // last elem
-		int idxHigherOfPivot = idxLeft -1;
-		int idxLowerOfPivot = idxOfPivot;
-		while(idxHigherOfPivot<idxLowerOfPivot) {
-			while( order.compare(tape.get(++idxHigherOfPivot),pivot)<0);
-			while( (idxLowerOfPivot>idxLeft) 
-					&& order.compare(tape.get(--idxLowerOfPivot),pivot)>0);
-			if(!(idxHigherOfPivot>=idxLowerOfPivot))
-				swap(tape, idxHigherOfPivot, idxLowerOfPivot);
+		int idxHigherThanPivot = idxLeft -1;
+		int idxLowerThanPivot = idxOfPivot;
+		while(idxHigherThanPivot<idxLowerThanPivot) {
+			while( order.compare(tape.get(++idxHigherThanPivot),pivot)<0);
+			while( (idxLowerThanPivot>idxLeft) 
+					&& order.compare(tape.get(--idxLowerThanPivot),pivot)>0);
+			if(!(idxHigherThanPivot>=idxLowerThanPivot))
+				swap(tape, idxHigherThanPivot, idxLowerThanPivot);
 		}
-		swap(tape, idxHigherOfPivot, idxOfPivot);
-		return idxHigherOfPivot;
+		swap(tape, idxHigherThanPivot, idxOfPivot);
+		return idxHigherThanPivot;
 	}
 	
 	private void swap( List tape, int leftIdx, int rightIdx) {
