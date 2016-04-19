@@ -31,7 +31,7 @@ public class QuickSort implements ListSorter{
 			while( order.compare(tape.get(++idxHigherOfPivot),pivot)<0);
 			while( (idxLowerOfPivot>idxLeft) 
 					&& order.compare(tape.get(--idxLowerOfPivot),pivot)>0);
-			if(idxHigherOfPivot<idxLowerOfPivot)
+			if(!(idxHigherOfPivot>=idxLowerOfPivot))
 				swap(tape, idxHigherOfPivot, idxLowerOfPivot);
 		}
 		swap(tape, idxHigherOfPivot, idxOfPivot);
