@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestNaturalComparator" project="BT-Library-Java" tests="8" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.tests.core.algorithms.comparators.TestNaturalComparator" incomplete="true">
+    <testcase name="test_NaturalComparator_1y2_Expect_m1_True" classname="bt.tests.core.algorithms.comparators.TestNaturalComparator" time="0.0"/>
+    <testcase name="test_NaturalComparator_2y1_Expect_1_True" classname="bt.tests.core.algorithms.comparators.TestNaturalComparator" time="0.0"/>
+    <testcase name="test_fib4_Expect_3_True" classname="bt.tests.core.algorithms.comparators.TestNaturalComparator" incomplete="true"/>
+    <testcase name="test_nativeComparator_1y2_Expect_m1_True" classname="bt.tests.core.algorithms.comparators.TestNaturalComparator" incomplete="true"/>
+    <testcase name="test_nativeComparator_9y50_Expect_m41_True" classname="bt.tests.core.algorithms.comparators.TestNaturalComparator" incomplete="true"/>
+    <testcase name="test_nativeComparator_Strings_09y50_Expect_True" classname="bt.tests.core.algorithms.comparators.TestNaturalComparator" incomplete="true"/>
+    <testcase name="test_nativeComparator_Strings_59y50_Expect_9_True" classname="bt.tests.core.algorithms.comparators.TestNaturalComparator" incomplete="true"/>
+    <testcase name="test_nativeComparator_Strings_9y50_Expect_True" classname="bt.tests.core.algorithms.comparators.TestNaturalComparator" incomplete="true"/>
+  </testsuite>
+</testrun>

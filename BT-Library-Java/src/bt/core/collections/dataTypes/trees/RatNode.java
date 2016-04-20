@@ -4,6 +4,8 @@ public class RatNode{
 	int val;
 	RatNode left;
 	RatNode right;
+	int ammountLowerNodes;
+	int ammountNodes;
 	public RatNode(int val) {
 		this.val = val;
 		left = right = null;

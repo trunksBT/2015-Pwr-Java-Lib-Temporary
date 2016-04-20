@@ -148,5 +148,24 @@ public class TestNaturalComparator extends TestCase
         }
         return len1 - len2;
     }
+    
+	@Test
+	public void test_fib4_Expect_3_True()
+	{
+	    //arrange
+		Integer val1 = new Integer(4);
+		int expVal = 5;
+		int rcVal = 0;
+		
+		//act
+		rcVal = fib(val1);
+	    
+	    //assert
+	    assertEquals(expVal,rcVal);
+	}
+	
+	public int fib(int n) {
+		return n < 2 ? 1 : fib(n-1)+fib(n-2);
+	}
 
 }

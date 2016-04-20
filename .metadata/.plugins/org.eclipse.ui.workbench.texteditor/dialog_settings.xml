@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="QuickSort2" key="selection"/>
+		<item value="&#x09;public List sort(List tape) {" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="&#x09;public List sort(List tape) {"/>
 			<item value="QuickSort"/>
 			<item value="MergeSortIter"/>
 			<item value="MergeSortRec"/>
@@ -15,7 +16,6 @@
 			<item value="BubbleSortPrimitive"/>
 			<item value="package bt.tests.core.algorithms.sorting;"/>
 			<item value="InsertSort"/>
-			<item value="SelectSort"/>
 		</list>
 		<list key="replacehistory">
 			<item value="QuickSort2"/>

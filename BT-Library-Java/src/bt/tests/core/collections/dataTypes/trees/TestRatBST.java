@@ -20,7 +20,7 @@ public class TestRatBST extends TestCase {
     public void test_CTOR_empty_true()
     {
     	// arrange
-    	RatNode root = getMock();
+    	RatNode root = getMockNotEmpty();
     	
     	// act
     	// assert
@@ -29,7 +29,7 @@ public class TestRatBST extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_countInternalNods_null_0()
+    public void test_countInternalNodes_null_0()
     {
     	// arrange
     	RatNode tape = null;
@@ -37,7 +37,7 @@ public class TestRatBST extends TestCase {
     	int recVal;
     	
     	// act
-    	recVal = RatBST.countInternalNods(tape);
+    	recVal = RatBST.countIN(tape);
     	
     	// assert
     	assertEquals(expVal, recVal);
@@ -45,27 +45,283 @@ public class TestRatBST extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_countInternalNods_Mock_8()
+    public void test_countInternalNodes_MockOneElement_1()
     {
     	// arrange
-    	RatNode tape = getMock();
+    	RatNode tape = getMockOneElement();
+    	int expVal = 1;
+    	int recVal;
+    	
+    	// act
+    	recVal = RatBST.countIN(tape);
+    	
+    	// assert
+    	assertEquals(expVal, recVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_countInternalNodes_MockNotEmpty_8()
+    {
+    	// arrange
+    	RatNode tape = getMockNotEmpty();
     	int expVal = 8;
     	int recVal;
     	
     	// act
-    	recVal = RatBST.countInternalNods(tape);
+    	recVal = RatBST.countIN(tape);
+    	
+    	// assert
+    	assertEquals(expVal, recVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_countExternalNodes_null_1()
+    {
+    	// arrange
+    	RatNode tape = null;
+    	int expVal = 1;
+    	int recVal;
+    	
+    	// act
+    	recVal = RatBST.countEN(tape);
+    	
+    	// assert
+    	assertEquals(expVal, recVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_countExternalNodes_MockOneElement_2()
+    {
+    	// arrange
+    	RatNode tape = getMockOneElement();
+    	int expVal = 2;
+    	int recVal;
+    	
+    	// act
+    	recVal = RatBST.countEN(tape);
+    	
+    	// assert
+    	assertEquals(expVal, recVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_countExternalNodes_MockNotEmpty_9()
+    {
+    	// arrange
+    	RatNode tape = getMockNotEmpty();
+    	int expVal = 9;
+    	int recVal;
+    	
+    	// act
+    	recVal = RatBST.countEN(tape);
     	
     	// assert
     	assertEquals(expVal, recVal);
     }
     
     
+    
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_countLeaves_null_0()
+     {
+     	// arrange
+     	RatNode tape = null;
+     	int expVal = 0;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.countL(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_countLeaves_MockOneElement_1()
+     {
+     	// arrange
+     	RatNode tape = getMockOneElement();
+     	int expVal = 1;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.countL(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_countLeaves_MockNotEmpty_4()
+     {
+     	// arrange
+     	RatNode tape = getMockNotEmpty();
+     	int expVal = 4;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.countL(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+  	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_height_null_m1()
+     {
+     	// arrange
+     	RatNode tape = null;
+     	int expVal = -1;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.height(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_height_MockOneElement_0()
+     {
+     	// arrange
+     	RatNode tape = getMockOneElement();
+     	int expVal = 0;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.height(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_height_MockNotEmpty_3()
+     {
+     	// arrange
+     	RatNode tape = getMockNotEmpty();
+     	int expVal = 3;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.height(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+   	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_countLowerNodes_null_0()
+     {
+     	// arrange
+     	RatNode tape = null;
+     	int expVal = 0;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.countLowerNodes(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_countLowerNodes_MockOneElement_0()
+     {
+     	// arrange
+     	RatNode tape = getMockOneElement();
+     	int expVal = 0;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.countLowerNodes(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_countLowerNodes_MockNotEmpty_4()
+     {
+     	// arrange
+     	RatNode tape = getMockNotEmpty();
+     	int expVal = 4;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.countLowerNodes(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+    	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_assignNodes_null_0()
+     {
+     	// arrange
+     	RatNode tape = null;
+     	int expVal = 0;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.assignNodes(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_assignNodes_MockOneElement_1()
+     {
+     	// arrange
+     	RatNode tape = getMockOneElement();
+     	int expVal = 1;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.assignNodes(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
+     
+ 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+     @Test
+     public void test_assignNodes_MockNotEmpty_8()
+     {
+     	// arrange
+     	RatNode tape = getMockNotEmpty();
+     	int expVal = 8;
+     	int recVal;
+     	
+     	// act
+     	recVal = RatBST.assignNodes(tape);
+     	
+     	// assert
+     	assertEquals(expVal, recVal);
+     }
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
     public void test_preorder_Mock_4213657()
     {
     	// arrange
-    	RatNode tape = getMock();
+    	RatNode tape = getMockNotEmpty();
     	
     	// act
     	RatBST.preorder(tape);
@@ -74,7 +330,7 @@ public class TestRatBST extends TestCase {
     	assertTrue(true);
     }
     
-    public RatNode getMock() {
+    public RatNode getMockNotEmpty() {
     	return 						new RatNode(4,
     					new RatNode(2,
     				new RatNode(1, 
@@ -82,4 +338,8 @@ public class TestRatBST extends TestCase {
     											new RatNode(6,
     										new RatNode(5), new RatNode(7)));
     }// lwp 01234567
+    
+    public RatNode getMockOneElement() {
+    	return new RatNode(4);
+    }
 }

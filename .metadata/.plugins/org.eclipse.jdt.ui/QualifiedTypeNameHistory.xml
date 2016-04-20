@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="bt.core.collections.iterators.FibIterator"/>
-<fullyQualifiedTypeName name="bt.core.algorithms.Strings"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.Arrays"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.SequencesCopy"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.ArraysCopy"/>
-<fullyQualifiedTypeName name="junit.framework.TestCase"/>
 <fullyQualifiedTypeName name="bt.core.wrox.algosFromBegg.RecursiveFolderTreeProcessing"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.Sequences"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayList"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.interfaces.Comparator"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.RatNode"/>
+<fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.RatBST"/>
 </qualifiedTypeNameHistroy>

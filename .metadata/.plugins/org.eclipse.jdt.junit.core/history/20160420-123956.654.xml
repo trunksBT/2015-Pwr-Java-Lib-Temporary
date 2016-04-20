@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRatBST" project="BT-Library-Java" tests="4" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.tests.core.collections.dataTypes.trees.TestRatBST" incomplete="true">
+    <testcase name="test_CTOR_empty_true" classname="bt.tests.core.collections.dataTypes.trees.TestRatBST" incomplete="true"/>
+    <testcase name="test_countInternalNods_Mock_8" classname="bt.tests.core.collections.dataTypes.trees.TestRatBST" incomplete="true"/>
+    <testcase name="test_countInternalNods_null_0" classname="bt.tests.core.collections.dataTypes.trees.TestRatBST" incomplete="true"/>
+    <testcase name="test_preorder_Mock_4213657" classname="bt.tests.core.collections.dataTypes.trees.TestRatBST" incomplete="true"/>
+  </testsuite>
+</testrun>

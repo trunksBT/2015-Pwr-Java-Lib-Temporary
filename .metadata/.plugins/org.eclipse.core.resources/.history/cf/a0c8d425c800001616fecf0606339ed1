@@ -1,5 +1,0 @@
-package bt.core.exceptions;
-
-public class ItemNotFoundException extends RuntimeException {
-
-}

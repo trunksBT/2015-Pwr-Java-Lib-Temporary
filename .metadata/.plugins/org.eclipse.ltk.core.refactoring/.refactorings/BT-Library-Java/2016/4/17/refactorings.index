@@ -39,3 +39,5 @@
 1461096219903	Copy compilation unit
 1461097141259	Rename type 'RatajBST'
 1461100345985	Rename method 'countInnerNods'
+1461156153772	Rename method 'countInternalNods'
+1461161596188	Rename method 'getMock'
