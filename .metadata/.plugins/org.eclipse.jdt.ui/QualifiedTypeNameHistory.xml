@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="bt.core.algorithms.Arrays"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.SequencesCopy"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.ArraysCopy"/>
 <fullyQualifiedTypeName name="bt.core.wrox.algosFromBegg.RecursiveFolderTreeProcessing"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="junit.framework.TestCase"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.RatNode"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.RatBST"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
