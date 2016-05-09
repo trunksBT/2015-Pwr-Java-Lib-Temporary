@@ -1,0 +1,10 @@
+package bt.core.collections.dataTypes.graphs;
+
+import bt.core.collections.dataTypes.GuardedLinkedListDouble;
+
+public class GraphEdgeList<V,W>{
+
+	public GraphEdgeList(GuardedLinkedListDouble guardedLinkedListDouble) {
+		// TODO Auto-generated constructor stub
+	}
+}

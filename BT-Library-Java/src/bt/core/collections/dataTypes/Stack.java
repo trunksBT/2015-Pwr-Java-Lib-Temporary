@@ -8,7 +8,7 @@ public class Stack implements bt.core.collections.interfaces.Stack {
 	private final List list;
 	
 	public Stack() {
-		this.list = new GuardedLinkedListDouble();
+		this.list = new LinkedList();
 	}
 	
 	public Stack(List list) {

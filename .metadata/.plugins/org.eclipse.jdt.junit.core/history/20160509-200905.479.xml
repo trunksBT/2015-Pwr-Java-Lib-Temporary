@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_Edge" project="BT-Library-Java" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.test.core.collections.dataTypes.graphs.Test_Edge" time="0.0">
+    <testcase name="test_equals_From_0to1_wage_cat_True" classname="bt.test.core.collections.dataTypes.graphs.Test_Edge" time="0.0"/>
+    <testcase name="test_getEnd_From_0to1_wage_cat_True" classname="bt.test.core.collections.dataTypes.graphs.Test_Edge" time="0.0"/>
+    <testcase name="test_getStart_From_0to1_wage_cat_True" classname="bt.test.core.collections.dataTypes.graphs.Test_Edge" time="0.0"/>
+    <testcase name="test_getWeight_From_0to1_wage_cat_True" classname="bt.test.core.collections.dataTypes.graphs.Test_Edge" time="0.0"/>
+    <testcase name="test_hashCode_From_0to1_wage_cat_True" classname="bt.test.core.collections.dataTypes.graphs.Test_Edge" time="0.0"/>
+    <testcase name="test_toString_From_0to1_wage_cat_True" classname="bt.test.core.collections.dataTypes.graphs.Test_Edge" time="0.0"/>
+  </testsuite>
+</testrun>

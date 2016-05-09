@@ -4,7 +4,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import bt.core.collections.dataTypes.GuardedLinkedListDouble;
+import bt.core.collections.dataTypes.LinkedList;
 import bt.core.collections.dataTypes.Stack;
 import bt.core.collections.interfaces.List;
 import bt.core.exceptions.EmptyStackException;
@@ -33,7 +33,7 @@ public class TestStack extends TestCase {
     public void test_push_emptyList_Expect_size1()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	String toAdd1 = new String("0");
     	int expSize = 1;
@@ -50,7 +50,7 @@ public class TestStack extends TestCase {
     public void test_push_NotEmptyList_Expect_size3()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	String toAdd0 = new String("0");
     	String toAdd1 =  new String("1");
@@ -72,7 +72,7 @@ public class TestStack extends TestCase {
     public void test_clearYisEmpty_NotEmpty_Expect_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	String toAdd1 =  new String("1");
     	String toAdd2 =  new String("2");
@@ -93,7 +93,7 @@ public class TestStack extends TestCase {
     public void test_clearYisEmpty_Empty_Expect_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	
     	// act
@@ -108,7 +108,7 @@ public class TestStack extends TestCase {
     public void test_pop_empty_Expect_Null_y_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	Object peeked = null;
     	
@@ -128,7 +128,7 @@ public class TestStack extends TestCase {
     public void test_pop_size1_Expect_0_y_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	String toAdd0 =  new String("0");
     	Object peeked = null;
@@ -150,7 +150,7 @@ public class TestStack extends TestCase {
     public void test_pop_size2_Expect_1_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	String toAdd0 =  new String("0");
     	String toAdd1 =  new String("1");
@@ -174,7 +174,7 @@ public class TestStack extends TestCase {
     public void test_peek_empty_Expect_Null_y_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	int expSize = 0;
     	Object peeked = null;
@@ -196,7 +196,7 @@ public class TestStack extends TestCase {
     public void test_peek_size1_Expect_0_y_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	String toAdd0 =  new String("0");
     	int expSize = 1;
@@ -220,7 +220,7 @@ public class TestStack extends TestCase {
     public void test_peek_size2_Expect_1_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Stack stack = new Stack(tape);
     	String toAdd0 =  new String("0");
     	String toAdd1 =  new String("1");

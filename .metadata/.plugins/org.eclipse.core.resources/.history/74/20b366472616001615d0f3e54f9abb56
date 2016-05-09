@@ -1,0 +1,19 @@
+package bt.test.core.collections.dataTypes.graphs;
+
+import bt.core.collections.dataTypes.graphs.Graph;
+
+public class GraphAdjacentList<V,W> implements Graph<V,W> {
+
+	@Override
+	public int numberOfVerts() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int numberOfEdges() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

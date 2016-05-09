@@ -11,7 +11,7 @@ public class Queue implements bt.core.collections.interfaces.IQueue {
 	}
 	
 	public Queue() {
-		this.list = new GuardedLinkedListDouble();
+		this.list = new LinkedList();
 	}
 
 	@Override

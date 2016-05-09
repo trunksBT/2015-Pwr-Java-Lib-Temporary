@@ -6,7 +6,7 @@ import org.junit.runners.MethodSorters;
 
 import bt.core.collections.dataTypes.AbstractList;
 import bt.core.collections.dataTypes.ArrayList;
-import bt.core.collections.dataTypes.GuardedLinkedListDouble;
+import bt.core.collections.dataTypes.LinkedList;
 import bt.core.collections.dataTypes.Queue;
 //import bt.core.collections.dataTypes.GuardedLinkedListDoubleCopy;
 import bt.core.collections.interfaces.List;
@@ -38,7 +38,7 @@ public class TestQueue extends TestCase {
     public void test_enqueue_emptyList_Expect_size1()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Queue queue = new Queue(tape);
     	String toAdd1 = new String("0");
     	int expSize = 1;
@@ -55,7 +55,7 @@ public class TestQueue extends TestCase {
     public void test_enqueue_NotEmptyList_Expect_size3()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Queue queue = new Queue(tape);
     	String toAdd0 = new String("0");
     	String toAdd1 =  new String("1");
@@ -77,7 +77,7 @@ public class TestQueue extends TestCase {
     public void test_clearYisEmpty_NotEmpty_Expect_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Queue queue = new Queue(tape);
     	String toAdd1 =  new String("1");
     	String toAdd2 =  new String("2");
@@ -98,7 +98,7 @@ public class TestQueue extends TestCase {
     public void test_clearYisEmpty_Empty_Expect_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Queue queue = new Queue(tape);
     	
     	// act
@@ -113,7 +113,7 @@ public class TestQueue extends TestCase {
     public void test_dequeue_empty_Expect_Null_y_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Queue queue = new Queue(tape);
     	Object dequeued = null;
     	
@@ -133,7 +133,7 @@ public class TestQueue extends TestCase {
     public void test_dequeue_size1_Expect_0_y_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Queue queue = new Queue(tape);
     	String toAdd0 =  new String("0");
     	Object dequeued = null;
@@ -155,7 +155,7 @@ public class TestQueue extends TestCase {
     public void test_dequeue_size2_Expect_0_True()
     {
     	// arrange
-    	List tape = new GuardedLinkedListDouble();
+    	List tape = new LinkedList();
     	Queue queue = new Queue(tape);
     	String toAdd0 =  new String("0");
     	String toAdd1 =  new String("1");

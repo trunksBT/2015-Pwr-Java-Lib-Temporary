@@ -1,0 +1,7 @@
+package bt.test.core.collections.dataTypes.graphs;
+
+import bt.core.collections.dataTypes.graphs.Graph;
+
+public class GraphAdjacentList implements Graph<V, S> {
+
+}

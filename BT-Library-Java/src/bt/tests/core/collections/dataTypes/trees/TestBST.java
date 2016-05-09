@@ -6,7 +6,7 @@ import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.comparators.NaturalComparator;
 import bt.core.collections.dataTypes.ArrayList;
-import bt.core.collections.dataTypes.GuardedLinkedListDouble;
+import bt.core.collections.dataTypes.LinkedList;
 import bt.core.collections.dataTypes.Queue;
 import bt.core.collections.dataTypes.trees.BST;
 import bt.core.collections.dataTypes.trees.BST;
