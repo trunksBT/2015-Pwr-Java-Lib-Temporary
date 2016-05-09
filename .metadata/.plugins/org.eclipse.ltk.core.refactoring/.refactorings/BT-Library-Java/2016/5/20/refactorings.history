@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Test_Edge.java&apos; to &apos;bt.test.core.collections.dataTypes.graphs.Test_Edge.java&apos;&#x0D;&#x0A;- Original project: &apos;BT-Library-Java&apos;&#x0D;&#x0A;- Destination element: &apos;bt.test.core.collections.dataTypes.graphs.Test_Edge.java&apos;&#x0D;&#x0A;- Original element: &apos;bt.test.core.collections.dataTypes.graphs.Test_Edge.java&apos;" description="Copy compilation unit" destination="/src&lt;bt.test.core.collections.dataTypes.graphs{Test_Edge.java" element1="/src&lt;bt.test.core.collections.dataTypes.graphs{Test_Edge.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1462824624057" units="1" version="1.0"/>
+</session>

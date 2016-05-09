@@ -1,11 +1,9 @@
 package bt.core.collections.various;
-
 import java.util.*;
-
 import bt.core.algorithms.interfaces.IGraf;
 
 public class GraphIndirected<W,S> implements IGraf<W,S>{
-	S[][] matrix;	
+	S[][] matrix;
 	Hashtable<W,Integer> vertIntoPosition;
 	ArrayList<W> vertices;
 	
@@ -17,7 +15,6 @@ public class GraphIndirected<W,S> implements IGraf<W,S>{
 		if(this.vertices!= null)
 			for(int i = 0 ; i < this.vertices.size();i++)
 				vertIntoPosition.put(this.vertices.get(i), i);
-		
 	}
 
 	@Override

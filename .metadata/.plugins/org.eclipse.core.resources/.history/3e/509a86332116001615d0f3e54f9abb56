@@ -1,0 +1,25 @@
+package bt.core.collections.dataTypes.graphs;
+
+public class Edge<V,W> {
+	V start;
+	V end;
+	W wage;
+	
+	public Edge() {
+		start = end = null;
+		wage = null;
+	}
+	public Edge(V start, V end, W wage) {
+		this.start = start;
+		this.end = end;
+		this.wage = wage;
+	}
+
+	public V getStart() {
+		return start;
+	}
+	
+	public V getEnd() {
+		return end;
+	}
+}

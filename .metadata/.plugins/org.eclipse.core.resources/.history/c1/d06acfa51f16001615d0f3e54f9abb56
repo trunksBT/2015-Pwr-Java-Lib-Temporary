@@ -1,0 +1,5 @@
+package bt.test.core.collections.dataTypes.graphs;
+
+public class Test_Edge {
+
+}
