@@ -27,7 +27,7 @@ public class Test_GraphAdjacentList extends TestCase
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfVerts();
+	    rcVal = inGraph.getNumberOfVerts();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);
@@ -47,7 +47,7 @@ public class Test_GraphAdjacentList extends TestCase
 	    inGraph.resetVerticesStory();
 	    
 	    //assert
-	    for(int i = 0 ; i <inGraph.numberOfVerts(); i++)
+	    for(int i = 0 ; i <inGraph.getNumberOfVerts(); i++)
 	    	rcVal|= inGraph.getAdjacents(i).isDirty();
 	    assertEquals(expVal, rcVal);
 	}
@@ -111,7 +111,7 @@ public class Test_GraphAdjacentList extends TestCase
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfVerts();
+	    rcVal = inGraph.getNumberOfVerts();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);
@@ -128,7 +128,7 @@ public class Test_GraphAdjacentList extends TestCase
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfVerts();
+	    rcVal = inGraph.getNumberOfVerts();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);

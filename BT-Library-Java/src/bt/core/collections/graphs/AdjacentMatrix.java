@@ -9,7 +9,7 @@ public class AdjacentMatrix<W> implements Graph<Integer, W> {
 			this.matrix = (W[][]) new String[0][0];	
 	}
 	@Override
-	public int numberOfVerts() {
+	public int getNumberOfVerts() {
 		return matrix.length;
 	}
 	@Override

@@ -1,7 +1,7 @@
 package bt.core.collections.graphs;
 
 public interface Graph<V,W> {
-	public int numberOfVerts();
+	public int getNumberOfVerts();
 	public int numberOfEdges();
 //	public void addEdge(V vertFrom, V vertTo);
 //	public Iterable<V> adjacentVerts(V vert);

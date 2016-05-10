@@ -18,7 +18,7 @@ public class EdgeList<V,W> implements Graph<V,W>{
 	}
 
 	@Override
-	public int numberOfVerts() {
+	public int getNumberOfVerts() {
 		throw new UnsupportedOperationException("notImplementedYet");
 	}
 

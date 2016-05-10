@@ -9,7 +9,7 @@ import bt.core.collections.lists.ListDecorator;
 public class DFS<W> {
 	public List forAdjacentList(AdjacentList<W> graph) {
 		graph.resetVerticesStory();
-		ArrayList retVal = new ArrayList(graph.numberOfVerts());
+		ArrayList retVal = new ArrayList(graph.getNumberOfVerts());
 		innerAdjList(0, graph, retVal);
 		return retVal;
 	}

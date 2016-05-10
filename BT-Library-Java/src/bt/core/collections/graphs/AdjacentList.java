@@ -12,7 +12,7 @@ public class AdjacentList<W> implements Graph<Integer,W> {
 	}
 	
 	@Override
-	public int numberOfVerts() {
+	public int getNumberOfVerts() {
 		return adjacents.length;
 	}
 

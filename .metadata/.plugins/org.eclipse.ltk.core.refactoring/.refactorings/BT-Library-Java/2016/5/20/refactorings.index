@@ -55,3 +55,6 @@
 1462900237780	Rename local variable 'inTape'
 1462901603181	Rename local variable 'inTape'
 1462902477098	Delete element
+1462906072684	Copy compilation unit
+1462906342977	Rename method 'numberOfVerts'
+1462906909128	Rename field 'list'

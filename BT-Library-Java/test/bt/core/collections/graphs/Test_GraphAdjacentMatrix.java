@@ -25,7 +25,7 @@ public class Test_GraphAdjacentMatrix extends TestCase
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfVerts();
+	    rcVal = inGraph.getNumberOfVerts();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);
@@ -42,7 +42,7 @@ public class Test_GraphAdjacentMatrix extends TestCase
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfVerts();
+	    rcVal = inGraph.getNumberOfVerts();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);
@@ -59,7 +59,7 @@ public class Test_GraphAdjacentMatrix extends TestCase
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfVerts();
+	    rcVal = inGraph.getNumberOfVerts();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);

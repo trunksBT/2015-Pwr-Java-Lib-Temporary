@@ -5,40 +5,40 @@ import bt.core.collections.lists.LinkedList;
 import bt.core.exceptions.EmptyQueueException;
 
 public class Queue implements bt.core.collections.interfaces.IQueue {
-	private final List list;
+	private final List tape;
 
 	public Queue(List list) {
-		this.list = list;
+		this.tape = list;
 	}
 	
 	public Queue() {
-		this.list = new LinkedList();
+		this.tape = new LinkedList();
 	}
 
 	@Override
 	public void enqueue(Object val) {
-		list.add(val);
+		tape.add(val);
 	}
 
 	@Override
 	public Object dequeue() throws EmptyQueueException {
 		if(isEmpty())
 			throw new EmptyQueueException();
-		return list.delete(0);
+		return tape.delete(0);
 	}
 
 	@Override
 	public void clear() {
-		list.clear();
+		tape.clear();
 	}
 
 	@Override
 	public int size() {
-		return list.size();
+		return tape.size();
 	}
 
 	@Override
 	public boolean isEmpty() {
-		return list.isEmpty();
+		return tape.isEmpty();
 	}
 }
