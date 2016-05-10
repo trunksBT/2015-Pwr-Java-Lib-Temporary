@@ -2,6 +2,7 @@ package bt.core.algorithms.graphs;
 
 import java.time.Instant;
 
+import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -19,13 +20,22 @@ import junit.framework.TestCase;
 public class Test_DFS extends TestCase
 {
 	final int size = 9;
+	LinkedList[] mockAdjacentList = null;
+	LinkedList mockExpVal = null;
+	
+	@Before
+	public void setUp () throws Exception{
+		mockAdjacentList = getAdjacentList(size);
+		mockExpVal = getExpVal();
+	}
+	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
 	public void test_adjacentList_WithTime_012356874()
 	{
 	    //arrange
 		ArrayList rcVal = null;
-		Graph<Integer,String> graph = new AdjacentList<String>(getAdjacentList(size));
+		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentList);
 	    boolean rcLogic = true;
 	    final int arraySize = 1000000;
 	    int endVal = 0;
@@ -45,7 +55,7 @@ public class Test_DFS extends TestCase
 	    
 	    //assert
 	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = getExpVal().iterator();
+	    Iterator sndIt = mockExpVal.iterator();
 	    fstIt.first();
 	    sndIt.first();
 	    while(!fstIt.isDone() && !sndIt.isDone()) {
@@ -60,7 +70,7 @@ public class Test_DFS extends TestCase
 	{
 	    //arrange
 		ArrayList rcVal = null;
-		Graph<Integer,String> graph = new AdjacentList<String>(getAdjacentList(size));
+		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentList);
 	    boolean rcLogic = true;
 	    
 	    //act
@@ -69,7 +79,7 @@ public class Test_DFS extends TestCase
 	    
 	    //assert
 	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = getExpVal().iterator();
+	    Iterator sndIt = mockExpVal.iterator();
 	    fstIt.first();
 	    sndIt.first();
 	    while(!fstIt.isDone() && !sndIt.isDone()) {
