@@ -18,9 +18,7 @@ import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Test_DFS extends TestCase
-{
-	final int size = 9;	
-	
+{	
 //	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 //	@Test
 //	public void test_adjacentList_WithTime_012356874()
@@ -58,11 +56,12 @@ public class Test_DFS extends TestCase
 //	}
 	
 	@Test
-	public void test_adjacentList_012356874()
+	public void test_adjacentList_NotEmpty_012356874()
 	{
 	    //arrange
 		ArrayList rcVal = null;
-		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentListNotEmpty(size));
+		int inSize = 9;
+		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentListNotEmpty(inSize));
 	    boolean rcLogic = true;
 	    
 	    //act
@@ -82,11 +81,11 @@ public class Test_DFS extends TestCase
 	}
 	
 	@Test
-	public void test_adjacentList_Null()
+	public void test_adjacentList_Null_Empty()
 	{
 	    //arrange
 		ArrayList rcVal = null;
-		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentListNull(size));
+		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentListNull(0));
 	    boolean rcLogic = true;
 	    
 	    //act
@@ -96,6 +95,31 @@ public class Test_DFS extends TestCase
 	    //assert
 	    Iterator fstIt = rcVal.iterator();
 	    Iterator sndIt = mockExpValNull().iterator();
+	    fstIt.first();
+	    sndIt.first();
+	    while(!fstIt.isDone() && !sndIt.isDone()) {
+	    	rcLogic &= fstIt.current().equals(sndIt.current());
+	    	fstIt.next(); sndIt.next();
+	    }
+	    assertTrue(rcLogic);
+	}
+	
+	@Test
+	public void test_adjacentList_TwoElem_12()
+	{
+	    //arrange
+		ArrayList rcVal = null;
+		int inSize = 2;
+		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentListTwoElem(inSize));
+	    boolean rcLogic = true;
+	    
+	    //act
+		rcVal = (ArrayList) new DFS<String>()
+		    		.forAdjacentList((AdjacentList<String>) graph);
+	    
+	    //assert
+	    Iterator fstIt = rcVal.iterator();
+	    Iterator sndIt = mockExpValTwoElem().iterator();
 	    fstIt.first();
 	    sndIt.first();
 	    while(!fstIt.isDone() && !sndIt.isDone()) {
@@ -138,16 +162,18 @@ public class Test_DFS extends TestCase
 		return (LinkedList) tab;
 	}
 	
-	public LinkedList[] mockAdjacentListOneElem(int size) {
+	public LinkedList[] mockAdjacentListTwoElem(int size) {
 		LinkedList [] tab = new LinkedList[size];
 		for(int i = 0; i < size ; i++)
 			tab[i] = new LinkedList();
+		tab[0].add(1);
 		return tab;
 	}
 	
-	public LinkedList mockExpValOneElem() {
+	public LinkedList mockExpValTwoElem() {
 		List tab = new LinkedList();
 		tab.add(0);
+		tab.add(1);
 		return (LinkedList) tab;
 	}
 	

@@ -62,3 +62,6 @@
 1462907869447	Rename method 'getExpVal'
 1462907924597	Rename method 'getAdjacentListNotEmpty'
 1462907933812	Rename method 'getExpValNotEmpty'
+1462908862864	Rename method 'getAdjacentList'
+1462908868221	Rename method 'mockAdjacentList'
+1462908875131	Rename method 'getExpVal'
