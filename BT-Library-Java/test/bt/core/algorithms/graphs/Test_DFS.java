@@ -8,6 +8,7 @@ import bt.core.algorithms.graph.DFS;
 import bt.core.collections.graphs.Graph;
 import bt.core.collections.graphs.AdjacentList;
 import bt.core.collections.interfaces.List;
+import bt.core.collections.iterators.Iterator;
 import bt.core.collections.lists.LinkedList;
 import junit.framework.TestCase;
 
@@ -21,6 +22,7 @@ public class Test_DFS extends TestCase
 	{
 	    //arrange
 	    LinkedList rcVal = null;
+	    boolean rcLogic = true;
 	    
 	    //act
 	    rcVal = (LinkedList) new DFS<String>()
@@ -29,7 +31,15 @@ public class Test_DFS extends TestCase
 	    						getAdjacentList(size)));
 	    
 	    //assert
-	    assertEquals(getExpVal(), rcVal);
+	    Iterator fstIt = rcVal.iterator();
+	    Iterator sndIt = getExpVal().iterator();
+	    fstIt.first();
+	    sndIt.first();
+	    while(!fstIt.isDone() && !sndIt.isDone()) {
+	    	rcLogic &= fstIt.current().equals(sndIt.current());
+	    	fstIt.next(); sndIt.next();
+	    }
+	    assertTrue(rcLogic);
 	}
 	
 	public LinkedList[] getAdjacentList(int size) {

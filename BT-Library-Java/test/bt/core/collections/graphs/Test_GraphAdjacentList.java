@@ -35,6 +35,25 @@ public class Test_GraphAdjacentList extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
+	public void test_resetVerticesStory_false()
+	{
+	    //arrange	    
+		AdjacentList<String> inGraph = 
+	    		new AdjacentList<>(getMock(size));
+	    boolean expVal = false;
+	    boolean rcVal = false;
+	    
+	    //act
+	    inGraph.resetVerticesStory();
+	    
+	    //assert
+	    for(int i = 0 ; i <inGraph.numberOfVerts(); i++)
+	    	rcVal|= inGraph.getAdjacents(i).isDirty();
+	    assertEquals(expVal, rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
 	public void test_isVerticeDirty_of0_false()
 	{
 	    //arrange	    

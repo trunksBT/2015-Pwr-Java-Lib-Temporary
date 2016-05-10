@@ -1,8 +1,8 @@
 package bt.core.collections.graphs;
 
-import bt.core.collections.interfaces.List;
 import bt.core.collections.lists.DirtyListDecorator;
 import bt.core.collections.lists.LinkedList;
+import bt.core.collections.lists.ListDecorator;
 
 public class AdjacentList<W> implements Graph<Integer,W> {
 	DirtyListDecorator[] adjacents;
@@ -24,6 +24,10 @@ public class AdjacentList<W> implements Graph<Integer,W> {
 	public boolean isVerticeDirty(int searchedVert) {
 		return adjacents[searchedVert].isDirty();
 	}
+
+	public ListDecorator getAdjacents(int searchedVert) {
+		return adjacents[searchedVert];
+	}
 	
 	private void initAdjacentsList(LinkedList[] adjacents) {
 		if ( adjacents != null ) {
@@ -37,7 +41,10 @@ public class AdjacentList<W> implements Graph<Integer,W> {
 		}
 	}
 
-	public List getAdjacents(int searchedVert) {
-		return adjacents[searchedVert];
+	public void resetVerticesStory() {
+		for(DirtyListDecorator it: adjacents)
+			it.setDirty(false);
 	}
+	
+	// little idealized graph when keys are Integers and it's no holes sequence
 }
