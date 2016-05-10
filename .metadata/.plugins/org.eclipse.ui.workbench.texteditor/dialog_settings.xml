@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="assignNodes" key="selection"/>
+		<item value="Verts" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Edges"/>
+			<item value="GraphEdgeList"/>
 			<item value="countLowerNodes"/>
 			<item value="coutLowerNodes"/>
 			<item value="height"/>
 			<item value="countL"/>
 			<item value="countLeaves"/>
 			<item value="Nods"/>
-			<item value="countEN"/>
-			<item value="ExternalNods"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Verts"/>
+			<item value="GraphAdjacentList"/>
 			<item value="assignNodes"/>
 			<item value="countLowerNodes"/>
 			<item value="height"/>
 			<item value="Nodes"/>
 			<item value="countL"/>
 			<item value="Leaves"/>
-			<item value="External"/>
-			<item value="QuickSort2"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

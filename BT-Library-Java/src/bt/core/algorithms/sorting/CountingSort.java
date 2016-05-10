@@ -1,8 +1,8 @@
 package bt.core.algorithms.sorting;
 
 import bt.core.algorithms.interfaces.ListSorter;
-import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.interfaces.List;
+import bt.core.collections.lists.ArrayList;
 
 public class CountingSort implements ListSorter{
 	private final int upperLimExclusive;

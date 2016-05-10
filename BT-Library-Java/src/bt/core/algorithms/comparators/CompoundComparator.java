@@ -1,9 +1,9 @@
 package bt.core.algorithms.comparators;
 
 import bt.core.algorithms.interfaces.Comparator;
-import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.interfaces.List;
 import bt.core.collections.iterators.Iterator;
+import bt.core.collections.lists.ArrayList;
 
 public class CompoundComparator implements Comparator{
 	private final List comparators = new ArrayList();

@@ -3,3 +3,16 @@
 1462825736226	Rename type 'TestGuardedLinkedListDouble'
 1462826349968	Copy compilation unit
 1462826434468	Move compilation unit
+1462877582675	Rename package 'bt.test.core.collections.dataTypes.graphs'
+1462877610424	Rename package 'bt.tests.core.collections.dataTypes.graphs'
+1462877617018	Rename package 'bt.tests.core.collections.dataTypes.trees'
+1462877626171	Rename package 'bt.tests.core.collections.graphs'
+1462877633891	Rename package 'bt.tests.core.collections.graph'
+1462877641791	Rename package 'bt.core.collections.dataTypes.graphs'
+1462877647820	Rename package 'bt.core.collections.dataTypes.trees'
+1462877712871	Move compilation units
+1462877836114	Move compilation unit
+1462877881952	Rename package 'bt.core.collections.dataTypes'
+1462877921345	Delete element
+1462877926306	Move compilation units
+1462877937967	Rename package 'bt.tests.core.collections.dataTypes'

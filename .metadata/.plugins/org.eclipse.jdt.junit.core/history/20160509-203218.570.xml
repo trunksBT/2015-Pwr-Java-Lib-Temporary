@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_GraphEdgeList" project="BT-Library-Java" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.test.core.collections.dataTypes.graphs.Test_GraphEdgeList" time="0.0">
-    <testcase name="test_CTORandSize_mock_12" classname="bt.test.core.collections.dataTypes.graphs.Test_GraphEdgeList" time="0.0"/>
-    <testcase name="test_CTORandSize_null_12" classname="bt.test.core.collections.dataTypes.graphs.Test_GraphEdgeList" time="0.0"/>
-  </testsuite>
-</testrun>

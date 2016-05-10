@@ -3,8 +3,8 @@ package bt.core.algorithms.sorting;
 import java.util.PriorityQueue;
 
 import bt.core.algorithms.interfaces.ListSorter;
-import bt.core.collections.dataTypes.LinkedList;
 import bt.core.collections.interfaces.List;
+import bt.core.collections.lists.LinkedList;
 
 public class BucketSort implements ListSorter{
 	

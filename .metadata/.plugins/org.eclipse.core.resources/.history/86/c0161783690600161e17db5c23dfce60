@@ -1,7 +1,0 @@
-package bt.core.collections.dataTypes.trees;
-
-private class RatNode{
-	int val;
-	Node left;
-	Node right;
-}

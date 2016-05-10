@@ -6,10 +6,10 @@ import java.util.PriorityQueue;
 import bt.core.algorithms.comparators.ReverseComparator;
 import bt.core.algorithms.interfaces.Comparator;
 import bt.core.algorithms.interfaces.ListSorter;
-import bt.core.collections.dataTypes.ArrayList;
-import bt.core.collections.dataTypes.Queue;
 import bt.core.collections.interfaces.List;
 import bt.core.collections.iterators.Iterator;
+import bt.core.collections.lists.ArrayList;
+import bt.core.collections.queues.Queue;
 
 public class HeapSort implements ListSorter {
 	private final Comparator order;

@@ -9,8 +9,8 @@ import bt.core.algorithms.comparators.NaturalComparator;
 import bt.core.algorithms.sorting.BubbleSortOptimal;
 import bt.core.algorithms.sorting.BubbleSortPrimitive;
 import bt.core.algorithms.sorting.ShellSort;
-import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.interfaces.List;
+import bt.core.collections.lists.ArrayList;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)

@@ -6,8 +6,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import bt.core.collections.dataTypes.ArrayList;
 import bt.core.collections.interfaces.List;
+import bt.core.collections.lists.ArrayList;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
