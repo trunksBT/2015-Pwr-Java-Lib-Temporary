@@ -19,7 +19,8 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 
 	public List<S> dijkstrable(W aStart,W aEnd){
 		
-		List<W> dirtyVertices = new ArrayList<>();	
+		List<W> dirtyValues = new ArrayList<>();	
+		// comment
 		boolean finished = false;
 		boolean notFound = true;
 		
@@ -27,11 +28,11 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 				&& !graf.Krawedzie(aStart).isEmpty()){
 			
 			while(finished == false){
-				dirtyVertices.add(aStart);
+				dirtyValues.add(aStart);
 								
 				W curr = aStart;
 				List<W>  associations = graf.Krawedzie(curr);
-				associations.removeAll(dirtyVertices);
+				associations.removeAll(dirtyValues);
 										
 				List<W> appropriate = associations.stream()
 						.filter(vert -> vert.equals(aEnd))
@@ -58,10 +59,10 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 		
 		ArrayList<S> _final = new ArrayList<>();
 		if(!notFound)
-			dirtyVertices.add(aEnd);
+			dirtyValues.add(aEnd);
 		
-		for(int i  = 0 ; i < dirtyVertices.size()-1;i++)
-			_final.add(graf.Krawedz(dirtyVertices.get(i),dirtyVertices.get(i+1)));
+		for(int i  = 0 ; i < dirtyValues.size()-1;i++)
+			_final.add(graf.Krawedz(dirtyValues.get(i),dirtyValues.get(i+1)));
 						
 		return _final;	
 	}
