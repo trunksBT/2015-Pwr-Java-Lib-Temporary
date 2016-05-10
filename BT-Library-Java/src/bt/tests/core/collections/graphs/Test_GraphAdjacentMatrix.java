@@ -6,7 +6,7 @@ import org.junit.runners.MethodSorters;
 
 import bt.core.collections.graphs.Edge;
 import bt.core.collections.graphs.Graph;
-import bt.core.collections.graphs.GraphAdjacentMatrix;
+import bt.core.collections.graphs.AdjacentMatrix;
 import bt.core.collections.lists.LinkedList;
 import junit.framework.TestCase;
 
@@ -20,7 +20,7 @@ public class Test_GraphAdjacentMatrix extends TestCase
 	{
 	    //arrange	    
 	    Graph<Integer,String> inGraph = 
-	    		new GraphAdjacentMatrix<>(getMock(size));
+	    		new AdjacentMatrix<>(getMock(size));
 	    int expVal = 9;
 	    int rcVal = -1;
 	    
@@ -37,7 +37,7 @@ public class Test_GraphAdjacentMatrix extends TestCase
 	{
 	    //arrange	    
 	    Graph<Integer,String> inGraph = 
-	    		new GraphAdjacentMatrix<>(null);
+	    		new AdjacentMatrix<>(null);
 	    int expVal = 0;
 	    int rcVal = -1;
 	    
@@ -54,7 +54,7 @@ public class Test_GraphAdjacentMatrix extends TestCase
 	{
 	    //arrange	    
 		Graph<Integer,String> inGraph = 
-	    		new GraphAdjacentMatrix<>(new String[0][0]);
+	    		new AdjacentMatrix<>(new String[0][0]);
 	    int expVal = 0;
 	    int rcVal = -1;
 	    

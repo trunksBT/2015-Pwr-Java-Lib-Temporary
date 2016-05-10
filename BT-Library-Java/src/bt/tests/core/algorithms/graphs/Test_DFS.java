@@ -6,7 +6,7 @@ import org.junit.runners.MethodSorters;
 
 import bt.core.algorithms.graph.DFS;
 import bt.core.collections.graphs.Graph;
-import bt.core.collections.graphs.GraphAdjacentList;
+import bt.core.collections.graphs.AdjacentList;
 import bt.core.collections.interfaces.List;
 import bt.core.collections.lists.LinkedList;
 import junit.framework.TestCase;
@@ -25,7 +25,7 @@ public class Test_DFS extends TestCase
 	    //act
 	    rcVal = (LinkedList) new DFS<String>()
 	    		.forAdjacentList(
-	    				new GraphAdjacentList<>(
+	    				new AdjacentList<>(
 	    						getAdjacentList(size)));
 	    
 	    //assert

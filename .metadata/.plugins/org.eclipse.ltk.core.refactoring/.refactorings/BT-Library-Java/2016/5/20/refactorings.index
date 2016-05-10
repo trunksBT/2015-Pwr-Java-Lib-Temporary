@@ -22,3 +22,8 @@
 1462880348850	Infer generic type arguments
 1462880959197	Extract method 'initDirtyTable'
 1462880986176	Extract method 'initAdjacentsList'
+1462882043052	Rename type 'GraphAdjacentList'
+1462882050337	Rename type 'GraphAdjacentMatrix'
+1462882057172	Rename type 'GraphEdgeList'
+1462882380915	Rename type 'DirtyListDecorator'
+1462882620015	Copy compilation unit

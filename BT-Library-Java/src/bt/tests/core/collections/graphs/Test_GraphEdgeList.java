@@ -6,7 +6,7 @@ import org.junit.runners.MethodSorters;
 
 import bt.core.collections.graphs.Edge;
 import bt.core.collections.graphs.Graph;
-import bt.core.collections.graphs.GraphEdgeList;
+import bt.core.collections.graphs.EdgeList;
 import bt.core.collections.lists.LinkedList;
 import junit.framework.TestCase;
 
@@ -19,7 +19,7 @@ public class Test_GraphEdgeList extends TestCase
 	{
 	    //arrange	    
 	    Graph<Integer,String> inGraph = 
-	    		new GraphEdgeList<>(getMock());
+	    		new EdgeList<>(getMock());
 	    int expVal = 12;
 	    int rcVal = -1;
 	    
@@ -36,7 +36,7 @@ public class Test_GraphEdgeList extends TestCase
 	{
 	    //arrange	    
 	    Graph<Integer,String> inGraph = 
-	    		new GraphEdgeList<>(null);
+	    		new EdgeList<>(null);
 	    int expVal = 0;
 	    int rcVal = -1;
 	    
@@ -53,7 +53,7 @@ public class Test_GraphEdgeList extends TestCase
 	{
 	    //arrange	    
 		Graph<Integer,String> inGraph = 
-	    		new GraphEdgeList<>(new LinkedList());
+	    		new EdgeList<>(new LinkedList());
 	    int expVal = 0;
 	    int rcVal = -1;
 	    
