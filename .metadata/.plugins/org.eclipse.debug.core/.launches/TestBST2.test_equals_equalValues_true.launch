@@ -10,7 +10,7 @@
 <booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
 <stringAttribute key="org.eclipse.jdt.junit.TESTNAME" value="test_equals_equalValues_true"/>
 <stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit4"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bt.tests.core.collections.lists.TestBST2"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bt.core.collections.lists.TestBST2"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BT-Library-Java"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=""/>
 </launchConfiguration>

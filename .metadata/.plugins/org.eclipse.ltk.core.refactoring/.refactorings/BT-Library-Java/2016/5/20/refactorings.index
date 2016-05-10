@@ -27,3 +27,26 @@
 1462882057172	Rename type 'GraphEdgeList'
 1462882380915	Rename type 'DirtyListDecorator'
 1462882620015	Copy compilation unit
+1462894739388	Move package
+1462894781188	Move packages
+1462894802534	Rename package 'bt.test.core.ABC'
+1462894839309	Rename package 'bt.tests.core.wrox.algosFromBegg'
+1462894847818	Rename package 'bt.tests.core.reflections'
+1462894856630	Rename package 'bt.tests.core.geometry.complex'
+1462894863931	Rename package 'bt.tests.core.geometry.elementaries'
+1462894872021	Rename package 'bt.tests.core.geometry.shapes'
+1462894878492	Rename package 'bt.tests.core.geometry'
+1462894885146	Rename package 'bt.tests.core.collections.various'
+1462894891734	Rename package 'bt.tests.core.collections.trees'
+1462894897730	Rename package 'bt.tests.core.collections.queues'
+1462894908576	Rename package 'bt.tests.core.collections.lists'
+1462894914774	Rename package 'bt.tests.core.collections.iterators'
+1462894920160	Rename package 'bt.tests.core.collections.graphs'
+1462894927062	Rename package 'bt.tests.core.collections.elems'
+1462894933019	Rename package 'bt.tests.core.collections'
+1462894939978	Rename package 'bt.tests.core.algorithms.sorting'
+1462894945644	Rename package 'bt.tests.core.algorithms.graphs'
+1462894951749	Rename package 'bt.tests.core.algorithms.comparators'
+1462894957914	Rename package 'bt.tests.core.algorithms'
+1462894964682	Rename package 'bt.tests'
+1462894980539	Delete element

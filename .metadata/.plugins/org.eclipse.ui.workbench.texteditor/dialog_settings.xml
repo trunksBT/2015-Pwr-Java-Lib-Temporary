@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Verts" key="selection"/>
+		<item value="List tape = new DirtyListDecorator(new LinkedList());" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="List tape = new LinkedList();"/>
+			<item value="GraphAdjacentList"/>
+			<item value="package bt.tests.core.collections.graphs;"/>
 			<item value="Edges"/>
 			<item value="GraphEdgeList"/>
 			<item value="countLowerNodes"/>
 			<item value="coutLowerNodes"/>
 			<item value="height"/>
-			<item value="countL"/>
-			<item value="countLeaves"/>
-			<item value="Nods"/>
 		</list>
 		<list key="replacehistory">
+			<item value="List tape = new DirtyListDecorator(new LinkedList());"/>
+			<item value="GraphAdjacentMatrix"/>
 			<item value="Verts"/>
 			<item value="GraphAdjacentList"/>
 			<item value="assignNodes"/>
 			<item value="countLowerNodes"/>
 			<item value="height"/>
 			<item value="Nodes"/>
-			<item value="countL"/>
-			<item value="Leaves"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
