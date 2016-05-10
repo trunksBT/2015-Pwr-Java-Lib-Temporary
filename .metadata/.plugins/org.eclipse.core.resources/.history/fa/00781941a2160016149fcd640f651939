@@ -144,33 +144,4 @@ public class LinkedList extends AbstractList implements List {
 		
 		return el;
 	}
-	
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + ((hdAndTl == null) ? 0 : hdAndTl.hashCode());
-		result = prime * result + size;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		LinkedList other = (LinkedList) obj;
-		if (hdAndTl == null) {
-			if (other.hdAndTl != null)
-				return false;
-		} else if (!hdAndTl.equals(other.hdAndTl))
-			return false;
-		if (size != other.size)
-			return false;
-		return true;
-	}
 }

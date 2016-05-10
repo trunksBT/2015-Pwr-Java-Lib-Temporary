@@ -17,3 +17,8 @@
 1462877926306	Move compilation units
 1462877937967	Rename package 'bt.tests.core.collections.dataTypes'
 1462878193905	Copy compilation unit
+1462879731764	Copy compilation unit
+1462879768387	Rename type 'Test_GraphAdjacentList'
+1462880348850	Infer generic type arguments
+1462880959197	Extract method 'initDirtyTable'
+1462880986176	Extract method 'initAdjacentsList'

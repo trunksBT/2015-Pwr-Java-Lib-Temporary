@@ -13,7 +13,6 @@ public class GraphAdjacentList<W> implements Graph<Integer,W> {
 		initAdjacentsList(adjacents);	
 		initDirtyTable();
 	}
-	
 	@Override
 	public int numberOfVerts() {
 		return adjacents.length;
