@@ -1,5 +1,7 @@
 package bt.core.algorithms.graphs;
 
+import java.time.Instant;
+
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -9,6 +11,7 @@ import bt.core.collections.graphs.Graph;
 import bt.core.collections.graphs.AdjacentList;
 import bt.core.collections.interfaces.List;
 import bt.core.collections.iterators.Iterator;
+import bt.core.collections.lists.ArrayList;
 import bt.core.collections.lists.LinkedList;
 import junit.framework.TestCase;
 
@@ -18,17 +21,51 @@ public class Test_DFS extends TestCase
 	final int size = 9;
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
+	public void test_adjacentList_WithTime_012356874()
+	{
+	    //arrange
+		ArrayList rcVal = null;
+		Graph<Integer,String> graph = new AdjacentList<String>(getAdjacentList(size));
+	    boolean rcLogic = true;
+	    final int arraySize = 1000000;
+	    int endVal = 0;
+	    java.util.ArrayList<Integer> toTimeCalc = new java.util.ArrayList<>(arraySize);
+	    //act
+	    for(int i = 0 ; i < arraySize; i++) {
+		    int start = Instant.now().getNano();
+		    rcVal = ((ArrayList) new DFS<String>()
+		    		.forAdjacentList((AdjacentList<String>) graph));
+		    int end = Instant.now().getNano();
+		    toTimeCalc.add(end-start);
+	    }
+	    for(int it :toTimeCalc)
+	    	endVal+=it;
+	    
+	    System.out.println( "TimePerform:"+ endVal / arraySize );
+	    
+	    //assert
+	    Iterator fstIt = rcVal.iterator();
+	    Iterator sndIt = getExpVal().iterator();
+	    fstIt.first();
+	    sndIt.first();
+	    while(!fstIt.isDone() && !sndIt.isDone()) {
+	    	rcLogic &= fstIt.current().equals(sndIt.current());
+	    	fstIt.next(); sndIt.next();
+	    }
+	    assertTrue(rcLogic);
+	}
+	
+	@Test
 	public void test_adjacentList_012356874()
 	{
 	    //arrange
-	    LinkedList rcVal = null;
+		ArrayList rcVal = null;
+		Graph<Integer,String> graph = new AdjacentList<String>(getAdjacentList(size));
 	    boolean rcLogic = true;
 	    
 	    //act
-	    rcVal = (LinkedList) new DFS<String>()
-	    		.forAdjacentList(
-	    				new AdjacentList<>(
-	    						getAdjacentList(size)));
+		rcVal = ((ArrayList) new DFS<String>()
+		    		.forAdjacentList((AdjacentList<String>) graph));
 	    
 	    //assert
 	    Iterator fstIt = rcVal.iterator();
