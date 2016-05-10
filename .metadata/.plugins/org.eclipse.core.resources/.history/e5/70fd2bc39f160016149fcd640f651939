@@ -6,12 +6,12 @@ import org.junit.runners.MethodSorters;
 
 import bt.core.collections.graphs.Edge;
 import bt.core.collections.graphs.Graph;
-import bt.core.collections.graphs.GraphAdjacentList;
+import bt.core.collections.graphs.GraphAdjacentMatrix;
 import bt.core.collections.lists.LinkedList;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class Test_GraphAdjacentList extends TestCase
+public class Test_GraphAdjacentMatrix extends TestCase
 {
 	final int size = 9;
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
@@ -20,7 +20,7 @@ public class Test_GraphAdjacentList extends TestCase
 	{
 	    //arrange	    
 	    Graph<Integer,String> inGraph = 
-	    		new GraphAdjacentList<>(getMock(size));
+	    		new GraphAdjacentMatrix<>(getMock(size));
 	    int expVal = 9;
 	    int rcVal = -1;
 	    
@@ -37,7 +37,7 @@ public class Test_GraphAdjacentList extends TestCase
 	{
 	    //arrange	    
 	    Graph<Integer,String> inGraph = 
-	    		new GraphAdjacentList<>(null);
+	    		new GraphAdjacentMatrix<>(null);
 	    int expVal = 0;
 	    int rcVal = -1;
 	    
@@ -54,7 +54,7 @@ public class Test_GraphAdjacentList extends TestCase
 	{
 	    //arrange	    
 		Graph<Integer,String> inGraph = 
-	    		new GraphAdjacentList<>(new LinkedList[0]);
+	    		new GraphAdjacentMatrix<>(new LinkedList[0]);
 	    int expVal = 0;
 	    int rcVal = -1;
 	    
@@ -65,22 +65,22 @@ public class Test_GraphAdjacentList extends TestCase
 	    assertEquals(expVal, rcVal);
 	}
 	
-	public LinkedList[] getMock(int size) {
-		LinkedList [] tab = new LinkedList[size];
-		for(int i = 0; i < size ; i++)
-			tab[i] = new LinkedList();
-		tab[0].add(1);
-		tab[0].add(3);		
-		tab[1].add(2);
-		tab[1].add(4);	
-		tab[2].add(3);
-		tab[2].add(4);	
-		tab[3].add(5);
-		tab[4].add(6);
-		tab[5].add(6);
-		tab[5].add(7);
-		tab[6].add(8);
-		tab[7].add(8);
+	public String [][] getMock(int size) {
+		String [][] tab = new String[3][2];
+//		for(int i = 0; i < size ; i++)
+//			tab[i] = new LinkedList();
+//		tab[0].add(1);
+//		tab[0].add(3);		
+//		tab[1].add(2);
+//		tab[1].add(4);	
+//		tab[2].add(3);
+//		tab[2].add(4);	
+//		tab[3].add(5);
+//		tab[4].add(6);
+//		tab[5].add(6);
+//		tab[5].add(7);
+//		tab[6].add(8);
+//		tab[7].add(8);
 		return tab;
 	}
 }

@@ -3,7 +3,7 @@ package bt.core.collections.graphs;
 import bt.core.collections.interfaces.List;
 import bt.core.collections.lists.LinkedList;
 
-public class GraphAdjacentList<W> implements Graph<Integer,W> {
+public class GraphAdjacentList<Integer,W> implements Graph<Integer,W> {
 	List[] adjacents;
 	public GraphAdjacentList(LinkedList[] adjacents) {
 		if ( adjacents != null )
