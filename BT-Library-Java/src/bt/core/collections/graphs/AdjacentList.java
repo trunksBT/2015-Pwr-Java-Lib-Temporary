@@ -26,7 +26,10 @@ public class AdjacentList<W> implements Graph<Integer,W> {
 	}
 
 	public ListDecorator getAdjacents(int searchedVert) {
-		return adjacents[searchedVert];
+		if (searchedVert >= 0 && searchedVert < adjacents.length)
+			return adjacents[searchedVert];
+		else
+			return new DirtyListDecorator(null);
 	}
 	
 	private void initAdjacentsList(LinkedList[] adjacents) {

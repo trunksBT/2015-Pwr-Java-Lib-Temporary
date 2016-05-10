@@ -19,15 +19,7 @@ import junit.framework.TestCase;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Test_DFS extends TestCase
 {
-	final int size = 9;
-	LinkedList[] mockAdjacentList = null;
-	LinkedList mockExpVal = null;
-	
-	@Before
-	public void setUp () throws Exception{
-		mockAdjacentList = getAdjacentList(size);
-		mockExpVal = getExpVal();
-	}
+	final int size = 9;	
 	
 //	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 //	@Test
@@ -70,7 +62,7 @@ public class Test_DFS extends TestCase
 	{
 	    //arrange
 		ArrayList rcVal = null;
-		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentList);
+		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentListNotEmpty(size));
 	    boolean rcLogic = true;
 	    
 	    //act
@@ -79,7 +71,7 @@ public class Test_DFS extends TestCase
 	    
 	    //assert
 	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = mockExpVal.iterator();
+	    Iterator sndIt = mockExpValNotEmpty().iterator();
 	    fstIt.first();
 	    sndIt.first();
 	    while(!fstIt.isDone() && !sndIt.isDone()) {
@@ -89,7 +81,31 @@ public class Test_DFS extends TestCase
 	    assertTrue(rcLogic);
 	}
 	
-	public LinkedList[] getAdjacentList(int size) {
+	@Test
+	public void test_adjacentList_Null()
+	{
+	    //arrange
+		ArrayList rcVal = null;
+		Graph<Integer,String> graph = new AdjacentList<String>(mockAdjacentListNull(size));
+	    boolean rcLogic = true;
+	    
+	    //act
+		rcVal = (ArrayList) new DFS<String>()
+		    		.forAdjacentList((AdjacentList<String>) graph);
+	    
+	    //assert
+	    Iterator fstIt = rcVal.iterator();
+	    Iterator sndIt = mockExpValNull().iterator();
+	    fstIt.first();
+	    sndIt.first();
+	    while(!fstIt.isDone() && !sndIt.isDone()) {
+	    	rcLogic &= fstIt.current().equals(sndIt.current());
+	    	fstIt.next(); sndIt.next();
+	    }
+	    assertTrue(rcLogic);
+	}
+	
+	public LinkedList[] mockAdjacentListNotEmpty(int size) {
 		LinkedList [] tab = new LinkedList[size];
 		for(int i = 0; i < size ; i++)
 			tab[i] = new LinkedList();
@@ -108,7 +124,7 @@ public class Test_DFS extends TestCase
 		return tab;
 	}
 	
-	public LinkedList getExpVal() {
+	public LinkedList mockExpValNotEmpty() {
 		List tab = new LinkedList();
 		tab.add(0);
 		tab.add(1);
@@ -120,5 +136,26 @@ public class Test_DFS extends TestCase
 		tab.add(7);
 		tab.add(4);
 		return (LinkedList) tab;
+	}
+	
+	public LinkedList[] mockAdjacentListOneElem(int size) {
+		LinkedList [] tab = new LinkedList[size];
+		for(int i = 0; i < size ; i++)
+			tab[i] = new LinkedList();
+		return tab;
+	}
+	
+	public LinkedList mockExpValOneElem() {
+		List tab = new LinkedList();
+		tab.add(0);
+		return (LinkedList) tab;
+	}
+	
+	public LinkedList[] mockAdjacentListNull(int size) {
+		return null;
+	}
+	
+	public LinkedList mockExpValNull() {
+		return new LinkedList();
 	}
 }

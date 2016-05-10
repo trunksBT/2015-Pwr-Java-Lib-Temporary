@@ -58,3 +58,7 @@
 1462906072684	Copy compilation unit
 1462906342977	Rename method 'numberOfVerts'
 1462906909128	Rename field 'list'
+1462907864697	Rename method 'getAdjacentList'
+1462907869447	Rename method 'getExpVal'
+1462907924597	Rename method 'getAdjacentListNotEmpty'
+1462907933812	Rename method 'getExpValNotEmpty'

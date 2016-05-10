@@ -72,7 +72,7 @@ public class Test_GraphAdjacentList extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_getAdjacents_of0_13()
+	public void test_getAdjacents_of0_1and3()
 	{
 	    //arrange	    
 		AdjacentList<String> inGraph = 
@@ -81,6 +81,34 @@ public class Test_GraphAdjacentList extends TestCase
 	    List expVal = new LinkedList();
 	    expVal.add(1);
 	    expVal.add(3);
+	    List rcVal = null;
+	    boolean rcLogic = true;
+	    
+	    //act
+	    rcVal = inGraph.getAdjacents(searchedVert);
+	    
+	    Iterator fstIt = rcVal.iterator();
+	    Iterator sndIt = expVal.iterator();
+	    fstIt.first();
+	    sndIt.first();
+	    while(!fstIt.isDone() && !sndIt.isDone()) {
+	    	rcLogic &= fstIt.current().equals(sndIt.current());
+	    	fstIt.next(); sndIt.next();
+	    }
+	    
+	    //assert
+	    assertTrue(rcLogic);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_getAdjacents_null_empty()
+	{
+	    //arrange	    
+		AdjacentList<String> inGraph = 
+	    		new AdjacentList<>(null);
+	    int searchedVert = 0;
+	    List expVal = new LinkedList();
 	    List rcVal = null;
 	    boolean rcLogic = true;
 	    
