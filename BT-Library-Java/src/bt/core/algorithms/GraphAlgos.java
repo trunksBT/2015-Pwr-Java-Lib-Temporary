@@ -18,6 +18,7 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 	}
 
 	public List<S> dijkstrable(W aStart,W aEnd){
+		
 		List<W> dirtyVertices = new ArrayList<>();	
 		boolean finished = false;
 		boolean notFound = true;
