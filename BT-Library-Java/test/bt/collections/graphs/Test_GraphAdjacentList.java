@@ -23,7 +23,7 @@ public class Test_GraphAdjacentList extends TestCase
 	    //arrange	    
 	    Graph<Integer,String> inGraph = 
 	    		new AdjacentList<>(getMock(size));
-	    int expVal = 9;
+	    int expVal = 9; 
 	    int rcVal = -1;
 	    
 	    //act
