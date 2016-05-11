@@ -1,14 +1,17 @@
 package bt.collections.graphs;
 
+import bt.algorithms.sorting.QuickSort;
 import bt.collections.interfaces.List;
 import bt.collections.lists.LinkedList;
 
-public class EdgeList<V,W> implements Graph<V,W>{
+public class EdgeList<W> implements Graph<Integer,W>{
 	List edgeList;
 	
 	public EdgeList(LinkedList edgeList) {
-		if(edgeList!=null)
-			this.edgeList = edgeList;
+		if(edgeList!=null) {
+			this.edgeList = new QuickSort(null).sort(edgeList);		
+			// sortuj Liste
+		}		
 		else
 			this.edgeList = new LinkedList();
 	}
