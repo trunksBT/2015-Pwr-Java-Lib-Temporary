@@ -1,5 +1,6 @@
 package bt.collections.graphs;
 
+import bt.algorithms.comparators.EdgeComparator;
 import bt.algorithms.sorting.QuickSort;
 import bt.collections.interfaces.List;
 import bt.collections.lists.LinkedList;
@@ -9,8 +10,7 @@ public class EdgeList<W> implements Graph<Integer,W>{
 	
 	public EdgeList(LinkedList edgeList) {
 		if(edgeList!=null) {
-			this.edgeList = new QuickSort(null).sort(edgeList);		
-			// sortuj Liste
+			this.edgeList = new QuickSort(new EdgeComparator()).sort(edgeList);		
 		}		
 		else
 			this.edgeList = new LinkedList();

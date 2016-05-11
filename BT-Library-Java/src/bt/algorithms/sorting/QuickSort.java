@@ -24,7 +24,7 @@ public class QuickSort implements ListSorter{
 		}
 	}
 	private int partition(List tape, int idxLeft, int idxOfPivot) {	
-		Object pivot = tape.get(idxOfPivot); // last elem
+		Object pivot = tape.get(idxOfPivot);
 		int idxHigherOfPivot = idxLeft -1;
 		int idxLowerOfPivot = idxOfPivot;
 		while(idxHigherOfPivot<idxLowerOfPivot) {

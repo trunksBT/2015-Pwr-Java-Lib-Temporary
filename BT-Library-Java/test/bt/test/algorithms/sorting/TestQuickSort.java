@@ -5,12 +5,16 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.algorithms.Sequences;
+import bt.algorithms.comparators.EdgeComparator;
 import bt.algorithms.comparators.NaturalComparator;
 import bt.algorithms.sorting.BubbleSortOptimal;
 import bt.algorithms.sorting.BubbleSortPrimitive;
 import bt.algorithms.sorting.QuickSort;
+import bt.collections.graphs.Edge;
 import bt.collections.interfaces.List;
+import bt.collections.iterators.Iterator;
 import bt.collections.lists.ArrayList;
+import bt.collections.lists.LinkedList;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -120,6 +124,32 @@ public class TestQuickSort extends TestCase
 		
 		//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 		@Test
+		public void test_QuickSort_onEdgeList_Expect_True()
+		{
+		    //arrange	    
+			List tape = getEdgeListMixed();
+			List orderedTape = null;
+			List expectedTape = getEdgeListOrdered();
+			boolean rcLogic = true;
+			boolean expLogic = true;
+			
+		    //act
+			orderedTape = new QuickSort(new EdgeComparator()).sort(tape);
+		    
+		    //assert
+			Iterator fstIt = orderedTape.iterator();
+			Iterator sndIt = expectedTape.iterator();
+			fstIt.first(); sndIt.first();
+			while(!fstIt.isDone()&&!sndIt.isDone()) {
+				rcLogic &= fstIt.current().equals(sndIt.current());
+				fstIt.next(); sndIt.next();		
+			}
+				
+		    assertTrue(rcLogic);
+		}
+		
+		//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+		@Test
 		public void test_QuickSort_012345678_Expect_012345678_True()
 		{
 		    //arrange	    
@@ -187,5 +217,39 @@ public class TestQuickSort extends TestCase
 		    
 		    //assert
 		    assertEquals(expectedTape,orderedTape);
+		}
+		
+		public LinkedList getEdgeListOrdered() {
+			LinkedList retVal = new LinkedList();
+			retVal.add(new Edge<Integer,String>(0,1,"ab"));
+			retVal.add(new Edge<Integer,String>(0,3,"ad"));
+			retVal.add(new Edge<Integer,String>(1,2,"bc"));
+			retVal.add(new Edge<Integer,String>(1,4,"be"));
+			retVal.add(new Edge<Integer,String>(2,3,"cd"));
+			retVal.add(new Edge<Integer,String>(2,4,"ce"));
+			retVal.add(new Edge<Integer,String>(3,5,"df"));
+			retVal.add(new Edge<Integer,String>(4,6,"eg"));
+			retVal.add(new Edge<Integer,String>(5,6,"fg"));
+			retVal.add(new Edge<Integer,String>(5,7,"fh"));
+			retVal.add(new Edge<Integer,String>(6,8,"gi"));
+			retVal.add(new Edge<Integer,String>(7,8,"hi"));
+			return retVal;
+		}
+		
+		public LinkedList getEdgeListMixed() {
+			LinkedList retVal = new LinkedList();
+			retVal.add(new Edge<Integer,String>(2,3,"cd"));
+			retVal.add(new Edge<Integer,String>(5,7,"fh"));
+			retVal.add(new Edge<Integer,String>(0,3,"ad"));	
+			retVal.add(new Edge<Integer,String>(1,2,"bc"));		
+			retVal.add(new Edge<Integer,String>(7,8,"hi"));
+			retVal.add(new Edge<Integer,String>(2,4,"ce"));
+			retVal.add(new Edge<Integer,String>(3,5,"df"));
+			retVal.add(new Edge<Integer,String>(4,6,"eg"));
+			retVal.add(new Edge<Integer,String>(1,4,"be"));
+			retVal.add(new Edge<Integer,String>(6,8,"gi"));
+			retVal.add(new Edge<Integer,String>(5,6,"fg"));
+			retVal.add(new Edge<Integer,String>(0,1,"ab"));		
+			return retVal;
 		}
 }
