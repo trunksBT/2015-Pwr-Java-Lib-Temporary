@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.junit.launchconfig">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/BT-Library-Java/test/bt/test/collections/lists/TestArrayList.java"/>
+<listEntry value="/BT-Library-Java/test/bt/collections/lists/TestArrayList.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -10,7 +10,7 @@
 <booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
 <stringAttribute key="org.eclipse.jdt.junit.TESTNAME" value="test_delete_byVal_notEmpty_false"/>
 <stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit4"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bt.test.collections.lists.TestArrayList"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bt.collections.lists.TestArrayList"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BT-Library-Java"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=""/>
 </launchConfiguration>

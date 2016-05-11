@@ -1,8 +1,0 @@
-package bt.collections.graphs;
-
-public abstract class DirtyEdgeDecorator<V,W> extends Edge<V,W>{
-	Edge<V,W> decorated;
-	public DirtyEdgeDecorator(Edge<V,W> edge) {
-		decorated = edge;
-	}
-}

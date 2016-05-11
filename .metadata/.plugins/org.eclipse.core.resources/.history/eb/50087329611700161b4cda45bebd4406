@@ -1,7 +1,0 @@
-package bt.collections.graphs;
-
-import bt.collections.interfaces.Edgable;
-
-public class EdgeDecorator<V,W> implements Edgable<V,W>{
-
-}
