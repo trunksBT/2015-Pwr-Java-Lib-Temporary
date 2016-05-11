@@ -4,8 +4,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import bt.algorithms.Sequences;
 import bt.collections.graphs.DirtyEdgeDecorator;
+import bt.collections.graphs.EdgeDecorator;
 import bt.collections.graphs.Edge;
 import bt.collections.interfaces.Edgable;
 import junit.framework.TestCase;
@@ -92,29 +92,7 @@ public class Test_DirtyEdgeDecorator extends TestCase
 	    //assert
 	    assertEquals(expVal , rcVal);
 	}
-	
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
-	public void test_isDirty_getEnd_From_0to1_wage_cat_True()
-	{
-	    //arrange	    
-	    int inStart = 0;	
-	    int inEnd = 1;
-	    String inWage = "cat";
-	    Edgable<Integer,String> inEdge = new DirtyEdgeDecorator<>(new Edge<>(inStart, inEnd, inWage));
-	    int expVal = 1;
-	    int rcVal = -1;
-	    boolean rcLogic;
-	      
-	    //act
-	    rcVal = inEdge.getEnd();
-	    rcLogic = ((DirtyEdgeDecorator<Integer,String>)inEdge).isDirty();
-	    
-	    //assert
-	    assertEquals(expVal , rcVal);
-	    assertTrue(rcLogic);
-	}
-	
+
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
 	public void test_workingWithPolymorphism()
@@ -124,14 +102,14 @@ public class Test_DirtyEdgeDecorator extends TestCase
 	    int inEnd = 1;
 	    String inWage = "cat";
 	    DirtyEdgeDecorator<Integer,String> inEdge = new DirtyEdgeDecorator<>(new Edge<>(inStart, inEnd, inWage));
-	    Edge<Integer,String> inEdge2 = inEdge;
+	    Edgable<Integer,String> inEdge2 = inEdge;
 	    //act
 	    inEdge.getStart();
-	    ((Edge<Integer,String>)inEdge).getStart();
+	    ((Edgable<Integer,String>)inEdge).getStart();
+	    
 	    
 	    inEdge2.getStart();
-	    ((Edge<Integer,String>)inEdge2).getStart();
-	    
+	    ((EdgeDecorator<Integer,String>)inEdge2).getStart();
 	    // Java object are made on references not on pointers, so after statically tying to object i 
 	    // can't go up in class hierarchy
 	    

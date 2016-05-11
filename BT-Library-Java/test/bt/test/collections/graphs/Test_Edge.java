@@ -4,7 +4,6 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import bt.algorithms.Sequences;
 import bt.collections.graphs.Edge;
 import bt.collections.interfaces.Edgable;
 import junit.framework.TestCase;

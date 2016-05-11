@@ -6,6 +6,7 @@ import org.junit.runners.MethodSorters;
 
 import bt.algorithms.graph.DFS;
 import bt.collections.graphs.AdjacentList;
+import bt.collections.graphs.DirtyEdgeDecorator;
 import bt.collections.graphs.Edge;
 import bt.collections.graphs.EdgeList;
 import bt.collections.graphs.Graph;
@@ -102,7 +103,7 @@ public class Test_DFS extends TestCase
 	    
 	    //act
 		rcVal = (ArrayList) new DFS<String>()
-		    		.forAdjacentList((AdjacentList<String>) graph);
+		    		.forEdgeList((EdgeList<String>) graph);
 	    
 	    //assert
 	    Iterator fstIt = rcVal.iterator();
@@ -116,20 +117,21 @@ public class Test_DFS extends TestCase
 	    assertTrue(rcLogic);
 	}
 	
-	public LinkedList mockEdgeListNotEmpty() {
-		LinkedList retVal = new LinkedList();
-		retVal.add(new Edge<Integer,String>(0,1,"ab"));
-		retVal.add(new Edge<Integer,String>(0,3,"ad"));
-		retVal.add(new Edge<Integer,String>(1,2,"bc"));
-		retVal.add(new Edge<Integer,String>(1,4,"be"));
-		retVal.add(new Edge<Integer,String>(2,3,"cd"));
-		retVal.add(new Edge<Integer,String>(2,4,"ce"));
-		retVal.add(new Edge<Integer,String>(3,5,"df"));
-		retVal.add(new Edge<Integer,String>(4,6,"eg"));
-		retVal.add(new Edge<Integer,String>(5,6,"fg"));
-		retVal.add(new Edge<Integer,String>(5,7,"fh"));
-		retVal.add(new Edge<Integer,String>(6,8,"gi"));
-		retVal.add(new Edge<Integer,String>(7,8,"hi"));
+	public ArrayList mockEdgeListNotEmpty() {
+		ArrayList retVal = new ArrayList();
+		// to change add method and hide this shit
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(0,1,"ab")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(0,3,"ad")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(1,2,"bc")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(1,4,"be")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(2,3,"cd")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(2,4,"ce")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(3,5,"df")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(4,6,"eg")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(5,6,"fg")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(5,7,"fh")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(6,8,"gi")));
+		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(7,8,"hi")));
 		return retVal;
 	}
 	

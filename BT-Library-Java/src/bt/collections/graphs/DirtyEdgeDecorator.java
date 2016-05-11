@@ -18,18 +18,21 @@ public class DirtyEdgeDecorator<V,W> extends EdgeDecorator<V,W>{
 
 	@Override
 	public V getStart() {
-		System.out.println( "DirtyEdgeDecoratorClass" );
 		return decorated.start;
 	}
 
 	@Override
 	public V getEnd() {
-		setDirty(true);
-		return decorated.end;
+		return decorated.getEnd();
 	}
 
 	@Override
 	public W getWage() {
 		return decorated.wage;
+	}
+	
+	@Override
+	public String toString() {
+		return "Dirty:"+isDirty + " " + decorated;
 	}
 }

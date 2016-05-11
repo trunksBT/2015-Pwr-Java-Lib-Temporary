@@ -3,16 +3,17 @@ package bt.collections.graphs;
 import bt.algorithms.comparators.EdgeComparator;
 import bt.algorithms.sorting.QuickSort;
 import bt.collections.interfaces.List;
-import bt.collections.lists.LinkedList;
+import bt.collections.lists.ArrayList;
+import bt.collections.graphs.DirtyEdgeDecorator;
 
 public class EdgeList<W> implements Graph<Integer,W>{
-	List edgeList;
+	ArrayList edgeList;
 	
-	public EdgeList(LinkedList edgeList) {
+	public EdgeList(List edgeList) {
 		if(edgeList!=null)
-			this.edgeList = new QuickSort(new EdgeComparator()).sort(edgeList);		
+			this.edgeList = (ArrayList) new QuickSort(new EdgeComparator()).sort(edgeList);		
 		else
-			this.edgeList = new LinkedList();
+			this.edgeList = new ArrayList();
 	}
 
 	public int size() {
@@ -27,5 +28,11 @@ public class EdgeList<W> implements Graph<Integer,W>{
 	@Override
 	public int numberOfEdges() {
 		return edgeList.size();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void resetVerticesStory() {
+		for(int i = 0 ; i<edgeList.size();i++)
+			((DirtyEdgeDecorator<Integer, W>)edgeList.get(i)).setDirty(false);
 	}
 }

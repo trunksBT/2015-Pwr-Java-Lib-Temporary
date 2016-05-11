@@ -1,6 +1,7 @@
 package bt.algorithms.graph;
 
 import bt.collections.graphs.AdjacentList;
+import bt.collections.graphs.EdgeList;
 import bt.collections.interfaces.List;
 import bt.collections.iterators.Iterator;
 import bt.collections.lists.ArrayList;
@@ -40,4 +41,9 @@ public class DFS<W> {
 //				innerAdjList((int) it.current(), graph, outTape);
 //		return outTape;
 //	}
+
+	public ArrayList forEdgeList(EdgeList<String> graph) {
+		graph.resetVerticesStory();
+		return null;
+	}
 }

@@ -1,6 +1,8 @@
 package bt.collections.graphs;
 
-public abstract class EdgeDecorator<V,W> extends Edge<V,W> {
+import bt.collections.interfaces.Edgable;
+
+public abstract class EdgeDecorator<V,W> implements Edgable<V,W> {
 	protected Edge<V,W> decorated;
 	
 	public EdgeDecorator(Edge<V,W> edge) {
