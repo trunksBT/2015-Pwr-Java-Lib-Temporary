@@ -25,7 +25,7 @@ public class AdjacentList<W> implements Graph<Integer,W> {
 		return adjacents[searchedVert].isDirty();
 	}
 
-	public DirtyListDecorator getAdjacentVerts(int searchedVert) {;
+	public ListDecorator getAdjacents(int searchedVert) {
 		if (searchedVert >= 0 && searchedVert < adjacents.length)
 			return adjacents[searchedVert];
 		else

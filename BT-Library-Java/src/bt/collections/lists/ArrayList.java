@@ -128,14 +128,5 @@ public class ArrayList extends AbstractList implements List {
 			array = copy;
 		}
 	}
-	
-	@Override
-	public String toString() {
-		StringBuilder retVal = new StringBuilder();
-		Iterator it = iterator();
-		for(it.first(); !it.isDone(); it.next())
-			retVal.append(it.current().toString());
-		return retVal.toString();
-	}
 
 }
