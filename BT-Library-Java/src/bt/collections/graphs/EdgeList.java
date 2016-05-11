@@ -5,6 +5,7 @@ import bt.algorithms.sorting.QuickSort;
 import bt.collections.interfaces.Edgable;
 import bt.collections.interfaces.List;
 import bt.collections.lists.ArrayList;
+import bt.collections.lists.LinkedList;
 import bt.collections.graphs.DirtyEdgeDecorator;
 
 public class EdgeList<W> implements Graph<Integer,W>{
@@ -37,8 +38,8 @@ public class EdgeList<W> implements Graph<Integer,W>{
 	}
 
 	@SuppressWarnings("unchecked")
-	public ArrayList getAdjacentEdges(int currVert) {
-		ArrayList retVal = new ArrayList((int)(size*0.75));
+	public LinkedList getAdjacentEdges(int currVert) {
+		LinkedList retVal = new LinkedList();
 		int i = 0;
 		boolean found = false;
 		// found first good idx ( some shape of indexOf )
