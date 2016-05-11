@@ -11,16 +11,16 @@ public class BFS<W> {
 	public List forAdjacentList(AdjacentList<W> graph) {
 		graph.resetVerticesStory();
 		ArrayList retVal = new ArrayList(graph.getNumberOfVerts());
-		graph.getAdjacents(startVert).setDirty(true);
+		graph.getAdjacentVerts(startVert).setDirty(true);
 		Queue pathStory = new Queue();
 		pathStory.enqueue(startVert);
 		while(!pathStory.isEmpty()) {
 			Integer dequeued = (Integer) pathStory.dequeue();
 			retVal.add(dequeued);
-			Iterator it = graph.getAdjacents(dequeued).iterator();
+			Iterator it = graph.getAdjacentVerts(dequeued).iterator();
 			for(it.first(); !it.isDone(); it.next())
 				if(!graph.isVerticeDirty((int) it.current())) {
-					graph.getAdjacents((int) it.current()).setDirty(true);
+					graph.getAdjacentVerts((int) it.current()).setDirty(true);
 					pathStory.enqueue(it.current());
 				}
 		}

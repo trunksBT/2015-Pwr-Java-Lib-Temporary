@@ -6,18 +6,21 @@ import bt.collections.interfaces.List;
 import bt.collections.iterators.Iterator;
 import bt.collections.lists.ArrayList;
 import bt.collections.lists.DirtyListDecorator;
+import bt.collections.lists.LinkedList;
 import bt.collections.lists.ListDecorator;
 
 public class DFS<W> {
+	private final int startVert = 0;
+	
 	public List forAdjacentList(AdjacentList<W> graph) {
 		graph.resetVerticesStory();
 		ArrayList retVal = new ArrayList(graph.getNumberOfVerts());
-		innerAdjList(0, graph, retVal);
+		innerAdjList(startVert, graph, retVal);
 		return retVal;
 	}
 	
 	private void innerAdjList(int currVert, AdjacentList<W> graph, List outTape) {
-		DirtyListDecorator adjacents = graph.getAdjacents(currVert);
+		DirtyListDecorator adjacents = graph.getAdjacentVerts(currVert);
 		adjacents.setDirty(true);
 		outTape.add(currVert);	
 		Iterator it = adjacents.iterator();
@@ -44,6 +47,11 @@ public class DFS<W> {
 
 	public ArrayList forEdgeList(EdgeList<String> graph) {
 		graph.resetVerticesStory();
+		
+		LinkedList outTape = new LinkedList();
+		int currVert = startVert;
+		ArrayList buffTape = graph.getAdjacentEdges(currVert);
+		
 		return null;
 	}
 }

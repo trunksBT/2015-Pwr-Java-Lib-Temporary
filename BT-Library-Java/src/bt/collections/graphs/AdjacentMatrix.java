@@ -16,4 +16,8 @@ public class AdjacentMatrix<W> implements Graph<Integer, W> {
 	public int numberOfEdges() {
 		throw new UnsupportedOperationException("notImplementedYet");
 	}
+	@Override
+	public void resetVerticesStory() {
+		// TODO Auto-generated method stub
+	}
 }

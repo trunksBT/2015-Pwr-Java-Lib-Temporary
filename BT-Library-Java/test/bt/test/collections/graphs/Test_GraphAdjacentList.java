@@ -48,7 +48,7 @@ public class Test_GraphAdjacentList extends TestCase
 	    
 	    //assert
 	    for(int i = 0 ; i <inGraph.getNumberOfVerts(); i++)
-	    	rcVal|= inGraph.getAdjacents(i).isDirty();
+	    	rcVal|= inGraph.getAdjacentVerts(i).isDirty();
 	    assertEquals(expVal, rcVal);
 	}
 	
@@ -85,7 +85,7 @@ public class Test_GraphAdjacentList extends TestCase
 	    boolean rcLogic = true;
 	    
 	    //act
-	    rcVal = inGraph.getAdjacents(searchedVert);
+	    rcVal = inGraph.getAdjacentVerts(searchedVert);
 	    
 	    Iterator fstIt = rcVal.iterator();
 	    Iterator sndIt = expVal.iterator();
@@ -113,7 +113,7 @@ public class Test_GraphAdjacentList extends TestCase
 	    boolean rcLogic = true;
 	    
 	    //act
-	    rcVal = inGraph.getAdjacents(searchedVert);
+	    rcVal = inGraph.getAdjacentVerts(searchedVert);
 	    
 	    Iterator fstIt = rcVal.iterator();
 	    Iterator sndIt = expVal.iterator();

@@ -119,7 +119,7 @@ public class Test_DFS extends TestCase
 	
 	public ArrayList mockEdgeListNotEmpty() {
 		ArrayList retVal = new ArrayList();
-		// to change add method and hide this shit
+		// to inherit from ArrayList and change add method to hide this shit
 		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(0,1,"ab")));
 		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(0,3,"ad")));
 		retVal.add(new DirtyEdgeDecorator<>(new Edge<Integer,String>(1,2,"bc")));

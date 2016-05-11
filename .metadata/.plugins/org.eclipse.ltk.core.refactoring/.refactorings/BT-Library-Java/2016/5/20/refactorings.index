@@ -130,3 +130,5 @@
 1462965459328	Copy compilation unit
 1462965692822	Copy compilation unit
 1462972055632	Infer generic type arguments
+1462973705904	Rename method 'getAdjacents'
+1462975177003	Rename method 'getAdjacentNodes'
