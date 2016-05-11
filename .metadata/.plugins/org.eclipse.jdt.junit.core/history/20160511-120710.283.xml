@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_DirtyEdgeDecorator" project="BT-Library-Java" tests="12" started="12" failures="1" errors="0" ignored="0">
+  <testsuite name="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0">
+    <testcase name="test_CTOR_isDirty_From_0to1_wage_cat_False" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_equals_From_0to1_wage_cat_True" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_getEnd_From_0to1_wage_cat_True" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_getStart_From_0to1_wage_cat_True" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_getWeight_From_0to1_wage_cat_True" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_hashCode_From_0to1_wage_cat_True" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_isDirty_getEndFromFatherClass_From_0to1_wage_cat_False" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertFalse(Assert.java:39)&#13;
+	at junit.framework.Assert.assertFalse(Assert.java:47)&#13;
+	at junit.framework.TestCase.assertFalse(TestCase.java:219)&#13;
+	at bt.test.collections.graphs.Test_DirtyEdgeDecorator.test_isDirty_getEndFromFatherClass_From_0to1_wage_cat_False(Test_DirtyEdgeDecorator.java:139)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="test_isDirty_getEnd_From_0to1_wage_cat_True" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_isDirty_getStart_From_0to1_wage_cat_False" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_setDirty_false_exp_false" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_setDirty_true_exp_true" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_toString_From_0to1_wage_cat_True" classname="bt.test.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+  </testsuite>
+</testrun>

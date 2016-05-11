@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestEdgeComparator" project="BT-Library-Java" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.test.algorithms.comparators.TestEdgeComparator" time="0.0">
+    <testcase name="test_EdgeComparator_01_CompareTo_Equals" classname="bt.test.algorithms.comparators.TestEdgeComparator" time="0.0"/>
+    <testcase name="test_EdgeComparator_01y11_CompareTo_fstLower" classname="bt.test.algorithms.comparators.TestEdgeComparator" time="0.0"/>
+    <testcase name="test_EdgeComparator_11y01_CompareTo_fstHigher" classname="bt.test.algorithms.comparators.TestEdgeComparator" time="0.0"/>
+    <testcase name="test_EdgeComparator_12y13_CompareTo_fstLower" classname="bt.test.algorithms.comparators.TestEdgeComparator" time="0.0"/>
+    <testcase name="test_EdgeComparator_18y10_CompareTo_fstHigher" classname="bt.test.algorithms.comparators.TestEdgeComparator" time="0.0"/>
+    <testcase name="test_EdgeComparator_90y12_CompareTo_fstHigher" classname="bt.test.algorithms.comparators.TestEdgeComparator" time="0.0"/>
+  </testsuite>
+</testrun>

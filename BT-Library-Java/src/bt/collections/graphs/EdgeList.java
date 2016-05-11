@@ -9,9 +9,8 @@ public class EdgeList<W> implements Graph<Integer,W>{
 	List edgeList;
 	
 	public EdgeList(LinkedList edgeList) {
-		if(edgeList!=null) {
+		if(edgeList!=null)
 			this.edgeList = new QuickSort(new EdgeComparator()).sort(edgeList);		
-		}		
 		else
 			this.edgeList = new LinkedList();
 	}

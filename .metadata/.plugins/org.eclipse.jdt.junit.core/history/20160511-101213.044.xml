@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_DFS" project="BT-Library-Java" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.algorithms.graphs.Test_DFS" time="0.0">
+    <testcase name="test_adjacentList_NotEmpty_012356874" classname="bt.algorithms.graphs.Test_DFS" time="0.0"/>
+    <testcase name="test_adjacentList_Null_Empty" classname="bt.algorithms.graphs.Test_DFS" time="0.0"/>
+    <testcase name="test_adjacentList_TwoElem_12" classname="bt.algorithms.graphs.Test_DFS" time="0.0"/>
+    <testcase name="test_edgeList_NotEmpty_012356874" classname="bt.algorithms.graphs.Test_DFS" time="0.0"/>
+  </testsuite>
+</testrun>

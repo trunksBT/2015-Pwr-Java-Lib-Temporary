@@ -1,0 +1,8 @@
+package bt.algorithms.comparators;
+
+public class EdgeComparator<V,W> extends CompoundComparator{
+	public EdgeComparator() {
+		addComparator(new EdgeEndComparator<V,W>());
+		addComparator(new EdgeStartComparator<V,W>());
+	}
+}

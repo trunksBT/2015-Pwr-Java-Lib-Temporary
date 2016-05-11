@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestEdgeEndComparator.test_EdgeEndComparator_01y11_CompareTo_Equals" project="BT-Library-Java" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="test_EdgeEndComparator_01y11_CompareTo_Equals" classname="bt.test.algorithms.comparators.TestEdgeEndComparator" time="0.0"/>
+</testrun>

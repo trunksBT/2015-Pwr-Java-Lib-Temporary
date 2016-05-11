@@ -18,6 +18,7 @@ public class Edge<V,W> implements Edgable<V,W>{
 	}
 
 	public V getStart() {
+		System.out.println( "EdgeClass" );
 		return start;
 	}
 	

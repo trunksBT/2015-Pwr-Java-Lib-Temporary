@@ -1,0 +1,13 @@
+package bt.algorithms.comparators;
+
+import bt.algorithms.interfaces.Comparator;
+
+public class EdgeStartComparator implements Comparator {
+
+	@Override
+	public int compare(Object left, Object right) throws ClassCastException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

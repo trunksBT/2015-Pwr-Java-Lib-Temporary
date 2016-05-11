@@ -1,0 +1,15 @@
+package bt.collections.interfaces;
+
+public interface Edgable <V,W>{
+	public V getStart() {
+		return start;
+	}
+	
+	public V getEnd() {
+		return end;
+	}
+	
+	public W getWeight() {
+		return wage;
+	}
+}

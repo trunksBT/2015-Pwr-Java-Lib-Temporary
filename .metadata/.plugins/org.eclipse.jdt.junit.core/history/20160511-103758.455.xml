@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_DirtyEdgeDecorator" project="BT-Library-Java" tests="10" started="10" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0">
+    <testcase name="test_equals_From_0to1_wage_cat_True" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_getEnd_From_0to1_wage_cat_True" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_getStart_From_0to1_wage_cat_False" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_getStart_From_0to1_wage_cat_True" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_getWeight_From_0to1_wage_cat_True" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_hashCode_From_0to1_wage_cat_True" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_isDirty_getStart_From_0to1_wage_cat_True" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_setDirty_false_exp_false" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_setDirty_true_exp_true" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+    <testcase name="test_toString_From_0to1_wage_cat_True" classname="bt.collections.graphs.Test_DirtyEdgeDecorator" time="0.0"/>
+  </testsuite>
+</testrun>

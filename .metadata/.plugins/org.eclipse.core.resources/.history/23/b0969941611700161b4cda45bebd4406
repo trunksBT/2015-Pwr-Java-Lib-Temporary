@@ -1,0 +1,19 @@
+package bt.collections.graphs;
+
+public abstract class DirtyEdgeDecorator<V,W> extends Edge<V,W>{
+	Edge<V,W> decorated;
+	boolean isDirty;
+	public DirtyEdgeDecorator(Edge<V,W> edge) {
+		if( edge != null)
+			decorated = edge;
+		else
+			decorated = new Edge<V,W>();
+		isDirty = false;
+	}
+	public boolean isDirty() {
+		return isDirty;
+	}
+	public void setDirty(boolean val) {
+		isDirty = val;
+	}
+}
