@@ -68,8 +68,8 @@ public class Test_GraphEdgeList extends TestCase
 		LinkedList retVal = new LinkedList();
 		retVal.add(new Edge<Integer,String>(0,1,"ab"));
 		retVal.add(new Edge<Integer,String>(0,3,"ad"));
-		retVal.add(new Edge<Integer,String>(1,4,"be"));
 		retVal.add(new Edge<Integer,String>(1,2,"bc"));
+		retVal.add(new Edge<Integer,String>(1,4,"be"));
 		retVal.add(new Edge<Integer,String>(2,3,"cd"));
 		retVal.add(new Edge<Integer,String>(2,4,"ce"));
 		retVal.add(new Edge<Integer,String>(3,5,"df"));

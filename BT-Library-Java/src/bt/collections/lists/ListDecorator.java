@@ -11,7 +11,4 @@ public abstract class ListDecorator implements List{
 		else
 			this.tape = new LinkedList();
 	}
-	
-	public abstract boolean isDirty();
-	public abstract void setDirty(boolean val);
 }

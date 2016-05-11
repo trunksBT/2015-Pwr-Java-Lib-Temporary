@@ -4,6 +4,7 @@ import bt.collections.graphs.AdjacentList;
 import bt.collections.interfaces.List;
 import bt.collections.iterators.Iterator;
 import bt.collections.lists.ArrayList;
+import bt.collections.lists.DirtyListDecorator;
 import bt.collections.lists.ListDecorator;
 
 public class DFS<W> {
@@ -15,7 +16,7 @@ public class DFS<W> {
 	}
 	
 	private void innerAdjList(int currVert, AdjacentList<W> graph, List outTape) {
-		ListDecorator adjacents = graph.getAdjacents(currVert);
+		DirtyListDecorator adjacents = graph.getAdjacents(currVert);
 		adjacents.setDirty(true);
 		outTape.add(currVert);	
 		Iterator it = adjacents.iterator();

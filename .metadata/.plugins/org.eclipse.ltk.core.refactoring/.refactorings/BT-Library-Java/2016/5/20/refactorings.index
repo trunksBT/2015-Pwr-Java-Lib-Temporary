@@ -105,3 +105,6 @@
 1462960347133	Rename package 'bt.core.algorithms.comparators'
 1462960351736	Rename package 'bt.core.algorithms'
 1462960355173	Rename package 'bt.core'
+1462961024064	Copy compilation unit
+1462961551100	Copy compilation unit
+1462961810937	Rename method 'getWeight'

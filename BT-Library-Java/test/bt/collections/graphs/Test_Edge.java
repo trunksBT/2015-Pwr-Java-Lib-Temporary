@@ -6,6 +6,7 @@ import org.junit.runners.MethodSorters;
 
 import bt.algorithms.Sequences;
 import bt.collections.graphs.Edge;
+import bt.collections.interfaces.Edgable;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -19,7 +20,7 @@ public class Test_Edge extends TestCase
 	    int inStart = 0;	
 	    int inEnd = 1;
 	    String inWage = "cat";
-	    Edge<Integer,String> inEdge = new Edge<>(inStart, inEnd, inWage);
+	    Edgable<Integer,String> inEdge = new Edge<>(inStart, inEnd, inWage);
 	    int expVal = 0;
 	    int rcVal = -1;
 	      
@@ -38,7 +39,7 @@ public class Test_Edge extends TestCase
 	    int inStart = 0;	
 	    int inEnd = 1;
 	    String inWage = "cat";
-	    Edge<Integer,String> inEdge = new Edge<>(inStart, inEnd, inWage);
+	    Edgable<Integer,String> inEdge = new Edge<>(inStart, inEnd, inWage);
 	    int expVal = 1;
 	    int rcVal = -1;
 	      
@@ -57,12 +58,12 @@ public class Test_Edge extends TestCase
 	    int inStart = 0;	
 	    int inEnd = 1;
 	    String inWage = "cat";
-	    Edge<Integer,String> inEdge = new Edge<>(inStart, inEnd, inWage);
+	    Edgable<Integer,String> inEdge = new Edge<>(inStart, inEnd, inWage);
 	    String expVal = "cat";
 	    String rcVal = null;
 	      
 	    //act
-	    rcVal = inEdge.getWeight();
+	    rcVal = inEdge.getWage();
 	    
 	    //assert
 	    assertEquals(expVal , rcVal);
@@ -76,7 +77,7 @@ public class Test_Edge extends TestCase
 	    int inStart = 0;	
 	    int inEnd = 1;
 	    String inWage = "cat";
-	    Edge<Integer,String> inEdge = new Edge<>(inStart, inEnd, inWage);
+	    Edgable<Integer,String> inEdge = new Edge<>(inStart, inEnd, inWage);
 	      
 	    //act
 	    System.out.println( inEdge );
@@ -93,8 +94,8 @@ public class Test_Edge extends TestCase
 	    int inStart = 0;	
 	    int inEnd = 1;
 	    String inWage = "cat";
-	    Edge<Integer,String> inEdge1 = new Edge<>(inStart, inEnd, inWage);
-	    Edge<Integer,String> inEdge2 = new Edge<>(inStart, inEnd, inWage);
+	    Edgable<Integer,String> inEdge1 = new Edge<>(inStart, inEnd, inWage);
+	    Edgable<Integer,String> inEdge2 = new Edge<>(inStart, inEnd, inWage);
 	    boolean expVal = true;
 	    boolean rcVal = false;
 	      
@@ -113,8 +114,8 @@ public class Test_Edge extends TestCase
 	    int inStart = 0;	
 	    int inEnd = 1;
 	    String inWage = "cat";
-	    Edge<Integer,String> inEdge1 = new Edge<>(inStart, inEnd, inWage);
-	    Edge<Integer,String> inEdge2 = new Edge<>(inStart, inEnd, inWage);
+	    Edgable<Integer,String> inEdge1 = new Edge<>(inStart, inEnd, inWage);
+	    Edgable<Integer,String> inEdge2 = new Edge<>(inStart, inEnd, inWage);
 	    int rcVal1 = -1;
 	    int rcVal2 = -1;
 	      

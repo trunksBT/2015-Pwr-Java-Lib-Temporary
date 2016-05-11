@@ -70,15 +70,11 @@ public class DirtyListDecorator extends ListDecorator {
 	public Iterator iterator() {
 		return tape.iterator();
 	}
-
-	@Override
+	
 	public boolean isDirty() {
 		return isDirty;
 	}
-
-	@Override
 	public void setDirty(boolean val) {
 		isDirty = val;
 	}
-
 }

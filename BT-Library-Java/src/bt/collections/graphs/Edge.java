@@ -1,6 +1,8 @@
 package bt.collections.graphs;
 
-public class Edge<V,W> {
+import bt.collections.interfaces.Edgable;
+
+public class Edge<V,W> implements Edgable<V,W>{
 	V start;
 	V end;
 	W wage;
@@ -23,7 +25,7 @@ public class Edge<V,W> {
 		return end;
 	}
 	
-	public W getWeight() {
+	public W getWage() {
 		return wage;
 	}
 	
