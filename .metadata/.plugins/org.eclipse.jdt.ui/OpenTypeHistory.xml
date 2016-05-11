@@ -9,6 +9,6 @@
 <typeInfo handle="=BT-Library-Java/C:\/Program Files \(x86)\/Java\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1459425355795"/>
 <typeInfo handle="=BT-Library-Java/src&lt;bt.core.collections.interfaces{Tree.java[Tree" modifiers="513" timestamp="1460476215902"/>
 <typeInfo handle="=BT-Library-Java/src&lt;bt.core.algorithms.interfaces{ListSorter.java[ListSorter" modifiers="513" timestamp="1458064354437"/>
-<typeInfo handle="=BT-Library-Java/src&lt;bt.core.collections.graphs{Graph.java[Graph" modifiers="513" timestamp="1462877641773"/>
-<typeInfo handle="=BT-Library-Java/src&lt;bt.core.collections.lists{ListDecorator.java[ListDecorator" modifiers="1025" timestamp="1462882380876"/>
+<typeInfo handle="=BT-Library-Java/src&lt;bt.core.collections.graphs{Graph.java[Graph" modifiers="513" timestamp="1462906342908"/>
+<typeInfo handle="=BT-Library-Java/src&lt;bt.core.collections.lists{ListDecorator.java[ListDecorator" modifiers="1025" timestamp="1462897844589"/>
 </typeInfoHistroy>
