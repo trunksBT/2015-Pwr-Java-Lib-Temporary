@@ -21,10 +21,6 @@ public class AdjacentMatrix<W> implements Graph<Integer, W> {
 	public int getNumberOfVerts() {
 		return matrix.length;
 	}
-	@Override
-	public int numberOfEdges() {
-		throw new UnsupportedOperationException("notImplementedYet");
-	}
 	public ListDecorator getAdjacents(int searchedVert) {
 		ListDecorator retVal = new DirtyListDecorator(new LinkedList());
 		

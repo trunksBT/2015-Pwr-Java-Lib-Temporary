@@ -16,11 +16,6 @@ public class AdjacentList<W> implements Graph<Integer,W> {
 		return adjacents.length;
 	}
 
-	@Override
-	public int numberOfEdges() {
-		throw new UnsupportedOperationException("notImplementedYet");
-	}
-
 	public boolean isVerticeDirty(int searchedVert) {
 		return adjacents[searchedVert].isDirty();
 	}

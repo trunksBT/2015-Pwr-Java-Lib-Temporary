@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="List tape = new DirtyListDecorator(new LinkedList());" key="selection"/>
+		<item value="rcVal = new DFS&lt;String&gt;()" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="rcVal = (ArrayList) new DFS&lt;String&gt;()"/>
+			<item value="rcVal = (ArrayList) new BFS&lt;String&gt;()"/>
+			<item value="ArrayList rcVal = null;"/>
+			<item value="DFS"/>
+			<item value="forAdjacentMatrix"/>
+			<item value="AdjacentList"/>
 			<item value="List tape = new LinkedList();"/>
 			<item value="GraphAdjacentList"/>
-			<item value="package bt.tests.core.collections.graphs;"/>
-			<item value="Edges"/>
-			<item value="GraphEdgeList"/>
-			<item value="countLowerNodes"/>
-			<item value="coutLowerNodes"/>
-			<item value="height"/>
 		</list>
 		<list key="replacehistory">
+			<item value="rcVal = new DFS&lt;String&gt;()"/>
+			<item value="rcVal = new BFS&lt;String&gt;()"/>
+			<item value="List rcVal = null;"/>
+			<item value="BFS"/>
+			<item value="forAdjacentList"/>
+			<item value="AdjacentMatrix"/>
 			<item value="List tape = new DirtyListDecorator(new LinkedList());"/>
 			<item value="GraphAdjacentMatrix"/>
-			<item value="Verts"/>
-			<item value="GraphAdjacentList"/>
-			<item value="assignNodes"/>
-			<item value="countLowerNodes"/>
-			<item value="height"/>
-			<item value="Nodes"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

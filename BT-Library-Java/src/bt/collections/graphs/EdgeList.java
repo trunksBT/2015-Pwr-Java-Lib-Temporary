@@ -22,12 +22,11 @@ public class EdgeList<V,W> implements Graph<V,W>{
 	public int getNumberOfVerts() {
 		throw new UnsupportedOperationException("notImplementedYet");
 	}
-
-	@Override
-	public int numberOfEdges() {
+	
+	public int getNumberOfEdges() {
 		return edgeList.size();
 	}
-
+	
 	@Override
 	public ListDecorator getAdjacents(int searchedVert) {
 		throw new UnsupportedOperationException("notImplementedYet");
@@ -50,8 +49,7 @@ public class EdgeList<V,W> implements Graph<V,W>{
 
 	@Override
 	public boolean isDirty(int vert) {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("notImplementedYet");
 	}
 
 	@Override

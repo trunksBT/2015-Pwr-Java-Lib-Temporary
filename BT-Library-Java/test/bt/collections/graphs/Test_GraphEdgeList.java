@@ -6,7 +6,6 @@ import org.junit.runners.MethodSorters;
 
 import bt.collections.graphs.Edge;
 import bt.collections.graphs.EdgeList;
-import bt.collections.graphs.Graph;
 import bt.collections.lists.LinkedList;
 import junit.framework.TestCase;
 
@@ -18,13 +17,13 @@ public class Test_GraphEdgeList extends TestCase
 	public void test_CTORandnumberOfEdges_mock_12()
 	{
 	    //arrange	    
-	    Graph<Integer,String> inGraph = 
+		EdgeList<Integer,String> inGraph = 
 	    		new EdgeList<>(getMock());
 	    int expVal = 12;
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfEdges();
+	    rcVal = inGraph.getNumberOfEdges();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);
@@ -35,13 +34,13 @@ public class Test_GraphEdgeList extends TestCase
 	public void test_CTORandnumberOfEdges_null_0()
 	{
 	    //arrange	    
-	    Graph<Integer,String> inGraph = 
+		EdgeList<Integer,String> inGraph = 
 	    		new EdgeList<>(null);
 	    int expVal = 0;
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfEdges();
+	    rcVal = inGraph.getNumberOfEdges();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);
@@ -52,13 +51,13 @@ public class Test_GraphEdgeList extends TestCase
 	public void test_CTORandnumberOfEdges_empty_0()
 	{
 	    //arrange	    
-		Graph<Integer,String> inGraph = 
+		EdgeList<Integer,String> inGraph = 
 	    		new EdgeList<>(new LinkedList());
 	    int expVal = 0;
 	    int rcVal = -1;
 	    
 	    //act
-	    rcVal = inGraph.numberOfEdges();
+	    rcVal = inGraph.getNumberOfEdges();
 	    
 	    //assert
 	    assertEquals(expVal, rcVal);
