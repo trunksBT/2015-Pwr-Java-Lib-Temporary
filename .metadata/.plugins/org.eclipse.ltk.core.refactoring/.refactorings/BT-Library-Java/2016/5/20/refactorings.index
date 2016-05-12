@@ -108,3 +108,6 @@
 1462986225550	Copy compilation unit
 1463050156803	Delete element
 1463050432775	Rename type 'AdjacentList'
+1463050980010	Copy compilation unit
+1463053057302	Rename method 'forAdjacentList'
+1463053062641	Rename method 'innerAdjList'

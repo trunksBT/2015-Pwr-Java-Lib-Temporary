@@ -48,6 +48,15 @@ public class AdjacentList<W> implements Graph<Integer,W> {
 		for(DirtyListDecorator it: adjacents)
 			it.setDirty(false);
 	}
-	
+
+	@Override
+	public void setDirty(int vert, boolean val) {
+		getAdjacents(vert).setDirty(val);	
+	}
+
+	@Override
+	public boolean isDirty(int vert) {
+		return getAdjacents(vert).isDirty();
+	}	
 	// little idealized graph when keys are Integers and it's no holes sequence
 }
