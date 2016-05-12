@@ -59,4 +59,9 @@ public class AdjacentList<W> implements Graph<Integer,W> {
 		return getAdjacents(vert).isDirty();
 	}	
 	// little idealized graph when keys are Integers and it's no holes sequence
+
+	@Override
+	public boolean isEmpty() {
+		return adjacents.length==0;
+	}
 }

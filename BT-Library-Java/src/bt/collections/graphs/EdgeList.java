@@ -53,4 +53,9 @@ public class EdgeList<V,W> implements Graph<V,W>{
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public boolean isEmpty() {
+		return edgeList.isEmpty();
+	}
 }

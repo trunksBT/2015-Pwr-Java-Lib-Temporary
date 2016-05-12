@@ -72,7 +72,7 @@ public class Test_GraphAdjacentMatrix extends TestCase
 	public void test_getAdjacents_of0_1and3()
 	{
 	    //arrange	    
-		AdjacentMatrix<String> inGraph = 
+		Graph<Integer,String> inGraph = 
 	    		new AdjacentMatrix<>(MockAdjacentMatrix.notEmpty(size));
 	    int searchedVert = 0;
 	    List expVal = new LinkedList();
@@ -121,7 +121,7 @@ public class Test_GraphAdjacentMatrix extends TestCase
 	public void test_getAdjacents_null_empty()
 	{
 	    //arrange	    
-		AdjacentMatrix<String> inGraph = 
+		Graph<Integer,String> inGraph = 
 	    		new AdjacentMatrix<>(null);
 	    int searchedVert = 0;
 	    List expVal = new LinkedList();

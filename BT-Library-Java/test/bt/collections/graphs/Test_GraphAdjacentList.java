@@ -38,7 +38,7 @@ public class Test_GraphAdjacentList extends TestCase
 	public void test_resetVerticesStory_false()
 	{
 	    //arrange	    
-		AdjacentList<String> inGraph = 
+		Graph<Integer,String> inGraph = 
 	    		new AdjacentList<>(getMock(size));
 	    boolean expVal = false;
 	    boolean rcVal = false;
@@ -57,7 +57,7 @@ public class Test_GraphAdjacentList extends TestCase
 	public void test_isVerticeDirty_of0_false()
 	{
 	    //arrange	    
-		AdjacentList<String> inGraph = 
+		Graph<Integer,String> inGraph = 
 	    		new AdjacentList<>(getMock(size));
 	    int searchedVert = 0;
 	    boolean expVal = false;
@@ -75,7 +75,7 @@ public class Test_GraphAdjacentList extends TestCase
 	public void test_getAdjacents_of0_1and3()
 	{
 	    //arrange	    
-		AdjacentList<String> inGraph = 
+		Graph<Integer,String> inGraph = 
 	    		new AdjacentList<>(getMock(size));
 	    int searchedVert = 0;
 	    List expVal = new LinkedList();
@@ -105,7 +105,7 @@ public class Test_GraphAdjacentList extends TestCase
 	public void test_getAdjacents_null_empty()
 	{
 	    //arrange	    
-		AdjacentList<String> inGraph = 
+		Graph<Integer,String> inGraph = 
 	    		new AdjacentList<>(null);
 	    int searchedVert = 0;
 	    List expVal = new LinkedList();

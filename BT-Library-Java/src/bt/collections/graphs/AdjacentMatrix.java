@@ -50,4 +50,8 @@ public class AdjacentMatrix<W> implements Graph<Integer, W> {
 	public boolean isDirty(int vert) {
 		return dirtyTable[vert];
 	}
+	@Override
+	public boolean isEmpty() {
+		return matrix.length==0;
+	}
 }

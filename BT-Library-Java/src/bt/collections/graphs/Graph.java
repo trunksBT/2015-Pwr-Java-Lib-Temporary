@@ -10,4 +10,5 @@ public interface Graph<V,W> {
 	public void resetVerticesStory();
 	public void setDirty(int vert, boolean val);
 	public boolean isDirty(int vert);
+	public boolean isEmpty();
 }
