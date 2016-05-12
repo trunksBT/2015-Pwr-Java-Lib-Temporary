@@ -105,3 +105,6 @@
 1462960347133	Rename package 'bt.core.algorithms.comparators'
 1462960351736	Rename package 'bt.core.algorithms'
 1462960355173	Rename package 'bt.core'
+1462986225550	Copy compilation unit
+1463050156803	Delete element
+1463050432775	Rename type 'AdjacentList'

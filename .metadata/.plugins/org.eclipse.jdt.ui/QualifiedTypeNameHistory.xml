@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.RatajList"/>
-<fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.Stack"/>
 <fullyQualifiedTypeName name="bt.core.exceptions.EmptyStackException"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.sorting.BubbleSortPrimitive"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="bt.core.collections.lists.ArrayList"/>
 <fullyQualifiedTypeName name="bt.core.collections.queues.Queue"/>
 <fullyQualifiedTypeName name="bt.core.collections.iterators.Iterator"/>
+<fullyQualifiedTypeName name="bt.collections.lists.ArrayList"/>
+<fullyQualifiedTypeName name="javax.print.attribute.Size2DSyntax"/>
 </qualifiedTypeNameHistroy>
