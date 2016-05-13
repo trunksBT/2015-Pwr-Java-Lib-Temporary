@@ -49,7 +49,7 @@ public class ArrayList extends AbstractList implements List {
 		if(nextValIdx < size)
 			System.arraycopy(array,nextValIdx,array,idx, size - nextValIdx);
 		
-		array[size--] = null;
+		array[--size] = null;
 		return oldValue;
 	}
 
