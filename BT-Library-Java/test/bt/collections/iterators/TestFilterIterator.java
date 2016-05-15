@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.collections.iterators.ArrayIterator;
-import bt.collections.iterators.ArrayIteratorCopy;
 import bt.collections.iterators.EvenCordsPred;
 import bt.collections.iterators.FilterIterator;
 import bt.collections.iterators.Iterator;
