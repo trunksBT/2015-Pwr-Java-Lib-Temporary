@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="rcVal = new DFS&lt;String&gt;()" key="selection"/>
+		<item value="BEntry2" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="BEntry"/>
+			<item value="IEntry"/>
 			<item value="rcVal = (ArrayList) new DFS&lt;String&gt;()"/>
 			<item value="rcVal = (ArrayList) new BFS&lt;String&gt;()"/>
 			<item value="ArrayList rcVal = null;"/>
 			<item value="DFS"/>
 			<item value="forAdjacentMatrix"/>
 			<item value="AdjacentList"/>
-			<item value="List tape = new LinkedList();"/>
-			<item value="GraphAdjacentList"/>
 		</list>
 		<list key="replacehistory">
+			<item value="BEntry2"/>
+			<item value="IEntry2"/>
 			<item value="rcVal = new DFS&lt;String&gt;()"/>
 			<item value="rcVal = new BFS&lt;String&gt;()"/>
 			<item value="List rcVal = null;"/>
 			<item value="BFS"/>
 			<item value="forAdjacentList"/>
 			<item value="AdjacentMatrix"/>
-			<item value="List tape = new DirtyListDecorator(new LinkedList());"/>
-			<item value="GraphAdjacentMatrix"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

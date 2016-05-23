@@ -396,9 +396,32 @@ public class TestRatajListRec extends TestCase {
     	assertEquals(expVal,rcVal);
     }
     
+    public void test_get_4val_On3size_false()
+    {
+    	// arrange
+    	int expVal = -1;
+    	int searchedVal = 4;
+    	RatajListRec l1 = 
+    			new RatajListRec(0,
+    					new RatajListRec(1,
+    							new RatajListRec(2)));
+    	int rcVal = -1;
+
+    	// act
+    	try {
+    		rcVal = l1.getElem(searchedVal).getVal();
+    	}catch(NullPointerException e)
+    	{
+    		rcVal = -1;
+    	}
+    	
+    	// assert
+    	assertEquals(expVal,rcVal);
+    }
+    
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_delete_On1size_Expect_size0()
+    public void test_delete_0_On1size_Expect_size0()
     {
     	// arrange
     	RatajListRec list = new RatajListRec(0);
@@ -421,7 +444,7 @@ public class TestRatajListRec extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_delete_On1size_Expect_size1()
+    public void test_delete_1_On1size_Expect_size1()
     {
     	// arrange
     	RatajListRec list = new RatajListRec(0);
@@ -438,7 +461,7 @@ public class TestRatajListRec extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_delete_On2size_Expect_size1()
+    public void test_delete_1_On2size_Expect_size1()
     {
     	// arrange
     	RatajListRec l1 = 
@@ -457,7 +480,7 @@ public class TestRatajListRec extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_delete_On3size_Expect_size2()
+    public void test_delete_1_On3size_Expect_size2()
     {
     	// arrange
     	RatajListRec l1 = 
@@ -467,6 +490,26 @@ public class TestRatajListRec extends TestCase {
     	RatajListRec rcList = null;
     	int expVal = 2;
     	int toDel = 1;
+    	
+    	// act
+    	rcList = l1.delete(toDel);
+    	
+    	// assert
+    	assertEquals(rcList.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_delete_4_On3size_Expect_size3()
+    {
+    	// arrange
+    	RatajListRec l1 = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, 
+    							new RatajListRec(2)));
+    	RatajListRec rcList = null;
+    	int expVal = 3;
+    	int toDel = 4;
     	
     	// act
     	rcList = l1.delete(toDel);

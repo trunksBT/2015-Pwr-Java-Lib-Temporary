@@ -247,7 +247,7 @@ public class TestRatajList extends TestCase {
     	RatajList l1 = new RatajList(new RatajElem(yetAdded0));
     	int rcVal = -1;
     	
-    	// act
+    	// actata
     	// act
     	try {
     		rcVal = l1.getElem(searchedVal).getVal();
@@ -411,7 +411,6 @@ public class TestRatajList extends TestCase {
     public void test_attachAfter_0_OnNullOrEmpty_Expect_size1()
     {
     	// arrange
-    	int afterWhich = 0;
     	int toAdd0 = 1;
     	int expSize = 1;
     	RatajList l1 = new RatajList(null);
@@ -426,9 +425,10 @@ public class TestRatajList extends TestCase {
     public void test_attachAfter_0_On1size_Expect_size2()
     {
     	// arrange
+    	int afterWhich = 0;
     	int toAdd0 = 1;
     	int expSize = 2;
-    	RatajElem yetAdded0 = new RatajElem(0);
+    	RatajElem yetAdded0 = new RatajElem(afterWhich);
     	RatajList l1 = new RatajList(yetAdded0);
     	
     	// act
@@ -453,7 +453,7 @@ public class TestRatajList extends TestCase {
     	// act
     	l1.attachAfter(yetAdded0,toAdd0);
     	
-    	// assert
+    	// asser
     	assertEquals(l1.size(), expSize);
     }
     

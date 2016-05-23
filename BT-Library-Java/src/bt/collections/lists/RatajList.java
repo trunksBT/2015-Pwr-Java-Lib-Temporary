@@ -1,31 +1,28 @@
 package bt.collections.lists;
 
 public class RatajList {
-	RatajElem poc;
+	RatajElem root;
 	
+	public RatajList(RatajElem head) {
+		this.root = head;
+	}
+
 	public RatajList() {
-		this.poc = null;
+		this(null);
 	}
-	
-	public RatajList(RatajElem poc) {
-		this.poc = poc;
-	}
-	
-	public static void print(RatajElem l) {
-		while(l != null) {
-			System.out.println( l.val + ',' );
-			l = l.next;
+
+	public static void print(RatajElem hd) {
+		while(hd != null) {
+			System.out.println( hd.val );
+			hd = hd.next;
 		}
 	}
 	
 	public int maxVal() {
-		if( poc == null)
-			throw new NullPointerException();
+		int max = root.val;
+		RatajElem l = root.next;
 		
-		int max = poc.val;	
-		RatajElem l = poc.next;
-		
-		while( l != null ) {
+		while( l!= null ) {
 			if( l.val > max )
 				max = l.val;
 			l = l.next;
@@ -37,54 +34,62 @@ public class RatajList {
 	public void add(int val) {
 		RatajElem newElem = new RatajElem(val);
 		
-		if(poc == null) poc = newElem;
+		if( root == null )
+			root = newElem;
 		else {
-			RatajElem l = poc;
-			while(l.next != null)
-				l = l.next;
+			RatajElem hd = root;
 			
-			l.next = newElem;
+			while( hd.next != null )
+				hd = hd.next;
+			
+			hd.next = newElem;
 		}
 	}
 
 	public int size() {
+		RatajElem hd = root;
 		int retVal = 0;
-		RatajElem l = poc;
 		
-		while(l != null) {
-			l = l.next;
+		while(hd != null) {
 			retVal++;
+			hd = hd.next;
 		}
 		
 		return retVal;
 	}
 
-	public RatajElem getElem(int val) {
-		RatajElem l = poc;
+	public RatajElem getElem(int searchedVal) {
+		RatajElem hd = root;
+		RatajElem retVal = null;
 		
-		while( l != null && l.val!= val)
-			l = l.next;
+		while(hd != null && retVal == null) {
+			if(hd.val == searchedVal)
+				retVal = hd;
+			hd = hd.next;
+		}
 		
-		return l;
+		return retVal;
 	}
-
+		
 	public void attachAfter(RatajElem afterWhich, int val) {
 		if( afterWhich == null )
-			poc = new RatajElem(val,poc);
+			root = new RatajElem( val, root );
 		else
 			afterWhich.next = new RatajElem(val, afterWhich.next);
 	}
 
 	public void delete(int toDel) {
-		if( poc != null) {
-			if( poc.val == toDel ) poc = poc.next;
+		if ( root != null ) {
+			if( root.val == toDel )
+				root = root .next;
 			else {
-				RatajElem l = poc;
-				while( l.next != null && l.next.val != toDel)
-					l = l.next;
+				RatajElem hd = root;	
 				
-				if( l.next != null )
-					l.next = l.next.next;
+				while( hd.next!= null && hd.next.val != toDel )
+					hd = hd.next;
+				
+				if ( hd.next != null )
+					hd.next = hd.next.next;
 			}
 		}
 	}
