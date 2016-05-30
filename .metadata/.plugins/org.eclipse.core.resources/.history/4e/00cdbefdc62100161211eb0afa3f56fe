@@ -1,0 +1,33 @@
+package bt.collections.lists;
+
+public class RatajList2 {
+
+	public RatajList2(RatajElem2 hd1) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public RatajList2() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void print(RatajElem2 hd1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int maxVal() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void add(int toAdd1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Object size() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

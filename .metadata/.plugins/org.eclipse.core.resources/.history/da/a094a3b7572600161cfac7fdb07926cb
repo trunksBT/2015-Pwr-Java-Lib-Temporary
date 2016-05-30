@@ -1,0 +1,9 @@
+package bt.collections.lists;
+
+public class RatajElem2 {
+
+	public RatajElem2(int i, RatajElem2 ratajElem2) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,112 @@
+package bt.collections.lists;
+
+public class RatajList2 {
+	RatajElem2 root;
+	public RatajList2(RatajElem2 root) {
+		this.root = root;
+	}
+
+	public RatajList2() {
+		root = null;
+	}
+
+	public static void print(RatajElem2 hd) {
+		while( hd!= null ) {
+			System.out.println( hd.val );
+			hd = hd.next;
+		}
+	}
+
+	public int maxVal() {
+		if( root!= null ) {
+			int currMax = root.val;
+			RatajElem2 refToRoot = root;
+			
+			while( refToRoot != null ) {
+				if( currMax < refToRoot.val )
+					currMax = refToRoot.val;
+				
+				refToRoot = refToRoot.next;
+			}
+			
+			return currMax;
+		}else
+			throw new NullPointerException("There is null root");
+	}
+
+	public void add(int newVal) {
+		if( root != null ) {
+			RatajElem2 refToRoot = root;
+			
+			while( refToRoot.next != null )
+				refToRoot = refToRoot.next;
+			
+			refToRoot.next = new RatajElem2(newVal);
+		}else
+			root = new RatajElem2(newVal);
+	}
+
+	public int size() {
+		int retVal = 0;
+		if( root != null ) {
+			RatajElem2 refToRoot = root;
+			
+			while( refToRoot != null ) {
+				retVal++;
+				refToRoot = refToRoot.next;
+			}				
+		}
+		return retVal;
+	}
+
+	public RatajElem2 getElem(int searchedVal) {
+		RatajElem2 retVal = null;
+		RatajElem2 refToRoot = root;
+		
+		while( refToRoot != null && retVal == null) {
+			if( refToRoot.val == searchedVal )
+				retVal = refToRoot;
+			refToRoot = refToRoot.next;
+		}
+					
+		return retVal;
+	}
+
+	public void attachAfter(RatajElem2 yetAdded0, int toAdd0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+//
+//	public void delete(int toDel) {
+//		if ( root != null ) {
+//			if( root.val == toDel )
+//				root = root.next;
+//			else {
+//				RatajElem2 hd = root;	
+//				
+//				while( hd.next!= null && hd.next.val != toDel )
+//					hd = hd.next;
+//				
+//				if ( hd.next != null )
+//					hd.next = hd.next.next;
+//			}
+//		}
+//	}
+	
+	public void delete(int toDel) {
+		if( root != null ) {
+			if( root.val == toDel )
+				root = root.next;
+			else {
+				RatajElem2 refToRoot = root;
+				
+				while(refToRoot.next != null && refToRoot.next.val != toDel )
+					refToRoot = refToRoot.next;
+				
+				if( refToRoot.next != null )
+					refToRoot.next = refToRoot.next.next;
+			}
+		}
+	}
+}

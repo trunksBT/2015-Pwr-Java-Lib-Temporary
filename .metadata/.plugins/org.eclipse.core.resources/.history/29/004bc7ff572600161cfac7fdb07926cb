@@ -1,0 +1,16 @@
+package bt.collections.lists;
+
+public class RatajListRec2 {
+	RatajListRec2 next;
+	int val;
+	
+	public RatajListRec2(int val) {
+		this(val,null);	
+	}
+
+	public RatajListRec2(int val, RatajListRec2 next) {
+		this.val = val;
+		this.next = next;
+	}
+
+}

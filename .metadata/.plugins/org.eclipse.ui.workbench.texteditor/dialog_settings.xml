@@ -2,37 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="BEntry2" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="RatajElem"/>
+			<item value="RatajListRec"/>
+			<item value="RatajList"/>
+			<item value="RatajList l1 = new RatajList();"/>
 			<item value="BEntry"/>
 			<item value="IEntry"/>
 			<item value="rcVal = (ArrayList) new DFS&lt;String&gt;()"/>
 			<item value="rcVal = (ArrayList) new BFS&lt;String&gt;()"/>
-			<item value="ArrayList rcVal = null;"/>
-			<item value="DFS"/>
-			<item value="forAdjacentMatrix"/>
-			<item value="AdjacentList"/>
 		</list>
 		<list key="replacehistory">
+			<item value="RatajElem2"/>
+			<item value="RatajListRec2"/>
+			<item value="RatajList2"/>
 			<item value="BEntry2"/>
 			<item value="IEntry2"/>
 			<item value="rcVal = new DFS&lt;String&gt;()"/>
 			<item value="rcVal = new BFS&lt;String&gt;()"/>
 			<item value="List rcVal = null;"/>
-			<item value="BFS"/>
-			<item value="forAdjacentList"/>
-			<item value="AdjacentMatrix"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="311" key="DIALOG_WIDTH"/>
 		<item value="1|DejaVu Sans Mono|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|-18|3|2|1|49|DejaVu Sans Mono" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="781" key="DIALOG_X_ORIGIN"/>
-		<item value="319" key="DIALOG_Y_ORIGIN"/>
+		<item value="1374" key="DIALOG_X_ORIGIN"/>
+		<item value="269" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

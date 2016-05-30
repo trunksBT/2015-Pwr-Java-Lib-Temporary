@@ -1,0 +1,9 @@
+package bt.collections.lists;
+
+public class RatajListRec2 {
+
+	public RatajListRec2(int i) {
+		
+	}
+
+}
