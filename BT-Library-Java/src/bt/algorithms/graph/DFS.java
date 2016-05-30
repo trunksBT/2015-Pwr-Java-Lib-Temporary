@@ -7,10 +7,11 @@ import bt.collections.lists.ArrayList;
 import bt.collections.lists.ListDecorator;
 
 public class DFS<W> {
+	private int startVert = 0;
 	public List forAdjacentShapes(Graph<Integer,W> graph) {
 		graph.resetVerticesStory();
 		ArrayList retVal = new ArrayList(graph.getNumberOfVerts());
-		innerAdjShapes(0, graph, retVal);
+		innerAdjShapes(startVert, graph, retVal);
 		return retVal;
 	}
 	

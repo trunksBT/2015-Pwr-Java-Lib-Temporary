@@ -1,0 +1,27 @@
+package bt.algorithms.graph;
+
+import bt.collections.graphs.Graph;
+import bt.collections.interfaces.List;
+import bt.collections.iterators.Iterator;
+import bt.collections.lists.ArrayList;
+import bt.collections.lists.DirtyListDecorator;
+import bt.collections.lists.ListDecorator;
+
+public class DFS2<String> {
+	private int startVert = 0;
+	public List forAdjacentShapes(Graph<Integer,String> graph) {
+		graph.resetVerticesStory();
+		List retVal = new ArrayList(graph.getNumberOfVerts());
+		innerAdjacentShapes(startVert, graph, retVal);
+		return retVal;
+	}
+	
+	private void innerAdjacentShapes(int startVert, Graph<Integer,String> graph, List retVal) {
+		ListDecorator adjList = graph.getAdjacents(startVert);
+		graph.setDirty(startVert, true);
+		Iterator it = adjList.iterator();
+		for(it.first(); !it.isDone(); it.last() ) {
+			if( graph.isDirty((int) it.current()))
+		}
+	}
+}

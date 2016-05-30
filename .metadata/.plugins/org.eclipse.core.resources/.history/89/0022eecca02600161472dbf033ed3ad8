@@ -1,0 +1,13 @@
+package bt.algorithms.graph;
+
+import bt.collections.graphs.AdjacentList;
+import bt.collections.interfaces.List;
+
+public class DFS2<String> {
+
+	public List forAdjacentShapes(AdjacentList<String> graph) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

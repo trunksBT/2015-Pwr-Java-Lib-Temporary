@@ -1,0 +1,11 @@
+package bt.algorithms.graph;
+
+import bt.collections.graphs.Graph;
+import bt.collections.interfaces.List;
+
+public class BFS2<W>{
+
+	public List forAdjacentShapes(Graph<Integer,String> graph) {
+		return null;
+	}
+}

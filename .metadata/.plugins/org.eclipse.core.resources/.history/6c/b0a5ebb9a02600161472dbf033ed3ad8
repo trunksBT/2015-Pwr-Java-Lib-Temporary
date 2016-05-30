@@ -1,0 +1,12 @@
+package bt.algorithms.graph;
+
+import bt.collections.graphs.AdjacentMatrix;
+import bt.collections.interfaces.List;
+
+public class BFS2<String>{
+
+	public List forAdjacentShapes(Graph<Integer,String> graph) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

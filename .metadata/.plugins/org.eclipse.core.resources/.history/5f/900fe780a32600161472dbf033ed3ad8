@@ -1,0 +1,24 @@
+package bt.algorithms.graph;
+
+import bt.collections.graphs.Graph;
+import bt.collections.interfaces.List;
+import bt.collections.lists.ArrayList;
+import bt.collections.lists.DirtyListDecorator;
+
+public class DFS2<String> {
+	private int startVert = 0;
+	public List forAdjacentShapes(Graph<Integer,String> graph) {
+		graph.resetVerticesStory();
+		List retVal = new ArrayList(graph.getNumberOfVerts());
+		int currVert = startVert;
+		
+		DirtyListDecorator adjacents = (DirtyListDecorator) graph.getAdjacents(currVert);
+		if(!adjacents.isDirty()) {
+			adjacents.setDirty(true);
+			retVal.add(currVert);
+		}
+		
+		return null;
+	}
+
+}

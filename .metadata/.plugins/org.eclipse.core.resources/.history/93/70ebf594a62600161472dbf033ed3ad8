@@ -1,0 +1,24 @@
+package bt.algorithms.graph;
+
+import bt.collections.graphs.Graph;
+import bt.collections.interfaces.IQueue;
+import bt.collections.interfaces.List;
+import bt.collections.lists.ArrayList;
+import bt.collections.queues.Queue;
+
+public class BFS2<W>{
+	private int startVert = 0;
+	
+	public List forAdjacentShapes(Graph<Integer,W> graph) {
+		graph.resetVerticesStory();
+		List retVal = new ArrayList(graph.getNumberOfVerts());
+		innerFun(startVert, graph, retVal);
+		return retVal;
+	}
+	
+	private void innerFun( int startVert, Graph<Integer,W> graph, List retVal) {
+		List adj = graph.getAdjacents(startVert);
+		IQueue adjacents = new Queue(adj);
+		retVal.add(startVert);
+	}
+}

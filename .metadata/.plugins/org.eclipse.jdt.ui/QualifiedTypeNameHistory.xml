@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="bt.core.algorithms.interfaces.ListSorter"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.comparators.NaturalComparator"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.BST"/>
 <fullyQualifiedTypeName name="bt.core.collections.interfaces.Tree"/>
@@ -40,24 +39,25 @@
 <fullyQualifiedTypeName name="bt.collections.graphs.AdjacentMatrix"/>
 <fullyQualifiedTypeName name="bt.mock.algorithms.graph.MockAdjacentMatrix"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="bt.collections.graphs.Graph"/>
-<fullyQualifiedTypeName name="bt.collections.lists.ListDecorator"/>
-<fullyQualifiedTypeName name="bt.collections.queues.Queue"/>
-<fullyQualifiedTypeName name="bt.collections.interfaces.IQueue"/>
 <fullyQualifiedTypeName name="bt.collections.interfaces.Entry"/>
 <fullyQualifiedTypeName name="bt.algorithms.comparators.NaturalComparator"/>
 <fullyQualifiedTypeName name="bt.collections.interfaces.Map"/>
 <fullyQualifiedTypeName name="bt.collections.interfaces.IEntry"/>
-<fullyQualifiedTypeName name="bt.collections.iterators.Iterator"/>
-<fullyQualifiedTypeName name="bt.collections.lists.LinkedList"/>
 <fullyQualifiedTypeName name="bt.collections.iterators.ReverseIterator"/>
 <fullyQualifiedTypeName name="bt.exceptions.IteratorOutOfBoundsException"/>
 <fullyQualifiedTypeName name="bt.collections.interfaces.IEntry2"/>
 <fullyQualifiedTypeName name="bt.algorithms.interfaces.Comparator"/>
-<fullyQualifiedTypeName name="bt.collections.lists.ArrayList"/>
 <fullyQualifiedTypeName name="bt.collections.interfaces.List"/>
 <fullyQualifiedTypeName name="bt.collections.interfaces.Map2"/>
 <fullyQualifiedTypeName name="bt.collections.trees.BEntry"/>
 <fullyQualifiedTypeName name="bt.collections.interfaces.IBNode"/>
 <fullyQualifiedTypeName name="bt.collections.iterators.ArrayIterator"/>
+<fullyQualifiedTypeName name="bt.collections.graphs.Graph"/>
+<fullyQualifiedTypeName name="bt.collections.lists.DirtyListDecorator"/>
+<fullyQualifiedTypeName name="bt.collections.lists.ListDecorator"/>
+<fullyQualifiedTypeName name="bt.collections.lists.ArrayList"/>
+<fullyQualifiedTypeName name="bt.collections.queues.Queue"/>
+<fullyQualifiedTypeName name="bt.collections.interfaces.IQueue"/>
+<fullyQualifiedTypeName name="bt.collections.iterators.Iterator"/>
+<fullyQualifiedTypeName name="bt.collections.lists.LinkedList"/>
 </qualifiedTypeNameHistroy>

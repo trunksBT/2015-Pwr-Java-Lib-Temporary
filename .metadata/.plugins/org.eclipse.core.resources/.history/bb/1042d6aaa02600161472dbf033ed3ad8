@@ -1,0 +1,9 @@
+package bt.algorithms.graph;
+
+import bt.collections.graphs.AdjacentList;
+import bt.collections.graphs.Graph;
+import bt.collections.interfaces.List;
+import bt.collections.lists.ListDecorator;
+
+public class BFS2<String>{
+}

@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="DFS2" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="DFS"/>
+			<item value="expValForNotEmpty_BFS2"/>
+			<item value="BFS"/>
 			<item value="RatajElem"/>
 			<item value="RatajListRec"/>
 			<item value="RatajList"/>
 			<item value="RatajList l1 = new RatajList();"/>
 			<item value="BEntry"/>
-			<item value="IEntry"/>
-			<item value="rcVal = (ArrayList) new DFS&lt;String&gt;()"/>
-			<item value="rcVal = (ArrayList) new BFS&lt;String&gt;()"/>
 		</list>
 		<list key="replacehistory">
+			<item value="DFS2"/>
+			<item value="expValForNotEmpty_BFS"/>
+			<item value="BFS2"/>
 			<item value="RatajElem2"/>
 			<item value="RatajListRec2"/>
 			<item value="RatajList2"/>
 			<item value="BEntry2"/>
 			<item value="IEntry2"/>
-			<item value="rcVal = new DFS&lt;String&gt;()"/>
-			<item value="rcVal = new BFS&lt;String&gt;()"/>
-			<item value="List rcVal = null;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
