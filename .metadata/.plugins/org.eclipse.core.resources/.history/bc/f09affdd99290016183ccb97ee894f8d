@@ -1,0 +1,35 @@
+package bt.collections.trees;
+
+public class RatBST2 {
+
+	public static void preorder(RatNode2 tape) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static int assignNodes(RatNode2 tape) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static int countLowerNodes(RatNode2 tape) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static int height(RatNode2 tape) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static int countL(RatNode2 tape) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static int countEN(RatNode2 tape) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
