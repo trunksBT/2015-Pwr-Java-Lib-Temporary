@@ -27,23 +27,23 @@ public class RatBST {
 		return root == null ? 0 : (root.ammountLowerNodes = countLowerNodes(root.left)+1);
 	}
 	
-	public static int assignAmountOfNodes(RatNode root) { //  some type of inorder
-		return root == null ? 0 : (root.ammountNodes = assignAmountOfNodes(root.left)
-													+1+ assignAmountOfNodes(root.right));
+	public static int assignAmountOfInternalNodes(RatNode root) { //  some type of inorder
+		return root == null ? 0 : (root.ammountNodes = assignAmountOfInternalNodes(root.left)
+													+1+ assignAmountOfInternalNodes(root.right));
 	}
 	
 // Uncomment to see how recurrency on tree works
-//	public static int countIN(RatNode root) {
-//		if( root != null )
-//			System.out.println( "I'm in : "+root.val );
-//		else
-//			System.out.println( "I'm in : ext node");
-//		if( root == null )
-//			return 0;
-//		else
-//			return 1 + countIN(root.left) +
-//					countIN(root.right);
-//	}
+	public static int countIN(RatNode root) {
+		if( root != null )
+			System.out.println( "I'm in : "+root.val );
+		else
+			System.out.println( "I'm in : ext node");
+		if( root == null )
+			return 0;
+		else
+			return 1 + countIN(root.left) +
+					countIN(root.right);
+	}
 	
 	public static void preorder(RatNode root) {
 		if( root == null )

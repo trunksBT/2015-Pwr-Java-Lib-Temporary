@@ -275,7 +275,7 @@ public class TestRatBST extends TestCase {
      
     	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
      @Test
-     public void test_assignNodes_null_0()
+     public void test_assignAmountOfInternalNodes_null_0()
      {
      	// arrange
      	RatNode tape = null;
@@ -283,7 +283,7 @@ public class TestRatBST extends TestCase {
      	int recVal;
      	
      	// act
-     	recVal = RatBST.assignAmountOfNodes(tape);
+     	recVal = RatBST.assignAmountOfInternalNodes(tape);
      	
      	// assert
      	assertEquals(expVal, recVal);
@@ -291,7 +291,7 @@ public class TestRatBST extends TestCase {
      
  	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
      @Test
-     public void test_assignNodes_MockOneElement_1()
+     public void test_assignAmountOfInternalNodes_MockOneElement_1()
      {
      	// arrange
      	RatNode tape = getMockOneElement();
@@ -299,7 +299,7 @@ public class TestRatBST extends TestCase {
      	int recVal;
      	
      	// act
-     	recVal = RatBST.assignAmountOfNodes(tape);
+     	recVal = RatBST.assignAmountOfInternalNodes(tape);
      	
      	// assert
      	assertEquals(expVal, recVal);
@@ -307,7 +307,7 @@ public class TestRatBST extends TestCase {
      
  	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
      @Test
-     public void test_assignNodes_MockNotEmpty_8()
+     public void test_assignAmountOfInternalNodes_MockNotEmpty_8()
      {
      	// arrange
      	RatNode tape = getMockNotEmpty();
@@ -315,7 +315,7 @@ public class TestRatBST extends TestCase {
      	int recVal;
      	
      	// act
-     	recVal = RatBST.assignAmountOfNodes(tape);
+     	recVal = RatBST.assignAmountOfInternalNodes(tape);
      	
      	// assert
      	assertEquals(expVal, recVal);
