@@ -1,24 +1,18 @@
 package bt.collections.trees;
 
-public class RatNode{
+public class RatNode {
+	RatNode left,right;
 	int val;
-	RatNode left;
-	RatNode right;
-	int ammountLowerNodes;
-	int ammountNodes;
+	int ammOfLowerNodes;
+	int ammOfInnerNodes;
+	
 	public RatNode(int val) {
-		this.val = val;
-		left = right = null;
+		this(val,null,null);
 	}
+	
 	public RatNode(int val, RatNode left, RatNode right) {
-		this(val);
 		this.left = left;
 		this.right = right;
-	}
-	public void setLeft(RatNode left) {
-		this.left = left;
-	}
-	public void setRight(RatNode right) {
-		this.right = right;
+		this.val = val;
 	}
 }

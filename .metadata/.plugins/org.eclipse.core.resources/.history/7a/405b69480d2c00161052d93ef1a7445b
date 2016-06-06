@@ -1,0 +1,6 @@
+package bt.collections.trees;
+
+public class RatNode2 {
+	RatNode2 left,right;
+	int val;
+}

@@ -231,10 +231,12 @@ public class TestRatBST extends TestCase {
      	int recVal;
      	
      	// act
-     	recVal = RatBST.countLowerNodes(tape);
+//     	System.out.println( "TODO" );
+     	recVal = RatBST.assignAndReturnAmountOfLowerNodes(tape);
      	
      	// assert
      	assertEquals(expVal, recVal);
+//     	assertTrue(true);
      }
      
  	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
@@ -247,12 +249,12 @@ public class TestRatBST extends TestCase {
      	int recVal;
      	
      	// act
-     	System.out.println( "TODO" );
-     	recVal = RatBST.countLowerNodes(tape);
+//     	System.out.println( "TODO" );
+     	recVal = RatBST.assignAndReturnAmountOfLowerNodes(tape);
      	
      	// assert
-//     	assertEquals(expVal, recVal);
-     	assertTrue(true);
+     	assertEquals(expVal, recVal);
+//     	assertTrue(true);
      }
      
  	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
@@ -265,12 +267,12 @@ public class TestRatBST extends TestCase {
      	int recVal;
      	
      	// act
-     	System.out.println( "TODO" );
-     	recVal = RatBST.countLowerNodes(tape);
+//    	System.out.println( "TODO" );
+     	recVal = RatBST.assignAndReturnAmountOfLowerNodes(tape);
      	
      	// assert
-//     	assertEquals(expVal, recVal);
-     	assertTrue(true);
+     	assertEquals(expVal, recVal);
+//     	assertTrue(true);
      }
      
     	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
@@ -320,6 +322,7 @@ public class TestRatBST extends TestCase {
      	// assert
      	assertEquals(expVal, recVal);
      }
+     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
     public void test_preorder_Mock_4213657()
@@ -328,7 +331,7 @@ public class TestRatBST extends TestCase {
     	RatNode tape = getMockNotEmpty();
     	
     	// act
-//    	RatBST.preorder(tape);
+    	RatBST.preorder(tape);
     	
     	// assert
     	assertTrue(true);
