@@ -52,4 +52,14 @@ public class RatajListRec {
 	public int getVal() {
 		return val;
 	}
+
+	public RatajListRec copy() {
+		return next == null ? null : 
+			new RatajListRec(val, copy(next));
+	}
+	
+	public static RatajListRec copy(RatajListRec root) {
+		return root == null ? null : 
+			new RatajListRec(root.val,copy(root.next));
+	}
 }

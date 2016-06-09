@@ -1,7 +1,0 @@
-package bt.algorithms.graph;
-
-import bt.collections.graphs.Graph;
-
-public class BFS2<String> implements Graph<Integer,String> {
-
-}

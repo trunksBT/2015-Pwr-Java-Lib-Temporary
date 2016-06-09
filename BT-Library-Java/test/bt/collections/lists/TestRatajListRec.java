@@ -240,6 +240,46 @@ public class TestRatajListRec extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
+    public void test_copyStatic_3size_Expect_size3()
+    {
+    	// arrange
+    	RatajListRec list = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, 
+    							new RatajListRec(2)));
+    	RatajListRec rcVal;
+    	int expSize = 3;
+
+    	// act
+    	rcVal = RatajListRec.copy(list);
+    	list.next = null;
+    	
+    	// assert
+    	assertEquals(rcVal.size(), expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_copy_3size_Expect_size3()
+    {
+    	// arrange
+    	RatajListRec list = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, 
+    							new RatajListRec(2)));
+    	RatajListRec rcVal;
+    	int expSize = 3;
+
+    	// act
+    	rcVal = list.copy();
+    	list.next = null;
+    	
+    	// assert
+    	assertEquals(rcVal.size(), expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
     public void test_get_0val_On1size_true()
     {
     	// arrange

@@ -1,0 +1,14 @@
+package bt.collections.lists;
+
+public class RatajListRec2 {
+
+	public RatajListRec2(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Object size() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

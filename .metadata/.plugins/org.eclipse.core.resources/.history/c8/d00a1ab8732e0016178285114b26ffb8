@@ -1,0 +1,9 @@
+package bt.collections.trees;
+
+public class RatNode2 {
+
+	public RatNode2(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

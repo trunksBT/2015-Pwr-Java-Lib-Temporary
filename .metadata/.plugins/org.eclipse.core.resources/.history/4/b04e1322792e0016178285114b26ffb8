@@ -1,0 +1,50 @@
+package bt.collections.lists;
+
+public class RatajListRec2 {
+	int val;
+	RatajListRec2 next;
+	
+	public RatajListRec2(int val, RatajListRec2 next) {
+		this.val = val;
+		this.next = next;
+	}
+
+	public RatajListRec2(int val) {
+		this(val, null);
+	}
+
+	public RatajListRec2 delete(int toDel) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int size() {
+		return next == null ? 1 : 1+ next.size();
+	}
+
+	public RatajListRec2 getElem(int searchedVal) {
+		if( val == searchedVal )
+			return this;
+		else if ( next == null )
+			return null;
+		else
+			return next.getElem(searchedVal);
+	}
+
+	public int getVal() {
+		return val;
+	}
+
+	public int sum() {
+		return next == null ? val : val + next.sum();
+	}
+
+	public void add(int newVal) {
+		next = next == null ? next.add(newVal) : new RatajListRec2(newVal);
+	}
+
+	public static int sum(RatajListRec2 head) {
+		return head == null ? 0 : head.val + RatajListRec2.sum(head.next);
+	}
+
+}
