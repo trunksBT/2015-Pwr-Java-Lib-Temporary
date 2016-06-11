@@ -2,25 +2,25 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="root" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="TODO"/>
 			<item value="tape"/>
-			<item value="RatBST"/>
 			<item value="RatNode"/>
+			<item value="RatBST"/>
 			<item value="DFS"/>
 			<item value="expValForNotEmpty_BFS2"/>
 			<item value="BFS"/>
 			<item value="RatajElem"/>
-			<item value="RatajListRec"/>
 		</list>
 		<list key="replacehistory">
 			<item value="root"/>
-			<item value="RatBST2"/>
 			<item value="RatNode2"/>
+			<item value="RatBST2"/>
 			<item value="DFS2"/>
 			<item value="expValForNotEmpty_BFS"/>
 			<item value="BFS2"/>
