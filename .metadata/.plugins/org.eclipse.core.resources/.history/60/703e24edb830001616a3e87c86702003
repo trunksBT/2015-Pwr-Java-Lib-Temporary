@@ -1,0 +1,34 @@
+package bt.algorithms.strings;
+
+public class StudentMailMatcher implements MailMatcher{
+	public final int STUDENT_IDX_SIZE = 6;
+	public static final StudentMailMatcher INSTANCE = new StudentMailMatcher();
+	
+	private StudentMailMatcher() {}
+
+	@Override
+	public boolean apply(String inChain) {
+		String upCased = StringUtils.upCase(inChain);
+		boolean result = true;
+		char curr;
+		int studentIdxSize = 0;
+		int it = -1;
+		
+		// isAccountNameNotEmpty
+		if((curr = upCased.charAt(++it)) == '@')
+				result&= false;
+		
+		// isAccountNameConsistedFromChars
+		while( (curr = upCased.charAt(it++)) != '@' && result)
+		{
+			if(!Character.isLetter(curr)) {
+				result&= true;
+				studentIdxSize++;
+			}
+				
+		}
+
+		
+		return result;
+	}
+}

@@ -1,0 +1,26 @@
+package bt.algorithms.strings;
+
+public class StudentMailMatcher implements MailMatcher{
+	public static final StudentMailMatcher INSTANCE = new StudentMailMatcher();
+	
+	private StudentMailMatcher() {}
+
+	@Override
+	public boolean apply(String inChain) {
+		String upCased = StringUtils.upCase(inChain);
+		boolean result = true;
+		char curr;
+		int it = -1;
+		
+		if((curr = upCased.charAt(++it)) == '@')
+				result&= false;
+		
+		while( (curr = upCased.charAt(it++)) != '@')
+		{
+			result&= !Character.isLetter(curr);
+		}
+
+		
+		return result;
+	}
+}

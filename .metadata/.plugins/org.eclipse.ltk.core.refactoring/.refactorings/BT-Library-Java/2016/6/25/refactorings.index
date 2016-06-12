@@ -6,3 +6,6 @@
 1465745631258	Rename type 'TestBucketSort'
 1465745642114	Rename type 'TestStudent'
 1465745673373	Delete element
+1465747316766	Copy compilation unit
+1465747328028	Rename type 'TestStudentMailMatcher2'
+1465747619617	Rename method 'upCaseChain'

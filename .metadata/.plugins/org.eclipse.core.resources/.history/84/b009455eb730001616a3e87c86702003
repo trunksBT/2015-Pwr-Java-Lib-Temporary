@@ -1,0 +1,10 @@
+package bt.algorithms.strings;
+
+public class StringUtils {
+
+	public static String upCaseChain(String inChain) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
