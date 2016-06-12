@@ -1,0 +1,34 @@
+package bt.algorithms.strings;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TestStudentMailMatcher extends TestCase
+{
+	@Before
+	public void setUp() throws Exception {
+		System.out.println( "SetUp" );
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		System.out.println( "TearDown" );
+	}
+
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_BucketSort_63124805_Expect_01234568_True()
+	{
+	    //arrange
+		//act
+		System.out.println( "TestMethod" );
+		//assert
+	}
+}
