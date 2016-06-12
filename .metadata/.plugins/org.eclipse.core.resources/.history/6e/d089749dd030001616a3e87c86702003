@@ -12,7 +12,7 @@ public class StudentMailMatcher implements MailMatcher{
 	public boolean apply(String inChain) {
 		if( inChain == null )
 			return false;
-	
+		
 		String upCased = StringUtils.upCase(inChain);
 		String addresSubstring;
 		int chainSize = upCased.length();
@@ -29,9 +29,9 @@ public class StudentMailMatcher implements MailMatcher{
 				result&= false;
 
 		// ConsistedFromNumbers
-		while( (curr = upCased.charAt(it++)) != '@' && it < chainSize && result)
+		while( (curr = upCased.charAt(it++)) != '@' && result)
 		{
-			if(Character.isDigit(curr)) {
+			if(!Character.isLetter(curr)) {
 				result&= true;
 				studentIdxSize++;
 			}else

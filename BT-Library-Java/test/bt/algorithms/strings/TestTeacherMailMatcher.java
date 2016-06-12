@@ -11,7 +11,7 @@ import org.junit.runners.MethodSorters;
 import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class TestStudentMailMatcher extends TestCase
+public class TestTeacherMailMatcher extends TestCase
 {
 	// testCases further refered as tc
 	public ArrayList<String> tcMock;
@@ -77,7 +77,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 41;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -94,7 +94,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 40;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -111,7 +111,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 39;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -128,7 +128,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 38;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -145,7 +145,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 37;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -162,7 +162,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 36;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -179,7 +179,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 35;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -196,7 +196,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 34;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -213,7 +213,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 33;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -230,7 +230,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 32;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -247,7 +247,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 31;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -264,7 +264,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 30;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -281,7 +281,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 29;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -298,7 +298,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 28;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -315,7 +315,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 27;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -332,7 +332,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 26;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -349,7 +349,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 25;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -366,7 +366,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 24;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -383,7 +383,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 23;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -400,7 +400,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 22;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -417,7 +417,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 21;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -434,7 +434,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 20;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -451,7 +451,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 19;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -468,7 +468,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 18;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -485,7 +485,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 17;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -502,7 +502,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 16;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -519,7 +519,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 15;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -536,7 +536,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 14;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -553,7 +553,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 13;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -570,7 +570,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 12;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -587,7 +587,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 11;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -604,7 +604,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 10;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -621,7 +621,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 9;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -638,7 +638,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 8;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -655,7 +655,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 7;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -672,7 +672,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 6;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -689,7 +689,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 5;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -706,7 +706,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 4;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -723,7 +723,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 3;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -740,7 +740,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 2;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -757,7 +757,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 1;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);
@@ -774,7 +774,7 @@ public class TestStudentMailMatcher extends TestCase
 		int tcIdx = 0;
 		boolean rcVal = true;
 		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
+		MailMatcher turnstile = TeacherMailMatcher.INSTANCE;
 		
 		//act
 		rcVal = turnstile.apply(inChain);

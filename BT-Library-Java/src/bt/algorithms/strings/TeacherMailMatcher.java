@@ -1,12 +1,12 @@
 package bt.algorithms.strings;
 
-public class StudentMailMatcher implements MailMatcher{
+public class TeacherMailMatcher implements MailMatcher{
 	public final int STUDENT_IDX_SIZE = 6; // 209826
 	public final String ADDRES_SERWER_EDU = "STUDENT.PWR.EDU.PL";
 	public final String ADDRES_SERWER_WROC = "STUDENT.PWR.WROC.PL";
-	public static final StudentMailMatcher INSTANCE = new StudentMailMatcher();
+	public static final TeacherMailMatcher INSTANCE = new TeacherMailMatcher();
 	
-	private StudentMailMatcher() {}
+	private TeacherMailMatcher() {}
 
 	@Override
 	public boolean apply(String inChain) {

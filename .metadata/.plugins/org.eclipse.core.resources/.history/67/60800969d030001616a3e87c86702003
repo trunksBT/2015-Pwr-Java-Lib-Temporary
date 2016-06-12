@@ -64,60 +64,7 @@ public class TestStudentMailMatcher extends TestCase
 		/* 36 */ tcMock.add("000000@student.pwr.wroc.pl");
 		/* 37 */ tcMock.add("000000@student.pwr.wroc.pd");
 		/* 38 */ tcMock.add("000000@student.pwr.wroc.3");
-		/* 39 */ tcMock.add("000000@student.pwr.wroc.com");
-		/* 40 */ tcMock.add(null);
-		/* 41 */ tcMock.add(" ");
-	}
-	
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
-	public void test_41_space_Expect_false()
-	{
-	    //arrange
-		int tcIdx = 41;
-		boolean rcVal = true;
-		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
 		
-		//act
-		rcVal = turnstile.apply(inChain);
-		
-		//assert
-		assertFalse(rcVal);
-	}
-	
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
-	public void test_40_null_Expect_false()
-	{
-	    //arrange
-		int tcIdx = 40;
-		boolean rcVal = true;
-		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
-		
-		//act
-		rcVal = turnstile.apply(inChain);
-		
-		//assert
-		assertFalse(rcVal);
-	}
-	
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
-	public void test_39_wczesniejOk_adresSerwera4_com_Expect_false()
-	{
-	    //arrange
-		int tcIdx = 39;
-		boolean rcVal = true;
-		String inChain = tcMock.get(tcIdx);
-		MailMatcher turnstile = StudentMailMatcher.INSTANCE;
-		
-		//act
-		rcVal = turnstile.apply(inChain);
-		
-		//assert
-		assertFalse(rcVal);
 	}
 
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior

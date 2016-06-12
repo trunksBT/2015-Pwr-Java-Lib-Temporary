@@ -29,9 +29,9 @@ public class StudentMailMatcher implements MailMatcher{
 				result&= false;
 
 		// ConsistedFromNumbers
-		while( (curr = upCased.charAt(it++)) != '@' && it < chainSize && result)
+		while( (curr = upCased.charAt(it++)) != '@' && result)
 		{
-			if(Character.isDigit(curr)) {
+			if(!Character.isLetter(curr)) {
 				result&= true;
 				studentIdxSize++;
 			}else

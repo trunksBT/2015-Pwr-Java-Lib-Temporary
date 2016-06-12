@@ -3,16 +3,12 @@ package bt.algorithms.strings;
 public class StudentMailMatcher implements MailMatcher{
 	public final int STUDENT_IDX_SIZE = 6; // 209826
 	public final String ADDRES_SERWER_EDU = "STUDENT.PWR.EDU.PL";
-	public final String ADDRES_SERWER_WROC = "STUDENT.PWR.WROC.PL";
 	public static final StudentMailMatcher INSTANCE = new StudentMailMatcher();
 	
 	private StudentMailMatcher() {}
 
 	@Override
 	public boolean apply(String inChain) {
-		if( inChain == null )
-			return false;
-	
 		String upCased = StringUtils.upCase(inChain);
 		String addresSubstring;
 		int chainSize = upCased.length();
@@ -29,9 +25,9 @@ public class StudentMailMatcher implements MailMatcher{
 				result&= false;
 
 		// ConsistedFromNumbers
-		while( (curr = upCased.charAt(it++)) != '@' && it < chainSize && result)
+		while( (curr = upCased.charAt(it++)) != '@' && result)
 		{
-			if(Character.isDigit(curr)) {
+			if(!Character.isLetter(curr)) {
 				result&= true;
 				studentIdxSize++;
 			}else
@@ -44,13 +40,7 @@ public class StudentMailMatcher implements MailMatcher{
 		
 		// *************** SerwerAdress ****************************
 		/////////////////////////////////////////////////////////////
-		
-		if((addresSubstring = upCased.substring(it, chainSize)).equals(ADDRES_SERWER_EDU))
-			result&= true;
-		else if ( addresSubstring.equals(ADDRES_SERWER_WROC))
-			result&= true;
-		else
-			result&= false;
+		if((addresSubstring = upCased.substring(++it, chainSize))
 		
 		
 		return result;
