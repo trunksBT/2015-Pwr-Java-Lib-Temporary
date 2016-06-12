@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRatajListRec" project="BT-Library-Java" tests="29" started="29" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.collections.lists.TestRatajListRec" time="0.001">
+    <testcase name="test_CTOR_associateTwoLists_true" classname="bt.collections.lists.TestRatajListRec" time="0.001"/>
+    <testcase name="test_CTOR_oneEl_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_add_On1size_Expect_size2" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_add_On2size_Expect_size3" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_add_On3size_Expect_size4" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_append_4size_On3size_Expect_size7" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_copyStatic_3size_Expect_size3" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_copy_3size_Expect_size3" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_delete_0_On1size_Expect_size0" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_delete_1_On1size_Expect_size1" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_delete_1_On2size_Expect_size1" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_delete_1_On3size_Expect_size2" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_delete_4_On3size_Expect_size3" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_get_0val_On1size_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_get_0val_On2size_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_get_0val_On3size_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_get_1val_On2size_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_get_1val_On3size_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_get_2val_On2size_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_get_2val_On3size_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_get_4val_On3size_false" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_size_On1size_Expect_1" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_size_On2size_Expect_2" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_size_On3size_Expect_3" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_sumStatic_1size_Expect_1_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_sumStatic_3size_Expect_6_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_sumStatic_null_Expect_0_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_sum_1size_Expect_1_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+    <testcase name="test_sum_3size_Expect_6_true" classname="bt.collections.lists.TestRatajListRec" time="0.0"/>
+  </testsuite>
+</testrun>

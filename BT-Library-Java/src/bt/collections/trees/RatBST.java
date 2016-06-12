@@ -42,7 +42,8 @@ public class RatBST {
 
 	public static int assignAmountOfInternalNodes(RatNode root) {
 		return root == null ? 0 :
-			(root.ammOfInnerNodes = assignAmountOfInternalNodes( root.left) + 1 + assignAmountOfInternalNodes(root.right));
+			(root.ammOfInnerNodes = assignAmountOfInternalNodes( root.left) 
+			+ 1 + assignAmountOfInternalNodes(root.right));
 	}
 
 	public static void preorder(RatNode root) {

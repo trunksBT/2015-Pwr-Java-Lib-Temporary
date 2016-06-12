@@ -1,0 +1,10 @@
+package bt.collections.trees;
+
+public class RatBST2 {
+
+	public static int height(RatNode2 tape) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

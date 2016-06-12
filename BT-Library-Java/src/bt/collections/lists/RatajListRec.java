@@ -54,8 +54,10 @@ public class RatajListRec {
 	}
 
 	public RatajListRec copy() {
-		return next == null ? null : 
-			new RatajListRec(val, copy(next));
+		if( next == null )
+			return new RatajListRec(val);
+		else
+			return new RatajListRec(val, next.copy());
 	}
 	
 	public static RatajListRec copy(RatajListRec root) {

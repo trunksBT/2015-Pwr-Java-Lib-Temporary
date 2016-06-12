@@ -223,7 +223,7 @@ public class TestRatBST extends TestCase {
      
    	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
      @Test
-     public void test_countLowerNodes_null_0()
+     public void test_assignAndReturnAmountOfLowerNodes_null_0()
      {
      	// arrange
      	RatNode tape = null;
@@ -241,7 +241,7 @@ public class TestRatBST extends TestCase {
      
  	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
      @Test
-     public void test_countLowerNodes_MockOneElement_0()
+     public void test_assignAndReturnAmountOfLowerNodes_MockOneElement_0()
      {
      	// arrange
      	RatNode tape = getMockOneElement();
@@ -259,7 +259,7 @@ public class TestRatBST extends TestCase {
      
  	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
      @Test
-     public void test_countLowerNodes_MockNotEmpty_4()
+     public void test_assignAndReturnAmountOfLowerNodes_MockNotEmpty_4()
      {
      	// arrange
      	RatNode tape = getMockNotEmpty();
