@@ -64,7 +64,11 @@ public class RatajListRec {
 	}
 
 	public RatajListRec append(RatajListRec l2) {
-		next = (next == null) ? l2 : next.append(l2);
+		if(next != null)
+			next.append(l2);
+		else {
+			next = new RatajListRec(l2.val,l2.next);
+		}
 		return this;
 	}
 }

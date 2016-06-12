@@ -574,7 +574,8 @@ public class TestRatajListRec extends TestCase {
     							new RatajListRec(2,new RatajListRec(3))));
     	
     	RatajListRec rcList = null;
-    	int expVal = 7;
+    	int expVal = 3;
+    	int toDel = 4;
     	
     	// act
     	rcList = l1.append(l2);

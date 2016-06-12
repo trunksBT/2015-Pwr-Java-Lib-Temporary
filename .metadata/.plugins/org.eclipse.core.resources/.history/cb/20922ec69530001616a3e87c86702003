@@ -573,11 +573,11 @@ public class TestRatajListRec extends TestCase {
     					new RatajListRec(1, 
     							new RatajListRec(2,new RatajListRec(3))));
     	
-    	RatajListRec rcList = null;
+    	RatajListRec rcList = l1;
     	int expVal = 7;
     	
     	// act
-    	rcList = l1.append(l2);
+    	l1.append(l2);
     	
     	// assert
     	assertEquals(rcList.size(), expVal);

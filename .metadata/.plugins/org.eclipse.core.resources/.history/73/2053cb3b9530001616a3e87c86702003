@@ -557,29 +557,4 @@ public class TestRatajListRec extends TestCase {
     	// assert
     	assertEquals(rcList.size(), expVal);
     }
-    
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-    @Test
-    public void test_append_4size_On3size_Expect_size7()
-    {
-    	// arrange
-    	RatajListRec l1 = 
-    			new RatajListRec(0, 
-    					new RatajListRec(1, 
-    							new RatajListRec(2)));
-    	
-    	RatajListRec l2 = 
-    			new RatajListRec(0, 
-    					new RatajListRec(1, 
-    							new RatajListRec(2,new RatajListRec(3))));
-    	
-    	RatajListRec rcList = null;
-    	int expVal = 7;
-    	
-    	// act
-    	rcList = l1.append(l2);
-    	
-    	// assert
-    	assertEquals(rcList.size(), expVal);
-    }
 }
