@@ -1,0 +1,59 @@
+package bt.algorithms.strings;
+
+public class StudentMailMatcher implements MailMatcher{
+	final int STUDENT_IDX_SIZE = 6; // 209826
+	final String ADDRES_SERWER_EDU = "STUDENT.PWR.EDU.PL";
+	final String ADDRES_SERWER_WROC = "STUDENT.PWR.WROC.PL";
+	final int MIN_SIZE =25; // 6-accountName, 19 serwerName
+	public static final StudentMailMatcher INSTANCE = new StudentMailMatcher();
+	
+	private StudentMailMatcher() {}
+
+	@Override
+	public boolean apply(String inChain) {
+		if( inChain == null )
+			return false;
+	
+		String upCased = StringUtils.upCase(inChain);
+		String addresSubstring;
+		int chainSize = upCased.length();
+		boolean result = true;
+		char curr;
+		int studentIdxSize = 0;
+		int it = -1;
+
+		if(chainSize < MIN_SIZE)
+			return false;
+				
+		// *************** AccountName ****************************
+		///////////////////////////////////////////////////////////	
+
+		// NotEmpty
+		if((curr = upCased.charAt(++it)) == '@')
+				return false;
+
+		// ConsistedFromNumbers
+		while( (curr = upCased.charAt(it++)) != '@' && it < chainSize && result)
+			if(Character.isDigit(curr)) {
+				result&= true;
+				studentIdxSize++;
+			}else
+				return false;
+
+		// ConsistedFrom6Numbers
+		if( studentIdxSize != STUDENT_IDX_SIZE)
+			return false;
+		
+		// *************** SerwerAdress ****************************
+		/////////////////////////////////////////////////////////////
+		
+		if((addresSubstring = upCased.substring(it, chainSize)).equals(ADDRES_SERWER_EDU))
+			result&= true;
+		else if ( addresSubstring.equals(ADDRES_SERWER_WROC))
+			result&= true;
+		else
+			return false;
+				
+		return result;
+	}
+}

@@ -19,7 +19,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	@After
 	public void tearDown() throws Exception {
-		System.out.println( "TearDown" );
+		
 	}
 	
 	@Before
@@ -615,7 +615,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_9_nazwa_Konta_6_Cyfr_2xMalpa_Expect_false()
+	public void test_09_nazwa_Konta_6_Cyfr_2xMalpa_Expect_false()
 	{
 	    //arrange
 		int tcIdx = 9;
@@ -632,7 +632,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_8_nazwa_Konta_6_Znakow_Expect_false()
+	public void test_08_nazwa_Konta_6_Znakow_Expect_false()
 	{
 	    //arrange
 		int tcIdx = 8;
@@ -649,7 +649,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_7_nazwa_Konta_5_Cyfry_1_Znak_Expect_false()
+	public void test_07_nazwa_Konta_5_Cyfry_1_Znak_Expect_false()
 	{
 	    //arrange
 		int tcIdx = 7;
@@ -666,7 +666,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_6_nazwa_Konta_6_Cyfra_Expect_true()
+	public void test_06_nazwa_Konta_6_Cyfra_Expect_true()
 	{
 	    //arrange
 		int tcIdx = 6;
@@ -683,7 +683,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_5_nazwa_Konta_7_Cyfra_Expect_false()
+	public void test_05_nazwa_Konta_7_Cyfra_Expect_false()
 	{
 	    //arrange
 		int tcIdx = 5;
@@ -700,7 +700,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_4_nazwa_Konta_6_Cyfra_Expect_true()
+	public void test_04_nazwa_Konta_6_Cyfra_Expect_true()
 	{
 	    //arrange
 		int tcIdx = 4;
@@ -717,7 +717,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_3_nazwa_Konta_2_Cyfra_Expect_false()
+	public void test_03_nazwa_Konta_2_Cyfra_Expect_false()
 	{
 	    //arrange
 		int tcIdx = 3;
@@ -734,7 +734,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_2_nazwa_Konta_1_Cyfra_Expect_false()
+	public void test_02_nazwa_Konta_1_Cyfra_Expect_false()
 	{
 	    //arrange
 		int tcIdx = 2;
@@ -751,7 +751,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_1_nazwa_Konta_1_Znak_Expect_false()
+	public void test_01_nazwa_Konta_1_Znak_Expect_false()
 	{
 	    //arrange
 		int tcIdx = 1;
@@ -768,7 +768,7 @@ public class TestStudentMailMatcher extends TestCase
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_0_nazwa_Konta_0_Znakow_Expect_false()
+	public void test_00_nazwa_Konta_0_Znakow_Expect_false()
 	{
 	    //arrange
 		int tcIdx = 0;

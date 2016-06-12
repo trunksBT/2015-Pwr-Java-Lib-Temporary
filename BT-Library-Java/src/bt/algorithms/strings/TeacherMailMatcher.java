@@ -1,12 +1,12 @@
 package bt.algorithms.strings;
 
 public class TeacherMailMatcher implements MailMatcher{
-	public final int MIN_NAME1_SIZE= 1; // ala
-	public final int MIN_NAME2_SIZE= 1; // nowak
-	public final int MAX_NAME_SIZE =75; // 64-accountName, 11 serwerName
-	public final int MIN_SIZE =15; // 64-accountName, 11 serwerName
-	public final String ADDRES_SERWER_EDU = "PWR.EDU.PL";
-	public final String ADDRES_SERWER_WROC = "PWR.WROC.PL";
+	final int MIN_NAME1_LENGTH= 1; // ala
+	final int MIN_NAME2_LENGTH= 1; // nowak
+	final int MAX_NAME_LENGTH =75; // 64-accountName, 11 serwerName
+	final int MIN_LENGTH =15; // 64-accountName, 11 serwerName
+	final String ADDRES_SERWER_EDU = "PWR.EDU.PL";
+	final String ADDRES_SERWER_WROC = "PWR.WROC.PL";
 	public static final TeacherMailMatcher INSTANCE = new TeacherMailMatcher();
 	
 	private TeacherMailMatcher() {}
@@ -18,16 +18,14 @@ public class TeacherMailMatcher implements MailMatcher{
 	
 		String upCased = StringUtils.upCase(inChain);
 		String addresSubstring;
-		int chainSize = upCased.length();
+		int chainLength = upCased.length();
 		boolean result = true;
 		char curr;
-		int name1Size = 0;
-		int name2Size = 0;
+		int name1Length = 0;
+		int name2Length = 0;
 		int it = -1;
 		
-		// *************** AccountNameSize ************************
-		///////////////////////////////////////////////////////////
-		if(chainSize > MAX_NAME_SIZE || chainSize < MIN_SIZE)
+		if(chainLength > MAX_NAME_LENGTH || chainLength < MIN_LENGTH)
 			return false;
 		
 		// *************** AccountName1 ****************************
@@ -38,50 +36,45 @@ public class TeacherMailMatcher implements MailMatcher{
 				result&= false;
 
 		// ConsistedFromNumbers
-		while( (curr = upCased.charAt(it++)) != '.' && it < chainSize && result)
-		{
+		while( (curr = upCased.charAt(it++)) != '.' && it < chainLength && result)
 			if(Character.isLetter(curr) && !Character.isSpaceChar(curr)) {
 				result&= true;
-				name1Size++;
+				name1Length++;
 			}else
-				result&= false;
-		}
+				return false;
 		
 		// ConsistedFromMin1Letter
-		if( name1Size < MIN_NAME1_SIZE && result)
-			result&= false;
+		if( name1Length < MIN_NAME1_LENGTH && result)
+			return false;
 
 		// *************** AccountName2 ****************************
 		///////////////////////////////////////////////////////////
 		
 		// NotEmpty
 		if((curr = upCased.charAt(it)) == '.' && result )
-				result&= false;
+			return false;
 
 		// ConsistedFromNumbers
-		while( (curr = upCased.charAt(it++)) != '@' && it < chainSize && result)
-		{
+		while( (curr = upCased.charAt(it++)) != '@' && it < chainLength && result)
 			if(Character.isLetter(curr) && !Character.isSpaceChar(curr)) {
 				result&= true;
-				name2Size++;
+				name2Length++;
 			}else
-				result&= false;
-		}
+				return false;
 		
 		// ConsistedFromMin1Letter
-		if( name2Size < MIN_NAME2_SIZE && result)
-			result&= false;
+		if( name2Length < MIN_NAME2_LENGTH && result)
+			return false;
 		
 		// *************** SerwerAdress ****************************
 		/////////////////////////////////////////////////////////////
 		
-		if((addresSubstring = upCased.substring(it, chainSize)).equals(ADDRES_SERWER_EDU))
+		if((addresSubstring = upCased.substring(it, chainLength)).equals(ADDRES_SERWER_EDU))
 			result&= true;
 		else if ( addresSubstring.equals(ADDRES_SERWER_WROC))
 			result&= true;
 		else
-			result&= false;
-		
+			return false;
 		
 		return result;
 	}
