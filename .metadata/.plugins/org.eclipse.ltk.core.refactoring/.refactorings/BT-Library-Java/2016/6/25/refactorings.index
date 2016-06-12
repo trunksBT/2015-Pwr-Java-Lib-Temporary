@@ -9,3 +9,7 @@
 1465747316766	Copy compilation unit
 1465747328028	Rename type 'TestStudentMailMatcher2'
 1465747619617	Rename method 'upCaseChain'
+1465752428762	Rename field 'SERWER_ADDRES_3_SIZE'
+1465752437260	Rename field 'SERWER_ADDRES_3_SIZE'
+1465753097598	Rename local variable 'chainSize'
+1465753169083	Rename local variable 'chainSizePlus1'
