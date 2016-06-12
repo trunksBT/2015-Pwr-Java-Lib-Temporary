@@ -81,26 +81,11 @@ public class TestStringUtils extends TestCase
 	public void test_Character_isLetter_dot_Expect_false()
 	{
 	    //arrange
-		boolean expVal = false;
+		boolean expVal = false
 		boolean rcVal;
 		
 		//act
 		rcVal = Character.isLetter('.');
-		
-		//assert
-		assertEquals(expVal, rcVal);
-	}
-	
-	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
-	@Test
-	public void test_Character_Monkey_dot_Expect_false()
-	{
-	    //arrange
-		boolean expVal = false;
-		boolean rcVal;
-		
-		//act
-		rcVal = Character.isLetter('@');
 		
 		//assert
 		assertEquals(expVal, rcVal);

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestTeacherMailMatcher" project="BT-Library-Java" tests="8" started="8" failures="1" errors="0" ignored="0">
+  <testsuite name="bt.algorithms.strings.TestTeacherMailMatcher" time="0.002">
+    <testcase name="test_0_nazwa_Konta1y2_0_Znakow_Expect_false" classname="bt.algorithms.strings.TestTeacherMailMatcher" time="0.0"/>
+    <testcase name="test_1_nazwa_Konta1_1_Znak_Expect_false" classname="bt.algorithms.strings.TestTeacherMailMatcher" time="0.0"/>
+    <testcase name="test_2_nazwa_Konta1_1_Cyfra_Expect_false" classname="bt.algorithms.strings.TestTeacherMailMatcher" time="0.0"/>
+    <testcase name="test_3_nazwa_Konta1_2_Cyfry_Expect_false" classname="bt.algorithms.strings.TestTeacherMailMatcher" time="0.0"/>
+    <testcase name="test_4_nazwa_Konta1_6_Cyfry_Expect_false" classname="bt.algorithms.strings.TestTeacherMailMatcher" time="0.0"/>
+    <testcase name="test_5_nazwa_Konta1_7_Cyfry_Expect_false" classname="bt.algorithms.strings.TestTeacherMailMatcher" time="0.0"/>
+    <testcase name="test_6_nazwa_Konta1_5_Cyfry_1_Znak_Expect_false" classname="bt.algorithms.strings.TestTeacherMailMatcher" time="0.0"/>
+    <testcase name="test_7_nazwa_Konta1_6_Znakow_Expect_true" classname="bt.algorithms.strings.TestTeacherMailMatcher" time="0.002">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.strings.TestTeacherMailMatcher.test_7_nazwa_Konta1_6_Znakow_Expect_true(TestTeacherMailMatcher.java:53)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>

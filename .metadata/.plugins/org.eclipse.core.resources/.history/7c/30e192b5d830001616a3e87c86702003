@@ -3,8 +3,8 @@ package bt.algorithms.strings;
 public class TeacherMailMatcher implements MailMatcher{
 	public final int MIN_NAME1_SIZE= 1; // ala
 	public final int MIN_NAME2_SIZE= 1; // ala
-	public final String ADDRES_SERWER_EDU = "PWR.EDU.PL";
-	public final String ADDRES_SERWER_WROC = "PWR.WROC.PL";
+	public final String ADDRES_SERWER_EDU = "STUDENT.PWR.EDU.PL";
+	public final String ADDRES_SERWER_WROC = "STUDENT.PWR.WROC.PL";
 	public static final TeacherMailMatcher INSTANCE = new TeacherMailMatcher();
 	
 	private TeacherMailMatcher() {}
@@ -20,7 +20,6 @@ public class TeacherMailMatcher implements MailMatcher{
 		boolean result = true;
 		char curr;
 		int name1Size = 0;
-		int name2Size = 0;
 		int it = -1;
 		
 		// *************** AccountName1 ****************************
@@ -48,11 +47,11 @@ public class TeacherMailMatcher implements MailMatcher{
 		///////////////////////////////////////////////////////////
 		
 		// NotEmpty
-		if((curr = upCased.charAt(it)) == '.')
+		if((curr = upCased.charAt(++it)) == '.')
 				result&= false;
 
 		// ConsistedFromNumbers
-		while( (curr = upCased.charAt(it++)) != '@' && it < chainSize && result)
+		while( (curr = upCased.charAt(it++)) != '.' && it < chainSize && result)
 		{
 			if(Character.isLetter(curr) && !Character.isSpaceChar(curr)) {
 				result&= true;
