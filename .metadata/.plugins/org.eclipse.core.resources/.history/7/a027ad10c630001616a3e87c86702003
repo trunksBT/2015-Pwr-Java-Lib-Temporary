@@ -69,7 +69,7 @@ public class TestStudentMailMatcher extends TestCase
 
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 	@Test
-	public void test_37_wczesniejOk_adresSerwera4_pd_Expect_false()
+	public void test_37_wczesniejOk_adresSerwera4_pd_Expect_true()
 	{
 	    //arrange
 		int tcIdx = 37;
@@ -81,7 +81,7 @@ public class TestStudentMailMatcher extends TestCase
 		rcVal = turnstile.apply(inChain);
 		
 		//assert
-		assertFalse(rcVal);
+		assertTrue(rcVal);
 	}
 	
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
