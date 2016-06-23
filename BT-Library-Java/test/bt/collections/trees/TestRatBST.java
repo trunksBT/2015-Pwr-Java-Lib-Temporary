@@ -347,7 +347,33 @@ public class TestRatBST extends TestCase {
     	RatNode tape = getMockNotEmpty();
     	
     	// act
-    	RatBST.preorder(tape);
+    	RatBST.preOrder(tape);
+    	
+    	// assert
+    	assertTrue(true);
+    }
+    
+    @Test
+    public void test_postOrderReversed_Mock_4213657()
+    {
+    	// arrange
+    	RatNode tape = getMockNotEmpty();
+    	
+    	// act
+    	RatBST.postOrderRev(tape);
+    	
+    	// assert
+    	assertTrue(true);
+    }
+    
+    @Test
+    public void test_postOrder_Mock_4213657()
+    {
+    	// arrange
+    	RatNode tape = getMockNotEmpty();
+    	
+    	// act
+    	RatBST.postOrder(tape);
     	
     	// assert
     	assertTrue(true);

@@ -240,6 +240,60 @@ public class TestRatajListRec extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
+    public void test_deleteEvery2_size1_Expect_size1()
+    {
+    	// arrange
+    	RatajListRec list = 
+    			new RatajListRec(0);
+    	int expVal = 1;
+
+    	// act
+    	list.deleteEvery2();
+    	
+    	// assert
+    	assertEquals(list.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_deleteEvery2_size3_Expect_size2()
+    {
+    	// arrange
+    	RatajListRec list = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, 
+    							new RatajListRec(2)));
+    	int expVal = 2;
+
+    	// act
+    	list.deleteEvery2();
+    	
+    	// assert
+    	assertEquals(list.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_deleteEvery2_size5_Expect_size3()
+    {
+    	// arrange
+    	RatajListRec list = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, 
+    							new RatajListRec(2,
+    									new RatajListRec(3,
+    											new RatajListRec(4)))));
+    	int expVal = 3;
+
+    	// act
+    	list.deleteEvery2();
+    	
+    	// assert
+    	assertEquals(list.size(), expVal);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
     public void test_copyStatic_3size_Expect_size3()
     {
     	// arrange

@@ -1,0 +1,100 @@
+package bt.collections.iterators;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.collections.iterators.PrimeIterator;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TestFrasioIter extends TestCase
+{				
+	private static final int size = 200000;
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_CTOR_limes_d0_u12_Expect_0_True()
+	{
+		int[] primitives = new int[size];
+		Integer[] objects = new Integer[size];
+		int sum;
+		double privitivesForEach1 = 0, 
+				privitivesForEach2 = 0,
+				primitivesFor = 0, 
+				primitivesTryCatch = 0;
+		double objectsForEach = 0, objectsFor = 0, objectsTryCatch = 0;
+		double time;
+		for(int i = 0; i < size; ++i)
+			objects[i] = primitives[i] = (int) Math.random() * 1000 - 500;
+		
+		for(int i = 0; i < 5; ++i){
+			sum = 0;
+			
+			privitivesForEach1 = System.nanoTime();
+			
+			for(int e : primitives)
+				sum += e;
+			
+//			time += System.nanoTime();
+			privitivesForEach2 = System.nanoTime();
+			
+			
+			sum = 0;
+//			time = -System.nanoTime();
+			
+			for(int k = 0; k < size; ++k)
+				sum += primitives[k];
+			
+//			time += System.nanoTime();
+			primitivesFor += System.nanoTime();
+			
+			sum = 0;
+//			time = -System.nanoTime();
+			
+			try{
+				for(int k = 0; ; ++k)
+					sum += primitives[k];
+			}catch(ArrayIndexOutOfBoundsException ex){
+			}
+			
+//			time += System.nanoTime();
+			primitivesTryCatch += time;
+			
+			sum = 0;
+			time = -System.nanoTime();
+			
+			for(Integer e : objects)
+				sum += e;
+			
+			time += System.nanoTime();
+			objectsForEach += System.nanoTime();
+						
+			
+			sum = 0;
+			time = -System.nanoTime();
+			
+			for(int k = 0; k < size; ++k)
+				sum += objects[k];
+			
+			time += System.nanoTime();
+			objectsFor += System.nanoTime();
+			
+			sum = 0;
+			time = -System.nanoTime();
+			
+			try{
+				for(int k = 0; ; ++k)
+					sum += objects[k];
+			}catch(ArrayIndexOutOfBoundsException ex){
+			}
+			
+			time += System.nanoTime();
+			objectsTryCatch += time;
+		}
+		
+		System.out.printf("Times %6.3e/%6.3e/%6.3e/%6.3e/%6.3e/%6.3e\n", privitivesForEach, primitivesFor, primitivesTryCatch, objectsForEach, objectsFor, objectsTryCatch);
+	
+	    assertTrue(true);
+	}	
+}

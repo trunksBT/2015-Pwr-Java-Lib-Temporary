@@ -46,16 +46,58 @@ public class RatBST {
 			+ 1 + assignAmountOfInternalNodes(root.right));
 	}
 
-	public static void preorder(RatNode root) {
-		if( root == null )
-			System.out.println( "null" );
-		else {
-			System.out.println( root.val );
-			preorder(root.left);
-			preorder(root.right);
+	public static void preOrder(RatNode root) {
+		if( root != null ) {
+			System.out.print( root.val +" " );
+			preOrder(root.left);
+			preOrder(root.right);
 		}
-		
 	}
+	
+	public static void inOrder(RatNode root) {
+		if( root != null ) {
+			inOrder(root.left);
+			System.out.print( root.val + " " );
+			inOrder(root.right);
+
+		}
+	}
+	
+	public static void postOrder(RatNode root) {
+		if( root != null ) {
+			postOrder(root.left);
+			postOrder(root.right);
+			System.out.print( root.val + " " );
+		}
+	}
+
+	public static void preOrderRev(RatNode root) {
+		if( root != null ) {
+			System.out.print( root.val +" " );
+			preOrderRev(root.right);
+			preOrderRev(root.left);
+		}
+	}
+	
+	public static void inOrderRev(RatNode root) {
+		if( root != null ) {
+			inOrderRev(root.right);
+			System.out.print( root.val + " " );
+			inOrderRev(root.left);
+
+		}
+	}
+	
+	public static void postOrderRev(RatNode root) {
+		if( root != null ) {
+			postOrderRev(root.right);
+			postOrderRev(root.left);
+			System.out.print( root.val + " " );
+		}
+	}
+
+
+	
 
 	public static int maxVal(RatNode root) {
 		return root.right == null ? root.val :
