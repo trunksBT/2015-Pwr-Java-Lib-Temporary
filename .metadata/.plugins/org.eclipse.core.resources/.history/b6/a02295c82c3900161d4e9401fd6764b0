@@ -17,13 +17,13 @@ public class TestRatBSTOrdersMock1 extends TestCase {
 
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_preorder()
+    public void test_preorder_Mock1()
     {
     	// arrange
     	RatNode tape = getMock1();
     	
     	// act
-    	System.out.println("preorder");
+    	System.out.println("preorder_Mock1");
     	RatBST.preOrder(tape);
     	System.out.println("");
     	
@@ -33,13 +33,29 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_postorder()
+    public void test_inorder_Mock1()
     {
     	// arrange
     	RatNode tape = getMock1();
     	
     	// act
-    	System.out.println("postorder");
+    	System.out.println("inorder_Mock1");
+    	RatBST.inOrder(tape);
+    	System.out.println("");
+    	
+    	// assert
+    	assertTrue(true);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_postorder_Mock1()
+    {
+    	// arrange
+    	RatNode tape = getMock1();
+    	
+    	// act
+    	System.out.println("postorder_Mock1");
     	RatBST.postOrder(tape);
     	System.out.println("");
     	
@@ -49,13 +65,13 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_preorderRev()
+    public void test_preorderRev_Mock1()
     {
     	// arrange
     	RatNode tape = getMock1();
     	
     	// act
-    	System.out.println("preorderRev");
+    	System.out.println("preorderRev_Mock1");
     	RatBST.preOrderRev(tape);
     	System.out.println("");
     	
@@ -65,13 +81,30 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
-    public void test_postorderRev()
+    public void test_inorderRev_Mock1()
+    {
+    	System.out.println("********* Mock1 ***********\n");
+    	// arrange
+    	RatNode tape = getMock1();
+    	
+    	// act
+    	System.out.println("inorderRev_Mock1");
+    	RatBST.inOrderRev(tape);
+    	System.out.println("");
+    	
+    	// assert
+    	assertTrue(true);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_postorderRev_Mock1()
     {
     	// arrange
     	RatNode tape = getMock1();
     	
     	// act
-    	System.out.println("postorderRev");
+    	System.out.println("postorderRev_Mock1");
     	RatBST.postOrderRev(tape);
     	System.out.println("");
     	

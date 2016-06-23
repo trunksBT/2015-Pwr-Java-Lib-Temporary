@@ -13,14 +13,14 @@ import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
-public class TestRatBSTOrdersMock1 extends TestCase {
+public class TestRatBSTOrdersMock4 extends TestCase {
 
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
     public void test_preorder()
     {
     	// arrange
-    	RatNode tape = getMock1();
+    	RatNode tape = getMock4();
     	
     	// act
     	System.out.println("preorder");
@@ -36,7 +36,7 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     public void test_postorder()
     {
     	// arrange
-    	RatNode tape = getMock1();
+    	RatNode tape = getMock4();
     	
     	// act
     	System.out.println("postorder");
@@ -52,7 +52,7 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     public void test_preorderRev()
     {
     	// arrange
-    	RatNode tape = getMock1();
+    	RatNode tape = getMock4();
     	
     	// act
     	System.out.println("preorderRev");
@@ -68,7 +68,7 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     public void test_postorderRev()
     {
     	// arrange
-    	RatNode tape = getMock1();
+    	RatNode tape = getMock4();
     	
     	// act
     	System.out.println("postorderRev");
@@ -79,7 +79,7 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     	assertTrue(true);
     }
     
-    public RatNode getMock1() {
-    	return			new RatNode(4, new RatNode(3, new RatNode(2, new RatNode(1),null),null),null);
+    public RatNode getMock4() {
+    	return		new RatNode(4,new RatNode(2,new RatNode(1),new RatNode(3)),new RatNode(6,new RatNode(5),new RatNode(7)));
     }
 }

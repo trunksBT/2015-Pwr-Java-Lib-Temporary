@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRatBSTOrdersMock2" project="BT-Library-Java" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.collections.trees.TestRatBSTOrdersMock2" time="0.0">
+    <testcase name="test_inorderRev_Mock2" classname="bt.collections.trees.TestRatBSTOrdersMock2" time="0.0"/>
+    <testcase name="test_inorder_Mock2" classname="bt.collections.trees.TestRatBSTOrdersMock2" time="0.0"/>
+    <testcase name="test_postorderRev_Mock2" classname="bt.collections.trees.TestRatBSTOrdersMock2" time="0.0"/>
+    <testcase name="test_postorder_Mock2" classname="bt.collections.trees.TestRatBSTOrdersMock2" time="0.0"/>
+    <testcase name="test_preorderRev_Mock2" classname="bt.collections.trees.TestRatBSTOrdersMock2" time="0.0"/>
+    <testcase name="test_preorder_Mock2" classname="bt.collections.trees.TestRatBSTOrdersMock2" time="0.0"/>
+  </testsuite>
+</testrun>

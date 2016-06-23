@@ -33,6 +33,22 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
+    public void test_inorder()
+    {
+    	// arrange
+    	RatNode tape = getMock1();
+    	
+    	// act
+    	System.out.println("inorder");
+    	RatBST.inOrder(tape);
+    	System.out.println("");
+    	
+    	// assert
+    	assertTrue(true);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
     public void test_postorder()
     {
     	// arrange
@@ -57,6 +73,22 @@ public class TestRatBSTOrdersMock1 extends TestCase {
     	// act
     	System.out.println("preorderRev");
     	RatBST.preOrderRev(tape);
+    	System.out.println("");
+    	
+    	// assert
+    	assertTrue(true);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_inorderRev()
+    {
+    	// arrange
+    	RatNode tape = getMock1();
+    	
+    	// act
+    	System.out.println("inorderRev");
+    	RatBST.inOrderRev(tape);
     	System.out.println("");
     	
     	// assert
