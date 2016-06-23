@@ -54,6 +54,15 @@ public class RatBST {
 		}
 	}
 	
+	public static void inOrder(RatNode root) {
+		if( root != null ) {
+			inOrder(root.left);
+			System.out.print( root.val + " " );
+			inOrder(root.right);
+
+		}
+	}
+	
 	public static void postOrder(RatNode root) {
 		if( root != null ) {
 			postOrder(root.left);
@@ -70,6 +79,15 @@ public class RatBST {
 		}
 	}
 	
+	public static void inOrderRev(RatNode root) {
+		if( root != null ) {
+			inOrderRev(root.right);
+			System.out.print( root.val + " " );
+			inOrderRev(root.left);
+
+		}
+	}
+	
 	public static void postOrderRev(RatNode root) {
 		if( root != null ) {
 			postOrderRev(root.right);
@@ -77,6 +95,8 @@ public class RatBST {
 			System.out.print( root.val + " " );
 		}
 	}
+
+
 	
 
 	public static int maxVal(RatNode root) {
