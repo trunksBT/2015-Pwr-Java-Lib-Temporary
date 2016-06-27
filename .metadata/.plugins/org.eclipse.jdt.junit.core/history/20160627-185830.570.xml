@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRatajListRec2" project="BT-Library-Java" tests="37" started="37" failures="2" errors="4" ignored="0">
+  <testsuite name="bt.collections.lists.TestRatajListRec2" time="0.013">
+    <testcase name="test_CTOR_associateTwoLists_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_CTOR_oneEl_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_add_On1size_Expect_size2" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_add_On2size_Expect_size3" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_add_On3size_Expect_size4" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_append_4size_On3size_Expect_size7" classname="bt.collections.lists.TestRatajListRec2" time="0.0">
+      <error>java.lang.NullPointerException&#13;
+	at bt.collections.lists.TestRatajListRec2.test_append_4size_On3size_Expect_size7(TestRatajListRec2.java:636)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="test_copyStatic_3size_Expect_size3" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_copy_3size_Expect_size3" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_deleteEach2From1_on6size_Expect" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_deleteEvery2_size1_Expect_size1" classname="bt.collections.lists.TestRatajListRec2" time="0.001"/>
+    <testcase name="test_deleteEvery2_size3_Expect_size2" classname="bt.collections.lists.TestRatajListRec2" time="0.001">
+      <failure>junit.framework.AssertionFailedError: expected:&lt;3&gt; but was:&lt;2&gt;&#13;
+	at junit.framework.Assert.fail(Assert.java:57)&#13;
+	at junit.framework.Assert.failNotEquals(Assert.java:329)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:78)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:234)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:241)&#13;
+	at junit.framework.TestCase.assertEquals(TestCase.java:409)&#13;
+	at bt.collections.lists.TestRatajListRec2.test_deleteEvery2_size3_Expect_size2(TestRatajListRec2.java:271)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="test_deleteEvery2_size5_Expect_size3" classname="bt.collections.lists.TestRatajListRec2" time="0.001">
+      <failure>junit.framework.AssertionFailedError: expected:&lt;5&gt; but was:&lt;3&gt;&#13;
+	at junit.framework.Assert.fail(Assert.java:57)&#13;
+	at junit.framework.Assert.failNotEquals(Assert.java:329)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:78)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:234)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:241)&#13;
+	at junit.framework.TestCase.assertEquals(TestCase.java:409)&#13;
+	at bt.collections.lists.TestRatajListRec2.test_deleteEvery2_size5_Expect_size3(TestRatajListRec2.java:291)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="test_delete_0_On1size_Expect_size0" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_delete_1_On1size_Expect_size1" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_delete_1_On2size_Expect_size1" classname="bt.collections.lists.TestRatajListRec2" time="0.0">
+      <error>java.lang.NullPointerException&#13;
+	at bt.collections.lists.TestRatajListRec2.test_delete_1_On2size_Expect_size1(TestRatajListRec2.java:571)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="test_delete_1_On3size_Expect_size2" classname="bt.collections.lists.TestRatajListRec2" time="0.0">
+      <error>java.lang.NullPointerException&#13;
+	at bt.collections.lists.TestRatajListRec2.test_delete_1_On3size_Expect_size2(TestRatajListRec2.java:591)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="test_delete_4_On3size_Expect_size3" classname="bt.collections.lists.TestRatajListRec2" time="0.001">
+      <error>java.lang.NullPointerException&#13;
+	at bt.collections.lists.TestRatajListRec2.test_delete_4_On3size_Expect_size3(TestRatajListRec2.java:611)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="test_get_0val_On1size_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_get_0val_On2size_true" classname="bt.collections.lists.TestRatajListRec2" time="0.001"/>
+    <testcase name="test_get_0val_On3size_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_get_1val_On2size_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_get_1val_On3size_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_get_2val_On2size_true" classname="bt.collections.lists.TestRatajListRec2" time="0.001"/>
+    <testcase name="test_get_2val_On3size_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_get_4val_On3size_false" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_revAndRetList_null_Descending_Expect_null_Ascending" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_revAndRetList_on1size_Descending_Expect_1size_Ascending" classname="bt.collections.lists.TestRatajListRec2" time="0.001"/>
+    <testcase name="test_revAndRetList_on2Size_Descending_Expect_2Size_Ascending" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_revAndRetList_on6size_Descending_Expect_6size_Ascending" classname="bt.collections.lists.TestRatajListRec2" time="0.001"/>
+    <testcase name="test_size_On1size_Expect_1" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_size_On2size_Expect_2" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_size_On3size_Expect_3" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_sumStatic_1size_Expect_1_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_sumStatic_3size_Expect_6_true" classname="bt.collections.lists.TestRatajListRec2" time="0.001"/>
+    <testcase name="test_sumStatic_null_Expect_0_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_sum_1size_Expect_1_true" classname="bt.collections.lists.TestRatajListRec2" time="0.0"/>
+    <testcase name="test_sum_3size_Expect_6_true" classname="bt.collections.lists.TestRatajListRec2" time="0.002"/>
+  </testsuite>
+</testrun>

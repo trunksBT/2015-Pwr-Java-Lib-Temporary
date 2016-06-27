@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Teacher" key="selection"/>
+		<item value="Mock5" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Mock4"/>
+			<item value="Mock3"/>
+			<item value="Mock2"/>
+			<item value="_Mock1"/>
+			<item value="_Mock2"/>
+			<item value="Mock1"/>
 			<item value="Student"/>
 			<item value="package bt.algorithms.strings;"/>
-			<item value="tape"/>
-			<item value="RatajListRec22"/>
-			<item value="RatajListRec"/>
-			<item value="    &#x09;// arrange"/>
-			<item value="TODO"/>
-			<item value="RatNode"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Mock5"/>
+			<item value="Mock4"/>
+			<item value="Mock3"/>
+			<item value=""/>
+			<item value="Mock2"/>
 			<item value="Teacher"/>
 			<item value="root"/>
 			<item value="RatajListRec2"/>
-			<item value="RatNode2"/>
-			<item value="RatBST2"/>
-			<item value="DFS2"/>
-			<item value="expValForNotEmpty_BFS"/>
-			<item value="BFS2"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

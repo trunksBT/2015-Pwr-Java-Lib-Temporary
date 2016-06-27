@@ -636,4 +636,115 @@ public class TestRatajListRec extends TestCase {
     	// assert
     	assertEquals(rcList.size(), expVal);
     }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_deleteEach2From1_on6size_Expect()
+    {
+    	// arrange
+    	RatajListRec l1 = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, 
+    							new RatajListRec(2,
+    									new RatajListRec(3,
+    											new RatajListRec(4,
+    													new RatajListRec(5))))));
+    	
+    	RatajListRec rcList = null;
+    	int expVal = 7;
+    	
+    	// act
+    	rcList = l1.deleteEach2From1(l1);
+    	
+    	// assert
+    	RatajListRec.print(rcList);
+    	assertTrue(true);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_revAndRetList_on6size_Descending_Expect_6size_Ascending()
+    {
+    	// arrange
+    	RatajListRec expList = 
+    			new RatajListRec(0, 
+    					new RatajListRec(1, 
+    							new RatajListRec(2,
+    									new RatajListRec(3,
+    											new RatajListRec(4,
+    													new RatajListRec(5))))));
+    	
+    	int[] inTab = {5,4,3,2,1,0};
+    	int inSize = 6;
+    	RatajListRec rcList = null;
+    	
+    	// act
+    	rcList = RatajListRec.revAndRetList(inTab, inSize);
+    	
+    	// assert
+    	RatajListRec.print(rcList);
+    	assertTrue(RatajListRec.equals(expList, rcList, inSize));
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_revAndRetList_on1size_Descending_Expect_1size_Ascending()
+    {
+    	// arrange
+    	RatajListRec expList = 
+    			new RatajListRec(0);
+    	
+    	int[] inTab = {0};
+    	int inSize = 1;
+    	RatajListRec rcList = null;
+    	
+    	// act
+    	rcList = RatajListRec.revAndRetList(inTab, inSize);
+    	
+    	// assert
+    	RatajListRec.print(rcList);
+    	assertTrue(RatajListRec.equals(expList, rcList, inSize));
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_revAndRetList_null_Descending_Expect_null_Ascending()
+    {
+    	// arrange
+    	RatajListRec expList = null;
+    	
+    	int[] inTab = {};
+    	int inSize = 0;
+    	RatajListRec rcList = null;
+    	
+    	// act
+    	try {
+    	rcList = RatajListRec.revAndRetList(inTab, inSize);
+    	
+    	// assert
+    		RatajListRec.print(rcList);
+    		assertTrue(RatajListRec.equals(expList, rcList, inSize));
+    	}catch(NullPointerException e) {
+    		assertTrue(true);
+    	}
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_revAndRetList_on2Size_Descending_Expect_2Size_Ascending()
+    {
+    	// arrange
+    	RatajListRec expList = new RatajListRec(1, new RatajListRec(0));
+    	
+    	int[] inTab = {0,1};
+    	int inSize = 0;
+    	RatajListRec rcList = null;
+    	
+    	// act
+    	rcList = RatajListRec.revAndRetList(inTab, inSize);
+    	
+    	// assert
+    	RatajListRec.print(rcList);
+    	assertTrue(RatajListRec.equals(expList, rcList, inSize));
+    }
 }

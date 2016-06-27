@@ -78,4 +78,40 @@ public class RatajListRec {
 		else
 			next = null;
 	}
+
+	public static void print(RatajListRec rcList) {
+		if( rcList != null ) {
+			System.out.println(rcList.val+" ");
+			RatajListRec.print(rcList.next);
+		}
+	}
+
+	public RatajListRec deleteEach2From1(RatajListRec a) {
+		if( a== null || a.next == null)
+			return null;
+		a.next.next = deleteEach2From1(a.next.next);
+		return a.next;
+	}
+
+	public static RatajListRec revAndRetList(int[] inTab, int inSize) {
+		return helpRev(inTab, 0, inSize-1);
+	}
+	
+	public static RatajListRec helpRev(int [] inTab, int idxSt, int idxEnd) {
+		if( idxSt< idxEnd )
+			return helpRev(inTab, idxSt+1, idxEnd);
+		else if( idxEnd == -1 || inTab.length == 0)
+			return null;
+		else
+			return new RatajListRec( inTab[idxSt], helpRev(inTab,idxSt-1,idxEnd-1));
+	}
+	
+	public static boolean equals(RatajListRec l1, RatajListRec l2, int size) {
+		boolean retVal = true;
+		
+		for( int i =0 ; i < size; i++)
+			retVal &= l1.getElem(i).val == l2.getElem(i).val;
+		
+		return retVal;
+	}
 }
