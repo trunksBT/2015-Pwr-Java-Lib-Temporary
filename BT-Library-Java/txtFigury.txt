@@ -1,2 +1,0 @@
-kolko    Circle    (10.5,10.5)    14.0
-trojkat    Triangle    (0.0,5.0) (5.0,0.0) (0.0,0.0)   
