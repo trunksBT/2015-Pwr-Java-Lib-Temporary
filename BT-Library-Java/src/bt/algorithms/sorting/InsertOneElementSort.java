@@ -11,7 +11,10 @@ public class InsertOneElementSort extends InsertSort implements ListOneElemSorte
 	
 	public List sort(List tape, Object elemToInsert)
 	{
+		if ( tape == null )
+			return null;
+		
 		tape.add(elemToInsert);
-		return 	super.sort(tape);
+		return super.sort(tape);
 	}
 }

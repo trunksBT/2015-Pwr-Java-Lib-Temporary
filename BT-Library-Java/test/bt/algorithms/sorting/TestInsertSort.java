@@ -237,4 +237,22 @@ public class TestInsertSort extends TestCase
 		    //assert
 		    assertEquals(expectedTape,orderedTape);
 		}
+		
+		//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+		@Test
+		public void test_OneElemInsertSort_null_7_Expect_null_True()
+		{
+		    //arrange	    
+			List tape = null;
+			Object elemToInsert = new Integer(7);
+			List orderedTape = null;
+			List expectedTape = null;
+			ListOneElemSorter algo = new InsertOneElementSort(NaturalComparator.INSTANCE);
+
+		    //act
+			orderedTape = algo.sort(tape,elemToInsert);
+		    
+		    //assert
+		    assertEquals(expectedTape,orderedTape);
+		}
 }

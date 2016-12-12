@@ -13,6 +13,9 @@ public class InsertSort implements ListSorter {
 	
 	@Override
 	public List sort(List tape) {
+		if ( tape == null )
+			return null;
+		
 		for(int idxFrom = 1; idxFrom<tape.size(); ++idxFrom) {
 			Object toInsert = tape.get(idxFrom),ordered;
 			int idxTo;
