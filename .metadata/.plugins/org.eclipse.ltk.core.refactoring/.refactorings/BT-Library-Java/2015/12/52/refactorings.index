@@ -1,0 +1,23 @@
+1450610520987	Delete element
+1450610534311	Delete element
+1450610581225	Delete element
+1450610583595	Delete element
+1450610654195	Delete element
+1450610656569	Delete element
+1450610659120	Delete element
+1450610660926	Delete element
+1450610861656	Delete element
+1450610989646	Delete element
+1450616192051	Copy compilation unit
+1450616197727	Rename type 'TestGeometriaIO_TestVersion'
+1450709934898	Rename field 'connectionMatrix'
+1450754610750	Move compilation unit
+1450764232446	Rename method 'wierzcholki'
+1450764243586	Rename method 'krawedz'
+1450764252717	Rename method 'krawedzie'
+1450769494146	Copy compilation unit
+1450771891299	Extract method 'loopWithNewVertice'
+1450788757101	Rename type 'TestIndirectedGraphAlgos'
+1450788768178	Copy compilation unit
+1450805603966	Rename method 'liczbaKol'
+1450806264159	Rename method 'sumaObwodow'

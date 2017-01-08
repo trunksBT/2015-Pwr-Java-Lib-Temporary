@@ -1,0 +1,7 @@
+package bt.collections.graphs;
+
+import bt.algorithms.interfaces.IGraf;
+
+public class GraphIndirected2 implements IGraf<W, S> {
+
+}

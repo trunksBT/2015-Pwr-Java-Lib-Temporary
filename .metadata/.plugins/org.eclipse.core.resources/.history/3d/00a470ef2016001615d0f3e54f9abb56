@@ -1,0 +1,32 @@
+package bt.test.core.collections.dataTypes.graphs;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.algorithms.Sequences;
+import bt.core.collections.dataTypes.graphs.Edge;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class Test_Edge extends TestCase
+{				
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_getStart_From_0to1_wage_cat_True()
+	{
+	    //arrange	    
+	    int inStart = 0;	
+	    int inEnd = 1;
+	    String inWage = "cat";
+	    Edge<Integer,Integer> inEdge = new Edge<Integer,Integer>(inStart, inEnd, inWage);
+	    int expStart = 0;
+	    int rcStart = -1;
+	      
+	    //act
+	    rcStart = inEdge.getStart();
+	    
+	    //assert
+	    assertEquals(expStart , rcStart);
+	}
+}

@@ -1,0 +1,21 @@
+package bt.core.collections.graphs;
+
+public class GraphAdjacentMatrix<W> implements Graph<Integer, W> {
+	W matrix[][];
+	public GraphAdjacentMatrix(W[][] matrix) {
+		if ( matrix != null )
+			this.matrix = matrix;
+		else
+			this.matrix = new String[0][0];	
+	}
+	@Override
+	public int numberOfVerts() {
+		return 0;
+	}
+
+	@Override
+	public int numberOfEdges() {
+		return 0;
+	}
+
+}

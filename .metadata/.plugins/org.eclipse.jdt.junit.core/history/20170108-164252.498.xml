@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_GraphAlgos_String_Double_2" project="BT-Library-Java" tests="21" started="21" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.049">
+    <testcase name="testFFDijkstraWlochyRosja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testFTDijkstraPolskaEstonia" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testFWDijkstraRosjaNULL" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testKrawedzieA" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testTFDijkstraDaniaRosja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.043"/>
+    <testcase name="testTTDijkstraDaniaAnglia" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.002"/>
+    <testcase name="testTTDijkstraDaniaAngliaGrammarNull" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaAngliaMapNull" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaAngliaMatrixNull" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaAngliaMatrixNullMapNull" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaBelgia" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.001"/>
+    <testcase name="testTTDijkstraDaniaCzechy" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaEstonia" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaFrancja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.001"/>
+    <testcase name="testTTDijkstraDaniaGrecja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaHiszpania" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.001"/>
+    <testcase name="testTWDijkstraDaniaNULL" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testWFDijkstraNULLRosja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testWTDijkstraDaniaNULL" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testWTDijkstraDaniaNULLNullGrammar" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.0"/>
+    <testcase name="testWWDijkstraNULLNULL" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double_2" time="0.001"/>
+  </testsuite>
+</testrun>

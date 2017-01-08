@@ -1,0 +1,15 @@
+package bt.core.collections.dataTypes.graphs;
+
+import bt.core.collections.dataTypes.LinkedList;
+
+public class GraphEdgeList<V,W>{
+
+	public GraphEdgeList(LinkedList guardedLinkedListDouble) {
+		
+	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

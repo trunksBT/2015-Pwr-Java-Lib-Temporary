@@ -1,0 +1,35 @@
+package bt.algorithms.graph;
+
+import java.util.Hashtable;
+import java.util.List;
+
+import bt.algorithms.interfaces.IGraf;
+
+public class GraphIndirected2<W,S> implements IGraf<W,S>{
+	private List<W> wierzcholki_;
+	private S[][] polaczenia_;
+	private Hashtable<W,Integer> indexWierzcholka;
+	
+	public GraphIndirected2(List<W> wierzcholki, S[][] polaczenia)
+	{
+		wierzcholki_ = wierzcholki;
+		polaczenia_ = polaczenia;
+	}
+
+	@Override
+	public List<W> Wierzcholki() {
+		return wierzcholki_; 
+	}
+
+	@Override
+	public S Krawedz(W w1, W w2) {
+		return polaczenia_[wierzcholki_.get(w1)][wierzcholki_.indexOf(w2)];
+	}
+
+	@Override
+	public List<W> Krawedzie(W w) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

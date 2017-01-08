@@ -1,0 +1,84 @@
+package bt.tests.core.collections.graphs;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.core.collections.graphs.Edge;
+import bt.core.collections.graphs.Graph;
+import bt.core.collections.graphs.GraphAdjacentMatrix;
+import bt.core.collections.lists.LinkedList;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class Test_GraphAdjacentMatrix extends TestCase
+{
+	final int size = 9;
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_CTORandnumberOfVerts_mock_9()
+	{
+	    //arrange	    
+	    Graph<Integer,String> inGraph = 
+	    		new GraphAdjacentMatrix<>(getMock(size));
+	    int expVal = 9;
+	    int rcVal = -1;
+	    
+	    //act
+	    rcVal = inGraph.numberOfVerts();
+	    
+	    //assert
+	    assertEquals(expVal, rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_CTORandnumberOfVerts_null_0()
+	{
+	    //arrange	    
+	    Graph<Integer,String> inGraph = 
+	    		new GraphAdjacentMatrix<>(null);
+	    int expVal = 0;
+	    int rcVal = -1;
+	    
+	    //act
+	    rcVal = inGraph.numberOfVerts();
+	    
+	    //assert
+	    assertEquals(expVal, rcVal);
+	}
+	
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_CTORandnumberOfVerts_empty_0()
+	{
+	    //arrange	    
+		Graph<Integer,String> inGraph = 
+	    		new GraphAdjacentMatrix<>(new String[0][0]);
+	    int expVal = 0;
+	    int rcVal = -1;
+	    
+	    //act
+	    rcVal = inGraph.numberOfVerts();
+	    
+	    //assert
+	    assertEquals(expVal, rcVal);
+	}
+	
+	public String [][] getMock(int size) {
+		String [][] retTab = new String[size][size];
+//		retTab[0]
+//		retTab[0]	
+//		retTab[1]
+//		retTab[1]
+//		retTab[2]
+//		retTab[2]
+//		retTab[3]
+//		retTab[4]
+//		retTab[5]
+//		retTab[5]
+//		retTab[6]
+//		retTab[7]
+		return retTab;
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;-2015-11-Pwr-Eclipse-Own-Library-Java&apos; to &apos;BT-Library-Java&apos;&#x0D;&#x0A;- Original element: &apos;-2015-11-Pwr-Eclipse-Own-Library-Java&apos;&#x0D;&#x0A;- Renamed element: &apos;-2015-11-Pwr-Eclipse-Own-Library-Java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;-2015-11-Pwr-Eclipse-Own-Library-Java&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=-2015-11-Pwr-Eclipse-Own-Library-Java" name="BT-Library-Java" references="true" stamp="1446832931805" version="1.0"/>
+</session>

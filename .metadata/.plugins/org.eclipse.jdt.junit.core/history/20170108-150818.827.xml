@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_GraphAlgos_String_Double" project="BT-Library-Java" tests="21" started="21" failures="9" errors="0" ignored="0">
+  <testsuite name="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.002">
+    <testcase name="testFFDijkstraWlochyRosja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testFTDijkstraPolskaEstonia" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testFWDijkstraRosjaNULL" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testKrawedzieA" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testKrawedzieA(Test_GraphAlgos_String_Double.java:70)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTFDijkstraDaniaRosja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testTFDijkstraDaniaRosja(Test_GraphAlgos_String_Double.java:496)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTTDijkstraDaniaAnglia" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.001">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testTTDijkstraDaniaAnglia(Test_GraphAlgos_String_Double.java:174)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTTDijkstraDaniaAngliaGrammarNull" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaAngliaMapNull" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaAngliaMatrixNull" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaAngliaMatrixNullMapNull" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testTTDijkstraDaniaBelgia" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testTTDijkstraDaniaBelgia(Test_GraphAlgos_String_Double.java:93)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTTDijkstraDaniaCzechy" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testTTDijkstraDaniaCzechy(Test_GraphAlgos_String_Double.java:377)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTTDijkstraDaniaEstonia" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testTTDijkstraDaniaEstonia(Test_GraphAlgos_String_Double.java:408)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTTDijkstraDaniaFrancja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testTTDijkstraDaniaFrancja(Test_GraphAlgos_String_Double.java:147)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTTDijkstraDaniaGrecja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testTTDijkstraDaniaGrecja(Test_GraphAlgos_String_Double.java:120)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTTDijkstraDaniaHiszpania" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.001">
+      <failure>junit.framework.AssertionFailedError&#13;
+	at junit.framework.Assert.fail(Assert.java:55)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:31)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:201)&#13;
+	at bt.algorithms.graphs.Test_GraphAlgos_String_Double.testTTDijkstraDaniaHiszpania(Test_GraphAlgos_String_Double.java:438)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testTWDijkstraDaniaNULL" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testWFDijkstraNULLRosja" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testWTDijkstraDaniaNULL" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testWTDijkstraDaniaNULLNullGrammar" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+    <testcase name="testWWDijkstraNULLNULL" classname="bt.algorithms.graphs.Test_GraphAlgos_String_Double" time="0.0"/>
+  </testsuite>
+</testrun>

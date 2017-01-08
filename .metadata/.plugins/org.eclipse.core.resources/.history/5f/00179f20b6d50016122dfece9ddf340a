@@ -1,0 +1,5 @@
+package bt.algorithms.graph;
+
+public class GraphIndirected2<W,S> implement IGraf<W,S>{
+
+}

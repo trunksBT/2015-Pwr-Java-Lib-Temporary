@@ -1,0 +1,19 @@
+package bt.core.collections.dataTypes.graphs;
+
+import bt.core.collections.dataTypes.LinkedList;
+import bt.core.collections.interfaces.List;
+
+public class GraphEdgeList<V,W>{
+	List edgeList;
+	
+	public GraphEdgeList(LinkedList edgeList) {
+		if(edgeList!=null)
+			this.edgeList = edgeList;
+		else
+			this.edgeList = new LinkedList();
+	}
+
+	public int size() {
+		return edgeList.size();
+	}
+}

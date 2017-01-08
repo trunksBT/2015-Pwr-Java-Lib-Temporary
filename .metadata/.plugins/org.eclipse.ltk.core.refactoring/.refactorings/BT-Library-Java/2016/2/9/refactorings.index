@@ -1,0 +1,53 @@
+1456127685730	Delete element
+1456127702230	Delete elements
+1456127704794	Delete element
+1456127708916	Delete element
+1456127711422	Delete element
+1456127740657	Rename package 'bt.core.geometry.Complex'
+1456127901286	Rename package 'bt.tests.core.geometry.Complex'
+1456127968731	Delete element
+1456127986916	Delete element
+1456128032213	Delete element
+1456128075351	Delete element
+1456128103800	Delete element
+1456128188129	Rename package 'bt.core.ABC.Tests'
+1456128399459	Delete element
+1456129892763	Copy compilation unit
+1456129900425	Rename type 'TestLineSegment'
+1456131089835	Rename local variable 'pointsIter'
+1456132263656	Copy compilation unit
+1456133016570	Copy compilation unit
+1456139821494	Move compilation unit
+1456139824220	Delete element
+1456139854773	Rename package 'bt.core.collections'
+1456140001570	Rename type 'Zawody'
+1456140220980	Copy compilation unit
+1456140226638	Rename type 'TestArrayIterator'
+1456140350944	Rename method 'wydruki'
+1456140743553	Rename type 'PlayerOk'
+1456140767776	Rename type 'PlayerOkPred'
+1456173172115	Copy compilation unit
+1456177372215	Copy compilation unit
+1456222218668	Copy compilation unit
+1456222246860	Rename type 'FibonacciIterator'
+1456251387949	Copy compilation unit
+1456260975084	Copy compilation unit
+1456316291803	Move compilation unit
+1456316314324	Move compilation unit
+1456316444064	Delete element
+1456317832274	Delete element
+1456318132404	Delete element
+1456328539636	Rename type 'TestAssertEqualsAndSome'
+1456329176969	Copy compilation unit
+1456329182329	Rename type 'TestAssertEqualsAndSame2'
+1456330284745	Copy compilation unit
+1456330499364	Delete element
+1456392275555	Rename compilation unit 'SequencesCopy.java'
+1456393050026	Delete element
+1456393913479	Delete element
+1456394288074	Delete element
+1456394334055	Copy compilation unit
+1456394343768	Rename type 'TestStackNatural'
+1456412225768	Delete element
+1456484922278	Copy compilation unit
+1456484927757	Rename type 'TestSequencesMY'

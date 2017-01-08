@@ -1,0 +1,49 @@
+package bt.core.collections.dataTypes;
+
+import bt.core.collections.iterators.Iterator;
+import bt.core.collections.lists.Element;
+
+public class ValueIterator implements Iterator {
+	final Element hdAndTlcopy;
+	Element cur;
+	
+	public ValueIterator(Element hdAndTl) {
+		this.hdAndTlcopy = hdAndTl;
+		this.cur = hdAndTl;
+	}
+	
+	@Override
+	public void previous() {
+		cur = cur.getPrev();
+	}
+
+	@Override
+	public void next() {
+		cur = cur.getNext();
+	}
+
+	@Override
+	public Object current() {
+		if(isDone())
+			throw new IndexOutOfBoundsException();
+		
+		return cur.getVal();
+		
+	}
+
+	@Override
+	public void first() {
+		cur = hdAndTlcopy.getNext();
+	}
+
+	@Override
+	public void last() {
+		cur = hdAndTlcopy.getPrev();
+	}
+
+	@Override
+	public boolean isDone() {
+		return cur == hdAndTlcopy;
+	}
+
+}
