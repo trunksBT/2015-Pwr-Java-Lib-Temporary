@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import bt.algorithms.GraphAlgos;
+import bt.algorithms.interfaces.IGraf;
 import bt.algorithms.interfaces.IGraphAlgo;
 import bt.collections.various.GraphIndirected;
 import junit.framework.TestCase;
@@ -51,7 +52,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     public void test_Krawedzie_A()
     {    	     
         //act
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	List<String> reachedList = _network.Krawedzie("Anglia");
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("Belgia");
@@ -73,21 +74,20 @@ public class Test_GraphAlgos_String_String extends TestCase{
     public void test_TT_Dijkstra_Dania_Belgia()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	GraphAlgos<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Belgia";
     	
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("1.0");
-    	boolean expectedVal = true;
     	boolean expectedLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	
         // assert
-        boolean reachedLogic = reachedList.containsAll(expectedList) == expectedVal;
+        boolean reachedLogic = reachedList.containsAll(expectedList);
         boolean result = !(expectedLogic ^ reachedLogic);
         assertTrue(result);
     }
@@ -96,7 +96,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     public void test_TT_Dijkstra_Dania_Grecja()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Grecja";
@@ -104,26 +104,22 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	List<String> expectedList = new ArrayList<>();
     	expectedList.add("4.0");
     	boolean expectedVal = true;
-    	boolean expectedListLogic = true;
-    	
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-//        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_TT_Dijkstra_Dania_Francja()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Francja";
@@ -132,25 +128,22 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	expectedList.add("1.0");
     	expectedList.add("1.0");
     	boolean expectedVal = true;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start, end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_TT_Dijkstra_Dania_Anglia()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Anglia";
@@ -159,75 +152,66 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	expectedList.add("1.0");
     	expectedList.add("3.0");
     	boolean expectedVal = true;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_TW_Dijkstra_Dania_NULL()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = null;
     	
     	List<String> expectedList = new ArrayList<>();
     	boolean expectedVal = false;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_WT_Dijkstra_NULL_Dania()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = null;
     	String end = "Dania";
     	
     	List<String> expectedList = new ArrayList<>();
     	boolean expectedVal = false;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_TT_Dijkstra_Dania_Czechy()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Czechy";
@@ -237,25 +221,22 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	expectedList.add("1.0");
     	expectedList.add("1.0");
     	boolean expectedVal = true;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_TT_Dijkstra_Dania_Estonia()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Estonia";
@@ -266,25 +247,22 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	expectedList.add("1.0");
     	expectedList.add("1.0");
     	boolean expectedVal = true;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_TT_Dijkstra_Dania_Hiszpania()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Hiszpania";
@@ -296,43 +274,37 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	expectedList.add("1.0");
     	expectedList.add("6.0");
     	boolean expectedVal = true;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
       
     @Test
     public void test_FT_Dijkstra_Polska_Estonia()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Polska";
     	String end = "Estonia";
     	
     	List<String> expectedList = new ArrayList<>();
     	boolean expectedVal = false;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
@@ -341,7 +313,7 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	System.out.println( "compare String" );
     	System.out.println( "5.0".compareTo("1.0") );
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Dania";
     	String end = "Rosja";
@@ -356,25 +328,22 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	expectedList.add("2.0");
 
     	boolean expectedVal = false;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_FF_Dijkstra_Wlochy_Rosja()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Wlochy";
     	String end = "Rosja";
@@ -382,25 +351,22 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	List<String> expectedList = new ArrayList<>();
 
     	boolean expectedVal = false;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_WF_Dijkstra_NULL_Rosja()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = null;
     	String end = "Rosja";
@@ -408,25 +374,22 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	List<String> expectedList = new ArrayList<>();
 
     	boolean expectedVal = false;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_FW_Dijkstra_Rosja_NULL()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = "Rosja";
     	String end = null;
@@ -434,25 +397,22 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	List<String> expectedList = new ArrayList<>();
 
     	boolean expectedVal = false;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
     
     @Test
     public void test_WW_Dijkstra_NULL_NULL()
     {    	     
     	// arrange 
-    	GraphIndirected<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
+    	IGraf<String,String> _network = new GraphIndirected<>(initList(),initMatrix());
     	IGraphAlgo<String,String> _walkAcross = new GraphAlgos<>(_network);
     	String start = null;
     	String end = null;
@@ -460,17 +420,14 @@ public class Test_GraphAlgos_String_String extends TestCase{
     	List<String> expectedList = new ArrayList<>();
 
     	boolean expectedVal = false;
-    	boolean expectedListLogic = true;
     	
         // act	
     	List<String> reachedList = _walkAcross.dijkstrable(start,end);
     	boolean reachedVal = _walkAcross.ifConnected(start, end);
     	
         // assert
-        boolean reachedLogic1 = reachedList.containsAll(expectedList) == expectedListLogic;
-        boolean reachedLogic2 = expectedVal && reachedVal;
-        boolean result1= !(expectedListLogic ^ reachedLogic1);
+        boolean reachedLogic1 = reachedList.containsAll(expectedList);
         boolean result2= !(expectedVal ^ reachedVal);
-        assertTrue(result1&&result2);
+        assertTrue(reachedLogic1&&result2);
     }
 }
