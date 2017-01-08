@@ -7,7 +7,6 @@ import org.junit.runners.MethodSorters;
 import bt.algorithms.Arrays;
 import bt.algorithms.comparators.NaturalComparator;
 import bt.algorithms.interfaces.ListOneElemSorter;
-import bt.algorithms.sorting.InsertOneElementSort;
 import bt.collections.interfaces.List;
 import bt.collections.lists.ArrayList;
 import junit.framework.TestCase;

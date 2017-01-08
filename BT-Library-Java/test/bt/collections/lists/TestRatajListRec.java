@@ -14,6 +14,20 @@ public class TestRatajListRec extends TestCase {
 
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test
+    public void test_CTOR_empty_true()
+    {
+    	// arrange
+    	int expSize = 0;
+    	RatajListRec list1 = new RatajListRec();
+    	
+    	// act
+    	
+    	// assert
+    	assertEquals(list1.size(),expSize);
+    }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
     public void test_CTOR_oneEl_true()
     {
     	// arrange

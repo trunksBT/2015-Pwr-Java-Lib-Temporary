@@ -2,13 +2,17 @@ package bt.collections.lists;
 
 public class RatajListRec {
 	RatajListRec next;
-	int val;
+	Integer val;
 	
 	public RatajListRec(int val) {
 		this(val,null);
 	}
+	
+	public RatajListRec() {
+		this(null,null);
+	}
 
-	public RatajListRec(int val, RatajListRec tail) {
+	public RatajListRec(Integer val, RatajListRec tail) {
 		this.val = val;
 		this.next = tail;
 	}
@@ -22,6 +26,8 @@ public class RatajListRec {
 	}
 
 	public void add(int val) {
+		if( next == null && this.val == null)
+			next = new RatajListRec(val);		
 		if( next == null )
 			next = new RatajListRec(val);		
 		else

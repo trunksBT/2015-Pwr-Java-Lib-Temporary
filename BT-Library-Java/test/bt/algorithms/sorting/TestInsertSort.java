@@ -9,7 +9,6 @@ import bt.algorithms.comparators.NaturalComparator;
 import bt.algorithms.interfaces.ListOneElemSorter;
 import bt.algorithms.interfaces.ListSorter;
 import bt.algorithms.sorting.BubbleSortOptimal;
-import bt.algorithms.sorting.InsertSort;
 import bt.algorithms.sorting.ShellSort;
 import bt.collections.interfaces.List;
 import bt.collections.lists.ArrayList;
