@@ -51,16 +51,22 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 					}
 				}
 				else
+				{
 					finished = true;
+				}
 			}		
 		}	
 		
 		ArrayList<S> _final = new ArrayList<>();
 		if(!notFound)
+		{
 			dirtyValues.add(aEnd);
+		}
 		
 		for(int i  = 0 ; i < dirtyValues.size()-1;i++)
+		{
 			_final.add(graf.Krawedz(dirtyValues.get(i),dirtyValues.get(i+1)));
+		}
 						
 		return _final;	
 	}
@@ -74,15 +80,20 @@ public class GraphAlgos<W,S> implements IGraphAlgo<W,S>{
 		boolean goodPath = true;
 		
 		if(graf!= null)
+		{
 			goodPath = path.size()<(graf.Wierzcholki().size()-1);
+		}
 		
 		if(isConnect&&goodPath)
 		{
 			System.out.println( " Przeszkody po drodze :"+ aW1 + " - " +aW2 );
 			path.stream().forEach(val -> System.out.print( val +","));
 			System.out.println();
-		}else
+		}
+		else
+		{
 			System.out.println( "Brak Sciezki miedzy wezlami" );
+		}
 	
 		return isConnect && goodPath;
 	}
