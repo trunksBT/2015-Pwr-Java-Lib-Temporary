@@ -1,0 +1,35 @@
+package bt.collections.graphs;
+
+import java.util.List;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.algorithms.interfaces.IGrafC07;
+import bt.algorithms.interfaces.IKrawedz;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class Test_GrafCwiczenia extends TestCase
+{
+	public List<IKrawedz<Double, String>> TC1_krawedzie()
+	{
+		return null;
+	}
+	
+	public List<Double> TC1_wierzcholki()
+	{
+		return null;
+	}
+	
+	@Test
+	public void test_TC1_CTOR_Empty()
+	{
+	    //arrange	    
+		IGrafC07<Double, String> graf = new GrafNieskierowany<>();
+	    //act
+	    
+	    //assert
+	}
+}

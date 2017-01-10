@@ -1,0 +1,7 @@
+package bt.collections.graphs;
+
+import bt.algorithms.interfaces.IGrafC07;
+
+public class GrafNieskierowany<W,S> implements IGrafC07<W, S> {
+
+}

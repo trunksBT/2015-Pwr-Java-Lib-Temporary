@@ -1,0 +1,30 @@
+package bt.collections.graphs;
+
+import bt.algorithms.interfaces.IKrawedz;
+
+public class Krawedz<W,S> implements IKrawedz<W, S> {
+	
+	public Krawedz(W wierzcholek1, W wierzcholek2, S polaczenie)
+	{
+		
+	}
+	
+	@Override
+	public W w1() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public W w2() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public S wart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

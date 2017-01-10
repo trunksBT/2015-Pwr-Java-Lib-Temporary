@@ -1,0 +1,5 @@
+package bt.algorithms.interfaces;
+
+public interface IKrawedz {
+
+}

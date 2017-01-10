@@ -1,0 +1,36 @@
+package bt.collections.graphs;
+package bt.collections.graphs;
+
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import bt.collections.graphs.AdjacentList;
+import bt.collections.graphs.Edge;
+import bt.collections.graphs.Graph;
+import bt.collections.interfaces.List;
+import bt.collections.iterators.Iterator;
+import bt.collections.lists.LinkedList;
+import junit.framework.TestCase;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class Test_GraphAdjacentList extends TestCase
+{
+	final int size = 9;
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+	@Test
+	public void test_CTORandnumberOfVerts_mock_9()
+	{
+	    //arrange	    
+	    Graph<Integer,String> inGraph = 
+	    		new AdjacentList<>(getMock(size));
+	    int expVal = 9; 
+	    int rcVal = -1;
+	    
+	    //act
+	    rcVal = inGraph.getNumberOfVerts();
+	    
+	    //assert
+	    assertEquals(expVal, rcVal);
+	}
+}

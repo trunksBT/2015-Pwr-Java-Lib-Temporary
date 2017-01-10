@@ -1,0 +1,41 @@
+package bt.collections.graphs;
+
+import java.util.List;
+
+import bt.algorithms.interfaces.IGrafC07;
+import bt.algorithms.interfaces.IKrawedz;
+
+public class GrafNieskierowany<W,S> implements IGrafC07<W, S> {
+
+	public GrafNieskierowany(
+			List<IKrawedz<W, S>> krawedzie,
+			List<Double> wierzcholki)
+	{
+		
+	}
+	
+	@Override
+	public List<W> wierzcholki() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<IKrawedz<W, S>> krawedzie() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<IKrawedz<W, S>> krawedzie(W w) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public S czyKrawedz(W w1, W w2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

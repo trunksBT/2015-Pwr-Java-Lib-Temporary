@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="bt.core.algorithms.sorting.InsertSort2"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.Queue"/>
-<fullyQualifiedTypeName name="bt.core.collections.interfaces.IQueue"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.ArrayList"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.interfaces.Comparator"/>
 <fullyQualifiedTypeName name="junit.framework.TestCase"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.RatNode"/>
@@ -50,7 +46,6 @@
 <fullyQualifiedTypeName name="bt.collections.interfaces.IQueue"/>
 <fullyQualifiedTypeName name="bt.collections.iterators.Iterator"/>
 <fullyQualifiedTypeName name="bt.collections.lists.LinkedList"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="bt.collections.lists.RatajListRec"/>
 <fullyQualifiedTypeName name="bt.algorithms.interfaces.ListOneElemSorter"/>
 <fullyQualifiedTypeName name="bt.algorithms.interfaces.ListSorter"/>
@@ -58,6 +53,11 @@
 <fullyQualifiedTypeName name="bt.collections.lists.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="bt.OptionalTemp"/>
-<fullyQualifiedTypeName name="bt.algorithms.interfaces.IGraf"/>
 <fullyQualifiedTypeName name="bt.collections.graphs.GraphIndirected"/>
+<fullyQualifiedTypeName name="bt.algorithms.graph.GraphIndirected"/>
+<fullyQualifiedTypeName name="bt.algorithms.interfaces.IGraf"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
 </qualifiedTypeNameHistroy>
