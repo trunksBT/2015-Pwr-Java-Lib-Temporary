@@ -1,7 +1,12 @@
 package bt.collections.graphs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -105,6 +110,67 @@ public class Test_GrafCwiczenia extends TestCase
 		retVal.add(wierzchNull);
 		retVal.add(wierzchNull);
 		return retVal;
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+//	@Test
+//	public void test_HashTable_MultiplePut()
+//	{
+//	    //arrange	    		
+//		Hashtable<String, List<String>> listaSasiedztwa = new Hashtable<>();
+//		listaSasiedztwa.put(new String("1"), new String("2"));
+//		listaSasiedztwa.put(new String("1"), new String("3"));
+//	    //act
+//	    
+//	    //assert
+//		assertNotNull(graf);
+//		assertEquals(0, graf.wierzcholki().size());
+//	}
+//	
+	
+	@Test
+	public void test_AddNullToList()
+	{
+	    //arrange	    		
+	    //act
+		List<Object> temp2 = new ArrayList<>();
+		temp2.add(null);
+		
+		List<Object> temp = Arrays.asList(null, null);
+		
+	    //assert
+		assertNotNull(temp);
+		assertEquals(2, temp.size());
+		assertTrue(temp2.containsAll(temp));
+	}
+	
+	@Test
+	public void test_FilterFromNull()
+	{
+	    //arrange	    
+		List<Object> temp = Arrays.asList(null, null);
+		
+	    //act	                                                                                                                                                                                                                                                                                
+	    List<Object> filteredFromNulls = temp
+	            .stream()
+	            .filter(Objects::nonNull)
+	            .collect(Collectors.toList());
+		
+	    //assert
+		assertNotNull(filteredFromNulls);
+		assertEquals(2, temp.size());
+		assertEquals(0, filteredFromNulls.size());
+	}
+	
+	@Test
+	public void test_CheckIfContainsNull()
+	{
+	    //arrange	    
+		List<Object> temp = Arrays.asList(null, null);
+
+	    //assert
+		assertTrue(	temp.contains(null));
 	}
 	
 	@Test
