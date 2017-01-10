@@ -33,8 +33,24 @@ public class GrafNieskierowany<W,S> implements IGrafC07<W, S> {
 
 	@Override
 	public List<IKrawedz<W, S>> krawedzie(W w) {
-		// TODO Auto-generated method stub
-		return null;
+		List<IKrawedz<W, S>> retVal = new ArrayList<>();
+		
+		for(Iterator it = krawedzie_.iterator(); it.hasNext(); ) {
+			IKrawedz<W, S> curr = (IKrawedz<W, S>) it.next();
+			if(curr== null)
+			{
+				return null;
+			}
+			if(curr.w1() == null || curr.w2() == null || curr.wart() == null)
+			{
+				return null;
+			}
+			if(curr.w1() == w || curr.w2() == w)
+			{
+				retVal.add(curr);
+			}
+		}
+		return retVal;
 	}
 
 	@Override

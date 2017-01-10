@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="IGraf&lt;String,String&gt;" key="selection"/>
+		<item value="TC4" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="TC3"/>
 			<item value="GraphIndirected2&lt;String,String&gt;"/>
 			<item value="GraphIndirected"/>
 			<item value="GraphIndirected2&lt;String,Double&gt;"/>
@@ -15,9 +16,9 @@
 			<item value="new IGraf"/>
 			<item value="GraphIndirected2"/>
 			<item value="IGrafAlgo"/>
-			<item value="IGraph"/>
 		</list>
 		<list key="replacehistory">
+			<item value="TC4"/>
 			<item value="IGraf&lt;String,String&gt;"/>
 			<item value="GraphIndirected2"/>
 			<item value="IGraf&lt;String,Double&gt;"/>
@@ -25,7 +26,6 @@
 			<item value="GraphIndirected"/>
 			<item value="IGraphAlgo"/>
 			<item value="IGraf"/>
-			<item value="IGraph&lt;String,Double&gt;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

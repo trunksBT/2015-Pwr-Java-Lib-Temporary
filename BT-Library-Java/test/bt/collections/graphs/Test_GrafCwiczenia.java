@@ -15,10 +15,21 @@ import junit.framework.TestCase;
 public class Test_GrafCwiczenia extends TestCase
 {
 	String wierzchA = "A";
+	String wierzchB = "B";
+	String wierzchC = "C";
+	String wierzchNull = null;
+	Double waga0 = new Double(0.0);
 	Double waga1 = new Double(1.0);
+	Double wagaNull = null;
 	
 	IKrawedz<String,Double> krawedzA_A = new Krawedz<>(
-			wierzchA, wierzchA,  new Double(0));
+			wierzchA, wierzchA,  waga0);
+	IKrawedz<String,Double> krawedzA_B = new Krawedz<>(
+			wierzchA, wierzchB,  waga0);
+	IKrawedz<String,Double> krawedzA_C= new Krawedz<>(
+			wierzchA, wierzchC,  waga0);
+	IKrawedz<String,Double> krawedzNull_Null = new Krawedz<>(
+			wierzchNull, wierzchNull,  wagaNull);
 	
 	public List<IKrawedz<String, Double>> TC1_krawedzie()
 	{
@@ -36,7 +47,7 @@ public class Test_GrafCwiczenia extends TestCase
 	public List<IKrawedz<String, Double>> TC2_krawedzie()
 	{
 		List<IKrawedz<String, Double>> retVal = new ArrayList<>();
-		retVal.add(new Krawedz<String, Double>(wierzchA, wierzchA, waga1));
+		retVal.add(krawedzA_A);
 		return retVal;
 	}
 	
@@ -44,6 +55,55 @@ public class Test_GrafCwiczenia extends TestCase
 	{
 		ArrayList<String> retVal = new ArrayList<String>();
 		retVal.add(wierzchA);
+		return retVal;
+	}
+	
+	public List<IKrawedz<String, Double>> TC3_krawedzie()
+	{
+		List<IKrawedz<String, Double>> retVal = new ArrayList<>();
+		retVal.add(krawedzA_B);
+		return retVal;
+	}
+	
+	public List<String> TC3_wierzcholki()
+	{
+		ArrayList<String> retVal = new ArrayList<String>();
+		retVal.add(wierzchA);
+		retVal.add(wierzchB);
+		return retVal;
+	}
+	
+	public List<IKrawedz<String, Double>> TC4_krawedzie()
+	{
+		List<IKrawedz<String, Double>> retVal = new ArrayList<>();
+		retVal.add(krawedzA_B);
+		retVal.add(krawedzA_C);
+		return retVal;
+	}
+	
+	public List<String> TC4_wierzcholki()
+	{
+		ArrayList<String> retVal = new ArrayList<String>();
+		retVal.add(wierzchA);
+		retVal.add(wierzchB);
+		retVal.add(wierzchC);
+		return retVal;
+	}
+	
+	public List<IKrawedz<String, Double>> TC5_krawedzie()
+	{
+		List<IKrawedz<String, Double>> retVal = new ArrayList<>();
+		retVal.add(krawedzNull_Null);
+		retVal.add(krawedzNull_Null);
+		return retVal;
+	}
+	
+	public List<String> TC5_wierzcholki()
+	{
+		ArrayList<String> retVal = new ArrayList<String>();
+		retVal.add(wierzchNull);
+		retVal.add(wierzchNull);
+		retVal.add(wierzchNull);
 		return retVal;
 	}
 	
@@ -74,10 +134,12 @@ public class Test_GrafCwiczenia extends TestCase
 		assertEquals(1, graf.wierzcholki().size());
 		assertEquals(0, graf.krawedzie().size());
 		assertEquals(null, graf.czyKrawedz(wierzchA, wierzchA));
+		assertTrue(graf.krawedzie().containsAll(TC1_krawedzie())
+				&& TC1_krawedzie().containsAll(graf.krawedzie()));
 	}
 	
 	@Test
-	public void test_TC1_CTOR_One_One()
+	public void test_TC2_CTOR_One_One()
 	{
 	    //arrange	    
 		IGrafC07<String, Double> graf = new GrafNieskierowany<>(
@@ -89,16 +151,69 @@ public class Test_GrafCwiczenia extends TestCase
 		assertNotNull(graf);
 		assertEquals(1, graf.wierzcholki().size());
 		assertEquals(1, graf.krawedzie().size());
-		assertEquals(waga1, graf.czyKrawedz(wierzchA, wierzchA));
+		assertEquals(waga0, graf.czyKrawedz(wierzchA, wierzchA));
+		assertTrue(graf.krawedzie().containsAll(TC2_krawedzie())
+				&& TC2_krawedzie().containsAll(graf.krawedzie()));
 	}
 	
-//	@Test
-//	public void test_TC1_CTOR_Empty()
-//	{
-//	    //arrange	    
-//		IGrafC07<Double, String> graf = new GrafNieskierowany<>(TC1_krawedzie(), TC1_wierzcholki());
-//	    //act
-//	    
-//	    //assert
-//	}
+	@Test
+	public void test_TC3_CTOR_One_Two()
+	{
+	    //arrange	    
+		IGrafC07<String, Double> graf = new GrafNieskierowany<>(
+				TC3_krawedzie(), TC3_wierzcholki());
+		
+	    //act
+	    
+	    //assert
+		assertNotNull(graf);
+		assertEquals(2, graf.wierzcholki().size());
+		assertEquals(1, graf.krawedzie().size());
+		assertTrue(graf.krawedzie(wierzchA).containsAll(TC3_krawedzie()));
+		assertEquals(waga0, graf.czyKrawedz(wierzchA, wierzchB));
+		assertNull(graf.czyKrawedz(wierzchA, wierzchA));
+		assertTrue(graf.krawedzie().containsAll(TC3_krawedzie())
+				&& TC3_krawedzie().containsAll(graf.krawedzie()));
+	}
+	
+	@Test
+	public void test_TC4_CTOR_Two_Three()
+	{
+	    //arrange	    
+		IGrafC07<String, Double> graf = new GrafNieskierowany<>(
+				TC4_krawedzie(), TC4_wierzcholki());
+		
+	    //act
+	    
+	    //assert
+		assertNotNull(graf);
+		assertEquals(3, graf.wierzcholki().size());
+		assertEquals(2, graf.krawedzie().size());
+		assertTrue(graf.krawedzie(wierzchA).containsAll(TC4_krawedzie()));
+		assertFalse(graf.krawedzie(wierzchB).containsAll(TC4_krawedzie()));
+		assertEquals(waga0, graf.czyKrawedz(wierzchA, wierzchB));
+		assertEquals(waga0, graf.czyKrawedz(wierzchA, wierzchC));
+		assertNull(graf.czyKrawedz(wierzchB, wierzchC));
+		assertTrue(graf.krawedzie().containsAll(TC4_krawedzie())
+				&& TC4_krawedzie().containsAll(graf.krawedzie()));
+	}
+	
+	@Test
+	public void test_TC5_CTOR_With_Null()
+	{
+	    //arrange	    
+		IGrafC07<String, Double> graf = new GrafNieskierowany<>(
+				TC5_krawedzie(), TC5_wierzcholki());
+		
+	    //act
+	    
+	    //assert
+		assertNotNull(graf);
+		assertEquals(3, graf.wierzcholki().size());
+		assertEquals(2, graf.krawedzie().size());
+		assertNull(graf.krawedzie(wierzchA));
+		assertNull(graf.czyKrawedz(wierzchA, wierzchB));
+		assertNull(graf.czyKrawedz(wierzchA, wierzchC));
+		assertNull(graf.czyKrawedz(wierzchB, wierzchC));
+	}
 }

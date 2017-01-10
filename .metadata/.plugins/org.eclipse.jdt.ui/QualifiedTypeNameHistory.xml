@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="bt.core.algorithms.interfaces.Comparator"/>
-<fullyQualifiedTypeName name="junit.framework.TestCase"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.RatNode"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.RatBST"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="bt.core.collections.dataTypes.graphs.Edge"/>
@@ -56,8 +53,11 @@
 <fullyQualifiedTypeName name="bt.collections.graphs.GraphIndirected"/>
 <fullyQualifiedTypeName name="bt.algorithms.graph.GraphIndirected"/>
 <fullyQualifiedTypeName name="bt.algorithms.interfaces.IGraf"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="bt.algorithms.interfaces.IGrafC07"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="bt.algorithms.interfaces.IKrawedz"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>
