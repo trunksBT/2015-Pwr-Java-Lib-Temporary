@@ -2,10 +2,17 @@ package bt.collections.graphs;
 
 import bt.algorithms.interfaces.IKrawedz;
 
-public class Krawedz<W,S> implements IKrawedz<W, S> {
+public class Krawedz<W,S> implements IKrawedz<W, S>, Comparable {
 	W wierzcholek1_;
 	W wierzcholek2_;
 	S polaczenie_;
+	
+	public Krawedz(W wierzcholek1, W wierzcholek2)
+	{
+		wierzcholek1_ = wierzcholek1;
+		wierzcholek2_ = wierzcholek2;
+		polaczenie_ = null;
+	}
 	
 	public Krawedz(W wierzcholek1, W wierzcholek2, S polaczenie)
 	{
@@ -13,19 +20,14 @@ public class Krawedz<W,S> implements IKrawedz<W, S> {
 		wierzcholek2_ = wierzcholek2;
 		polaczenie_ = polaczenie;
 	}
-	
-	@Override
-	public W w1() {
-		return wierzcholek1_;
-	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((polaczenie_ == null) ? 0 : polaczenie_.hashCode());
-		result = prime * result + ((wierzcholek1_ == null) ? 0 : wierzcholek1_.hashCode());
-		result = prime * result + ((wierzcholek2_ == null) ? 0 : wierzcholek2_.hashCode());
+		int hashOfW1 = wierzcholek1_ == null ? 0 : wierzcholek1_.hashCode();
+		int hashOfW2 = wierzcholek1_ == null ? 0 : wierzcholek2_.hashCode();
+		result = prime * hashOfW1 * hashOfW2;
 		return result;
 	}
 
@@ -38,22 +40,19 @@ public class Krawedz<W,S> implements IKrawedz<W, S> {
 		if (getClass() != obj.getClass())
 			return false;
 		Krawedz other = (Krawedz) obj;
-		if (polaczenie_ == null) {
-			if (other.polaczenie_ != null)
-				return false;
-		} else if (!polaczenie_.equals(other.polaczenie_))
+		if(wierzcholek1_.equals(other.wierzcholek1_)
+				&& wierzcholek2_.equals(other.wierzcholek2_))
+			return true;
+		else if(wierzcholek1_.equals(other.wierzcholek2_)
+				&& wierzcholek2_.equals(other.wierzcholek1_))
+			return true;
+		else
 			return false;
-		if (wierzcholek1_ == null) {
-			if (other.wierzcholek1_ != null)
-				return false;
-		} else if (!wierzcholek1_.equals(other.wierzcholek1_))
-			return false;
-		if (wierzcholek2_ == null) {
-			if (other.wierzcholek2_ != null)
-				return false;
-		} else if (!wierzcholek2_.equals(other.wierzcholek2_))
-			return false;
-		return true;
+	}
+
+	@Override
+	public W w1() {
+		return wierzcholek1_;
 	}
 
 	@Override
@@ -64,6 +63,11 @@ public class Krawedz<W,S> implements IKrawedz<W, S> {
 	@Override
 	public S wart() {
 		return polaczenie_;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		return 0;
 	}
 
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_GrafCwiczenia" project="BT-Library-Java" tests="6" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.collections.graphs.Test_GrafCwiczenia" incomplete="true">
+    <testcase name="test_CTOR_GetOrDefault" classname="bt.collections.graphs.Test_GrafCwiczenia" time="0.0"/>
+    <testcase name="test_CTOR_Null_Null" classname="bt.collections.graphs.Test_GrafCwiczenia" time="0.0"/>
+    <testcase name="test_TC1_CTOR_Zero_One" classname="bt.collections.graphs.Test_GrafCwiczenia" incomplete="true"/>
+    <testcase name="test_TC2_CTOR_One_One" classname="bt.collections.graphs.Test_GrafCwiczenia" incomplete="true"/>
+    <testcase name="test_TC3_CTOR_One_Two" classname="bt.collections.graphs.Test_GrafCwiczenia" incomplete="true"/>
+    <testcase name="test_TC4_CTOR_Two_Three" classname="bt.collections.graphs.Test_GrafCwiczenia" incomplete="true"/>
+  </testsuite>
+</testrun>
