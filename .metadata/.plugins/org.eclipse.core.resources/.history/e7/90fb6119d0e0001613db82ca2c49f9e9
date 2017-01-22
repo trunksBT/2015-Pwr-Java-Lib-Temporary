@@ -1,0 +1,7 @@
+package bt.algorithms.interfaces;
+
+import java.util.List;
+
+public interface IGraphComponents<W,S> {
+	List<IGrafC07<W, S>> connectedComponents(IGrafC07<W, S> graph);
+}

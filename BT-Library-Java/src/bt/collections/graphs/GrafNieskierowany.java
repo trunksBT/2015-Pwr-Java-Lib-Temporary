@@ -3,6 +3,7 @@ package bt.collections.graphs;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -39,7 +40,7 @@ public class GrafNieskierowany<W,S> implements IGrafC07<W, S> {
 				throw new EdgeContainsWrongVerticeException();
 			}
 			Set<W> unikalneWierzcholki = new TreeSet<>(wierzcholki);
-			wierzcholki_ = new ArrayList<>(unikalneWierzcholki);
+			wierzcholki_ = new LinkedList<>(unikalneWierzcholki);
 			listaSasiedztwa_ = wypelnijListeSasiedztwa(krawedzie, wierzcholki);
 		} 
 	}
@@ -56,9 +57,8 @@ public class GrafNieskierowany<W,S> implements IGrafC07<W, S> {
 	
 	@Override
 	public List<IKrawedz<W, S>> krawedzie(W w) {
-		List<IKrawedz<W,S>> listaKrawedzi = new ArrayList<>();
-		
-		Set<Entry<W, Set<W>>> pary = new TreeSet<>();
+		Set<IKrawedz<W,S>> zbiorKrawedzi = new TreeSet<>();
+		Set<Entry<W, Set<W>>> pary = new HashSet<>();
 		
 		if(w == null)
 		{
@@ -67,47 +67,25 @@ public class GrafNieskierowany<W,S> implements IGrafC07<W, S> {
 		else
 		{
 			Set<W> wartosciDlaKlucza = listaSasiedztwa_.getOrDefault(w, new TreeSet<>());
-			Entry<W, Set<W>> para =  new AbstractMap.SimpleEntry<>(w, wartosciDlaKlucza);
-			pary.add(para);
+			pary.add(new AbstractMap.SimpleEntry<>(w, wartosciDlaKlucza));
 		}
 		
 		for (Entry<W, Set<W>> para : pary)
 		{
 			for(W docelowyWierzcholek : para.getValue())
 			{
-				listaKrawedzi.add(new Krawedz(para.getKey(), docelowyWierzcholek, 0));
+				zbiorKrawedzi.add(new Krawedz(para.getKey(), docelowyWierzcholek, 0));
 			}
 		}
 		
-		listaKrawedzi = wyciagnijZduplikowaneKrawedzie(listaKrawedzi);
-		return listaKrawedzi;
-	}
-
-	List<IKrawedz<W,S>> wyciagnijZduplikowaneKrawedzie(List<IKrawedz<W,S>> listaKrawedzi)
-	{
-		List<IKrawedz<W,S>> nieskierowanaListaKrawedzi = 
-				new ArrayList<>(listaKrawedzi);
-		for(IKrawedz<W,S> krawedz: listaKrawedzi)
-		{
-			if(krawedz.w1() != krawedz.w2())
-			{
-				IKrawedz<W,S> mozeZduplikowana = new Krawedz(krawedz.w2(), krawedz.w1());
-				if(nieskierowanaListaKrawedzi.contains(mozeZduplikowana))
-				{			
-					nieskierowanaListaKrawedzi.remove(mozeZduplikowana);		
-				}
-			}
-		}
-		return listaKrawedzi;
+		return new ArrayList<>(zbiorKrawedzi);
 	}
 	
 	@Override
-	public S czyKrawedz(W w1, W w2) {
-		return null;
+	public S dajWage(W w1, W w2) {
+		throw new UnsupportedOperationException();
 	}
 	
-	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private boolean krawedzieZawierajaPoprawneWierzcholki(
 			List<IKrawedz<W, S>> krawedzie, List<W> wierzcholki)
 	{
@@ -118,8 +96,8 @@ public class GrafNieskierowany<W,S> implements IGrafC07<W, S> {
 				
 		boolean czyOk = true;	
 		
-		for(Iterator it = krawedzie.iterator(); it.hasNext(); ) {
-			IKrawedz<W, S> curr = (IKrawedz<W, S>) it.next();
+		for(IKrawedz<W, S> curr : krawedzie)
+		{
 			if(curr.w1() == null || curr.w2() == null || curr.wart() == null)
 			{
 				return false;
@@ -163,8 +141,8 @@ public class GrafNieskierowany<W,S> implements IGrafC07<W, S> {
 			List<IKrawedz<W, S>> krawedzie,
 			Map<W, Set<W>> listaSasiedztwa) {
 		
-		for(Iterator it = krawedzie.iterator(); it.hasNext(); ) {
-			IKrawedz<W, S> curr = (IKrawedz<W, S>) it.next();
+		for(IKrawedz<W, S> curr : krawedzie)
+		{
 			listaSasiedztwa.get(curr.w1()).add(curr.w2());
 			listaSasiedztwa.get(curr.w2()).add(curr.w1());
 		}

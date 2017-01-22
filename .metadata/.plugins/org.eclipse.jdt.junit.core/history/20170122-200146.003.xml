@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_GrafCwiczenia_SkladoweSpojne" project="BT-Library-Java" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="bt.collections.graphs.Test_GrafCwiczenia_SkladoweSpojne" time="0.06">
+    <testcase name="test_TC1_CTOR_OneConsistentGraph" classname="bt.collections.graphs.Test_GrafCwiczenia_SkladoweSpojne" time="0.058"/>
+    <testcase name="test_TC2_CTOR_OneConsistentGraph" classname="bt.collections.graphs.Test_GrafCwiczenia_SkladoweSpojne" time="0.001"/>
+    <testcase name="test_TC3_CTOR_OneConsistentGraph" classname="bt.collections.graphs.Test_GrafCwiczenia_SkladoweSpojne" time="0.001"/>
+  </testsuite>
+</testrun>

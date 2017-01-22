@@ -2,7 +2,7 @@ package bt.collections.graphs;
 
 import bt.algorithms.interfaces.IKrawedz;
 
-public class Krawedz<W,S> implements IKrawedz<W, S>, Comparable {
+public class Krawedz<W,S> implements IKrawedz<W, S>, Comparable<Krawedz<W,S>> {
 	W wierzcholek1_;
 	W wierzcholek2_;
 	S polaczenie_;
@@ -66,8 +66,17 @@ public class Krawedz<W,S> implements IKrawedz<W, S>, Comparable {
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		return 0;
+	public int compareTo(Krawedz<W, S> o) {
+		if(wierzcholek1_.equals(o.wierzcholek2_)
+				&& wierzcholek2_.equals(o.wierzcholek1_))
+		{
+			return ((Comparable<W>) wierzcholek1_).compareTo((W) o.wierzcholek2_) +
+					((Comparable<W>) wierzcholek2_).compareTo((W) o.wierzcholek1_);
+		}
+		else
+		{
+			return ((Comparable<W>) wierzcholek1_).compareTo((W) o.wierzcholek1_) +
+					((Comparable<W>) wierzcholek2_).compareTo((W) o.wierzcholek2_);
+		}
 	}
-
 }
