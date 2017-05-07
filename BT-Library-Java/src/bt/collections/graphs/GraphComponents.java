@@ -36,13 +36,13 @@ public class GraphComponents<W,S> implements IGraphComponents<W,S>{
 		
 		for(IKrawedz<W,S> krawedz : graph.krawedzie())
 		{
-			zlaczZbioryZawierajacePolaczoneWierzcholki(listaZbiorow, krawedz);
+			zlaczZbioryZawierajaceWierzcholkiPolaczoneKrawedzia(listaZbiorow, krawedz);
 		}
 		
 		return listaZbiorow;
 	}
 
-	private void zlaczZbioryZawierajacePolaczoneWierzcholki(List<Set<W>> listaZbiorow, IKrawedz<W, S> krawedz) {
+	private void zlaczZbioryZawierajaceWierzcholkiPolaczoneKrawedzia(List<Set<W>> listaZbiorow, IKrawedz<W, S> krawedz) {
 		Set<W> zbiorPierwszy = listaZbiorow.stream()
 		          .filter(it -> it.contains(krawedz.w1()))
 		          .findFirst().get();

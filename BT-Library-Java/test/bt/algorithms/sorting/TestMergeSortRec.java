@@ -7,6 +7,7 @@ import org.junit.runners.MethodSorters;
 import bt.algorithms.comparators.NaturalComparator;
 import bt.algorithms.sorting.MergeSortRec;
 import bt.collections.interfaces.List;
+import bt.collections.iterators.Iterator;
 import bt.collections.lists.ArrayList;
 import junit.framework.TestCase;
 

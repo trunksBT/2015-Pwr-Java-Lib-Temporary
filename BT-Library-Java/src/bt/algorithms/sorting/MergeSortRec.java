@@ -11,44 +11,54 @@ public class MergeSortRec implements ListSorter {
 	public MergeSortRec(Comparator order) {
 		this.order = order;
 	}
+	
 	@Override
 	public List sort(List tape) {
-		return mergesort(tape, 0, tape.size() -1);
-	}
-	private List mergesort(List tape, int startIdx, int endIdx) {
-		if(startIdx == endIdx) {
-			List result = new ArrayList();
-			result.add(tape.get(startIdx)); // here empty list will throw exception
-			return result;
+		if(tape == null){
+			return null;
 		}
-		int splitIdx = startIdx + (endIdx- startIdx)/2;
-		return merge(mergesort(tape, startIdx, splitIdx),
-				mergesort(tape, splitIdx+1, endIdx)); 
+		else	{
+			return mergeSort(tape, 0, tape.size() - 1);
+		}
 	}
+	
+	private List mergeSort(List tape, int idxStart, int idxEnd) {
+		if( idxStart== idxEnd) {
+			List oneElemList = new ArrayList(1);
+			oneElemList.add(tape.get(idxStart));
+			return oneElemList;
+		}
+		int idxSplit = idxStart + (idxEnd- idxStart)/2;
+		return merge(mergeSort(tape, idxStart, idxSplit), mergeSort( tape, idxSplit+1, idxEnd));
+	}
+	
 	private List merge(List leftArray, List rightArray) {
-		List result = new ArrayList(leftArray.size()+rightArray.size());
-		Iterator leftIt = leftArray.iterator();
-		Iterator rightIt = rightArray.iterator();
-		leftIt.first();rightIt.first();	
-		
-		while(!leftIt.isDone()&& !rightIt.isDone()) {
-			if(order.compare(leftIt.current(), rightIt.current())<= 0) {
-				result.add(leftIt.current());
-				leftIt.next();
-			}else {
-				result.add(rightIt.current());
-				rightIt.next();
+		List retList = new ArrayList(leftArray.size() + rightArray.size());
+		Iterator itLeft = leftArray.iterator();
+		Iterator itRight = rightArray.iterator();
+
+		itLeft.first();
+		itRight.first();
+
+		while(!itLeft.isDone() && !itRight.isDone()) {
+			if(order.compare(itLeft.current(), itRight.current())<=0) {
+				retList.add(itLeft.current());
+				itLeft.next();
+			}
+			else{
+				retList.add(itRight.current());
+				itRight.next();
 			}
 		}
-		while(!leftIt.isDone()) {
-			result.add(leftIt.current());
-			leftIt.next();
+		while(!itLeft.isDone()) {
+			retList.add(itLeft.current());
+			itLeft.next();
 		}
-		while(!rightIt.isDone()) {
-			result.add(rightIt.current());
-			rightIt.next();
+		while(!itRight.isDone()) {
+			retList.add(itRight.current());
+			itRight.next();
 		}
 		
-		return result;
+		return retList;
 	}
 }

@@ -1,7 +1,0 @@
-package bt.algorithms.interfaces;
-
-import java.util.List;
-
-public interface IGraphComponents<W,S> {
-	List<IGrafC07<W, S>> spojneSkladowe(IGrafC07<W, S> graph);
-}

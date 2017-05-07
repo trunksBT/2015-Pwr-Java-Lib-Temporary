@@ -13,17 +13,22 @@ public class BubbleSortOptimal implements ListSorter{
 	
 	@Override
 	public List sort(List tape) {
-		int lastSwap = tape.size()-1;
-		while(lastSwap>0) {
+		if(tape == null)
+			return tape;
+		
+		int lastSwap = tape.size() -1;
+		while(lastSwap > 0) {
 			int end = lastSwap;
 			lastSwap = 0;
-			for(int i = 0; i<end; i++) {
-				if(order.compare(tape.get(i),tape.get(i+1))>0) {
-					Object notProper = tape.get(i);
-					while(i<end && order.compare(notProper,tape.get(i+1))>0)
-						tape.set(i,tape.get(i+++1));
+			for(int i = 0; i< end; i++) {
+				if(order.compare(tape.get(i), tape.get(i+1))>0) {
+					Object toBubbleUp = tape.get(i);
+					while(i<end && order.compare(toBubbleUp, tape.get(i+1))>0){
+						tape.set(i, tape.get(i+1));
+						i++;
+					}
+					tape.set(i, toBubbleUp);
 					lastSwap = i;
-					tape.set(lastSwap,notProper);
 				}
 			}
 		}

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_GrafCwiczenia_SkladoweSpojne" project="BT-Library-Java" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="bt.collections.graphs.Test_GrafCwiczenia_SkladoweSpojne" incomplete="true">
-    <testcase name="test_TC1_CTOR_OneConsistentGraph" classname="bt.collections.graphs.Test_GrafCwiczenia_SkladoweSpojne" incomplete="true"/>
-  </testsuite>
-</testrun>

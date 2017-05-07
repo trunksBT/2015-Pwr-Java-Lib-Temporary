@@ -13,18 +13,20 @@ public class InsertSort implements ListSorter {
 	
 	@Override
 	public List sort(List tape) {
-		if ( tape == null )
-			return null;
+		if(tape == null)
+			return tape;
 		
-		for(int idxFrom = 1; idxFrom<tape.size(); ++idxFrom) {
-			Object toInsert = tape.get(idxFrom),ordered;
-			int idxTo;
-			for(idxTo = idxFrom; 
-					idxTo > 0 && order.compare(toInsert, ordered = tape.get(idxTo-1)) < 0; 
-						--idxTo)
-				tape.set(idxTo, ordered);
-			tape.set(idxTo,toInsert);
+		for(int i = 1; i < tape.size(); i++) {
+			Object toInsert = tape.get(i);
+			Object curr = null;
+			int j;
+			for(j= i; j > 0 && order.compare(toInsert, curr = tape.get(j-1)) < 0; j--)
+			{
+				tape.set(j, curr);
+			}
+			tape.set(j, toInsert);
 		}
+		
 		return tape;
 	}
 }

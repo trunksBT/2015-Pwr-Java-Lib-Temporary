@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.trees.RatBST"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.graphs.Edge"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.graphs.GraphEdgeList"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.GuardedLinkedListDouble"/>
-<fullyQualifiedTypeName name="bt.core.collections.dataTypes.graphs.Graph"/>
-<fullyQualifiedTypeName name="bt.core.collections.graphs.GraphAdjacentList"/>
-<fullyQualifiedTypeName name="bt.core.algorithms.graph.DFS"/>
-<fullyQualifiedTypeName name="bt.core.collections.interfaces.List"/>
-<fullyQualifiedTypeName name="bt.core.collections.lists.DirtyListDecorator"/>
-<fullyQualifiedTypeName name="bt.core.collections.lists.ListDecorator"/>
-<fullyQualifiedTypeName name="java.time.Instant"/>
-<fullyQualifiedTypeName name="bt.core.collections.graphs.Graph"/>
-<fullyQualifiedTypeName name="bt.core.collections.lists.LinkedList"/>
-<fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="bt.core.algorithms.graph.BFS"/>
 <fullyQualifiedTypeName name="bt.core.collections.lists.ArrayList"/>
 <fullyQualifiedTypeName name="bt.core.collections.queues.Queue"/>
@@ -54,10 +39,25 @@
 <fullyQualifiedTypeName name="bt.algorithms.graph.GraphIndirected"/>
 <fullyQualifiedTypeName name="bt.algorithms.interfaces.IGraf"/>
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
-<fullyQualifiedTypeName name="bt.algorithms.interfaces.IGrafC07"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="bt.algorithms.interfaces.IKrawedz"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.AbstractMap"/>
+<fullyQualifiedTypeName name="java.util.AbstractSet"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="bt.exceptions.EdgeContainsWrongVerticeException"/>
+<fullyQualifiedTypeName name="org.junit.FixMethodOrder"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="bt.algorithms.interfaces.IGrafC07"/>
+<fullyQualifiedTypeName name="bt.algorithms.interfaces.IGraphComponents"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="java.util.concurrent.LinkedBlockingQueue"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>

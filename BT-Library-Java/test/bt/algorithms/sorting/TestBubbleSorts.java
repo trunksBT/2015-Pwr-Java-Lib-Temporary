@@ -206,7 +206,7 @@ public class TestBubbleSorts extends TestCase
 		    //assert
 		    assertEquals(expectedTape,orderedTape);
 		}
-		
+
 		//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
 		@Test
 		public void test_BubbleSortOptimal_63124805_Expect_01234568_True()

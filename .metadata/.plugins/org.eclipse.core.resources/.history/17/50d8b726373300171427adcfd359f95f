@@ -1,0 +1,18 @@
+package bt.algorithms.sorting;
+
+import bt.algorithms.interfaces.Comparator;
+import bt.algorithms.interfaces.ListSorter;
+import bt.collections.interfaces.List;
+
+public class BubbleSortOptimal implements ListSorter{
+	private final Comparator order;
+	
+	public BubbleSortOptimal(Comparator order) {
+		this.order = order;
+	}
+	
+	@Override
+	public List sort(List tape) {
+		return tape;
+	}
+}

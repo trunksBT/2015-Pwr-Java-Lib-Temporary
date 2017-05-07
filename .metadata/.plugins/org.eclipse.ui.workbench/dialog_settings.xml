@@ -14,23 +14,31 @@
 		<item value="1025" key="dialogWidth"/>
 		<list key="textEntries">
 			<item value="3"/>
-			<item value="3"/>
 			<item value="2"/>
 			<item value="3"/>
+			<item value="3"/>
+			<item value="2"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.ui.console.ConsoleView"/>
+			<item value="org.eclipse.debug.ui.BreakpointView"/>
 			<item value="org.eclipse.debug.ui.VariableView"/>
 			<item value="org.eclipse.jdt.ui.PackageExplorer"/>
 			<item value="org.eclipse.ui.preferencePages.Keys"/>
-			<item value="org.eclipse.ui.console.ConsoleView"/>
 		</list>
 		<list key="orderedProviders">
 			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.e4.ui.parts"/>
-			<item value="org.eclipse.ui.preferences"/>
 			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.ui.preferences"/>
 		</list>
 		<list key="textArray">
+			<item value="console"/>
+			<item value="co"/>
+			<item value="con"/>
+			<item value="break"/>
+			<item value="brea"/>
 			<item value="var"/>
 			<item value="varia"/>
 			<item value="va"/>
@@ -39,9 +47,6 @@
 			<item value="packa"/>
 			<item value="keys"/>
 			<item value="key"/>
-			<item value="console"/>
-			<item value="con"/>
-			<item value="co"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">

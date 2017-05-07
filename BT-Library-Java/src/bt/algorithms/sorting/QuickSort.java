@@ -12,35 +12,41 @@ public class QuickSort implements ListSorter{
 	}
 
 	public List sort(List tape) {
-		quicksort(tape,0, tape.size()-1);
+		if(tape == null)
+			return null;
+
+		quickSort(tape, 0, tape.size() -1);
 		return tape;
 	}
 	
-	private void quicksort(List tape, int idxStart, int idxEnd) {
-		if( idxEnd> idxStart) {
+	private void quickSort(List tape, int idxStart, int idxEnd) {
+		if( idxEnd > idxStart ) {
 			int idxSplit = partition(tape, idxStart, idxEnd);
-			quicksort(tape, idxStart, idxSplit-1);
-			quicksort(tape, idxSplit + 1, idxEnd);
+			quickSort(tape, idxStart, idxSplit-1);
+			quickSort(tape, idxSplit + 1, idxEnd);
 		}
-	}
-	private int partition(List tape, int idxLeft, int idxOfPivot) {	
-		Object pivot = tape.get(idxOfPivot); // last elem
-		int idxHigherOfPivot = idxLeft -1;
-		int idxLowerOfPivot = idxOfPivot;
-		while(idxHigherOfPivot<idxLowerOfPivot) {
-			while( order.compare(tape.get(++idxHigherOfPivot),pivot)<0);
-			while( (idxLowerOfPivot>idxLeft) 
-					&& order.compare(tape.get(--idxLowerOfPivot),pivot)>0);
-			if(idxHigherOfPivot<idxLowerOfPivot)
-				swap(tape, idxHigherOfPivot, idxLowerOfPivot);
-		}
-		swap(tape, idxHigherOfPivot, idxOfPivot);
-		return idxHigherOfPivot;
 	}
 	
-	private void swap( List tape, int leftIdx, int rightIdx) {
-		Object oldLeft = tape.get(leftIdx);
-		tape.set(leftIdx,tape.get(rightIdx));
-		tape.set(rightIdx,oldLeft);
+	private int partition(List tape, int idxStart, int idxEnd) {
+		Object pivot = tape.get(idxEnd);
+		int idxOfHigherThanPivot = idxStart -1;
+		int idxOfLowerThanPivot = idxEnd;
+		while( idxOfHigherThanPivot< idxOfLowerThanPivot) {
+			while( order.compare(tape.get( ++idxOfHigherThanPivot), pivot) < 0);
+			while( idxOfLowerThanPivot>idxStart &&
+					order.compare(tape.get( --idxOfLowerThanPivot), pivot) > 0);
+			if(idxOfHigherThanPivot < idxOfLowerThanPivot)
+				swap(tape, idxOfHigherThanPivot, idxOfLowerThanPivot);
+		}
+		swap(tape, idxOfHigherThanPivot, idxEnd);
+		return idxOfHigherThanPivot;
+	}
+	
+	private void swap( List tape, int idxLeft, int idxRight) {
+		if(idxLeft != idxRight) {
+			Object oldLeft = tape.get(idxLeft);
+			tape.set(idxLeft, tape.get(idxRight));
+			tape.set(idxRight, oldLeft);
+		}
 	}
 }
