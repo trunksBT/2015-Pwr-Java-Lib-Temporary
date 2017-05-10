@@ -1,7 +1,0 @@
-package Bt.Core.Geometry.Shapes;
-
-public interface IShape {
-	int hashCode();
-	public double Obwod();
-	public String toString();
-}

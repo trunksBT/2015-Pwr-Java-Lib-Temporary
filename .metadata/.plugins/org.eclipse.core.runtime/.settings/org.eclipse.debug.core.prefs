@@ -1,3 +1,0 @@
-//org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.jdt.junit.launchconfig=org.eclipse.jdt.junit.launchconfig,debug,;
-eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="_buffStack"/>\r\n<expression enabled\="true" text\="_buffStack"/>\r\n<expression enabled\="true" text\="this"/>\r\n<expression enabled\="true" text\="_set"/>\r\n<expression enabled\="true" text\="tab"/>\r\n<expression enabled\="true" text\="tempTab"/>\r\n<expression enabled\="true" text\="currNode"/>\r\n<expression enabled\="true" text\="currNode"/>\r\n</watchExpressions>\r\n

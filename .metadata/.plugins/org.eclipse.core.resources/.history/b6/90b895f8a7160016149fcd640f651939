@@ -1,7 +1,0 @@
-package bt.core.collections.lists;
-
-import bt.core.collections.interfaces.List;
-
-public class DirtyListDecorator implements List{
-
-}

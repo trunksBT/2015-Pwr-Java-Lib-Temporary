@@ -1,8 +1,0 @@
-package bt.core.collections.dataTypes.graphs;
-
-public interface Graph<V> {
-	public int numberOfVertices();
-	public int numberOfEdges();
-	public void addEdge(V vertFrom, V vertTo);
-	public Iterable<V> adj(V vert);
-}
