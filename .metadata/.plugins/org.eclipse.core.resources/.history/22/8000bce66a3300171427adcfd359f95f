@@ -1,0 +1,24 @@
+package bt.algorithms.sorting;
+
+import bt.algorithms.interfaces.Comparator;
+import bt.algorithms.interfaces.ListSorter;
+import bt.collections.interfaces.List;
+
+public class QuickSort implements ListSorter{
+	private final Comparator order;
+	
+	public QuickSort(Comparator order) {
+		this.order = order;
+	}
+
+	public List sort(List tape) {
+		if(tape == null)
+			return null;
+		quickSort(0, tape.size() -1);
+		return tape;
+	}
+	
+	public void quickSort(List tape, int idxStart, int idxEnd) {
+		
+	}
+}

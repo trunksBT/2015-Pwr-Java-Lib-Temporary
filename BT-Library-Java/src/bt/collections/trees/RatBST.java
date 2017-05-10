@@ -47,8 +47,8 @@ public class RatBST {
 	}
 
 	public static void preOrder(RatNode root) {
-		if( root != null ) {
-			System.out.print( root.val +" " );
+		if(root!=null) {
+			System.out.print(root.val + " ");
 			preOrder(root.left);
 			preOrder(root.right);
 		}

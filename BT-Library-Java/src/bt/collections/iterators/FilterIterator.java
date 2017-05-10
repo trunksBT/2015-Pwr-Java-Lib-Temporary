@@ -11,7 +11,7 @@ public class FilterIterator extends ItPrint implements Iterator {
 	
 	public void filterForwards(){
 		while(!it.isDone() && !pred.accept(it.current()))
-			it.next();			
+			it.next();
 	}
 	
 	public void filterBackwards() {

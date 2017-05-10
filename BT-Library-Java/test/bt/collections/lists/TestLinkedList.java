@@ -739,6 +739,30 @@ public class TestLinkedList extends TestCase {
     	// assert
     	assertThat(tape.size(), is(expSize));
     }
+    
+	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
+    @Test
+    public void test_equals_true()
+    {
+    	// arrange
+    	List tapeBase = new LinkedList();
+    	tapeBase.add(new String("1"));
+    	tapeBase.add(new String("2"));
+    	tapeBase.add(new String("3"));
+    	tapeBase.add(new String("4"));
+    	tapeBase.add(new String("5"));
+    	
+    	List tapeToTest = new LinkedList();
+    	tapeToTest.add(new String("1"));
+    	tapeToTest.add(new String("2"));
+    	tapeToTest.add(new String("3"));
+    	tapeToTest.add(new String("4"));
+    	tapeToTest.add(new String("5"));
+    	
+    	// act
+    	// assert
+    	assertThat(tapeBase.equals(tapeToTest), is(true));
+    }
 
 	//Test_MethodName_StateUnderTest_Expect_ExpectedBehavior
     @Test

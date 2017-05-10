@@ -58,7 +58,7 @@ public class RatajListRec {
 	public int getVal() {
 		return val;
 	}
-
+	
 	public RatajListRec copy() {
 		if( next == null )
 			return new RatajListRec(val);
@@ -103,13 +103,17 @@ public class RatajListRec {
 		return helpRev(inTab, 0, inSize-1);
 	}
 	
+	public static RatajListRec revAndRetList(int[] inTab) {
+		return helpRev(inTab, 0, inTab.length-1);
+	}
+	
 	public static RatajListRec helpRev(int [] inTab, int idxSt, int idxEnd) {
-		if( idxSt< idxEnd )
-			return helpRev(inTab, idxSt+1, idxEnd);
-		else if( idxEnd == -1 || inTab.length == 0)
+		if( idxSt < idxEnd )
+			return helpRev( inTab, idxSt+1, idxEnd);
+		else if(idxEnd < 0 || inTab.length < 0)
 			return null;
 		else
-			return new RatajListRec( inTab[idxSt], helpRev(inTab,idxSt-1,idxEnd-1));
+			return new RatajListRec(inTab[idxSt], helpRev(inTab, idxSt-1, idxEnd-1));
 	}
 	
 	public static boolean equals(RatajListRec l1, RatajListRec l2, int size) {

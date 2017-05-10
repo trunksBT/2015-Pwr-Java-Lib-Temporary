@@ -157,20 +157,6 @@ public class LinkedList extends AbstractList implements List {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		LinkedList other = (LinkedList) obj;
-		if (hdAndTl == null) {
-			if (other.hdAndTl != null)
-				return false;
-		} else if (!hdAndTl.equals(other.hdAndTl))
-			return false;
-		if (size != other.size)
-			return false;
-		return true;
+		return super.equals(obj);
 	}
 }
