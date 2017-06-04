@@ -10,7 +10,6 @@ import bt.collections.graphs.AdjacentMatrix;
 import bt.collections.graphs.Graph;
 import bt.collections.interfaces.List;
 import bt.collections.iterators.Iterator;
-import bt.collections.lists.ArrayList;
 import bt.mock.algorithms.graph.MockAdjacentList;
 import bt.mock.algorithms.graph.MockAdjacentMatrix;
 import junit.framework.TestCase;

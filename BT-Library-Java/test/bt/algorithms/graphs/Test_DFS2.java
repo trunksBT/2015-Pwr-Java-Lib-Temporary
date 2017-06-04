@@ -9,8 +9,6 @@ import bt.collections.graphs.AdjacentList;
 import bt.collections.graphs.AdjacentMatrix;
 import bt.collections.graphs.Graph;
 import bt.collections.interfaces.List;
-import bt.collections.iterators.Iterator;
-import bt.collections.lists.ArrayList;
 import bt.collections.lists.LinkedList;
 import bt.mock.algorithms.graph.MockAdjacentList;
 import bt.mock.algorithms.graph.MockAdjacentMatrix;
@@ -18,7 +16,7 @@ import junit.framework.TestCase;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Test_DFS2 extends TestCase
-{		
+{
 	@Test
 	public void test_adjacentList_NotEmpty_012356874()
 	{
@@ -27,7 +25,6 @@ public class Test_DFS2 extends TestCase
 		int inSize = 9;
 		Graph<Integer,String> graph = 
 				new AdjacentList<String>(MockAdjacentList.NotEmpty(inSize));
-	    boolean rcLogic = true;
 	    
 	    //act
 		rcVal = new DFS2<String>()
@@ -36,7 +33,7 @@ public class Test_DFS2 extends TestCase
 		//assert
 	    assertEquals(MockAdjacentList.expValForNotEmpty_DFS(), rcVal);
 	}
-	
+
 	@Test
 	public void test_adjacentList_Null_Empty()
 	{
@@ -44,7 +41,6 @@ public class Test_DFS2 extends TestCase
 		List rcVal = null;
 		Graph<Integer,String> graph = 
 				new AdjacentList<String>(MockAdjacentList.Null(0));
-	    boolean rcLogic = true;
 	    
 	    //act
 		rcVal = new DFS2<String>()
@@ -53,7 +49,7 @@ public class Test_DFS2 extends TestCase
 	    //assert
 	    assertEquals(new LinkedList(), rcVal);
 	}
-	
+
 	@Test
 	public void test_adjacentList_TwoElem_12()
 	{
@@ -70,7 +66,7 @@ public class Test_DFS2 extends TestCase
 	    //assert
 	    assertEquals(MockAdjacentList.expValForTwoElem_DFSyBFS(), rcVal);
 	}
-	
+
 	@Test
 	public void test_adjacentMatrix_NotEmpty_012356874()
 	{
@@ -87,7 +83,7 @@ public class Test_DFS2 extends TestCase
 	    //assert
 	    assertEquals(MockAdjacentList.expValForNotEmpty_DFS(), rcVal);
 	}
-	
+
 	@Test
 	public void test_adjacentMatrix_Null_Empty()
 	{
@@ -103,7 +99,7 @@ public class Test_DFS2 extends TestCase
 	    //assert
 	    assertEquals(new LinkedList(), rcVal);
 	}
-	
+
 	@Test
 	public void test_adjacentMatrix_TwoElem_12()
 	{
@@ -120,6 +116,4 @@ public class Test_DFS2 extends TestCase
 	    //assert
 	    assertEquals(MockAdjacentMatrix.expValForTwoElem_DFSyBFS(), rcVal);
 	}
-	
-
 }
