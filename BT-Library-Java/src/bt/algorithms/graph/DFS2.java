@@ -6,17 +6,18 @@ import bt.collections.interfaces.List;
 import bt.collections.iterators.Iterator;
 import bt.collections.lists.ArrayList;
 import bt.collections.lists.LinkedList;
-import bt.collections.queues.Queue;
+import bt.collections.lists.ListDecorator;
+import bt.collections.queues.Stack;
 
-public class BFS<W> {
-	final int startVert = 0;
+public class DFS2<W> {
+	private int startVert = 0;
 	public List forAdjacentShapes(Graph<Integer,W> graph) {
 		if(graph == null || graph.isEmpty())
 			return new LinkedList();
 		else {
 			List retVal = new ArrayList(graph.getNumberOfVerts());
 			graph.resetVerticesStory();
-			IQueue queueOfTrace = new Queue();
+			IQueue queueOfTrace = new Stack();
 			queueOfTrace.enqueue(startVert);
 			
 			while(!queueOfTrace.isEmpty()) {
@@ -34,5 +35,16 @@ public class BFS<W> {
 			}
 			return retVal;
 		}
-	}
+//	public List forAdjacentShapes(Graph<Integer,W> graph) {
+//		graph.resetVerticesStory();
+//		List retVal = new ArrayList(graph.getNumberOfVerts());
+//		innerForAdjacentShapes(graph, retVal, startVert);
+//		return retVal;
+//	}
+//	
+//	void innerForAdjacentShapes(Graph<Integer,W> graph, List listOfVerts, Integer currVert) {
+//		graph.getAdjacents(currVert);
+//	}
+}
+
 }

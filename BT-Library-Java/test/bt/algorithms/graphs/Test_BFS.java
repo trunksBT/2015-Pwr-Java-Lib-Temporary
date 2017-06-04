@@ -9,8 +9,7 @@ import bt.collections.graphs.AdjacentList;
 import bt.collections.graphs.AdjacentMatrix;
 import bt.collections.graphs.Graph;
 import bt.collections.interfaces.List;
-import bt.collections.iterators.Iterator;
-import bt.collections.lists.ArrayList;
+import bt.collections.lists.LinkedList;
 import bt.mock.algorithms.graph.MockAdjacentList;
 import bt.mock.algorithms.graph.MockAdjacentMatrix;
 import junit.framework.TestCase;
@@ -33,15 +32,7 @@ public class Test_BFS extends TestCase
 		    		.forAdjacentShapes((AdjacentList<String>) graph);
 	    
 	    //assert
-	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = MockAdjacentList.expValForNotEmpty_BFS().iterator();
-	    fstIt.first();
-	    sndIt.first();
-	    while(!fstIt.isDone() && !sndIt.isDone()) {
-	    	rcLogic &= fstIt.current().equals(sndIt.current());
-	    	fstIt.next(); sndIt.next();
-	    }
-	    assertTrue(rcLogic);
+	    assertEquals(MockAdjacentList.expValForNotEmpty_BFS(), rcVal);
 	}
 	
 	@Test
@@ -58,15 +49,7 @@ public class Test_BFS extends TestCase
 		    		.forAdjacentShapes((AdjacentList<String>) graph);
 	    
 	    //assert
-	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = MockAdjacentList.expValForNotEmpty_DFS().iterator();
-	    fstIt.first();
-	    sndIt.first();
-	    while(!fstIt.isDone() && !sndIt.isDone()) {
-	    	rcLogic &= fstIt.current().equals(sndIt.current());
-	    	fstIt.next(); sndIt.next();
-	    }
-	    assertTrue(rcLogic);
+	    assertEquals(new LinkedList(), rcVal);
 	}
 	
 	@Test
@@ -84,15 +67,7 @@ public class Test_BFS extends TestCase
 		    		.forAdjacentShapes((AdjacentList<String>) graph);
 	    
 	    //assert
-	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = MockAdjacentList.expValForTwoElem_DFSyBFS().iterator();
-	    fstIt.first();
-	    sndIt.first();
-	    while(!fstIt.isDone() && !sndIt.isDone()) {
-	    	rcLogic &= fstIt.current().equals(sndIt.current());
-	    	fstIt.next(); sndIt.next();
-	    }
-	    assertTrue(rcLogic);
+	    assertEquals(MockAdjacentList.expValForTwoElem_DFSyBFS(), rcVal);
 	}
 	
 	@Test
@@ -110,15 +85,7 @@ public class Test_BFS extends TestCase
 		    		.forAdjacentShapes((AdjacentMatrix<String>) graph);
 	    
 	    //assert
-	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = MockAdjacentMatrix.expValForNotEmpty_BFS().iterator();
-	    fstIt.first();
-	    sndIt.first();
-	    while(!fstIt.isDone() && !sndIt.isDone()) {
-	    	rcLogic &= fstIt.current().equals(sndIt.current());
-	    	fstIt.next(); sndIt.next();
-	    }
-	    assertTrue(rcLogic);
+	    assertEquals(MockAdjacentList.expValForNotEmpty_BFS(), rcVal);
 	}
 	
 	@Test
@@ -135,15 +102,7 @@ public class Test_BFS extends TestCase
 		    		.forAdjacentShapes((AdjacentMatrix<String>) graph);
 	    
 	    //assert
-	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = MockAdjacentMatrix.expValForNotEmpty_BFS().iterator();
-	    fstIt.first();
-	    sndIt.first();
-	    while(!fstIt.isDone() && !sndIt.isDone()) {
-	    	rcLogic &= fstIt.current().equals(sndIt.current());
-	    	fstIt.next(); sndIt.next();
-	    }
-	    assertTrue(rcLogic);
+	    assertEquals(new LinkedList(), rcVal);
 	}
 	
 	@Test
@@ -161,16 +120,7 @@ public class Test_BFS extends TestCase
 		    		.forAdjacentShapes((AdjacentMatrix<String>) graph);
 	    
 	    //assert
-	    Iterator fstIt = rcVal.iterator();
-	    Iterator sndIt = MockAdjacentMatrix.expValForTwoElem_DFSyBFS().iterator();
-	    fstIt.first();
-	    sndIt.first();
-	    while(!fstIt.isDone() && !sndIt.isDone()) {
-	    	rcLogic &= fstIt.current().equals(sndIt.current());
-	    	fstIt.next(); sndIt.next();
-	    }
-	    assertTrue(rcLogic);
+	    assertEquals(MockAdjacentMatrix.expValForTwoElem_DFSyBFS(), rcVal);
 	}
 	
-
 }

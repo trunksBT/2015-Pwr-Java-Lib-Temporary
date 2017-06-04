@@ -8,7 +8,7 @@ import bt.collections.lists.ArrayList;
 import bt.collections.lists.LinkedList;
 import bt.collections.queues.Queue;
 
-public class BFS<W> {
+public class BFS2<W> {
 	final int startVert = 0;
 	public List forAdjacentShapes(Graph<Integer,W> graph) {
 		if(graph == null || graph.isEmpty())
